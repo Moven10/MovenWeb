@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Moven Account</title>
+    <link rel="stylesheet" href="create-account.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Top Footer -->
+    <div class="top-footer">
+        <div class="logo-menu-container">
+            <a href="index.html">
+                <img src="assets/MovenLogoblack.jpg" alt="Moven Logo">
+            </a>
+            <nav class="top-menu">
+                <a href="moverpro.html">MoverPro</a>
+                <a href="move-to-earn.html">Move To Earn</a>
+                <a href="move-tokens.html">Move Tokens</a>
+                <a href="partner.html">Partner With Moven</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Top Section -->
+    <div class="top-section">
+        <div class="center-sheet">
+            <div class="headline-section">
+                <h1>Create Moven Account</h1>
+            </div>
+            <div class="form-section">
+                <form id="create-account-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <div id="username-feedback" class="feedback"></div>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <div class="password-toggle" id="password-toggle"></div>
+                    </div>
+
+                    <label for="retype-password">Retype Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="retype-password" name="retype-password" placeholder="Retype your password" required>
+                        <div class="password-toggle" id="retype-password-toggle"></div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the 
+                            <a href="terms.html" target="_blank" title="Read our Terms and Conditions">Terms and Conditions</a>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="promo" name="promo">
+                        <label for="promo">I would like to receive promotional emails from Moven</label>
+                    </div>
+
+                    <button type="submit" class="create-account-button">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <footer class="footer-section">
+        <div class="footer-logo">
+            <img src="assets/MovenLogoblack.jpg" alt="Moven Logo">
+            <p class="copyright">© 2025 Moven</p>
+            <a href="https://www.apple.com/app-store/" target="_blank">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
+            </a>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="comingsoon.html">Coming Soon</a>
+                <a href="developerpartner.html">Build With Us</a>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <a href="privacy.html">Privacy</a>
+                <a href="partner.html">Get In Touch</a>
+                <a href="index.html">Activities</a>
+            </div>
+            <div class="footer-column">
+                <h4>Learn</h4>
+                <a href="move-to-earn.html">Move To Earn</a>
+                <a href="move-tokens.html">Move Tokens</a>
+                <a href="create-account.html">Join For Free</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="create-account.js"></script>
+</body>
+</html>

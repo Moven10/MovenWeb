@@ -1,0 +1,466 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/250.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+/* White Content Section */
+.content {
+    background: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.content img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Background Section */
+.background-section {
+    background: url('assets/253.jpg') no-repeat center center/cover;
+    height: 50vh;
+}
+
+/* Black Section */
+.black-section {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.black-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.black-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Instagram Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* New Background Section */
+.background-section-2 {
+    background: url('assets/256.jpg') no-repeat center center/cover;
+    height: 50vh;
+}
+
+/* Light Grey Section */
+.light-grey-section {
+    background: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.light-grey-section h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.light-grey-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+/* Circle Images */
+.circle-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Move to Earn Events Background Section */
+.background-section-3 {
+    background: url('assets/5050.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* White Section */
+.white-section {
+    background: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.white-section h2 {
+    font-size: 2rem;
+}
+
+/* Tokens Section */
+.token-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.icon {
+    width: 80px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Create A Free Account Background Section */
+.background-section-4 {
+    background: url('assets/4005.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.background-section-4 h1 {
+    font-size: 2.5rem;
+}
+
+/* Dark Grey Section */
+.dark-grey-section {
+    background: #333;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Join Moven Button */
+.join-button {
+    background: #48d1cc;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Top Footer Section */
+.top-footer {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Menu Button (Three lines ☰) - Moved slightly higher */
+.menu-button {
+    font-size: 34px;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -3px; /* Moves the menu icon slightly higher */
+}
+
+/* Larger Moven Logo */
+.moven-logo {
+    height: 40px;
+    width: auto;
+    margin-left: -110px;
+}
+
+/* Smaller Sign Up Button & Moved Slightly Left */
+.signup-button {
+    background-color: #5fd3eb;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.signup-button:hover {
+    background-color: #48bdd7;
+}
+
+/* Remove underline from the link */
+.signup-button-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Ensures proper button alignment */
+}
+
+
+/* Slide-Out Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    padding-top: 20px;
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Close (X) Button - Now Larger */
+.close-menu {
+    font-size: 34px;  /* Increased size */
+    color: black;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    font-weight: 400; /* Slightly bolder */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add slight hover effect for better UX */
+.close-menu:hover {
+    transform: scale(1.1);
+}
+
+/* Overlay (Covers screen when menu is open, clicking it closes menu) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.442); /* Fully black */
+    display: none; /* Hidden by default */
+    z-index: 1050;
+    pointer-events: all;
+}
+
+/* Prevent scrolling and interactions behind menu */
+body.menu-open {
+    background-color: black;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Menu List */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 20px 0; /* Adjusted margin to make space for X */
+}
+
+/* Menu Items */
+.side-menu ul li {
+    padding: 12px 20px;
+}
+
+/* Menu Links */
+.side-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: block;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Light Grey Divider */
+.menu-divider {
+    width: 85%;
+    height: 1px;
+    background: #ddd;
+    margin: 15px auto;
+}
+
+/* Small Non-Bold Options (Smaller & Grey) */
+.small-options p {
+    font-size: 14px; /* Smaller font */
+    color: grey; /* Grey text */
+    padding: 10px 20px;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+}
+
+.small-options p a {
+    text-decoration: none;
+    color: grey; /* Matches text color */
+}
+
+/* Remove underline from the link */
+.get-app-button-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Makes the button behave properly inside the link */
+    width: 80%; /* Matches the button width */
+    margin: 20px auto; /* Centers the link */
+}
+
+/* "Get The App" Button (Now Rectangular) */
+.get-app-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0px; /* Makes it fully rectangular */
+    cursor: pointer;
+    display: block;
+    width: 100%; /* Ensures it takes full width */
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.get-app-button:hover {
+    background-color: #333;
+}
+
+
+/* Moven Logo at the bottom */
+.moven-logo-footer {
+    width: 120px;
+    display: block;
+    margin: 20px auto;
+}
+/* Footer Section */
+.footer-section {
+    background-color: #f8f8f8; /* Light grey */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: flex-start; /* Align to left */
+}
+
+/* Footer Content Wrapper */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align everything */
+    max-width: 300px; /* Keeps content neatly stacked */
+}
+
+/* Moven Logo */
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Copyright Text */
+.copyright-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Apple Store Button (Made Smaller) */
+.apple-store-button {
+    width: 140px; /* Reduced width */
+    margin-bottom: 15px;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Privacy Policy Link */
+.footer-text a {
+    color: #5fd3eb;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    width: 20px; /* Slightly smaller */
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Footer Links (Now Left-Aligned) */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left align */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

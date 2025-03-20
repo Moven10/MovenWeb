@@ -1,0 +1,374 @@
+/* Entire page background */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white; /* Ensure text is visible on black background */
+    font-family: Arial, sans-serif;
+}
+
+/* Parallax effect */
+.parallax {
+    background-image: url('assets/Member.jpg');
+    height: 80vh; /* Slightly reduced height */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden for fade-in effect */
+    animation: fadeInBackground 3s forwards; /* Image fades in over 3 seconds */
+}
+
+/* Additional Parallax Section */
+.mover-member {
+    background-image: url('assets/movermember.jpg');
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Headline styling for parallax */
+.headline, .headline-scroll {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+/* Animation for initial parallax headline */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation for scroll-triggered headline */
+@keyframes fadeInOnScroll {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward motion */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation when visible */
+.headline-scroll.visible {
+    animation: fadeInOnScroll 3s forwards;
+}
+
+/* Form container */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: none; /* No background to keep it clean */
+    box-shadow: none; /* Remove shadow for a flat, sleek design */
+}
+
+/* Form heading */
+.container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Input group styling */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Input field styling */
+.input-group input {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    color: white;
+    padding: 10px 0;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #00796b; /* Nike-like green focus effect */
+    color: #00796b; /* Change text color on focus */
+}
+
+.input-group input::placeholder {
+    color: #ccc; /* Subtle placeholder color */
+}
+
+/* Submit button styling */
+.btn-submit {
+    display: block;
+    width: 100%;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #004d40;
+}
+
+/* Loading spinner */
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #00796b;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* About Moven Pro Section */
+.about-moven {
+    max-width: 800px; /* Increased width */
+    margin: 40px auto; /* Added more spacing above and below */
+    padding: 200px; /* Larger section for emphasis */
+    text-align: center;
+    background: none;
+    box-shadow: none;
+}
+
+.about-moven h2 {
+    font-size: 36px; /* Larger headline size */
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-top: -100px; /* Moves the headline higher up within the section */
+    margin-bottom: 60px; /* Keeps spacing below the headline consistent */
+    opacity: 0; /* Start hidden */
+    animation: fadeInHeadline 2s forwards; /* Fade-in animation */
+}
+
+.about-moven p {
+    font-size: 18px; /* Larger font size for paragraph */
+    color: #ccc;
+    line-height: 1.8; /* Improved readability */
+    margin-top: 0; /* Keeps the paragraph at its default position */
+}
+
+/* Fade-in animation for headline */
+@keyframes fadeInHeadline {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward motion */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Button for More About MoverPro */
+.btn-learn-more {
+    display: inline-block;
+    margin-top: 40px; /* Increased spacing from paragraph */
+    padding: 20px 35px; /* Larger size */
+    font-size: 20px; /* Larger font size */
+    font-weight: bold;
+    color: white;
+    background-color: #333333; /* Dark gray */
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline */
+    border-radius: 10px; /* Slight rounding */
+    transition: all 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.btn-learn-more:hover {
+    background-color: #7fffd4; /* Light aqua blue */
+    color: #333333; /* Optional: Change text color to match original background */
+    border-radius: 50px; /* Oval shape on hover */
+    transform: scale(1.2); /* Slightly larger on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+/* Top Footer Logo */
+.top-footer {
+    position: fixed; /* Keeps the logo fixed in place */
+    top: 10px; /* Distance from the top of the page */
+    left: 30px; /* Move the logo 30px from the left */
+    z-index: 1000; /* Ensures it stays above other elements */
+    padding: 10px; /* Maintains spacing around the logo */
+}
+
+.top-footer img {
+    width: 120px; /* Increased size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover animations */
+    cursor: pointer; /* Indicates the logo is clickable */
+}
+
+.top-footer img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    opacity: 0.8; /* Adds a semi-transparent effect */
+}
+
+
+
+/* Bottom Section */
+.offwhite-section {
+    background-color: #fefaf3; /* Subtle cream color */
+    padding: 70px 8%; /* Generous padding with a slight shift to the right */
+}
+
+.footer-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 40px; /* Space between columns */
+    align-items: flex-start; /* Align content to the top of each column */
+    justify-content: center; /* Center the entire grid */
+}
+
+.footer-column {
+    text-align: center; /* Center align all content within each column */
+}
+
+/* First Column: Vertical Alignment */
+.footer-column:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    height: 100%; /* Ensure column takes up full height of the grid */
+}
+
+/* Footer Logo */
+.footer-logo {
+    width: 160px; /* Increased logo size */
+    margin-bottom: 15px; /* Space below the logo */
+}
+
+/* Black Apple Store Button */
+.apple-store-button {
+    display: block;
+    margin: 15px auto; /* Center align the button */
+    width: 120px; /* Smaller button size */
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px; /* Footer text size */
+    color: black; /* Black text for the Privacy Policy and general footer text */
+    line-height: 1.6; /* Line spacing for readability */
+    margin-top: 10px; /* Space above the text */
+    text-align: center; /* Ensure footer text is also centered */
+}
+
+/* Footer Links in Text */
+.footer-text a {
+    color: black; /* Ensure the "Privacy Policy" link is black */
+    font-weight: bold;
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #007aff;
+    border-bottom: 2px solid #007aff; /* Sliding underline effect */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    justify-content: center; /* Center align icons */
+    margin-top: 15px; /* Add space above social icons */
+}
+
+.social-icon {
+    width: 30px; /* Larger icon size for emphasis */
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add hover scaling effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Footer Lists */
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px; /* List item text size */
+    line-height: 1.6; /* Line spacing for readability */
+}
+
+.footer-list li {
+    margin-bottom: 10px; /* Space between list items */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-list li a {
+    color: black;
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.footer-list li a:hover {
+    color: #007aff;
+    border-bottom: 2px solid #007aff; /* Sliding underline effect */
+}

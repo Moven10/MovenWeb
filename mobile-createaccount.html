@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="mobile-createaccount.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Top Footer Section -->
+<div class="top-footer">
+    <div class="menu-button" id="menuButton">&#9776;</div> <!-- Three-line menu button -->
+    <img src="assets/MovenLogoblack.jpg" alt="Moven Logo" class="moven-logo">
+    <a href="mobile-createaccount.html" class="signup-button-link">
+        <button class="signup-button">Sign Up</button>
+    </a>
+    
+</div>
+
+<!-- Slide-Out Menu -->
+<div class="side-menu" id="sideMenu">
+    <!-- Close Button (Only one, above Home) -->
+    <div class="close-menu" id="closeMenu">&times;</div>
+
+    <ul>
+        <li><a href="mobile.html">Home</a></li>
+        <li><a href="mobile-about.html">About</a></li>
+        <li><a href="mobile-features.html">Features</a></li>
+        <li><a href="mobile-createaccount.html">Join Moven</a></li>
+        <li><a href="mobile-movetokens.html">Move Tokens</a></li>
+    </ul>
+
+    <!-- Light Grey Divider -->
+    <div class="menu-divider"></div>
+
+    <!-- Extra Options (Smaller & Grey) -->
+    <div class="small-options">
+        <p><a href="mobile-moverprodeepdive.html">MoverPro</a></p>
+        <p><a href="mobile-movetoearn.html">Move To Earn</a></p>
+    </div>
+
+    <a href="https://apps.apple.com/" target="_blank" class="get-app-button-link">
+        <button class="get-app-button">Get The App</button>
+    </a>
+    
+    
+    <!-- Moven Logo -->
+    <img src="assets/MovenLogoblack.jpg" alt="Moven Logo" class="moven-logo-footer">
+</div>
+
+<!-- Overlay to close menu -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="top-section">
+        <h1>Go Beyond with Moven</h1>
+    </div>
+
+    <div class="bottom-section">
+        <h2>Join Moven Now</h2>
+        <form class="form-group" id="signup-form">
+            <input type="text" id="name" placeholder="Name" required>
+
+            <p id="username-message" class="username-message"></p>
+            <input type="text" id="username" placeholder="Username" required>
+
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9]{10,}">
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Retype Password" required>
+            
+            <div class="privacy-policy">
+                <input type="checkbox" id="privacy" required>
+                <label for="privacy">
+                    I agree to the <a href="privacypolicy.html" target="_blank" class="privacy-link">Privacy Policy</a>
+                </label>
+            </div>
+            
+
+            <button type="submit" class="create-account-btn" disabled id="create-account-btn">Create Account</button>
+        </form>
+    </div>
+
+    <!-- Loading & Success Message Overlay -->
+    <div id="overlay">
+        <div id="overlay-message"></div>
+    </div>
+
+    <!-- New Background Section -->
+<div class="move-more-section">
+    <h2>More Ways To Move</h2>
+</div>
+
+<!-- Black Section with Move Tokens Button -->
+<div class="move-tokens-section">
+    <a href="mobile-movetokens.html" class="move-tokens-button">Move Tokens</a>
+</div>
+
+    <!-- Bottom Footer Section -->
+<section class="footer-section">
+    <div class="footer-content">
+        <!-- Moven Logo -->
+        <img src="assets/MovenLogoblack.jpg" alt="Moven Logo" class="footer-logo">
+
+        <!-- Copyright Text -->
+        <p class="copyright-text">© 2024 Moven. All Rights Reserved.</p>
+
+        <!-- Official Apple Store Download Button -->
+        <a href="https://apps.apple.com/" target="_blank">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us.svg" 
+                 alt="Download on the App Store" 
+                 class="apple-store-button">
+        </a>
+
+        <!-- Privacy Notice -->
+        <p class="footer-text">
+            Moven protects your data.<br>
+            Read more in our <a href="#privacy-policy.html" class="footer-link">Privacy Policy</a>.
+        </p>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank">
+                <img src="assets/twitter.png" alt="X" class="social-icon">
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <img src="assets/youtube.png" alt="YouTube" class="social-icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="assets/instagram.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <img src="assets/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+                <img src="assets/tik-tok.png" alt="TikTok" class="social-icon">
+            </a>
+        </div>
+
+        <!-- Footer Links (Now Left-Aligned) -->
+        <div class="footer-links">
+            <a href="mobile-features.html">Features</a>
+            <a href="mobile-moverprodeepdive.html">MoverPro</a>
+            <a href="mobile-about.html">About</a>
+            <a href="mobile-movenathlete.html">Moven Athlete</a>
+            <a href="mobile-movetokens.html">Move Tokens</a>
+            <a href="mobile-movetoearn.html">Move To Earn Event</a>
+            <a href="mobile.comingsoon.html">Coming Soon</a>
+        </div>
+    </div>
+</section>
+
+    <script src="mobile-createaccount.js"></script>
+    <script src="mobile-script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Moven</title>
+    <link rel="stylesheet" href="success.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <div class="top-section">
+        <img src="assets/430.jpg" alt="Left Image" class="left-image">
+        <div class="middle-section">
+            <!-- Verified video (initially shown) -->
+            <video id="verified-video" src="verified.mp4" autoplay muted class="video"></video>
+
+            <!-- Content that shows after verified.mp4 finishes -->
+            <div id="content-section" class="hidden">
+                <video src="run.mp4" autoplay loop muted class="video"></video>
+                <h1>Welcome To Moven</h1>
+                <p>Your journey to fitness and movement starts here. Take the first step toward a healthier, more active life.</p>
+                <a href="index.html" class="cta-button">Get Moven</a>
+                
+                <!-- Download Now Text -->
+                <p class="download-text">Download Now</p>
+
+                <!-- Official Apple App Store Button -->
+                <a href="#" class="app-store-button">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+                         alt="Download on the App Store">
+                </a>
+            </div>
+        </div>
+        <img src="assets/431.jpg" alt="Right Image" class="right-image">
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="success.js"></script>
+</body>
+</html>

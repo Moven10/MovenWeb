@@ -1,0 +1,826 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Darken the Background Image */
+.top-section {
+    position: relative;
+    height: 80vh;
+    background-image: url('assets/870.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Add a dark overlay on top of the background */
+.top-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 value for more darkness */
+    z-index: 1;
+}
+
+/* Subheadline - Ensure Text is Above the Dark Overlay */
+.top-section h2 {
+    position: absolute;
+    left: 20px;
+    top: 30%;
+    margin: 0;
+    font-size: 2.5rem;
+    z-index: 3; /* Higher than the overlay */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Enhances readability */
+}
+
+/* Diamond Formation Container - Ensure it's Above the Overlay */
+.diamond-container {
+    position: absolute;
+    top: 70%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Higher than the overlay */
+}
+
+/* Circle Formation - Now Solid Light Grey */
+.diamond-container .circle {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #d3d3d3; /* Solid Light Grey */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    z-index: 4; /* Ensure they appear on top */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow to make them pop */
+}
+
+/* Ensure Images Inside Circles Stay Visible */
+.diamond-container .circle img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* Circle Hover Effect - Change to Light Aqua */
+.diamond-container .circle:hover {
+    transform: scale(1.2);
+    background-color: #7fffd4; /* Light Aqua Blue */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Circle Positions (spaced out further) */
+.diamond-container .top {
+    top: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.diamond-container .left {
+    top: 50%;
+    left: -350px;
+    transform: translateY(-50%);
+}
+
+.diamond-container .right {
+    top: 50%;
+    right: -350px;
+    transform: translateY(-50%);
+}
+
+.diamond-container .bottom {
+    bottom: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Info Section Styles */
+.info-section {
+    background-color: white; /* White background for the section */
+    padding: 80px 40px; /* Increased spacing for a larger section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh; /* Increased height of the section */
+}
+
+.info-content {
+    display: flex;
+    max-width: 1400px; /* Increased max width for a larger layout */
+    gap: 50px; /* Larger spacing between text and images */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.info-text {
+    flex: 1; /* Text takes up equal space */
+    min-width: 300px; /* Prevent text from getting too small */
+}
+
+.info-text h3 {
+    font-size: 2rem; /* Larger heading size */
+    margin-bottom: 15px;
+    color: #333; /* Darker text for readability */
+}
+
+.info-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666; /* Softer gray for paragraph text */
+}
+
+/* Image Section (with larger images) */
+.info-image {
+    flex: 1;
+    min-width: 400px; /* Larger minimum width */
+    position: relative;
+}
+
+.info-image img {
+    width: 100%; 
+    height: auto; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Overlay Image (202.jpg) */
+.overlay-image {
+    position: absolute;
+    bottom: -50px; /* Adjusted positioning */
+    left: -150px; /* Adjusted positioning */
+    width: 150px; /* Slightly larger overlay image */
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 5; /* Ensure it appears above the main image */
+}
+
+/* Overlay Text Styling */
+.overlay-text {
+    position: absolute;
+    bottom: -300px; /* Moved lower down */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%); /* Ensures true horizontal centering */
+    width: 300px; /* Keeps the width for readability */
+    color: #333; 
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center-aligns the text */
+}
+
+.overlay-text h4 {
+    font-size: 1.7rem; /* Slightly larger headline */
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+/* New Background Section */
+.background-section {
+    position: relative;
+    height: 60vh; /* Adjust height of the background section */
+    background-image: url('assets/203.jpg'); /* Image 203 as background */
+    background-size: cover;
+    background-position: center left; /* Align background image to the left */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left-center text alignment */
+    padding-left: 40px; /* Add some padding for spacing */
+    color: white;
+    text-align: left;
+}
+
+.background-overlay h2 {
+    font-size: 2.5rem; /* Subheadline size */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Subtle text shadow for better contrast */
+}
+
+/* White Section Below */
+.white-content-section {
+    background-color: white; /* White background for this section */
+    padding: 100px 20px; /* Larger spacing around the content */
+    display: flex;
+    flex-direction: column; /* Arrange main content and side content vertically */
+    align-items: center;
+    gap: 80px; /* Increased space between sections */
+    min-height: 180vh; /* Further increased section height */
+}
+
+.content-wrapper {
+    display: flex;
+    max-width: 1200px; /* Limit the content width */
+    gap: 50px; /* Space between text and image */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    align-items: center;
+}
+
+/* Text Section with Small Headline */
+.content-text {
+    flex: 1; /* Text takes up equal space */
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; /* Dark text for readability */
+    min-width: 300px; /* Prevent text from getting too small */
+}
+
+.content-text h4 {
+    font-size: 1.4rem; /* Small headline size */
+    margin-bottom: 15px;
+    color: #555; /* Slightly darker color for the headline */
+}
+
+/* Main Image Section */
+.content-image {
+    flex: 1; /* Image takes up equal space */
+    min-width: 300px; /* Prevent image from getting too small */
+    position: relative; /* Required for positioning the overlay image and text */
+}
+
+.content-image img {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 0; /* No rounding for the image */
+}
+
+/* Overlapping Image and Text */
+.overlay-content {
+    position: absolute;
+    bottom: -50px; /* Move the overlay image to overlap the bottom right */
+    right: -60px; /* Offset the image further to the right */
+    display: flex; /* Arrange image and text horizontally */
+    align-items: center;
+    gap: 20px; /* Space between image and text */
+}
+
+.overlay-content img {
+    width: 180px; /* Larger size for the overlay image */
+    height: auto; /* Maintain aspect ratio to prevent stretching */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.overlay-content .overlay-text {
+    max-width: 200px; /* Restrict text width */
+    font-size: 0.9rem; /* Smaller font size */
+    line-height: 1.6;
+    color: #555; /* Slightly darker gray for readability */
+}
+
+.overlay-content .overlay-text h4 {
+    font-size: 1.2rem; /* Headline size */
+    margin-bottom: 8px; /* Spacing below the headline */
+    color: #333; /* Darker color for emphasis */
+}
+
+.overlay-content .overlay-text p {
+    font-size: 0.9rem; /* Paragraph size */
+    line-height: 1.6;
+    color: #555; /* Softer gray for paragraph text */
+}
+
+/* Side Image and Text Section */
+.side-content {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between the image and text */
+    max-width: 1000px; /* Narrower width for the entire section */
+    width: 100%;
+    margin-top: 150px; /* Moved lower */
+    position: relative;
+    top: 150px; /* Further moved down */
+}
+
+.side-content img {
+    width: 400px; /* Made the new side image much larger */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.side-content .side-text {
+    flex: 1; /* Text takes up remaining space */
+    max-width: 300px; /* Made the text container narrower */
+}
+
+.side-content .side-text h4 {
+    font-size: 1.4rem; /* Small headline size */
+    margin-bottom: 10px;
+    color: #333; /* Darker headline for emphasis */
+}
+
+.side-content .side-text p {
+    font-size: 1rem; /* Paragraph size */
+    line-height: 1.6;
+    color: #666; /* Softer gray for paragraph text */
+}
+/* Full-Width Background Section with Image 207 */
+.new-background-section {
+    width: 100%; /* Full width of the screen */
+    position: relative;
+    height: 70vh; /* Set height for the section */
+    background-image: url('assets/207.jpg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align content to the left */
+    padding-left: 40px; /* Add padding to the left for spacing */
+    color: white; /* Ensure text is visible */
+}
+
+.new-background-overlay h2 {
+    font-size: 3rem; /* Larger font size for the headline */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for contrast */
+}
+
+
+/* Light Grey Section with Image 208 */
+.light-grey-section {
+    background-color: #f7f7f7; /* Light grey background */
+    padding: 80px 40px; /* Add spacing around the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Set height */
+}
+
+.light-grey-content {
+    display: flex;
+    max-width: 1200px; /* Limit the content width */
+    gap: 40px; /* Space between text and image */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    align-items: center;
+}
+
+.light-grey-text {
+    flex: 1; /* Text takes up equal space */
+    min-width: 300px; /* Prevent text from getting too small */
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; /* Dark text for readability */
+}
+
+.light-grey-text h4 {
+    font-size: 1.6rem; /* Headline size */
+    margin-bottom: 15px;
+    color: #555; /* Slightly darker color for the headline */
+}
+
+.light-grey-text p {
+    font-size: 1.1rem; /* Paragraph size */
+    color: #666; /* Softer gray for readability */
+}
+
+.light-grey-image {
+    flex: 1; /* Image takes up equal space */
+    min-width: 300px; /* Prevent image from getting too small */
+}
+
+.light-grey-image img {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+/* Section with Larger Image 209 and Overhanging Image 210 */
+.image-text-section {
+    width: 100%; /* Full width of the screen */
+    padding: 80px 40px; /* Add spacing around the section */
+    display: flex;
+    justify-content: center; /* Center the inner content */
+    align-items: center;
+    background-color: white; /* White background for contrast */
+}
+
+.image-text-content {
+    display: flex;
+    width: 90%; /* Content width with some margin on the sides */
+    max-width: 1200px; /* Limit the maximum width */
+    gap: 40px; /* Space between the image and text */
+    flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+    align-items: center;
+}
+
+.image-container {
+    flex: 0 0 400px; /* Larger size for the main image */
+    max-width: 400px; /* Prevent the image from becoming too large */
+    position: relative; /* Required for positioning the overlay image */
+}
+
+.image-wrapper {
+    position: relative; /* For positioning the overlay image (210) */
+}
+
+.image-container img {
+    width: 100%; /* Ensure the main image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border-radius: 0; /* Ensure the image is not rounded */
+}
+
+.overlay-image {
+    position: absolute;
+    bottom: -70px; /* Lowered further down */
+    left: -90px; /* Moved farther to the left */
+    width: 120px; /* Decent size for the smaller overlay image */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 0; /* Ensure the smaller image is not rounded */
+}
+
+
+.text-container {
+    flex: 1; /* Text takes up the remaining space */
+    min-width: 300px; /* Prevent text from shrinking too much */
+    color: #333; /* Dark text for readability */
+}
+
+.text-container h4 {
+    font-size: 1.6rem; /* Headline size */
+    margin-bottom: 15px;
+    color: #555; /* Slightly darker headline */
+}
+
+.text-container p {
+    font-size: 1.1rem; /* Paragraph size */
+    line-height: 1.8; /* Comfortable line spacing */
+    color: #666; /* Softer gray for readability */
+}
+/* Section Styling */
+.image-text-section {
+    position: relative; /* Ensure child elements are positioned relative to this section */
+    width: 100%; /* Full width of the section */
+    padding: 80px 40px; /* Space around the section */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align content */
+    background-color: white; /* Background color */
+}
+
+/* Bottom-Right Content - Move Image Lower */
+.bottom-right-content {
+    position: absolute;
+    bottom: 40px; /* Keeps the section near the bottom */
+    right: 100px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 600px;
+}
+
+/* Move the Image Lower */
+.bottom-right-content img {
+    width: 200px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    top: 40px; /* Moves the image lower */
+}
+
+/* Text Styling */
+.bottom-right-content .text-content h4 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.bottom-right-content .text-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* Full-Width Background Section with Image 212 */
+.full-width-section {
+    width: 100%; /* Full width of the screen */
+    position: relative;
+    height: 70vh; /* Adjust height of the section */
+    background-image: url('assets/212.jpg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align content to the left */
+    color: white; /* Ensure the text is visible */
+    padding-left: 40px; /* Padding on the left */
+}
+
+.full-width-section .headline-center {
+    font-size: 3rem; /* Large headline size */
+    font-weight: bold; /* Bold font */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for better contrast */
+    margin: 0; /* Remove default margin */
+}
+/* Fix Logo Strip to Fill Full Width */
+.logo-strip {
+    display: flex;
+    justify-content: space-between; /* Ensures logos spread across the strip */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents stacking */
+    width: 100%; /* Ensure full-width */
+    padding: 10px 5%; /* Adds spacing from edges */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    background-color: white; /* Ensure a clean background */
+}
+
+/* Adjust Logo Sizing */
+.logo-strip img {
+    width: 100px; /* Maintain a good size */
+    height: auto;
+    flex-grow: 1; /* Allows logos to spread evenly */
+    min-width: 80px; /* Prevents shrinking too much */
+    max-width: 120px; /* Prevents logos from getting too big */
+    object-fit: contain;
+}
+
+
+
+
+/* Black Section with Image 213 */
+.black-section {
+    width: 100%; /* Full width of the screen */
+    background-color: black; /* Black background */
+    color: white; /* White text for contrast */
+    padding: 100px 40px; /* Increased padding for larger section */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    gap: 60px; /* Add spacing between content blocks */
+    align-items: center; /* Center-align content */
+}
+
+.black-content {
+    display: flex; /* Flexbox layout */
+    max-width: 1200px; /* Limit content width */
+    gap: 40px; /* Space between text and image */
+    flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+    align-items: center; /* Vertically center-align content */
+}
+
+.black-text {
+    flex: 1; /* Text takes up equal space */
+    min-width: 300px; /* Prevent text from shrinking too much */
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.black-text h4 {
+    font-size: 2rem; /* Large headline size */
+    margin-bottom: 15px; /* Space below the headline */
+    color: white; /* White text for headline */
+}
+
+.black-text p {
+    font-size: 1.1rem; /* Paragraph size */
+    color: #ccc; /* Softer white for readability */
+}
+
+.black-image {
+    flex: 1; /* Image takes up equal space */
+    min-width: 300px; /* Prevent image from shrinking too much */
+    position: relative; /* Required for positioning overlapping image */
+}
+
+.black-image img {
+    width: 100%; /* Full width for the main image */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    border-radius: 0; /* No rounded corners */
+}
+
+/* Overlapping Image (215) */
+.overlay-image {
+    position: absolute; /* Positioned relative to the parent container */
+    bottom: -70px; /* Overlaps the bottom of the parent image */
+    left: 0%; /* Center it horizontally */
+    transform: translateX(-50%); /* Perfect centering */
+    width: 70%; /* Smaller size for the overlay */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    border-radius: 0; /* Ensure the image is not rounded */
+}
+/* Dark Grey Section Styles */
+.dark-grey-section {
+    width: 100vw; /* Full width of the viewport */
+    background-color: #333; /* Dark grey background */
+    color: white; /* White text for contrast */
+    padding: 60px 20px; /* Space around the section */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    margin: 0; /* Remove default margin */
+}
+
+.dark-grey-section .content-container {
+    display: flex;
+    justify-content: space-between; /* Space out headline and button */
+    align-items: center;
+    max-width: 1200px; /* Limit content width */
+    width: 100%; /* Full width for content inside the container */
+    gap: 30px; /* Space between elements */
+}
+
+.dark-grey-section h2 {
+    font-size: 2rem; /* Size of the headline */
+    margin: 0; /* Remove default margin */
+}
+
+.join-button {
+    display: inline-block;
+    padding: 15px 30px; /* Spacing inside the button */
+    font-size: 1rem; /* Button text size */
+    color: white; /* White text */
+    border: 2px solid white; /* White outline */
+    border-radius: 30px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.join-button:hover {
+    background-color: #7fffd4; /* Light aqua turquoise green */
+    color: #333; /* Dark grey text when hovered */
+}
+
+/* New Logo Strip Section */
+.new-logo-strip {
+    width: 100%; /* Full width of the section */
+    background-color: white; /* White background for contrast */
+    padding: 10px 0; /* Minimal padding */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-around; /* Distribute logos evenly */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Space between rows if wrapping occurs */
+}
+
+.new-logo-strip img {
+    width: 100px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure logos are scaled properly */
+    margin: 0; /* Remove any default margins */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content within the section */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+
+/* Top Footer in Top Section */
+.top-footer {
+    position: absolute; /* Float it within the top section */
+    top: 20px; /* Distance from the top of the section */
+    left: 50px; /* Position the logo slightly to the right */
+    width: 100%; /* Make the footer span the full width */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Align vertically */
+    justify-content: space-between; /* Space out logo and nav */
+    z-index: 10; /* Ensure it's above other elements */
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+/* Logo Styling */
+.top-footer img {
+    width: 120px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.top-footer img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Centered Navigation Links */
+.footer-nav {
+    flex: 1; /* Allow it to take up available space */
+    display: flex; /* Arrange links horizontally */
+    justify-content: center; /* Center the links */
+    gap: 40px; /* Space between links */
+    margin-left: -120px; /* Balance out the logo’s width to center nav links */
+}
+
+.footer-nav a {
+    position: relative; /* Necessary for the sliding underline */
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Link color */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-nav a:hover {
+    color: #7fffd4; /* Light aqua on hover */
+}
+
+/* Sliding Underline Effect */
+.footer-nav a::after {
+    content: ''; /* Create the underline */
+    position: absolute;
+    left: 0; /* Start at the left */
+    bottom: -5px; /* Position below the text */
+    width: 0; /* Start with no width */
+    height: 2px; /* Height of the underline */
+    background-color: #7fffd4; /* Aqua underline color */
+    transition: width 0.3s ease; /* Smooth sliding animation */
+}
+
+.footer-nav a:hover::after {
+    width: 100%; /* Expand the underline to full width */
+}
+

@@ -1,0 +1,251 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden; /* Disable scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top footer */
+.top-footer {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    justify-content: flex-start; /* Ensures content stays on the left */
+    padding-left: 15rem; /* Adjust padding to move content right */
+}
+
+/* Container for the logo and menu */
+.logo-menu-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Spacing between logo and menu */
+}
+
+/* Logo styling */
+.top-footer img {
+    height: 40px;
+    width: auto;
+}
+
+/* Top menu styling */
+.top-menu {
+    display: flex;
+    gap: 1.5rem; /* Spacing between menu items */
+}
+
+.top-menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Underline animation */
+.top-menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+.top-menu a:hover::after {
+    width: 100%; /* Slides the underline out */
+}
+
+.top-menu a:hover {
+    color: black; /* Keep the color black when hovering */
+}
+
+/* Top section with background image */
+.top-section {
+    background-image: url('assets/370.jpg'); /* Replace with your local image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%; /* Top section occupies 70% of the page */
+    padding-top: 70px; /* Push content down to make room for top footer */
+    position: relative;
+}
+
+/* Centered sheet */
+.center-sheet {
+    width: 20%; /* Reduced width for smaller size */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Headline section (light aqua blue) */
+.headline-section {
+    background-color: #7fdde9; /* Light aqua blue */
+    color: white;
+    text-align: center;
+    padding: 0.8rem; /* Smaller padding */
+}
+
+.headline-section h1 {
+    font-family: 'Strava', sans-serif; /* Ensure Strava font is included */
+    font-size: 1.6rem; /* Slightly smaller font size */
+    margin: 0;
+}
+
+/* Form section (dark grey-black) */
+.form-section {
+    background-color: #333333; /* Dark grey-black */
+    color: white;
+    padding: 1rem; /* Reduced padding */
+    text-align: left;
+}
+
+.form-section label {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section input[type="password"] {
+    width: 100%;
+    padding: 0.7rem; /* Smaller input size */
+    font-size: 0.9rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    margin-bottom: 0.8rem; /* Reduced margin */
+    box-sizing: border-box;
+}
+
+/* Terms and Conditions link styling */
+.form-section a {
+    color: #007bff; /* Always blue */
+    text-decoration: none; /* No underline by default */
+    font-weight: bold; /* Make it stand out */
+}
+
+.form-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #0056b3; /* Darker blue for hover */
+}
+
+/* Checkbox group styling */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.checkbox-group label {
+    font-size: 0.85rem;
+    color: #ddd;
+}
+
+/* Create Account button */
+.create-account-button {
+    background-color: #7fdde9; /* Light aqua blue */
+    color: white;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    font-weight: bold;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.create-account-button:hover {
+    background-color: #6acbd5;
+}
+
+/* Bottom footer */
+.footer-section {
+    background-color: white; /* White background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content within the section */
+    align-items: flex-start; /* Align items at the top */
+    gap: 3rem; /* Space between logo and columns */
+    border-top: 1px solid #eaeaea; /* Subtle top border for separation */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow at the top */
+}
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .copyright {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #555; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}

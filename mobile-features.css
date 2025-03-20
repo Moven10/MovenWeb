@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevents side scrolling */
+}
+
+/* Remove gaps between sections */
+section,
+.background-section {
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/70.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 20px;
+}
+
+/* Features Section */
+.features-section {
+    background: #eaeaea;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.features-section p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* General Image Styling (No Rounded Corners) */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Feature Image Container */
+.feature-image {
+    position: relative; /* Allows absolute positioning inside */
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure Image is Positioned Correctly */
+.feature-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Text Inside Image */
+.image-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to exact center */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for readability */
+    padding: 10px; /* Padding for better spacing */
+    border-radius: 8px; /* Slightly rounded edges for a sleek look */
+}
+
+/* Styling for 306.jpg */
+.large-feature-image {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Circular Image Styling */
+.circle-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto; /* Space between Feature 2 and Feature 3 */
+}
+
+.circle-image img {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    object-fit: cover; /* Ensures the image fills the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better appearance */
+}
+
+
+/* Content Sections */
+.feature-content {
+    padding: 20px;
+}
+
+.feature-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.feature-content p {
+    font-size: 1rem;
+    color: #444;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+/* Background Section */
+.background-section {
+    background: url('assets/90.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.background-section h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    max-width: 80%;
+}
+
+/* Black Section */
+.black-section {
+    background: black;
+    color: white;
+}
+
+.black-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.black-section p {
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+/* Small Feature Images */
+.small-feature-image {
+    width: 60%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* White Section */
+.white-section {
+    background: white;
+    padding: 40px 20px 20px; /* Added more bottom padding */
+}
+
+/* White Section Headings */
+.white-section h2,
+.white-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* White Section Text */
+.white-section p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+/* Small Image Section (94.jpg) - Now larger */
+.small-image {
+    width: 50%;
+    max-width: 300px;
+    margin: 20px auto 30px; /* Added bottom margin for extra space */
+}
+
+.small-image img {
+    width: 100%;
+    display: block;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for Image 94 only */
+}
+
+/* Light Aqua Section (Made Larger) */
+.aqua-section {
+    background: #d4f1f9;
+    text-align: center;
+    padding: 80px 20px; /* Increased height */
+}
+
+/* Join Moven Button (Rounded) */
+.join-btn {
+    background: transparent;
+    border: 2px solid black;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: black !important; /* Ensures the text stays black */
+    text-decoration: none; /* Prevents default blue link styling */
+    cursor: pointer;
+    border-radius: 30px; /* Rounded button */
+    transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+    background: black;
+    color: white !important; /* Ensures text turns white on hover */
+}
+
+/* Prevents link styling if button is wrapped in an <a> tag */
+.join-btn a {
+    color: black !important;
+    text-decoration: none;
+}
+
+
+/* New Background Section */
+.background-section.new-bg {
+    background: url('assets/87.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.background-section.new-bg h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    max-width: 80%;
+}
+
+/* Custom White Section */
+.custom-white-section {
+    background: white;
+    padding: 40px 20px;
+}
+
+.custom-white-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Move Tokens Section */
+.token-image {
+    width: 50%;
+    max-width: 250px;
+    margin: 20px auto;
+}
+
+.token-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Your Route Section - Smaller Images */
+.route-image {
+    width: 50%;
+    max-width: 250px;
+    margin: 20px auto;
+}
+
+.route-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Route Description */
+.route-description {
+    font-size: 1rem;
+    color: #555;
+    max-width: 80%;
+    margin: 10px auto 30px;
+    text-align: center;
+}
+
+/* View Tokens Button */
+.button-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.view-tokens-btn {
+    background: black;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-tokens-btn:hover {
+    background: #333;
+}
+
+/* Capture Moments Background Section */
+.background-section.capture-moments {
+    background: url('assets/97.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.background-section.capture-moments h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    max-width: 80%;
+}
+
+/* Black Section (PhotoMix Sessions & Mover Albums) */
+.black-section {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* PhotoMix Sessions */
+.black-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.black-section p {
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+/* PhotoMix Image */
+.photomix-image {
+    width: 60%;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.photomix-image img {
+    width: 100%;
+    display: block;
+}
+
+.black-section .hot-pink-strip {
+    background: #d4f1f9; /* Light Aqua */
+    height: 5px;
+    width: 80%; /* Set an even, centered width */
+    max-width: 600px; /* Ensures it doesn't get too wide on large screens */
+    margin: 20px auto; /* Centers it horizontally */
+}
+
+
+
+
+/* Mover Albums Section (Now Inside Black Section) */
+.black-section .mover-albums h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white; /* Keeping text white inside black section */
+    margin-top: 20px;
+}
+
+.black-section .mover-albums h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.black-section .mover-albums p {
+    font-size: 1rem;
+    color: #ddd; /* Slightly lighter text for readability */
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+/* Savings Images (99.jpg & 101.jpg Now Inside Black Section) */
+.black-section .savings-image {
+    width: 70%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.black-section .savings-image img {
+    width: 100%;
+    display: block;
+}
+/* Full-Width Dark Grey Section */
+.dark-grey-section {
+    background: #333; /* Dark grey */
+    width: 100vw; /* Full width */
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers vertically */
+    padding: 50px 0; /* Even padding */
+}
+
+/* Join Moven Button (Light Rose Pink) */
+.join-moven-btn {
+    background: #f7c5cc; /* Light rose pink */
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: black; /* Ensures text is black */
+    cursor: pointer;
+    border-radius: 30px; /* Rounded button */
+    transition: all 0.3s ease;
+}
+
+.join-moven-btn:hover {
+    background: #f4aeb8; /* Slightly darker rose pink on hover */
+}
+
+
+
+
+/*footers*/
+
+/* Top Footer Section */
+.top-footer {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Menu Button (Three lines ☰) - Moved slightly higher */
+.menu-button {
+    font-size: 34px;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -3px; /* Moves the menu icon slightly higher */
+}
+
+/* Larger Moven Logo */
+.moven-logo {
+    height: 40px;
+    width: auto;
+    margin-left: -110px;
+}
+
+/* Smaller Sign Up Button & Moved Slightly Left */
+.signup-button {
+    background-color: #5fd3eb;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.signup-button:hover {
+    background-color: #48bdd7;
+}
+
+/* Remove underline from the link */
+.signup-button-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Ensures proper button alignment */
+}
+
+
+/* Slide-Out Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    padding-top: 20px;
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Close (X) Button - Now Larger */
+.close-menu {
+    font-size: 34px;  /* Increased size */
+    color: black;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    font-weight: 400; /* Slightly bolder */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add slight hover effect for better UX */
+.close-menu:hover {
+    transform: scale(1.1);
+}
+
+/* Overlay (Covers screen when menu is open, clicking it closes menu) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.442); /* Fully black */
+    display: none; /* Hidden by default */
+    z-index: 1050;
+    pointer-events: all;
+}
+
+/* Prevent scrolling and interactions behind menu */
+body.menu-open {
+    background-color: black;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Menu List */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 20px 0; /* Adjusted margin to make space for X */
+}
+
+/* Menu Items */
+.side-menu ul li {
+    padding: 12px 20px;
+}
+
+/* Menu Links */
+.side-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: block;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Light Grey Divider */
+.menu-divider {
+    width: 85%;
+    height: 1px;
+    background: #ddd;
+    margin: 15px auto;
+}
+
+/* Small Non-Bold Options (Smaller & Grey) */
+.small-options p {
+    font-size: 14px; /* Smaller font */
+    color: grey; /* Grey text */
+    padding: 10px 20px;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+}
+
+.small-options p a {
+    text-decoration: none;
+    color: grey; /* Matches text color */
+}
+
+/* Remove underline from the link */
+.get-app-button-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Makes the button behave properly inside the link */
+    width: 80%; /* Matches the button width */
+    margin: 20px auto; /* Centers the link */
+}
+
+/* "Get The App" Button (Now Rectangular) */
+.get-app-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0px; /* Makes it fully rectangular */
+    cursor: pointer;
+    display: block;
+    width: 100%; /* Ensures it takes full width */
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.get-app-button:hover {
+    background-color: #333;
+}
+
+
+/* Moven Logo at the bottom */
+.moven-logo-footer {
+    width: 120px;
+    display: block;
+    margin: 20px auto;
+}
+/* Footer Section */
+.footer-section {
+    background-color: #f8f8f8; /* Light grey */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: flex-start; /* Align to left */
+}
+
+/* Footer Content Wrapper */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align everything */
+    max-width: 300px; /* Keeps content neatly stacked */
+}
+
+/* Moven Logo */
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Copyright Text */
+.copyright-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Apple Store Button (Made Smaller) */
+.apple-store-button {
+    width: 140px; /* Reduced width */
+    margin-bottom: 15px;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Privacy Policy Link */
+.footer-text a {
+    color: #5fd3eb;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    width: 20px; /* Slightly smaller */
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Footer Links (Now Left-Aligned) */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left align */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

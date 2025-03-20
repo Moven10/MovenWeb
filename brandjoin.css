@@ -1,0 +1,427 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5%;
+    background-color: #ffffff;
+    color: black;
+    margin: 0;
+}
+
+/* Top White Navigation Bar - Adjusted Position */
+.top-footer {
+    width: 100%;
+    background: white;
+    padding: 20px 5%; /* Increased padding for lower positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Logo - Slightly Lower and More Left */
+.logo {
+    height: 40px;
+    position: absolute;
+    left: 4%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+/* Navigation Menu - Lower and Slightly More Left */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 47%; /* Moves it slightly more to the left */
+    top: 55%; /* Moves it slightly lower */
+    transform: translate(-50%, -50%);
+}
+
+/* Navigation Links */
+.nav-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Black Slide-Out Underline on Hover */
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* Ensure the form section does not overlap */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.content {
+    max-width: 40%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.note {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.form-container {
+    width: 50%;
+    max-width: 550px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Increased spacing between fields */
+.form-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+/* Ensure all input fields, including "Describe Your Goals", are consistent */
+input, select, textarea {
+    font-size: 18px;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 6px rgba(0, 122, 255, 0.5);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button Styles */
+button {
+    background-color: black;
+    color: white;
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Background Section - Full Width */
+.background-section {
+    background: url('assets/555.jpg') no-repeat center center/cover;
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+
+.background-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+/* Info Section */
+.info-section {
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    padding: 60px;
+}
+
+/* Subheadline Above the Three Sections */
+.info-subheadline {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Layout for the Three Image Boxes */
+.info-boxes {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Ensures images are spaced properly */
+.info-box {
+    width: 30%;
+}
+
+/* New Small Headlines Under Images */
+.info-box h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.info-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 1.1rem;
+    color: black;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .top-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .background-section {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .info-section {
+        text-align: center;
+    }
+
+    .info-subheadline {
+        text-align: center;
+    }
+
+    .info-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+/* Footer Section - Full Width */
+.footer-section {
+    background-color: #ffffff; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+    width: 100vw; /* Ensures it spans the full width of the viewport */
+    max-width: 100%; /* Prevents any unintentional constraining */
+    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+}
+
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+/* Hidden by default */
+.hidden {
+    display: none;
+}
+
+/* 🔄 Spinning Circle (Now Inside Button) */
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ✅ Success Message */
+#success-message {
+    font-size: 1.2rem;
+    color: black;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    opacity: 0; /* Fade effect */
+    transform: translateY(-10px);
+}
+
+/* 🎉 Smooth fade-in animation for success message */
+.fade-in {
+    display: flex !important;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✔️ Checkmark Style */
+.checkmark {
+    font-size: 2rem;
+    color: black;
+}

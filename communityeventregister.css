@@ -1,0 +1,282 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Ensure entire page is white */
+}
+
+/* Top Footer */
+.top-footer {
+    display: flex;
+    justify-content: center; /* Center everything */
+    align-items: center;
+    padding: 15px 50px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-footer .logo-link img {
+    height: 50px;
+    margin-right: 20px; /* Adds spacing from the nav */
+}
+
+.top-nav {
+    display: flex;
+    gap: 30px; /* Space between nav items */
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 15px;
+    position: relative; /* Needed for underline effect */
+    transition: color 0.3s ease;
+}
+
+.top-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease-in-out;
+}
+
+.top-nav a:hover::after {
+    width: 100%; /* Slide out underline effect */
+}
+
+/* White Section (Ensuring Full White Background) */
+.white-section {
+    background: white;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Text */
+.content {
+    flex: 1;
+    text-align: left;
+    padding-right: 40px;
+}
+
+.content h1 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Image 622 under paragraph */
+.content img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+/* Apple-Inspired Form */
+.form-container {
+    flex: 1.2;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+/* Increased spacing between inputs */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.input-group div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #f9f9f9;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #5AD2FF;
+    background: #fff;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #5AD2FF;
+    color: #000;
+}
+
+/* Image Section (623 + Enlarged 621 Overlapping) */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Allows positioning for 621 */
+    padding-left: 50px;
+}
+
+.image-container img {
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Enlarged Image 621 Overlapping 623 */
+.image-container .overlap {
+    position: absolute;
+    width: 250px; /* Made larger */
+    bottom: -50px;
+    right: -50px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer-section {
+    background: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Moves logo & copyright left */
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Left Side: Moven Logo & Copyright */
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left img {
+    height: 40px;
+    margin-right: 15px;
+}
+
+.footer-left .footer-text {
+    font-size: 14px;
+    color: #ccc;
+    text-align: left;
+}
+
+/* Right Side: Footer Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 50px;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-column a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+.loading-spinner {
+    border: 5px solid rgba(90, 210, 255, 0.2);
+    border-top: 5px solid #5AD2FF; /* Light Aqua Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.success-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.success-message.fade-in {
+    opacity: 1;
+}
+
+/* Style for the SVG checkmark */
+.checkmark {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: black;
+}

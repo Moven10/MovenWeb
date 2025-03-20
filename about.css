@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.top-section {
+    width: 100%;
+    height: 50vh; /* Keep at 50% of the page height */
+    background-color: #e5e5e5; /* Dark white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+    overflow: hidden; /* Prevents unwanted scrollbars */
+}
+
+.content {
+    max-width: 600px; /* Controls text width */
+    text-align: left; /* Centers text */
+    position: absolute;
+    left: 50%; /* Moves it to the middle */
+    top: 50%; /* Centers it vertically */
+    transform: translate(-50%, -50%); /* Perfect centering */
+}
+
+
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.subheadline {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.start-button {
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background-color: #a0e7e5; /* Light aqua blue */
+    border-radius: 50px;
+}
+
+/* Floating Image */
+.image-430 {
+    position: absolute;
+    right: 2%;
+    top: 10vh; /* Moves image slightly higher */
+    width: 400px; /* Larger size */
+    height: auto;
+    z-index: 3; /* Floats above the sections */
+}
+
+/* White Section - Now Larger */
+.white-section {
+    width: 100%;
+    background-color: white;
+    padding: 150px 50px; /* Increased padding to make it larger */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-content {
+    max-width: 800px;
+    text-align: left;
+    position: relative;
+    left: -10%; /* Slightly off-center to the left */
+}
+
+.white-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 1rem;
+    color: grey;
+    line-height: 1.6;
+}
+
+.join-community {
+    font-size: 1rem;
+    color: hotpink;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.join-community::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: hotpink;
+    transition: width 0.3s ease;
+}
+
+.join-community:hover::after {
+    width: 100%;
+}
+/* Aqua Section - Adjust Text Position */
+.aqua-section {
+    width: 100%;
+    background-color: #a0e7e5; /* Light aqua blue */
+    padding: 120px 50px;
+    display: flex;
+    justify-content: center; /* Center overall content */
+    align-items: center;
+    gap: 0px; /* Space between text and grid */
+    position: relative;
+}
+
+/* Centered in Section but Left-Aligned */
+.aqua-content {
+    max-width: 800px;
+    text-align: left; /* Left align text */
+    position: relative;
+    left: 10%; /* Adjusted so it's centered in the section */
+}
+
+/* Headline */
+.aqua-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.aqua-section p {
+    font-size: 1.4rem;
+    color: white;
+    line-height: 1.8;
+}
+
+/* Image Grid - Properly Moved to the Left */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 10px; /* Space between images */
+    max-width: 400px; /* Keeps grid compact */
+    position: absolute; /* Allows precise positioning */
+    right: 60%; /* Moves grid further to the left */
+    transform: translateX(-50%); /* Fine-tune centering */
+}
+
+/* Small Instagram-Style Images */
+.image-grid img {
+    width: 100px; /* Small image size */
+    height: 100px; /* Square format */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 10px; /* Slight rounding for Instagram-style look */
+}
+
+/* Small White Section */
+.small-white-section {
+    width: 100%;
+    background-color: white;
+    padding: 80px 50px; /* Adjusted padding for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.belief-content {
+    max-width: 700px;
+    text-align: left; /* Left-aligned text */
+}
+
+.belief-content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.belief-content p {
+    font-size: 1rem;
+    color: #555; /* Dark grey */
+    line-height: 1.6;
+}
+
+/* Make "Try Sweating With Moven" Fully Hot Pink */
+.try-moven {
+    font-size: 1rem;
+    color: hotpink;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+}
+
+.try-moven::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: hotpink;
+    transition: width 0.3s ease;
+}
+
+.try-moven:hover::after {
+    width: 100%;
+}
+
+/* Light Orange Section - Our History */
+.history-section {
+    width: 100%;
+    height: 50vh; /* Keeps it compact */
+    display: flex;
+    position: relative; /* Needed for the pattern */
+}
+
+/* Our History Text - 60% of the Section */
+.history-content {
+    width: 60%; /* Keeps the correct section width */
+    background-color: #fcd5ce; /* Light skin/orange color */
+    padding: 60px; /* Adjusted padding for responsiveness */
+    max-width: 60%; /* Ensures content doesn't overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: flex-start;
+    position: relative; /* Needed for the pattern */
+}
+
+/* Apple-style subtle pattern */
+.history-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px; /* Width of the pattern */
+    height: 100%;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 10px 10px; /* Adjust dot spacing */
+    opacity: 0.2; /* Make it subtle */
+}
+
+/* Larger "Our History" Headline */
+.history-content h2 {
+    font-size: 3rem; /* Increased size */
+    font-weight: 900;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Wider Text Container */
+.history-content p {
+    font-size: 1.4rem; /* Increased size */
+    color: white; /* Ensure readability */
+    line-height: 1.6;
+    max-width: 70%; /* Made it wider */
+}
+
+/* Our History Image - 40% of the Section */
+.history-image {
+    width: 40%; /* Keeps the 40% split */
+    height: 100%;
+}
+
+.history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the full area */
+}
+
+/* Find Out What's Next Button */
+.find-out-button {
+    display: block; /* Ensures proper placement */
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto; /* Adjusts spacing */
+    position: relative; /* Keeps it within the section */
+}
+
+.find-out-button:hover {
+    background-color: #a0e7e5; /* Light Aqua Blue */
+    border-radius: 50px; /* Oval Shape */
+}
+
+/* Responsive Fix for Laptops (≤1400px width) */
+@media screen and (max-width: 1400px) {
+    .history-content {
+        padding: 40px; /* Reduce padding */
+        max-width: 65%; /* Allow more space */
+    }
+
+    .find-out-button {
+        margin-top: 30px; /* Adjust button spacing */
+    }
+}
+
+
+/* The Story Behind Moven Section */
+.story-section {
+    width: 100%;
+    background-color: white;
+    padding: 150px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Story Container */
+.story-container {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+/* Story Text */
+.story-text {
+    flex: 1;
+    text-align: left;
+}
+
+.story-text h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.story-text p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Story Image */
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+/* Move to Earn Section */
+.move-to-earn {
+    max-width: 1000px;
+    text-align: left;
+}
+
+.move-to-earn h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.move-to-earn p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+/* Map Section (Now Just Background) */
+.map-section {
+    width: 100%;
+    height: 500px;
+    background-image: url('assets/5070.jpg'); /* Background Map */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Global Events Section */
+.global-events-section {
+    width: 100%;
+    background-color: white;
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+/* Global Content Container */
+.global-content {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Headline - Slightly Off-Centered to the Left */
+.global-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Paragraph */
+.global-content p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Image */
+.global-image {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.global-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Move To Earn Section - Uses Flexbox for Text + Image Layout */
+.move-to-earn-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between text and image */
+    margin-top: 50px;
+}
+
+.move-to-earn-info {
+    flex: 1;
+}
+
+.move-to-earn-info h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.move-to-earn-info p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Move To Earn Image */
+.move-to-earn-image {
+    flex: 1;
+    text-align: center;
+}
+
+.move-to-earn-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+/* Move To Earn Button */
+.move-to-earn-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+.move-to-earn-button:hover {
+    background-color: #a0e7e5; /* Light Aqua Blue */
+    border-radius: 50px; /* Turns Oval */
+}
+/* Unlock Your Potential Section */
+.unlock-potential-section {
+    width: 100%;
+    background-color: #a0e7e5; /* Light Aqua Blue */
+    padding: 120px 50px;
+    display: flex;
+    justify-content: space-between; /* Space content evenly */
+    align-items: center;
+    text-align: left;
+}
+
+/* Content Wrapper */
+.unlock-content {
+    max-width: 700px;
+    margin-left: 10%; /* Slightly off-center to the left */
+}
+
+/* Headline */
+.unlock-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* Large Body Text */
+.unlock-content p {
+    font-size: 1.5rem;
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Join For Free Button */
+.join-free-button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px; /* Oval Shape */
+}
+
+.join-free-button:hover {
+    background-color: #ffb6c1; /* Light Pink */
+    border: 2px solid #ffb6c1;
+    color: black;
+}
+
+/* MoverPro Button (Rectangle by Default) */
+.moverpro-button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px; /* Rectangle Shape */
+}
+
+/* Hover Effect for MoverPro Button */
+.moverpro-button:hover {
+    background-color: #90EE90; /* Light Green */
+    border-radius: 50px; /* Turns Oval */
+    transform: scale(1.1); /* Slight size increase */
+    color: black; /* Text turns black */
+}
+
+/* Right Side Image */
+.unlock-image {
+    flex: 1;
+    text-align: right;
+    margin-right: 10%;
+}
+
+.unlock-image img {
+    width: 100%;
+    max-width: 600px; /* Slightly larger */
+}
+/* Top Footer - Increased Size */
+.top-footer {
+    width: 100%;
+    height: 70px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: relative;
+}
+
+/* Logo (Now Clickable & Left-Aligned) */
+.footer-logo {
+    width: 140px; /* Slightly larger */
+    height: auto;
+    position: absolute;
+    left: 30px; /* Moved slightly left */
+    top: 10px;
+}
+
+/* Make the logo a clickable link */
+.footer-logo a {
+    display: block;
+}
+
+/* Navigation - Moved Slightly Left for Perfect Centering */
+.footer-nav {
+    display: flex;
+    gap: 40px; /* Keep good spacing */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -30px; /* Moves the options slightly left */
+}
+
+
+/* Footer Navigation Links */
+.footer-nav a {
+    font-size: 1.1rem; /* Slightly larger */
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover Underline Effect */
+.footer-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.footer-nav a:hover::after {
+    width: 100%;
+}
+
+/* Right Side Buttons - Moved More Left */
+.footer-buttons {
+    position: absolute;
+    right: 120px; /* Moved buttons more to the left */
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+/* Sign Up Button - White with Black Outline */
+.sign-up-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    background: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.sign-up-button:hover {
+    background: black;
+    color: white;
+}
+
+/* MoverPro Button - Black with White Text */
+.moverpro-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.moverpro-button:hover {
+    background: #ffb6c1; /* Light pink */
+    color: black;
+}
+.bottom-footer {
+    width: 100vw; /* Full width of the viewport */
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Keep existing padding */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Stack everything vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Ensure text is centered */
+    gap: 2rem; /* Space between sections */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Top Section of Footer - Aligns Logo and Links Side by Side */
+.bottom-footer-top {
+    display: flex;
+    justify-content: center; /* Center everything */
+    align-items: center; /* Align vertically */
+    flex-wrap: wrap; /* Allows responsiveness */
+    gap: 3rem; /* Space between logo and first column */
+}
+
+/* Moven Logo - Now Next to the First Column */
+.bottom-footer-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Keep logo text centered */
+    max-width: 150px;
+    gap: 1rem;
+}
+
+.bottom-footer-logo img {
+    width: 80px;
+}
+
+.bottom-footer-logo .footer-text {
+    text-align: center; /* Keep copyright text centered */
+}
+
+.bottom-footer-logo .copyright,
+.bottom-footer-logo .privacy-policy {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin: 0;
+}
+
+/* Links Section - Now Starts Next to the Logo */
+.bottom-footer-links {
+    display: flex;
+    justify-content: center; /* Keep centered */
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 2rem;
+}
+
+/* Center individual link columns */
+.bottom-footer-column {
+    text-align: center;
+    min-width: 150px;
+}
+
+.bottom-footer-column h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.bottom-footer-column a {
+    display: block;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.bottom-footer-column a:hover {
+    text-decoration: underline;
+    color: #00d9ff;
+}
+
+/* App Store Button */
+.bottom-footer-app-store {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-footer-app-store img {
+    width: 150px;
+    margin-top: 1rem;
+    display: block;
+}

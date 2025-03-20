@@ -1,0 +1,531 @@
+/* partner.css */
+
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Footer Navigation */
+.top-footer {
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding: 20px 0; /* Increased height for a larger footer */
+    box-shadow: none; /* Ensure no shadow at the bottom */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Align items to the center */
+}
+
+.logo img {
+    height: 40px; /* Slightly larger logo */
+    display: block;
+    box-shadow: none; /* Explicitly remove shadow */
+}
+
+/* Removed Partnership Text */
+.partnership-text {
+    display: none; /* Hides the partnership text */
+}
+
+.contact-link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit; /* Keeps text color the same */
+    padding-bottom: 4px; /* Space for the underline */
+}
+
+.contact-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of underline */
+    background-color: hotpink; /* Hot pink color */
+    transition: width 0.3s ease-out; /* Smooth slide-out effect */
+}
+
+.contact-link:hover::after {
+    width: 100%; /* Expands the underline */
+}
+
+
+
+/* Menu Items */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Adjusted gap for cleaner spacing */
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative; /* Required for dropdown positioning */
+}
+
+.dropdown-button {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.chevron {
+    margin-left: 5px;
+    font-size: 0.7rem;
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+/* Rotate arrow for open dropdown */
+.menu li.open .chevron {
+    transform: rotate(180deg); /* Rotate down arrow to up */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position it below the parent menu item */
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 10;
+    width: 300px; /* Make dropdown much wider */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for the dropdown menu */
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: #000; /* Black text for dropdown items */
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #f7f7f7; /* Light grey hover effect */
+    color: #333; /* Slightly darker text on hover */
+}
+
+.dropdown-menu a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the black color */
+}
+
+/* Contact */
+.contact span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #00d3f9; /* Light aqua blue */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.contact .chevron {
+    font-size: 0.7rem;
+}
+
+/* Main Content */
+.content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the SVG path */
+    width: 100%;
+    max-width: 1200px;
+    margin: 150px auto 20px; /* Adds more space below the footer */
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif; /* Use Inter font for the headline */
+    font-size: 2.5rem; /* Smaller headline */
+    font-weight: 400; /* Not bold */
+    line-height: 1.2; /* Compact spacing */
+    margin-bottom: 15px; /* Tighter spacing below headline */
+    color: #333; /* Dark text for contrast */
+}
+
+p {
+    font-family: 'Inter', sans-serif; /* Use Inter font for the subheadline */
+    font-size: 1.2rem; /* Smaller subheadline */
+    font-weight: 400; /* Normal weight for subheadline */
+    color: #555;
+    margin-bottom: 30px; /* Tighter spacing below subheadline */
+}
+
+/* Standardized Square Image Sizes */
+.image-grid img {
+    width: 200px; /* Reduce width to make them fit side by side */
+    height: 200px; /* Keep them square */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 5px; /* Slight rounding */
+}
+
+/* Ensure images are displayed horizontally */
+.top-row, .bottom-row {
+    display: flex;
+    justify-content: center; /* Centers images in the row */
+    align-items: center; /* Aligns them properly */
+    gap: 20px; /* Space between images */
+    flex-wrap: nowrap; /* Prevent stacking */
+}
+
+/* Prevents wrapping and ensures they stay in a row */
+@media (max-width: 800px) {
+    .top-row, .bottom-row {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: center; /* Keeps them centered */
+    }
+}
+
+
+
+
+img {
+    border-radius: 5px; /* Slight rounding for aesthetic */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.top-row img, .bottom-row img {
+    width: calc(48% - 7.5px); /* Each image takes 48% of the row minus the gap */
+    max-height: 350px; /* Larger size for top and bottom row images */
+    object-fit: cover;
+}
+
+.wide-image {
+    width: calc(100% - 60px); /* Adjusted to make the wide image wider */
+    max-width: 1070px; /* Optional limit to prevent excessive stretching */
+    max-height: 400px; /* Taller height for emphasis */
+    object-fit: cover; /* Ensure the image looks proportional */
+    margin-left: 50px; /* Adjust left spacing */
+    margin-right: 50px; /* Adjust right spacing */
+    position: relative; /* Make the wide image the containing element */
+}
+
+/* Developers Section - Adjusted Text Overlay */
+#developers-section .text-overlay {
+    position: absolute; /* Ensure we can control its position */
+    bottom: 15px; /* Place the text 15px from the bottom of the image */
+    left: 65px; /* Place the text 15px from the left edge of the image */
+    text-align: left; /* Align the text content to the left */
+    color: #fff; /* Keep the text white for contrast */
+    padding: 10px 15px; /* Add padding for spacing */
+    border-radius: 5px; /* Slight rounding for aesthetic */
+}
+
+
+/* Updated Form Section Styling */
+.new-section {
+    background: #eaeaea; /* Slightly lighter gray */
+    padding: 60px 20px; /* Adjusted padding for better spacing */
+    text-align: center;
+    margin-top: 50px;
+    width: 100vw; /* Full width of the viewport */
+    margin-left: calc(-50vw + 50%); /* Force full-width alignment */
+}
+
+.new-section h2 {
+    font-size: 1.8rem; /* Smaller headline size */
+    font-weight: 700; /* Bold for emphasis */
+    margin-bottom: 10px; /* Spacing below the headline */
+    color: #333; /* Darker text for readability */
+    font-family: 'Lato', sans-serif; /* Strava's font */
+}
+
+.new-section .section-subtitle {
+    font-size: 1rem; /* Smaller subtitle size */
+    font-weight: 400; /* Regular weight for readability */
+    margin-bottom: 40px; /* Spacing below the subtitle */
+    color: #555; /* Slightly lighter text */
+    font-family: 'Lato', sans-serif; /* Consistent font with headline */
+}
+
+/* Form Container Styling */
+.form-container {
+    display: flex;
+    align-items: flex-start; /* Align form and image closer to the top */
+    justify-content: flex-start; /* Align the content toward the left */
+    gap: 40px; /* Space between the image and the form */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1200px; /* Constrain the overall width for a balanced layout */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Left-Side Image Styling */
+.form-image img {
+    width: 100%;
+    max-width: 400px; /* Restrict image width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Right-Side Form Styling */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align form fields to the left */
+    gap: 15px; /* Reduced gap for compact layout */
+    max-width: 400px; /* Restrict form width */
+    flex: 1; /* Ensure proportional space with the image */
+    margin: 0; /* Remove auto centering */
+}
+
+.new-section input, .new-section button {
+    width: 100%;
+    padding: 12px 15px; /* Reduced padding for smaller fields */
+    font-size: 1rem; /* Smaller font size for inputs and button */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded edges */
+    font-family: 'Lato', sans-serif; /* Consistent font */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.new-section input:focus {
+    border-color: #00aaff; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.5); /* Subtle blue glow on focus */
+}
+
+.new-section button {
+    background-color: #00aaff; /* Bright blue button */
+    color: #fff;
+    font-weight: 700; /* Bold button text */
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.new-section button:hover {
+    background-color: #008fcc; /* Slightly darker blue on hover */
+}
+
+.new-section button:disabled {
+    background-color: #ccc; /* Gray button when disabled */
+    cursor: not-allowed; /* Disabled cursor */
+}
+
+/* Styling for text overlays */
+.image-with-text {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    height: 100%;
+}
+
+.image-with-text img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px; /* Default text alignment for most sections */
+    color: #fff; /* White text */
+    font-family: 'Lato', sans-serif; /* Strava's font */
+    text-align: left; /* Left-aligned text */
+}
+
+.text-overlay h2 {
+    font-size: 1.8rem; /* Slightly smaller headline size */
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 1rem; /* Slightly smaller subheadline */
+    margin: 5px 0 0;
+    color: #fff; /* Ensure the text is white */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column; /* Stack image and form vertically */
+        gap: 20px; /* Adjust spacing for vertical layout */
+    }
+
+    .registration-form {
+        align-items: center; /* Center-align form fields on smaller screens */
+    }
+}
+
+
+/* Path Animation */
+#path-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Ensure the path is behind the content */
+    overflow: visible;
+}
+
+#squiggly-path {
+    stroke: #87CEFA;
+    stroke-width: 18;
+    fill: none;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation: draw-path 5s ease-out forwards;
+}
+
+#moving-ball {
+    fill: #FFC0CB;
+    offset-path: path("M-200 300 Q50 450 300 300 T600 500 Q850 550 1100 300 T1400 300");
+    offset-distance: 0%;
+    animation: move-ball 10s linear infinite;
+}
+
+/* Animations */
+@keyframes draw-path {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes move-ball {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+/* Footer Section */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Stack everything vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 2rem; /* Space between the logo and links */
+    width: 100%; /* Ensure the footer spans the full width */
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: center; /* Center-align text */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Center the footer content as a group */
+    align-items: center; /* Vertically center the content */
+    gap: 2rem; /* Space between columns */
+    width: 100%; /* Ensure the footer spans the full width */
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Footer Logo and Copyright */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: flex-start; /* Align to the top of the column */
+    align-items: flex-start; /* Left-align logo and text */
+    gap: 1rem; /* Space between logo and text */
+    max-width: 150px; /* Restrict width of the logo section */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align content toward the left */
+    align-items: center; /* Vertically center the columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all text in the columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+    text-align: left; /* Ensure header is also left-aligned */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+    text-align: left; /* Left-align the links */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}

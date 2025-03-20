@@ -1,0 +1,627 @@
+/* Import Outfit Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Background Section */
+.background-section {
+    background-image: url('assets/6000.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: white;
+    padding: 20px 10%;
+    font-size: 2rem;
+}
+
+/* White Section */
+.white-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 50px 10%;
+    font-size: 1.5rem;
+    color: black;
+    width: 100%;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Reverse Order for Second Section */
+.content-wrapper.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+}
+
+.text-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: grey;
+    font-weight: normal;
+}
+
+/* Section Label with Icon */
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #ff007f;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    gap: 5px;
+}
+
+/* Lightbulb Icon */
+.section-label .icon {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    object-fit: contain;
+}
+
+/* Remove Lightbulb Icon from New Section */
+.new-section .section-label {
+    display: none;
+}
+
+/* Floating Parallax Effect for Images */
+.parallax-image {
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+}
+
+/* ⬆️ Increased Image Sizes */
+.parallax-image {
+    width: 100%;
+    max-width: 550px; /* Increased from 400px */
+    height: auto;
+    display: block;
+}
+
+/* Video Strip */
+.video-strip {
+    width: 100vw;
+    height: 150px;
+    overflow: hidden;
+}
+
+.video-strip video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* New Section */
+.new-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 80px 10%;
+}
+
+.new-section .main-headline {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.new-section .text-content {
+    text-align: left;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* View Tokens Button */
+.view-tokens-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.view-tokens-button:hover {
+    background-color: #7FFFD4;
+    color: black;
+    border-radius: 50px;
+}
+
+/* Background Section - Increased Height */
+.background-section {
+    background-image: url('assets/6001.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 65vh; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: white;
+    padding: 20px 10%;
+    font-size: 2.5rem;
+}
+
+/* White Section */
+.white-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 50px 10%;
+    font-size: 1.5rem;
+    color: black;
+    width: 100%;
+}
+
+/* Move Tokens Section */
+.move-tokens-section {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+/* Headline */
+.move-tokens-headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Light Blue Subtext with Lightbulb Icon */
+.move-tokens-subtext {
+    font-size: 1rem;
+    color: #7FFFD4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.move-tokens-subtext .icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Grey Paragraph */
+.move-tokens-description {
+    font-size: 1.2rem;
+    color: grey;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    line-height: 1.5;
+}
+
+/* Parallax Image (400.jpg) */
+.move-tokens-parallax {
+    background-image: url('assets/6002.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+/* View Tokens Button */
+.view-tokens-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.view-tokens-button:hover {
+    background-color: #7FFFD4;
+    color: black;
+    border-radius: 50px;
+}
+
+/* Parallax Background Section */
+.parallax-section {
+    background-image: url('assets/6003.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 450px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    color: white;
+}
+
+/* Parallax Headline */
+.parallax-headline {
+    font-size: 2.8rem;
+    font-weight: bold;
+    max-width: 600px;
+}
+/* Transition Sections (Background Images) */
+.transition-section {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#transition1 {
+    background-image: url('assets/6010.jpg');
+}
+#transition2 {
+    background-image: url('assets/6011.jpg');
+}
+#transition3 {
+    background-image: url('assets/6012.jpg');
+}
+
+/* Instagram-style Grid - 4 Columns (for Walkers & Joggers) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 35px; /* Spacing between items */
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Grid - 3 Columns (for Swimmers, Bikers, Golf, Pickleball, Tennis, Squash, Paddle, Soccer) */
+.cards-grid.three-columns {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    max-width: 1100px; /* Adjusted for 3 items */
+}
+
+/* Grid - 2 Columns (for Rowing) */
+.cards-grid.two-columns {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    max-width: 750px; /* Adjusted for 2 items */
+}
+
+/* Card Styling */
+.card {
+    width: 100%;
+    height: 320px; /* Large height */
+    background-color: #d3d3d3; /* Light grey */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Smaller Images Inside Cards */
+.card img {
+    width: 80%; /* Reduced image size */
+    height: 80%;
+    object-fit: contain; /* Keep aspect ratio with padding around */
+    border-radius: 12px;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.07); /* Slightly larger on hover */
+    background-color: #a0f0d0; /* Light aqua-green */
+}
+
+/* Image Name Display on Hover (Wider Text Field) */
+.card::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px; /* Increased padding */
+    min-width: 150px; /* Ensures the text field is wider */
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text from stacking */
+}
+
+
+/* Show Name on Hover */
+.card:hover::after {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+    .cards-grid.three-columns, .cards-grid.two-columns {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for 3-column and 2-column layouts */
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-grid, .cards-grid.three-columns, .cards-grid.two-columns {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+    }
+}
+
+/* Popup Container */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Popup Box */
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Popup Image */
+.popup-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Popup Title (Name + Icon) */
+.popup-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Activity Icon */
+.popup-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Show Popup */
+.popup-container.show {
+    display: flex;
+}
+/* Footer Section */
+.footer-section {
+    background-color: #ffffff; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content within the section */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #000000; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #504d4d; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+/* Top Footer */
+.top-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    position: absolute; /* Make it float over the background */
+    top: 20px; /* Position inside the background section */
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    z-index: 1000; /* Keep it above the background image */
+    background: transparent; /* No background color */
+}
+
+/* Left Side: Logo */
+.top-footer-logo {
+    position: absolute;
+    left: 10%;
+}
+
+.top-footer-logo img {
+    height: 40px;
+}
+
+/* Middle: Navigation Links */
+.top-footer-nav {
+    display: flex;
+    gap: 40px; /* Increased spacing */
+}
+
+/* Navigation Links Styling */
+.top-footer-nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px; /* Space for underline */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Black Slide-Out Underline on Hover */
+.top-footer-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.top-footer-nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 15px;
+        padding: 10px 5%;
+    }
+
+    .top-footer-logo {
+        position: relative;
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    .top-footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}

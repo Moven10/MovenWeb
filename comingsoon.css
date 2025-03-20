@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f7f1; 
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.white-section {
+    background-color: transparent;
+    padding: 80px 40px;
+    position: relative;
+    margin-top: 150px;
+}
+
+.subheadline {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    max-width: 600px;
+    text-align: center; /* Centers the text */
+    margin: 0 auto; /* Centers the entire element */
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Rectangles with background images & shadow */
+.rectangle {
+    width: 350px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Black shadow */
+}
+
+/* First Row */
+.grid-container:nth-of-type(1) .feature:nth-child(1) .rectangle { background-image: url('assets/5000.jpg'); }
+.grid-container:nth-of-type(1) .feature:nth-child(2) .rectangle { background-image: url('assets/5001.jpg'); }
+.grid-container:nth-of-type(1) .feature:nth-child(3) .rectangle { background-image: url('assets/5002.jpg'); }
+
+/* Second Row */
+.grid-container:nth-of-type(2) .feature:nth-child(1) .rectangle { background-image: url('assets/5003.jpg'); }
+.grid-container:nth-of-type(2) .feature:nth-child(2) .rectangle { background-image: url('assets/5004.jpg'); }
+.grid-container:nth-of-type(2) .feature:nth-child(3) .rectangle { background-image: url('assets/5005.jpg'); }
+
+/* Third Row */
+.grid-container:nth-of-type(3) .feature:nth-child(1) .rectangle { background-image: url('assets/5006.jpg'); }
+.grid-container:nth-of-type(3) .feature:nth-child(2) .rectangle { background-image: url('assets/5007.jpg'); }
+.grid-container:nth-of-type(3) .feature:nth-child(3) .rectangle { background-image: url('assets/5008.jpg'); }
+
+/* Fourth Row */
+.grid-container:nth-of-type(4) .feature:nth-child(1) .rectangle { background-image: url('assets/5009.jpg'); }
+.grid-container:nth-of-type(4) .feature:nth-child(2) .rectangle { background-image: url('assets/5010.jpg'); }
+.grid-container:nth-of-type(4) .feature:nth-child(3) .rectangle { background-image: url('assets/5011.jpg'); }
+
+
+/* Left-align text and shift it slightly to the left */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 20px;
+    max-width: 320px;
+    margin-left: -20px; /* Moves text more to the left */
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.label-text {
+    font-size: 14px;
+    color: rgb(87, 217, 247);
+    font-weight: 400;
+}
+
+.headline {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    max-width: 320px;
+}
+
+.body-text {
+    font-size: 16px;
+    color: grey;
+    max-width: 320px;
+    line-height: 1.5;
+}
+
+/* Ensures even spacing between rows */
+.lower-grid {
+    margin-top: 100px;
+}
+/* Top Footer */
+.top-footer {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: center; /* Centers everything horizontally */
+    padding: 20px; /* Reduced padding to bring everything closer */
+    position: relative;
+    width: 100%;
+    max-width: 900px; /* Keeps content centered and tighter */
+    margin: 0 auto; /* Centers the top footer */
+    gap: 20px; /* Adds a little spacing between logo and nav */
+}
+
+/* Moven Logo - Left Aligned */
+.footer-logo {
+    width: 130px; /* Slightly smaller logo */
+    cursor: pointer;
+    flex-shrink: 0; /* Prevents resizing */
+}
+
+/* Navigation Links */
+.footer-nav {
+    display: flex;
+    gap: 20px; /* Reduces space between links */
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    justify-content: center; /* Centers nav links */
+}
+
+/* Keep links properly aligned */
+.footer-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 3px; /* Reduced padding for a tighter look */
+}
+
+/* Black Slide-Out Underline Effect */
+.footer-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footer-nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) { /* Adjusts layout for smaller screens */
+    .top-footer {
+        flex-direction: column; /* Stacks logo and nav */
+        align-items: center; /* Centers items */
+        text-align: center;
+        gap: 10px; /* Smaller gap for mobile */
+    }
+
+    .footer-logo {
+        margin-bottom: 10px; /* Adds a small gap below logo */
+    }
+
+    .footer-nav {
+        gap: 15px; /* Reduces space between links */
+    }
+}
+
+
+/* Footer Section (Bottom Footer) */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content within the section */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+/* Bottom Footer Logo & Copyright */
+.footer-logo-bottom {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo-bottom img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo-bottom .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo-bottom .copyright,
+.footer-logo-bottom .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Strava', sans-serif;
+    background: #f5f5f7;
+    color: #1d1d1f;
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/4050.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Info Section */
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: white;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Text Section */
+.info-text {
+    width: 50%;
+    text-align: left;
+}
+
+.small-text {
+    max-width: 400px;
+    font-size: 1rem;
+}
+
+/* Image Under Paragraph */
+.info-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Section */
+.info-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Headline Inside the Form */
+.form-headline {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background: #f5f5f7;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #0071e3;
+    background: white;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 113, 227, 0.2);
+}
+
+/* Button */
+button {
+    background: #0071e3;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+button:active {
+    background: #004a94;
+}
+
+/* Full-Width Background Image Section */
+.full-width-banner {
+    background: url('assets/4052.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* White Section with Image & Text */
+.run-club-benefits {
+    background: white;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+}
+
+.benefits-text {
+    width: 50%;
+}
+
+.benefits-image {
+    width: 50%;
+    max-width: 500px;
+}
+/* Footer Section - Full Width */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    width: 100%; /* Make footer span full width */
+    padding: 3rem 1rem; /* Maintain compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Keep everything centered */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+/* Top Footer */
+.top-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center everything horizontally */
+    background: white;
+    padding: 15px 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Logo - Positioned on the Left */
+.top-footer-logo {
+    width: 120px; /* Adjust size as needed */
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+
+/* Navigation Links - Slightly Shifted Left */
+.top-footer-nav {
+    display: flex;
+    gap: 40px; /* Adjust spacing between links */
+    position: relative;
+    left: -5%; /* Shift the links slightly left */
+}
+
+/* Navigation Link Styling */
+.top-footer-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Black Slide-Out Underline Effect */
+.top-footer-nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.top-footer-nav a:hover {
+    color: #333; /* Slightly darker on hover */
+}
+
+.top-footer-nav a:hover::after {
+    width: 100%;
+}
+/* Spinning Aqua Blue Circle */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(0, 213, 255, 0.3); /* Light blue aqua */
+    border-top-color: #00d5ff; /* Solid light blue aqua */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+/* Spin Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Thank-You Message with Checkmark */
+.thank-you-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Black Checkmark */
+.checkmark {
+    font-size: 24px;
+    color: black;
+    margin-right: 10px;
+}

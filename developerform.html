@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moven For Business</title>
+    <link rel="stylesheet" href="registerpartner.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- Top White Footer -->
+    <div class="top-footer">
+        <a href="index.html" class="logo-link">
+            <img src="assets/MovenLogo1.png" alt="Moven Logo">
+        </a>
+        <nav class="top-nav">
+            <a href="move-tokens.html">Move Tokens</a>
+            <a href="move-to-earn.html">Move To Earn</a>
+            <a href="partner.html">More Opportunities</a>
+            <a href="create-account.html">Join Moven</a>
+        </nav>
+    </div>
+
+    <!-- White Section: Form -->
+<div class="white-section">
+    <div class="wrapper">
+        <div class="content">
+            <h1>Build The Future With Moven</h1>
+            <p class="subheadline">Bring Your Tech Idea To Life.</p>
+            <p>
+                For developers who believe in the power of ideas, Moven provides the tools to bring your vision to life. With carefully designed financial solutions, expert mentorship, and strategic guidance, we help you craft transformative apps and software. Your journey toward innovation starts here. 
+            </p>
+            <p>
+                Where innovation meets possibility, Moven is your partner in crafting the future. Our precision-engineered financial solutions, tailored mentorship, and strategic insights empower developers to transform visionary ideas into revolutionary apps and software. Let your creativity define tomorrow.
+            </p>
+            <p>Take the first step—share your idea with us today.</p>
+
+            <!-- New Image Below -->
+            <div class="moven-image-container">
+                <img src="assets/1000.jpg" alt="Moven Tech Innovation" class="moven-image">
+            </div>
+        </div>
+
+        <form class="form-container">
+            <!-- Name & Email -->
+            <div class="input-group input-group-left">
+                <div>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div>
+                    <label for="company">Startup or Project Name</label>
+                    <input type="text" id="company" placeholder="Your project or startup name" required>
+                </div>
+            </div>
+
+            <!-- First Name & Last Name -->
+            <div class="input-group input-group-left">
+                <div>
+                    <label for="first-name">Your First Name</label>
+                    <input type="text" id="first-name" placeholder="Enter your first name" required>
+                </div>
+
+                <div>
+                    <label for="last-name">Your Last Name</label>
+                    <input type="text" id="last-name" placeholder="Enter your last name" required>
+                </div>
+            </div>
+
+            <!-- New Company Name Field -->
+            <div>
+                <label for="company-name">Company Name</label>
+                <input type="text" id="company-name" placeholder="Enter your company name (if applicable)">
+            </div>
+
+            <label>Are you an independent innovator or part of a team?</label>
+            <div class="radio-group">
+                <label><input type="radio" id="brand" name="work-type" required> Independent</label>
+                <label><input type="radio" id="agency" name="work-type" required> Part of a Team</label>
+            </div>
+
+            <label>What stage is your project currently in?</label>
+            <div class="radio-group">
+                <label><input type="radio" id="under-100" name="employees" required> Idea Phase</label>
+                <label><input type="radio" id="101-500" name="employees" required> MVP (Minimum Viable Product)</label>
+                <label><input type="radio" id="over-500" name="employees" required> Scaling & Growth</label>
+            </div>
+
+            <label for="country">Where are you based?</label>
+            <select id="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Germany">Germany</option>
+                <option value="Australia">Australia</option>
+                <option value="India">India</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="budget">Do you have a budget for development?</label>
+            <select id="budget" required>
+                <option value="no-budget">No, I need funding</option>
+                <option value="not-sure">Not sure yet</option>
+                <option value="20k">$20,000</option>
+                <option value="20k-50k">$20,000 - $50,000</option>
+                <option value="50k-100k">$50,000 - $100,000</option>
+                <option value="101k-plus">$101,000+</option>
+            </select>
+
+            <label for="goals">What do you want to achieve with Moven?</label>
+            <textarea id="goals" placeholder="Describe your goals with Moven..." required></textarea>
+
+            <label for="referral">How did you hear about Moven?</label>
+            <textarea id="referral" placeholder="Let us know where you found us..." required></textarea>
+
+            <button type="submit">Submit Your Idea</button>
+
+            <!-- Response & Spinner Container -->
+            <div id="responseContainer">
+                <div id="spinner" style="display: none;"></div>
+                <p id="responseMessage"></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <!-- Grey Section: Images & Text -->
+    <div class="fitness-section">
+        <h2>Taking health and fitness to new levels!</h2>
+        <p class="subheadline">Get ready to go above and beyond with Moven.</p>
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="assets/1001.jpg" alt="Fitness Image 1">
+                <p>Stay active and reach your fitness goals with the right tools.</p>
+            </div>
+            <div class="image-box">
+                <img src="assets/1002.jpg" alt="Fitness Image 2">
+                <p>Track your progress and push your limits with Moven.</p>
+            </div>
+            <div class="image-box">
+                <img src="assets/1003.jpg" alt="Fitness Image 3">
+                <p>Join a community that values health and personal growth.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer-section">
+        <div class="footer-logo">
+            <a href="index.html">
+                <img src="assets/MovenLogo.png" alt="Moven Logo">
+            </a>
+            <div class="footer-text">
+                <p class="copyright">© 2025 Moven. All rights reserved.</p>
+                <p class="privacy-policy">Privacy Policy</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Browse</h4>
+                <a href="moverpro.html">MoverPro</a>
+                <a href="features.html">Features</a>
+                <a href="About.html">About</a>
+                <a href="comingsoon.html">Coming Soon</a>
+                <a href="partner.html">Partner</a>
+            </div>
+            <div class="footer-column">
+                <h4>Follow and Support</h4>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://x.com/?lang=en&mx=2">Twitter</a>
+                <a href="https://www.youtube.com/">YouTube</a>
+                <a href="moveraffiliate.html">MoverAffiliate</a>
+                <a href="clothingqr.html">MoverClothingQr</a>
+            </div>
+            <div class="footer-column">
+                <h4>Get Started</h4>
+                <a href="create-account.html">Sign Up</a>
+                <a href="youraccount.html">Login</a>
+                <a href="#" class="app-store-button">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="deveolperform.js"></script>
+</body>
+</html>

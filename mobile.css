@@ -1,0 +1,834 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* Reset styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 255, 255);
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Top half section */
+.top-half {
+    height: 50vh;
+    background: url('assets/1.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Dark overlay for better text visibility */
+.top-half::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Headline text */
+.headline {
+    font-size: 44px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #5fd3eb;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+    z-index: 1;
+    position: relative;
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Ensures proper button-like behavior */
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #48bdd7;
+}
+
+/* Learn More text */
+.learn-more {
+    font-size: 14px;
+    color: white;
+    margin: 5px 0;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Down Arrow */
+.down-arrow {
+    font-size: 24px;
+    color: #5fd3eb;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Static Info Section (Does NOT change) */
+.info-section {
+    background-color: white;
+    color: black;
+    padding: 40px 20px;
+}
+
+/* Swiping Section (Image, Dots, and Exercise Section change together) */
+.swipe-section {
+    background-color: white;
+    padding: 40px 20px;
+}
+
+/* Image styling */
+.info-image {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Dots Container */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 25px;
+}
+
+/* Individual Dot */
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Active Dot (Highlighted) */
+.dot.active {
+    background-color: #5fd3eb;
+    border: 3px solid #5fd3eb;
+    width: 16px;
+    height: 16px;
+}
+
+/* Exercise Section (Changes on Swipe) */
+.exercise-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.exercise-description {
+    font-size: 16px;
+    color: rgb(103, 103, 103);
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 1.5;
+    transition: opacity 0.3s ease-in-out;
+}
+/* Full-width Grey section for MoverPro */
+.moverpro-section {
+    background-color: #f0f0f0; /* Light grey */
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* MoverPro Button */
+.moverpro-button {
+    background-color: #000000;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Makes it look like a button */
+    text-align: center;
+}
+
+.moverpro-button:hover {
+    background-color: #00e5ff;
+}
+
+
+/* White section with black headline and full-width image */
+.movers-section {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.movers-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Full-width image */
+.movers-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Grey Section Below the Image */
+.info-pocket {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.info-pocket p {
+    font-size: 16px;
+    color: black;
+    max-width: 75%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Circular Image */
+.circle-image-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.circle-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Features Section */
+.features-section {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.features-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black; /* Ensure the heading is visible */
+}
+
+
+.feature {
+    margin-bottom: 30px;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: rgb(0, 236, 248); /* Ensure headlines are visible */
+}
+
+
+.feature p {
+    font-size: 14px;
+    color: black;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Move Button */
+.move-button {
+    background-color: transparent;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.move-button:hover {
+    background-color: #5fd3eb;
+    color: white;
+}
+/* Remove underline from the link */
+.move-button-link {
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Keeps the button inline */
+}
+
+/* Ready To Move Section */
+.ready-to-move-section {
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.ready-to-move-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Benefits List */
+.move-benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 300px; /* Keeps everything aligned in a neat column */
+    margin: 0 auto; /* Centers the content */
+}
+
+/* Each Benefit Item */
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%; /* Ensures all items take up the same width */
+}
+
+/* Tick Icon Styling */
+.tick-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0; /* Prevents icon from resizing */
+}
+
+/* Benefit Text */
+.benefit p {
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    flex-grow: 1; /* Ensures text aligns properly */
+}
+/* Join Moven Now Button */
+.join-moven-button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px; /* Oval shape */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.join-moven-button:hover {
+    background-color: #333; /* Slightly lighter black for hover effect */
+}
+/* Remove underline from the link */
+.join-moven-button-link {
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Ensures button stays properly formatted */
+}
+
+/* MoverPro Subscription Section */
+.moverpro-subscription {
+    background-color: #272525; /* Black-clay color */
+    padding: 70px 20px; /* Increased padding */
+    text-align: center;
+}
+
+/* MoverPro Subscription Headline */
+.moverpro-subscription h3 {
+    font-size: 8px;
+    font-weight: bold;
+    color: lightgrey;
+    text-transform: uppercase;
+    margin-bottom: 15px; /* Increased spacing */
+}
+
+/* MoverPro Subscription Description */
+.moverpro-subscription p {
+    font-size: 18px;
+    color: white;
+    max-width: 80%;
+    margin: 0 auto 30px auto; /* Increased bottom margin */
+    line-height: 1.8; /* Increased line height */
+}
+
+/* Subscription Image */
+.subscription-image {
+    width: 70%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto 70px auto; /* Added more spacing below */
+}
+
+/* Exercise Headline */
+.exercise-headline {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    max-width: 80%;
+    margin: 0 auto 20px auto; /* More space below */
+}
+
+/* Running Icon */
+.running-icon {
+    width: 30px;
+    height: auto;
+    margin-bottom: 20px; /* More space before the paragraph */
+}
+
+/* Exercise Description */
+.exercise-description {
+    font-size: 14px;
+    color: lightgrey;
+    max-width: 80%;
+    margin: 0 auto 70px auto; /* Increased spacing below */
+    line-height: 1.8;
+}
+
+/* MoverPro Benefits Headline */
+.moverpro-benefits-headline {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    max-width: 80%;
+    text-align: center;
+    margin: 70px auto 40px auto; /* More space above and below */
+    line-height: 1.6;
+}
+
+/* MoverPro Subheadings (Larger & White) */
+.moverpro-subheading {
+    font-size: 20px; /* Increased size */
+    font-weight: bold;
+    color: white; /* Changed from light grey to white */
+    text-align: center;
+    margin-top: 50px; /* Added more spacing */
+}
+
+
+
+/* Short Description Text */
+.moverpro-description {
+    font-size: 14px;
+    color: lightgrey;
+    max-width: 75%;
+    margin: 10px auto 40px auto; /* Increased bottom margin */
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Explore Button */
+.explore-button {
+    background-color: transparent;
+    color: #5fd3eb;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 32px; /* Slightly larger button */
+    border: 2px solid #5fd3eb;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    margin: 60px auto 0 auto; /* Moved further down */
+    transition: all 0.3s ease-in-out;
+}
+
+.explore-button:hover {
+    background-color: #5fd3eb;
+    color: white;
+}
+/* Style for the small heart icons next to headlines */
+.headline-icon {
+    width: 18px;  /* Adjust size as needed */
+    height: auto;
+    margin-right: 8px;  /* Spacing between the icon and text */
+    vertical-align: middle;
+}
+/* Full-Width Background Section */
+.full-width-section {
+    background: url('assets/3013.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Text inside Full-Width Section */
+.full-width-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* Ensures text is readable */
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Improves readability */
+}
+
+/* Light Aqua Blue Section */
+.moven-features-section {
+    background-color: #b3ecff; /* Light aqua blue */
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Title inside the section */
+.moven-features-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Features Button */
+.features-button {
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.features-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Top Footer Section */
+.top-footer {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Menu Button (Three lines ☰) - Moved slightly higher */
+.menu-button {
+    font-size: 34px;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -3px; /* Moves the menu icon slightly higher */
+}
+
+/* Larger Moven Logo */
+.moven-logo {
+    height: 40px;
+    width: auto;
+    margin-left: -110px;
+}
+
+/* Smaller Sign Up Button & Moved Slightly Left */
+.signup-button {
+    background-color: #5fd3eb;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.signup-button:hover {
+    background-color: #48bdd7;
+}
+
+/* Remove underline from the link */
+.signup-button-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Ensures proper button alignment */
+}
+
+
+/* Slide-Out Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    padding-top: 20px;
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Close (X) Button - Now Larger */
+.close-menu {
+    font-size: 34px;  /* Increased size */
+    color: black;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    font-weight: 400; /* Slightly bolder */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add slight hover effect for better UX */
+.close-menu:hover {
+    transform: scale(1.1);
+}
+
+/* Overlay (Covers screen when menu is open, clicking it closes menu) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.442); /* Fully black */
+    display: none; /* Hidden by default */
+    z-index: 1050;
+    pointer-events: all;
+}
+
+/* Prevent scrolling and interactions behind menu */
+body.menu-open {
+    background-color: black;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Menu List */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 20px 0; /* Adjusted margin to make space for X */
+}
+
+/* Menu Items */
+.side-menu ul li {
+    padding: 12px 20px;
+}
+
+/* Menu Links */
+.side-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: block;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Light Grey Divider */
+.menu-divider {
+    width: 85%;
+    height: 1px;
+    background: #ddd;
+    margin: 15px auto;
+}
+
+/* Small Non-Bold Options (Smaller & Grey) */
+.small-options p {
+    font-size: 14px; /* Smaller font */
+    color: grey; /* Grey text */
+    padding: 10px 20px;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+}
+
+.small-options p a {
+    text-decoration: none;
+    color: grey; /* Matches text color */
+}
+
+/* Remove underline from the link */
+.get-app-button-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Makes the button behave properly inside the link */
+    width: 80%; /* Matches the button width */
+    margin: 20px auto; /* Centers the link */
+}
+
+/* "Get The App" Button (Now Rectangular) */
+.get-app-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0px; /* Makes it fully rectangular */
+    cursor: pointer;
+    display: block;
+    width: 100%; /* Ensures it takes full width */
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.get-app-button:hover {
+    background-color: #333;
+}
+
+
+/* Moven Logo at the bottom */
+.moven-logo-footer {
+    width: 120px;
+    display: block;
+    margin: 20px auto;
+}
+/* Footer Section */
+.footer-section {
+    background-color: #f8f8f8; /* Light grey */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: flex-start; /* Align to left */
+}
+
+/* Footer Content Wrapper */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align everything */
+    max-width: 300px; /* Keeps content neatly stacked */
+}
+
+/* Moven Logo */
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Copyright Text */
+.copyright-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Apple Store Button (Made Smaller) */
+.apple-store-button {
+    width: 140px; /* Reduced width */
+    margin-bottom: 15px;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Privacy Policy Link */
+.footer-text a {
+    color: #5fd3eb;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    width: 20px; /* Slightly smaller */
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Footer Links (Now Left-Aligned) */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left align */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
