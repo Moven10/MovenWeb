@@ -11,6 +11,16 @@ body {
     margin: 0;
 }
 
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /* Top White Navigation Bar - Adjusted Position */
 .top-footer {
     width: 100%;
