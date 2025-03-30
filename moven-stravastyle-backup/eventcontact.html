@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With Moven</title>
+    <link rel="stylesheet" href="eventcontact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    
+    <!-- Background Image Section -->
+    <div class="hero">
+        <a href="index.html">
+            <img src="assets/MovenLogo1.png" alt="Moven Logo" class="logo">
+        </a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="container">
+        <h1>Connect With Moven</h1>
+        <h2>See below what's suited for you.</h2>
+        <div class="rectangles">
+            <a href="registerpartner.html" class="rectangle"> <!-- First Rectangle -->
+                <p class="rect-title">Moven Business Connect</p>
+                <p class="rect-subtitle">Get In Touch ></p>
+            </a>
+            <a href="communityeventregister.html" class="rectangle"> <!-- Second Rectangle -->
+                <p class="rect-title">Moven Community Partner</p>
+                <p class="rect-subtitle">Get In Touch ></p>
+            </a>
+        </div>
+    </div>
+
+    <!-- New Smaller Background Section -->
+    <div class="mid-section"></div>
+
+    <!-- New Info Section -->
+    <div class="info-section">
+        <div class="info-box">
+            <img src="assets/602.jpg" alt="Start Event" class="info-image">
+            <p class="info-text">
+                Launch events easily with Moven—smooth, seamless, successful.
+            </p>
+        </div>
+        <div class="info-box">
+            <img src="assets/603.jpg" alt="Benefits" class="info-image">
+            <p class="info-text">
+                Partner with Moven for resources, support, and expert guidance to monetize events and boost attendance.
+            </p>
+        </div>
+        <div class="info-box">
+            <img src="assets/604.jpg" alt="Future" class="info-image">
+            <p class="info-text">
+                Events go digital—engage, integrate, and innovate.
+            </p>
+        </div>
+    </div>
+
+  <!-- Newsletter Section -->
+<div class="newsletter">
+    <h3 class="newsletter-title">Sign Up To Our Newsletter</h3>
+    
+    <!-- ✅ Success message container (Hidden by default) -->
+    <div id="successContainer" class="success-container" style="display: none;">
+        <div class="checkmark">✔</div> <!-- ✅ Black checkmark -->
+        <p id="successMessage" class="success-message">Thank You, check your email for our weekly newsletters</p>
+    </div>
+
+    <!-- Newsletter Form -->
+    <form id="newsletterForm" class="newsletter-form">
+        <div class="input-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="example@email.com" required>
+        </div>
+        
+        <div class="name-company">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="John" required>
+            </div>
+            <div class="input-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" placeholder="Moven Inc." required>
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+        
+        <!-- ✅ Spinner directly under the submit button -->
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;"></div>
+
+        <!-- ✅ Response message (for errors) -->
+        <p id="responseMessage" class="response-message" style="display: none;"></p>
+    </form>
+</div>
+
+<!-- Footer Section -->
+<div class="footer-section">
+    <div class="footer-logo">
+        <a href="index.html">
+            <img src="assets/MovenLogo.png" alt="Moven Logo">
+        </a>
+        <div class="footer-text">
+            <p class="copyright">© 2025 Moven. All rights reserved.</p>
+            <p class="privacy-policy">Privacy Policy</p>
+        </div>
+    </div>
+    
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Browse</h4>
+            <a href="moverpro.html">MoverPro</a>
+            <a href="features.html">Features</a>
+            <a href="About.html">About</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="partner.html">Partner</a>
+        </div>
+        <div class="footer-column">
+            <h4>Follow and Support</h4>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://x.com/?lang=en&mx=2">Twitter</a>
+            <a href="https://www.youtube.com/">YouTube</a>
+            <a href="moveraffiliate.html">MoverAffiliate</a>
+            <a href="clothingqr.html">MoverClothingQr</a>
+        </div>
+        <div class="footer-column">
+            <h4>Get Started</h4>
+            <a href="create-account.html">Sign Up</a>
+            <a href="youraccount.html">Login</a>
+            <a href="#" class="app-store-button">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ✅ JavaScript File (Make Sure This Exists!) -->
+<script src="eventcontact.js"></script>
+
+</body>
+</html>

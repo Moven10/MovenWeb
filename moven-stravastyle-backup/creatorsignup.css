@@ -1,0 +1,477 @@
+/* Import Starava-like Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Top Header */
+.top-header {
+    width: 100%;
+    background: white;
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+/* Logo - Moved More to the Right */
+.logo {
+    height: 40px;
+    position: absolute;
+    left: 80px; /* Adjusted to move it slightly right */
+    top: 10px;
+}
+
+/* Navigation Menu - Centered Horizontally */
+.nav-menu {
+    display: flex;
+    gap: 40px; /* Added more spacing */
+    margin: 0 auto; /* Centers the nav */
+}
+
+/* Navigation Links */
+.nav-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Slide-out underline on hover */
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Left Side - Text Content */
+.text-content {
+    flex: 1;
+    padding: 40px;
+}
+
+/* Typography Inspired by Starava */
+.text-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.text-content h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Image Styling - Fills Bottom Half */
+.moven-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Larger Form Section */
+.form-section {
+    flex: 1;
+    padding: 50px;
+}
+
+/* Form Container */
+.form-container {
+    background: #f4f4f4;
+    padding: 40px;
+}
+
+/* Small Headline Above Form */
+.form-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.3);
+}
+
+/* Radio Button Groups */
+.radio-group {
+    margin-top: 20px;
+}
+
+.radio-group div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.radio-group input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+/* Dropdowns */
+.dropdown-group {
+    margin-top: 20px;
+}
+
+/* Submit Button */
+button {
+    background-color: #007aff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005ecb;
+}
+
+/* Small Horizontal Video Strip */
+.video-strip {
+    width: 100%;
+    height: 80px; /* Adjusted to be smaller */
+    overflow: hidden;
+    margin-top: 70px; /* Moved lower down */
+}
+
+.video-strip video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .text-content, .form-container {
+        width: 100%;
+    }
+
+    .video-strip {
+        height: 60px; /* Slightly smaller on mobile */
+    }
+
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* Import Starava-like Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Future Section */
+.future-section {
+    background: white;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.future-section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+/* Light Aqua Blue Rectangle */
+.aqua-box {
+    width: 1000px;
+    height: 500px;
+    background-color: #c3eef2;
+    margin: 0 auto;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+/* Left Side Text */
+.aqua-text {
+    flex: 1;
+    text-align: left;
+}
+
+.aqua-text h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.aqua-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Deep Dive Button */
+.deep-dive-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.deep-dive-btn:hover {
+    background-color: #ffb6c1;
+    color: black;
+    border-radius: 30px;
+}
+
+/* Right Side Image */
+.aqua-image {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .aqua-box {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .aqua-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .aqua-image {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+/* Footer Section (Full Width) */
+.footer-section {
+    background: white;
+    padding: 50px 20px;
+    width: 100%; /* Full width of the page */
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer Content (Aligning Logo & Links) */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+/* Left Section: Logo & Copyright */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    flex: 1;
+}
+
+/* Footer Logo */
+.footer-left img {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+/* Copyright & Privacy */
+.footer-text {
+    text-align: left;
+}
+
+.footer-text p {
+    font-size: 0.9rem;
+    color: black;
+    margin: 5px 0;
+}
+
+/* Footer Links (Centered & Evenly Spread) */
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+}
+
+/* Footer Columns (Now Centered) */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Footer Headings */
+.footer-column h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Footer Links */
+.footer-column a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ff007f; /* Pink hover effect */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 140px;
+    margin-top: 10px;
+}
+/* Light Blue Spinning Circle */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 191, 255, 0.3);
+    border-top: 4px solid #00bfff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success Message Styling */
+.success-container {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Green Checkmark */
+.checkmark {
+    font-size: 50px;
+    font-weight: bold;
+    color: #00ff00;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Success Message */
+.success-message {
+    font-size: 24px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Response Message */
+.response-message {
+    text-align: center;
+    font-size: 16px;
+    color: red;
+    margin-top: 10px;
+}
+

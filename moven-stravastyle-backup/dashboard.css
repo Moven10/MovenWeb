@@ -1,0 +1,729 @@
+/* Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* ✅ General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Navigation Bar */
+.top-nav {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.nav-logo {
+    height: 40px;
+}
+
+/* ✅ Account Button with Profile Picture and Chevron */
+#account-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    margin-right: 50px;
+}
+
+/* ✅ Hover effect only on the chevron and background (NOT the profile picture) */
+#account-btn:hover {
+    background-color: #e0f7fa;
+    border-radius: 30px;
+}
+
+#account-btn:active {
+    background-color: #b2ebf2;
+}
+
+/* ✅ Profile Picture — NO hover effect */
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ✅ Chevron Icon */
+.chevron {
+    font-size: 18px;
+    color: #666;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+#account-btn:hover .chevron {
+    color: #007c91;
+}
+
+/* ✅ Dropdown Menu Styling */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    overflow: hidden;
+    min-width: 160px;
+}
+
+/* ✅ Clean Dropdown Items */
+.dropdown-menu a {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* ✅ Make Logout Red */
+.dropdown-menu a:last-child {
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+.dropdown-menu a:last-child:hover {
+    background-color: #ffebee;
+}
+
+/* ✅ Show Dropdown on Hover */
+#account-btn:hover .dropdown-menu {
+    display: flex;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* ✅ Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ✅ Top Section Flexbox for Side-by-Side Layout */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* ✅ Left Section to Stack User and Claimed Tokens */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 48%;
+}
+
+/* ✅ Right Section for Welcome and Get Our App */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+/* ✅ User Section (Fixed Height) */
+.user-section {
+    background-color: #ffffff;
+    color: #000;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ✅ User Info */
+.user-info {
+    display: flex !important;
+    align-items: center !important; /* Vertically center */
+    gap: 8px !important; /* Space between initial and username */
+    flex-direction: row !important; /* Force horizontal alignment */
+}
+#username-initial, #username {
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+
+
+
+/* ✅ Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ✅ Stat Box */
+.stat-box {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+/* ✅ Make "Following" the same size and alignment as other stats */
+#followers-title, #following-title, #friends-title {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ✅ Smaller Followers Box */
+.small-stat-box {
+    flex: 0.8;
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* ✅ Thin Divider Between Stat Boxes */
+.stat-box:not(:last-child) {
+    border-right: 1px solid #e0e0e0;
+}
+
+/* ✅ Horizontal Divider with Text */
+.divider-section {
+    margin-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    padding-top: 10px;
+    text-align: left; /* Changed from center to left */
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* ✅ Add Image Below Divider Section */
+.user-section-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+/* ✅ Claimed Tokens Section */
+.claimed-images-section {
+    background-color: #ffffff;
+    color: #000;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.claimed-images-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* ✅ Lazy Grid for Claimed Tokens */
+.claimed-images-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 10px;
+}
+
+/* ✅ Claimed Tokens Section */
+.claimed-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Increased from 80px */
+    height: 100px; /* Increased from 80px */
+    background-color: #f0f0f0;
+    border-radius: 12px; /* Increased border radius to maintain smooth edges */
+}
+
+.claimed-image {
+    width: 90%; /* Increased from 70% to fill more of the wrapper */
+    height: 90%; /* Increased from 70% to fill more of the wrapper */
+    object-fit: cover; /* Ensures image maintains aspect ratio without being cut off */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.claimed-image:hover {
+    transform: scale(1.1);
+}
+
+
+/* ✅ Total Distance Section */
+.total-distance {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 30px;
+    z-index: 1;
+}
+
+/* ✅ Total Distance Value & Text */
+#total-distance-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    display: block;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.total-distance p {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 5px;
+}
+
+/* ✅ Total Distance Icon */
+.total-distance-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* ✅ Background Image for Bottom 50% */
+.total-distance-background {
+    width: 100%; 
+    height: 50%; /* Keep it covering exactly 50% */
+    object-fit: cover;
+    object-position: center 80%; /* 👈 Moves the image down without cropping */
+    position: absolute;
+    bottom: 0; /* Keeps it aligned with the bottom */
+    left: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 0;
+}
+
+
+
+
+
+/* ✅ Welcome to Moven Section */
+.centered-section {
+    width: 100%; 
+    height: auto;
+    padding: 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #ffffff;
+    text-align: left;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.centered-section img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.centered-section .content {
+    padding: 40px; /* Increased padding for better spacing */
+}
+
+.centered-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.centered-section p {
+    font-size: 14px; /* Reduced font size */
+    color: #777; /* Kept the grey color */
+    line-height: 1.6;
+    margin-bottom: 20px; /* Added more spacing */
+}
+
+/* ✅ Divider under the paragraph */
+.centered-section .divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 24px 0;
+}
+
+/* ✅ Tokens Header */
+.tokens-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tokens-headline {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+/* ✅ AI Icon under Tokens */
+.tokens-ai-icon {
+    width: 35px !important; /* Reduced size */
+    height: 35px !important;
+    max-width: 35px !important;
+    max-height: 35px !important;
+    object-fit: contain !important;
+    margin-top: 2px; /* Reduced gap */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ✅ Tokens Description */
+.tokens-description {
+    font-size: 13px; /* Made smaller */
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 20px; /* Added more spacing */
+}
+
+/* ✅ Tokens Button */
+.tokens-button {
+    background-color: #4dabf7;
+    color: #ffffff;
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tokens-button:hover {
+    background-color: #1c7ed6;
+}
+
+/* ✅ Grey Divider */
+.grey-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 24px 0;
+}
+
+/* ✅ Friends Header */
+.friends-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.friends-headline {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+/* ✅ AI Icon under Friends */
+.friends-ai-icon {
+    width: 35px !important; /* Reduced size */
+    height: 35px !important;
+    max-width: 35px !important;
+    max-height: 35px !important;
+    object-fit: contain !important;
+    margin-top: 2px; /* Reduced gap */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ✅ Friends Description */
+.friends-description {
+    font-size: 13px; /* Made smaller */
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* ✅ Find Friends Button */
+.find-friends-button {
+    background-color: #4dabf7;
+    color: #ffffff;
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.find-friends-button:hover {
+    background-color: #1c7ed6;
+}
+
+
+
+
+
+/* ✅ Get Our App Section */
+.get-app-section {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+/* ✅ Get Our App Images Layout */
+.get-app-images {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between images */
+    margin-top: 10px;
+}
+
+/* ✅ First Image (50.jpg) */
+.get-app-image {
+    width: 200px; /* Increased size */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* ✅ Second Image (appstore.jpg) */
+.appstore-image {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.appstore-image:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+
+/* ✅ Modal Styling */
+.modal {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    z-index: 1100;
+    display: none;
+}
+
+.modal.show {
+    display: block;
+}
+
+
+
+
+
+
+
+/* Profile Picture Styling */
+.profile-picture {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Profile Initial (Circle) */
+.profile-initial {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4dabf7;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+/* ✅ Styling for user-info container */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ✅ Nav Left Section */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ✅ Nav Links */
+.nav-links a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #00ced1; /* Light Aqua */
+}
+
+
+
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content within the section */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+.icon {
+    width: 24px;  /* Adjust the size as needed */
+    height: 24px;
+}

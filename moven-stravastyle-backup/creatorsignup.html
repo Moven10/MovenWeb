@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promote With Moven</title>
+    <link rel="stylesheet" href="creatorsignup.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- Top Header with Logo and Navigation -->
+    <header class="top-header">
+        <a href="index.html">
+            <img src="assets/MovenLogo1.png" alt="Moven Logo" class="logo">
+        </a>
+        <nav class="nav-menu">
+            <a href="eventspartner.html">Events</a>
+            <a href="partner.html">More Opportunities</a>
+            <a href="move-to-earn.html">Move To Earn</a>
+            <a href="create-account.html">Join Moven For Free</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Left Side Content -->
+        <div class="text-content">
+            <h1>Promote With Moven</h1>
+            <h3>Want To Become A Moven Athlete?</h3>
+            <p>Moven Athletes are passionate creators who grow their brand while collaborating with Moven.</p>
+            <p>
+                Becoming a Moven Athlete means gaining exclusive opportunities to collaborate with a top-tier brand, 
+                expand your audience, and earn through partnerships. Whether you create content full-time or are just starting, 
+                Moven provides the tools and support to help you succeed in the creator economy.
+            </p>
+
+            <!-- Non-Rounded Image -->
+            <img src="assets/3050.jpg" alt="Moven Athlete Image" class="moven-image">
+        </div>
+
+        <!-- Larger Form Section -->
+<section class="form-section">
+    <div class="form-container">
+        <!-- Small Headline Above the Form -->
+        <h3 class="form-title">Moven Athlete</h3>
+
+        <!-- Success Message Container (Initially Hidden) -->
+        <div id="successContainer" class="success-container" style="display: none;">
+            <div class="checkmark">✔</div>
+            <h2 class="success-message">Thank You for Signing Up!</h2>
+        </div>
+
+        <!-- Form Container -->
+        <form id="athleteForm">
+            <div class="name-fields">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <!-- Social Media Fields -->
+            <div class="social-fields">
+                <input type="text" id="instagram" name="instagram" placeholder="Instagram">
+                <input type="text" id="tiktok" name="tiktok" placeholder="TikTok">
+                <input type="text" id="youtube" name="youtube" placeholder="YouTube">
+                <input type="text" id="twitter" name="twitter" placeholder="X (Twitter)">
+            </div>
+
+            <div class="radio-group">
+                <label>Are you part of a brand or a sole creator?</label>
+                <div>
+                    <label><input type="radio" name="brandOrCreator" value="Brand"> Brand</label>
+                    <label><input type="radio" name="brandOrCreator" value="Creator"> Sole Creator</label>
+                </div>
+            </div>
+
+            <div class="radio-group">
+                <label>Do you want to create content or partner with Moven as a creator?</label>
+                <div>
+                    <label><input type="radio" name="partnerType" value="Content"> Create Content</label>
+                    <label><input type="radio" name="partnerType" value="Partner"> Partner with Moven</label>
+                </div>
+            </div>
+
+            <div class="dropdown-group">
+                <label for="experience">How long have you been a content creator for?</label>
+                <select id="experience" name="experience">
+                    <option value="never">I have never done it</option>
+                    <option value="5months">5 months</option>
+                    <option value="1year">1 year</option>
+                    <option value="3years">3 years</option>
+                    <option value="8plus">8+ years</option>
+                </select>
+            </div>
+
+            <div class="dropdown-group">
+                <label for="location">Where Are You Located?</label>
+                <select id="location" name="location">
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                    <option value="brazil">Brazil</option>
+                </select>
+            </div>
+
+            <!-- Loading Spinner (Initially Hidden) -->
+            <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+
+            <button type="submit">Apply Now</button>
+
+            <!-- Response Message -->
+            <p id="responseMessage" class="response-message" style="display: none;"></p>
+        </form>
+    </div>
+</section>
+
+    </div>
+
+    <!-- Small Horizontal Video Strip (Lower on Page) -->
+    <section class="video-strip">
+        <video autoplay loop muted playsinline>
+            <source src="running.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- New White Section with Light Aqua Blue Rectangle -->
+    <section class="future-section">
+        <h2>Help Shape The Future With Moven.</h2>
+        <div class="aqua-box">
+            <div class="aqua-text">
+                <h3>Move Differently As A Moven Athlete</h3>
+                <p>Moven Athletes are not just creators; they are innovators. They redefine movement, engagement, and influence, unlocking 
+                exclusive benefits and opportunities to grow within the Moven community.</p>
+                
+                <!-- Deep Dive Button -->
+                <a href="movenathlete.html" class="deep-dive-btn">Deep Dive</a>
+            </div>
+            <img src="assets/3051.jpg" alt="Moven Athlete Action" class="aqua-image">
+        </div>
+    </section>
+
+    <!-- Full-Width Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-content">
+            <!-- Left Side: Logo and Copyright -->
+            <div class="footer-left">
+                <a href="index.html">
+                    <img src="assets/MovenLogo1.png" alt="Moven Logo">
+                </a>
+                <div class="footer-text">
+                    <p class="copyright">© 2025 Moven. All rights reserved.</p>
+                    <p class="privacy-policy">Privacy Policy</p>
+                </div>
+            </div>
+
+            <!-- Center and Right: Links Section -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Browse</h4>
+                    <a href="moverpro.html">MoverPro</a>
+                    <a href="features.html">Features</a>
+                    <a href="About.html">About</a>
+                    <a href="comingsoon.html">Coming Soon</a>
+                    <a href="partner.html">Partner</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow and Support</h4>
+                    <a href="https://www.instagram.com/">Instagram</a>
+                    <a href="https://x.com/?lang=en&mx=2">Twitter</a>
+                    <a href="https://www.youtube.com/">YouTube</a>
+                    <a href="moveraffiliate.html">MoverAffiliate</a>
+                    <a href="clothingqr.html">MoverClothingQr</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Get Started</h4>
+                    <a href="create-account.html">Sign Up</a>
+                    <a href="youraccount.html">Login</a>
+                    <!-- Official App Store Button -->
+                    <a href="#" class="app-store-button">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="creatorsignup.js"></script>
+
+</body>
+</html>

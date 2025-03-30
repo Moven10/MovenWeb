@@ -1,0 +1,657 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section (Fixed Background 500.jpg) */
+.hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('assets/800.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Footer Section (Now Fully Centered & Compact) */
+.footer {
+    display: flex;
+    justify-content: center; /* Centers everything */
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1100px; /* Keeps it slightly smaller for a compact layout */
+    background: none;
+    z-index: 1000;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Footer Content (Now Closer Together) */
+.footer-content {
+    width: 100%;
+    max-width: 900px; /* Keeps everything compact */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Reduces unnecessary spacing */
+}
+
+/* When a dropdown is active, only the background expands */
+.footer.active {
+    background: white;
+    width: 100%;
+}
+
+/* Ensure Footer Content Stays in Place */
+.footer.active .footer-content {
+    max-width: 900px; /* Keeps it compact even when white */
+    margin: 0 auto; /* Ensures it stays centered */
+}
+
+/* Footer Text Turns Black When Dropdown is Open */
+.footer.active a,
+.footer.active .chevron {
+    color: black;
+}
+
+/* Footer Logo (Now Closer to Links) */
+.footer-logo {
+    height: 35px; /* Slightly smaller */
+    margin-right: 10px; /* Reduces space */
+}
+
+/* Footer Links (Now Closer Together) */
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Reduced spacing */
+    padding: 0;
+    position: relative;
+}
+
+/* Footer Links Styling */
+.footer-links li {
+    position: relative;
+}
+
+/* Footer Links */
+.footer-links a {
+    text-decoration: none;
+    font-size: 0.95rem; /* Slightly smaller */
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: white; /* Default text color */
+}
+
+/* Chevron Icon */
+.chevron {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* When dropdown is open, rotate chevron up */
+.dropdown.active .chevron {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 180px; /* Keeps dropdown smaller */
+    padding: 10px 0;
+    list-style: none;
+    z-index: 1050;
+}
+
+/* Dropdown Items */
+.dropdown-menu li {
+    padding: 12px 20px;
+}
+
+/* Dropdown Links */
+.dropdown-menu a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: normal;
+}
+
+/* Hover Effect */
+.dropdown-menu a:hover {
+    background: #f4f4f4;
+}
+
+/* Show dropdown when active */
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+/* "Get In Touch" Button */
+.contact-btn {
+    background-color: #7fd3e9;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-left: auto; /* Keeps it aligned */
+}
+
+/* Contact Button Hover Effect */
+.contact-btn:hover {
+    background-color: #5bb8d4;
+}
+
+/* When the footer is active (white background), change button text to light aqua blue */
+.footer.active .contact-btn {
+    color: #7fd3e9;
+    background-color: white;
+    border: 2px solid #7fd3e9; /* Optional: Adds an outline for visibility */
+}
+
+/* Ensure hover effect still works */
+.footer.active .contact-btn:hover {
+    background-color: #f0f8ff; /* Very light blue on hover */
+}
+
+
+
+/* Content Section */
+.content {
+    position: relative;
+    background: white;
+    padding: 100px 50px;
+    min-height: 150vh;
+    margin-top: 85vh;
+    z-index: 10;
+    text-align: center;
+}
+
+/* Remove all previous content text */
+.content h1, 
+.content h2, 
+.content p, 
+.content h3 {
+    display: none;
+}
+
+/* Subheadline Styling */
+.subheadline {
+    font-family: 'Relative Mono', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    color: black;
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    transform: translateX(-30%);
+}
+
+/* Rectangle Container */
+.rectangle-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Adjust spacing */
+    margin-top: 250px;
+}
+
+/* Small Vibrant Pink Text (Now Smaller & Left-Aligned) */
+.rectangle .tagline {
+    font-size: 1rem; /* Reduced size to match body text */
+    font-weight: normal;
+    color: #ff007f; /* Vibrant pink */
+    text-align: left; /* Align left */
+    width: 100%;
+    margin-bottom: 10px; /* Adds spacing below */
+}
+
+/* Headline (Now Left-Aligned) */
+.rectangle .headline {
+    font-size: 2rem; /* Slightly smaller */
+    font-weight: normal;
+    color: black;
+    text-align: left; /* Align left */
+    width: 100%;
+    margin-bottom: 50px; /* Pushes paragraph lower */
+}
+
+/* Rectangle (Updated to Keep Title at Top, Center Paragraph) */
+.rectangle {
+    width: 600px;
+    height: 900px;
+    background-color: #c3eef3;
+    border-radius: 10px;
+    padding: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns title & tagline to the left */
+}
+
+/* Small Black Paragraph (Wider Text, Left-Aligned) */
+.small-text {
+    font-size: 20px;  /* Keeps the text larger */
+    color: black;  /* Ensures text is black */
+    text-align: left;  /* Aligns only the text to the left */
+    position: absolute; /* Allows precise positioning */
+    top: 25%; /* Moves it downward */
+    left: 50%; /* Keeps the paragraph box centered */
+    transform: translate(-50%, -50%); /* Centers the box exactly */
+    z-index: 5;
+    display: block !important;
+    width: 90%; /* Changed from max-width to width for full control */
+    line-height: 1.6; /* Keeps spacing comfortable */
+}
+
+
+/* Image (Remains the Same) */
+.rectangle img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Hero Text Container */
+.hero-text {
+    position: absolute;
+    bottom: 30%; /* Higher up */
+    left: 20%;   /* Shifted more to the right */
+    text-align: left;
+    max-width: 600px;
+    transform: translateY(50%);
+}
+
+/* Headline Styling (No Shadow) */
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* General Button Styling (Black Default) */
+.cta-btn, .worldwide-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: black; /* Default black */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, border-radius 0.3s ease;
+}
+
+/* Hover Effect (Light Aqua Blue & Oval Shape) */
+.cta-btn:hover, .worldwide-btn:hover {
+    background-color: #7fd3e9;
+    color: black;
+    border-radius: 50px; /* Becomes oval */
+}
+
+/* Secondary Subheadline (Moved Lower & More to the Right) */
+.subheadline-secondary {
+    font-size: 1.8rem;
+    font-weight: normal; /* Not bold */
+    color: black;
+    text-align: left;
+    margin-top: 100px; /* Moved lower */
+    margin-left: 15%; /* Moved more to the right */
+}
+
+/* Rectangles Container */
+.small-rectangles {
+    display: flex;
+    justify-content: center; /* Center the section */
+    gap: 50px; /* Space between rectangles */
+    margin-top: 50px; /* Space below subheadline */
+}
+
+/* Rectangles Container */
+.small-rectangles {
+    display: flex;
+    justify-content: center; /* Center the section */
+    gap: 50px; /* Space between rectangles */
+    margin-top: 50px; /* Space below subheadline */
+}
+
+/* Individual Rectangle - Updated */
+.small-rectangle {
+    width: 400px;
+    height: 380px; /* Increased height */
+    background-color: #a7e5f5; /* Light Aqua Blue */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text higher up */
+    align-items: center; /* Centers text horizontally */
+    text-align: center; /* Ensures text stays centered */
+    padding: 20px;
+    position: relative; /* Allows the image to be positioned inside */
+    overflow: hidden; /* Ensures the image doesn't break layout */
+}
+
+/* Ensure text doesn't get cut off */
+.small-rectangle .tagline,
+.small-rectangle .headline,
+.small-rectangle .description {
+    display: block; /* Make sure all elements are visible */
+    width: 100%; /* Take up full width */
+}
+
+/* Small Pink Tagline */
+.small-rectangle .tagline {
+    font-size: 0.9rem; /* Smaller pink text */
+    font-weight: normal;
+    color: #ff007f; /* Vibrant pink */
+    margin-bottom: 6px;
+}
+
+/* Headline in Black */
+.small-rectangle .headline {
+    font-size: 1.5rem; /* Smaller black headline */
+    font-weight: bold;
+    color: black;
+    margin-bottom: 8px;
+    margin-top: 5px; /* Keeps the headline higher */
+}
+
+/* Small Black Paragraph (Moved Slightly Lower) */
+.small-rectangle .description {
+    font-size: 0.9rem; /* Smaller paragraph */
+    color: black;
+    line-height: 1.4;
+    max-width: 90%;
+    margin-top: 35px; /* Moves the paragraph slightly lower */
+}
+
+/* Overhanging Image - Takes up Bottom Quarter */
+.small-rectangle img {
+    width: 100%; /* Full width of the rectangle */
+    height: 25%; /* Bottom quarter of the rectangle */
+    object-fit: cover; /* Ensures the image scales properly */
+    position: absolute;
+    bottom: 0; /* Anchors to the bottom */
+    left: 0;
+    border-radius: 0 0 10px 10px; /* Matches rectangle's rounded edges */
+}
+
+/* Full-Width Background Section (Now Larger) */
+.worldwide-section {
+    width: 100%;
+    height: 550px; /* Increased height */
+    background-image: url('assets/523.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    padding-left: 10%; /* Push content inward from the left */
+}
+
+/* Headline Styling */
+.worldwide-headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    max-width: 500px; /* Restricts text width for readability */
+}
+
+/* General Button Styling (Black Default) */
+.cta-btn, .worldwide-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: black; /* Default black */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, border-radius 0.3s ease;
+}
+
+/* Hover Effect (Light Aqua Blue & Oval Shape) */
+.cta-btn:hover, .worldwide-btn:hover {
+    background-color: #7fd3e9;
+    color: black;
+    border-radius: 50px; /* Becomes oval */
+}
+
+
+/* Steps Section (White Background) */
+.steps-section {
+    background: white;
+    padding: 100px 20px; /* Space around the grid */
+    display: flex;
+    justify-content: center;
+}
+
+/* Steps Grid (Centered, Now Larger) */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+    gap: 50px; /* More space between boxes */
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Individual Step Box (Now Much Larger) */
+.step-box {
+    background: #a7e5f5; /* Light aqua blue */
+    padding: 50px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns text at the top */
+    height: 500px; /* Increased height */
+    width: 100%;
+    position: relative; /* Allows image to be positioned */
+}
+
+/* Step Number (Small Text in Top Left) */
+.step-number {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #005f73; /* Darker blue for contrast */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Step Title (Moved Back to Top) */
+.step-title {
+    font-size: 2rem; /* Larger title */
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* Step Description (Moved Above Image) */
+.step-description {
+    font-size: 1.1rem; /* Slightly larger */
+    color: black;
+    line-height: 1.6;
+    margin-top: 20px; /* Space between title and paragraph */
+    margin-bottom: auto; /* Pushes text up, prevents overlap with image */
+}
+
+/* Step Images (Still at the Bottom) */
+.step-box img {
+    width: 100%;
+    height: 180px; /* Adjust size as needed */
+    object-fit: cover; /* Ensures images look good */
+    border-radius: 0 0 10px 10px; /* Matches box's rounded edges */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* Full-Width Background Section (Using 540.jpg) */
+.contact-section {
+    width: 100%;
+    height: 500px; /* Large section */
+    background-image: url('assets/834.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Headline Styling */
+.contact-headline {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Contact Us Section (White Background) */
+.contact-us-section {
+    background: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Contact Us Subheadline */
+.contact-subheadline {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Contact Button (Black, Rounded, Transforms on Hover) */
+.contact-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded rectangle */
+    transition: all 0.3s ease;
+}
+
+/* Button Hover Effect (Transforms to Oval and Light Aqua Blue) */
+.contact-btn:hover {
+    background-color: #a7e5f5; /* Light Aqua Blue */
+    color: black;
+    border-radius: 50px; /* Transforms into an oval */
+}
+/* Footer Section (Full Width) */
+.footer-section {
+    background: white;
+    padding: 50px 20px;
+    width: 100%; /* Full width of the page */
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer Content (Aligning Logo & Links) */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+/* Left Section: Logo & Copyright */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    flex: 1;
+}
+
+/* Footer Logo */
+.footer-left img {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+/* Copyright & Privacy */
+.footer-text {
+    text-align: left;
+}
+
+.footer-text p {
+    font-size: 0.9rem;
+    color: black;
+    margin: 5px 0;
+}
+
+/* Footer Links (Centered & Evenly Spread) */
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+}
+
+/* Footer Columns (Now Centered) */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Footer Headings */
+.footer-column h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Footer Links */
+.footer-column a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ff007f; /* Pink hover effect */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 140px;
+    margin-top: 10px;
+}

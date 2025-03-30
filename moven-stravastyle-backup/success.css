@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif; /* Clean, modern font alternative */
+}
+
+.top-section {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+}
+
+.left-image, .right-image {
+    width: 35%; /* Adjusted for balance */
+    height: 100vh; /* Full screen height */
+    object-fit: cover;
+}
+
+.middle-section {
+    width: 30%;
+    height: 100vh; /* Full screen height */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Centrally aligns all text */
+    padding: 20px;
+    position: relative;
+}
+
+.video {
+    width: 80%; /* Adjust width */
+    max-height: 200px; /* Limit height */
+    margin-bottom: 20px; /* Space below video */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.hidden {
+    display: none; /* Hide elements with this class */
+}
+
+h1 {
+    font-size: 48px; /* Headline size */
+    color: #333;
+    margin-bottom: 20px; /* Spacing below the headline */
+    font-weight: 700; /* Bold for emphasis */
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0; /* Space above and below the paragraph */
+    font-weight: 400;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 0; /* Start as rectangle */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 25px; /* Space between Get Moven button and Download Now text */
+}
+
+.cta-button:hover {
+    background-color: #a2dff3; /* Light aqua blue */
+    border-radius: 50px; /* Change to oval */
+}
+
+.cta-button:active {
+    transform: scale(0.95); /* Slight click effect */
+}
+
+.download-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Space between Download Now text and App Store button */
+}
+
+.app-store-button img {
+    width: 150px; /* Set width for the App Store button */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.app-store-button img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}

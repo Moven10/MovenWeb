@@ -1,0 +1,635 @@
+/* moverprodeepdive.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+/* Top Section */
+.top-section {
+    height: 70vh;
+    background: url('assets/250.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 20px;
+    color: white;
+}
+
+.top-section h1 {
+    font-size: 3.5rem;
+    max-width: 50%;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* White Section */
+.white-section {
+    background: white;
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    padding: 60px 20px; /* Adds spacing around the section */
+}
+
+.side-by-side-content {
+    display: flex;
+    align-items: center; /* Vertically aligns text and image */
+    justify-content: center; /* Ensures content stays centered in the section */
+    gap: 40px; /* Space between text and image */
+    max-width: 1000px; /* Limits the width of the entire section */
+    width: 100%;
+    text-align: left; /* Aligns the text to the left */
+}
+
+.text-content {
+    flex: 1; /* Ensures text takes up equal space */
+    max-width: 500px; /* Limits the width of the text container */
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.image-content {
+    flex: 1; /* Ensures the image takes up equal space */
+    text-align: center; /* Centers the image inside its container */
+}
+
+.image-wrapper {
+    position: relative; /* Required for positioning the hovering image */
+    display: inline-block;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 400px; /* Increased size for the main image */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds shadow around the image */
+    border-radius: 5px; /* Optional: Slightly rounded corners for the main image */
+}
+
+.hover-image {
+    position: absolute;
+    bottom: 220px; /* Moved higher to overlap more with the 251 image */
+    left: -30px; /* Adjusted to keep it aligned over the left side */
+    width: 250px; /* Larger size for the hovering image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds shadow for the hovering image */
+    border-radius: 0; /* No rounded corners for the hovering image */
+}
+
+.hover-text {
+    margin-top: 180px; /* Moved text further down below the 252 image */
+    text-align: center; /* Centers the text under the 252 image */
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.hover-text h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.hover-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-section h1 {
+        font-size: 2.5rem;
+        max-width: 70%;
+    }
+
+    .white-section {
+        padding: 40px 10px;
+    }
+
+    .side-by-side-content {
+        flex-direction: column; /* Stacks text and image vertically on smaller screens */
+        gap: 20px; /* Reduces the gap */
+    }
+
+    .text-content {
+        max-width: 100%; /* Expands the text container on smaller screens */
+        text-align: center; /* Centers the text */
+    }
+
+    .image-content {
+        text-align: center;
+    }
+
+    .section-image {
+        max-width: 80%; /* Adjusts main image size for smaller screens */
+    }
+
+    .hover-image {
+        bottom: 20px; /* Adjusts position for smaller screens */
+        left: -20px; /* Keeps the hovering image aligned */
+        width: 200px; /* Scales down the hovering image size */
+    }
+
+    .hover-text {
+        margin-top: 50px; /* Adjusts space for smaller screens */
+    }
+}
+/* Full-Width Background Section */
+.difference-background {
+    background: url('assets/253.jpg') no-repeat center center;
+    background-size: cover;
+    height: 70vh; /* Increased height for the background section */
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: left; /* Aligns text to the left */
+    padding-left: 20px; /* Adds padding for the text */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Makes text readable over the image */
+}
+
+.difference-background h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* New White Section for Paragraph and Images */
+.difference-content-section {
+    background: white;
+    padding: 80px 20px; /* Adds more padding for spacing */
+}
+
+.difference-content, .difference-extra-content {
+    display: flex;
+    align-items: center; /* Vertically centers text and image */
+    justify-content: space-between; /* Spreads text and image apart */
+    max-width: 1000px; /* Restricts the content width */
+    margin: 0 auto; /* Centers the content */
+    gap: 40px; /* Space between text and image */
+    margin-bottom: 40px; /* Adds space between sections */
+}
+
+.difference-content .text-content, .difference-extra-content .text-content {
+    flex: 1; /* Ensures text takes up equal space */
+    max-width: 500px; /* Limits the width of the text container */
+    text-align: left; /* Aligns text to the left */
+}
+
+.difference-content .text-content h3, .difference-extra-content .text-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.difference-content .text-content p, .difference-extra-content .text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.difference-content .image-content img, .difference-extra-content .image-content img {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for the image */
+    border-radius: 5px; /* Adds rounded corners */
+}
+
+.difference-content .difference-image {
+    max-width: 400px; /* Larger image size */
+    width: 100%; /* Ensures responsiveness */
+}
+
+.difference-extra-content .difference-small-image {
+    max-width: 300px; /* Slightly smaller image */
+    width: 100%; /* Ensures responsiveness */
+}
+
+/* Responsive Design for Both Sections */
+@media (max-width: 768px) {
+    .difference-background h2 {
+        font-size: 2rem;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .difference-content, .difference-extra-content {
+        flex-direction: column; /* Stacks text and image vertically */
+        gap: 20px; /* Reduces space between items */
+    }
+
+    .difference-content .text-content, .difference-extra-content .text-content {
+        text-align: center; /* Centers text for smaller screens */
+    }
+
+    .difference-content .difference-image, .difference-extra-content .difference-small-image {
+        max-width: 80%; /* Adjusts image size for smaller screens */
+    }
+}
+/* New Split Section */
+.split-section {
+    display: flex;
+    justify-content: space-between; /* Ensures the two halves are side by side */
+    align-items: stretch; /* Ensures both sections are the same height */
+    margin: 40px 0; /* Adds spacing above and below the section */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font similar to Strava */
+}
+
+.split-left, .split-right {
+    flex: 1; /* Ensures both sections are equal width by default */
+    padding: 60px 20px; /* Increased padding for more vertical space */
+    color: #333;
+    text-align: center; /* Centers the text and bullet points */
+    min-height: 300px; /* Ensures enough height for 5 bullet points */
+    transition: flex 0.3s ease, background-color 0.3s ease; /* Smoothly adjust size and background on hover */
+}
+
+.split-left {
+    background: #8a8a8a; /* Darker grey background */
+}
+
+.split-right {
+    background: #66d1f2; /* Brighter blue background */
+}
+
+.split-left h3, .split-right h3 {
+    font-size: 1.8rem; /* Larger headline font size */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.split-left ul, .split-right ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    text-align: center; /* Centers the bullet points */
+}
+
+.split-left ul li, .split-right ul li {
+    font-size: 0.9rem; /* Smaller font size for bullet points */
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-align: center; /* Centers the text of each bullet point */
+    display: block; /* Ensures each bullet point takes up a new line */
+}
+
+/* Hover Effect - Resize Sections */
+.split-left:hover {
+    background: #707070; /* Slightly darker grey when hovered */
+    flex: 1.2; /* Expands the grey section slightly */
+}
+
+.split-right:hover {
+    background: #3ccdf0; /* Slightly brighter blue when hovered */
+    flex: 1.2; /* Expands the blue section slightly */
+}
+
+/* Ensure the other section shrinks proportionally */
+.split-left:hover ~ .split-right {
+    flex: 0.8; /* Shrinks the blue section when grey is hovered */
+}
+
+.split-right:hover ~ .split-left {
+    flex: 0.8; /* Shrinks the grey section when blue is hovered */
+}
+
+/* Responsive Design for Split Section */
+@media (max-width: 768px) {
+    .split-section {
+        flex-direction: column; /* Stacks the two halves vertically */
+        gap: 20px; /* Adds space between stacked sections */
+    }
+
+    .split-left, .split-right {
+        flex: none; /* Removes equal width when stacked */
+        width: 100%; /* Makes each section full width */
+        min-height: auto; /* Removes fixed height for smaller screens */
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .split-left:hover, .split-right:hover {
+        flex: none; /* No resizing on hover for stacked sections */
+    }
+}
+
+/* New Section Under Grey and Blue */
+.new-section {
+    display: flex;
+    justify-content: space-between; /* Distributes content evenly */
+    gap: 40px; /* Space between the sections */
+    padding: 80px 20px; /* Adds padding around the section */
+    max-width: 1200px; /* Restricts section width */
+    margin: 0 auto; /* Centers the section */
+}
+
+.new-content {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsive wrapping for smaller screens */
+    gap: 40px; /* Space between the three sections */
+}
+
+.left-content, .center-content, .right-content {
+    flex: 1; /* Ensures each section gets equal space */
+    display: flex;
+    flex-direction: column; /* Stacks text and image vertically */
+    gap: 20px; /* Space between text and image */
+}
+
+.new-section .text-content h3 {
+    font-family: "Proxima Nova", "Helvetica Neue", Arial, sans-serif; /* Strava-like font */
+    font-size: 2rem; /* Larger headline size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Darker text color */
+}
+
+.new-section .text-content p {
+    font-family: "Proxima Nova", "Helvetica Neue", Arial, sans-serif; /* Strava-like font */
+    font-size: 1.2rem; /* Paragraph font size */
+    line-height: 1.6; /* Standard line spacing */
+    color: #555; /* Medium text color */
+}
+
+.new-section .image-content img {
+    max-width: 300px; /* Sets image size */
+    width: 100%; /* Ensures responsiveness */
+    border-radius: 0; /* No rounded corners */
+}
+
+/* Responsive Design for New Section */
+@media (max-width: 768px) {
+    .new-section {
+        flex-direction: column; /* Stacks all three sections vertically */
+        padding: 60px 20px; /* Reduces padding for smaller screens */
+        gap: 30px; /* Reduces space between sections */
+    }
+
+    .new-content {
+        flex-direction: column; /* Stacks sections vertically */
+    }
+
+    .left-content, .center-content, .right-content {
+        align-items: center; /* Centers text and images */
+    }
+
+    .new-section .image-content img {
+        max-width: 80%; /* Adjusts image size for smaller screens */
+    }
+
+    .new-section .text-content h3, .new-section .text-content p {
+        text-align: center; /* Centers text for smaller screens */
+    }
+}
+
+
+
+
+
+
+/* Background Image Section */
+.background-image-section {
+    background: url('assets/256.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire section */
+    height: 60vh; /* Adjust height for the section */
+    display: flex;
+    align-items: center; /* Vertically centers the text */
+    justify-content: left; /* Aligns the text to the left */
+    padding-left: 40px; /* Adds space between the text and the edge */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Makes text more readable */
+}
+
+.background-image-section h2 {
+    font-size: 2.5rem; /* Headline size */
+    font-weight: bold;
+}
+
+/* Dark Grey Section */
+.dark-grey-section {
+    background: #2e2e2e; /* Dark grey background */
+    color: white;
+    padding: 80px 20px; /* Increased padding for larger size */
+    display: flex; /* Flexbox for aligning content */
+    align-items: center; /* Vertically centers content */
+    justify-content: space-between; /* Distributes text and button */
+    text-align: left; /* Keeps text left-aligned */
+    position: relative;
+}
+
+/* Content Wrapper for Text */
+.dark-grey-content {
+    max-width: 600px; /* Limits text width */
+    margin-left: 15%; /* Moves the text slightly to the center */
+}
+
+/* Subheadline Styling */
+.dark-grey-content h3 {
+    font-family: "Proxima Nova", "Helvetica Neue", Arial, sans-serif; /* Strava-like font */
+    font-size: 2rem; /* Slightly larger size for emphasis */
+    font-weight: bold; /* Bold for better visibility */
+    margin-bottom: 0; /* Removes extra space below the subheadline */
+    color: #fff; /* White text */
+}
+
+/* Subscribe Button Container */
+.subscribe-button-container {
+    margin-right: 15%; /* Adds space to the right */
+}
+
+/* Subscribe Button Styled as a Link */
+.subscribe-button {
+    display: inline-block; /* Makes the link behave like a button */
+    background: pink; /* Button background color */
+    color: #2e2e2e; /* Button text color */
+    font-size: 1.2rem; /* Larger text size */
+    font-weight: bold; /* Bold text */
+    padding: 20px 40px; /* Button size */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded rectangle shape */
+    text-decoration: none; /* Removes underline */
+    text-align: center; /* Centers text inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+/* Hover Effect */
+.subscribe-button:hover {
+    background: lightblue; /* Button hover background */
+    color: white; /* Text color on hover */
+    border-radius: 30px; /* Changes shape to oval */
+    transform: scale(1.1); /* Slightly enlarges the button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dark-grey-section {
+        flex-direction: column; /* Stacks text and button vertically */
+        align-items: center; /* Centers all content */
+        text-align: center; /* Centers text */
+    }
+
+    .dark-grey-content, .subscribe-button-container {
+        margin: 0; /* Removes side margins */
+    }
+
+    .subscribe-button {
+        margin-top: 20px; /* Adds space above the button */
+    }
+}
+/* Top Footer Styles */
+.top-footer {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Vertically center content */
+    padding: 10px 20px; /* Add padding inside the footer */
+    position: absolute; /* Position the footer at the very top */
+    top: 0; /* Stick it to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it appears above all other content */
+    background: none; /* No background color */
+    color: white; /* Default text color */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+/* Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically align the logo */
+}
+
+.logo {
+    height: 40px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation Menu */
+.menu {
+    display: flex; /* Align menu items horizontally */
+    justify-content: center; /* Center the menu items */
+    gap: 30px; /* Space between menu items */
+    flex: 1; /* Fills remaining space to center the menu */
+    text-transform: uppercase; /* Capitalize menu text */
+}
+
+.menu a {
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Menu text color */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Make text bold */
+    position: relative; /* For hover underline effect */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover underline effect */
+.menu a::after {
+    content: ""; /* Empty content for the underline */
+    position: absolute; /* Position relative to the link */
+    bottom: -5px; /* Position underline below the text */
+    left: 0; /* Start from the left */
+    width: 0; /* Initially, no underline is visible */
+    height: 2px; /* Thickness of the underline */
+    background: white; /* Underline color */
+    transition: width 0.3s ease; /* Smooth slide-out effect */
+}
+
+.menu a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content within the section */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}

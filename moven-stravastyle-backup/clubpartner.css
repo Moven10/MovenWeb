@@ -1,0 +1,703 @@
+@font-face {
+    font-family: 'Strava';
+    src: url('strava-font.woff2') format('woff2'); /* Ensure this file exists */
+}
+
+body {
+    margin: 0;
+    font-family: 'Strava', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background: url('assets/4000.jpg') no-repeat center center/cover;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    margin-left: 50px; /* Moves the text and button to the right */
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #7fffd4; /* Light aqua blue */
+    border-radius: 50px;
+}
+
+.content {
+    background: white;
+    padding: 50px 20px;
+    text-align: center; /* Centers the headline */
+}
+
+.subheadline {
+    font-size: 2rem;
+    font-weight: normal; /* Makes text not bold */
+    color: black;
+    margin-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Adjusted gap */
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item {
+    width: 500px;
+    height: 577px;
+    background: rgb(52, 238, 210);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.image-section {
+    height: 50%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+    
+.step-number {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.step-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.step-description {
+    font-size: 20px;
+    color: black;
+    max-width: 90%;
+    line-height: 1.4;
+}
+
+/* New Section Below Grid */
+.extra-section {
+    margin-top: 100px;
+    text-align: left;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.extra-subheadline {
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.stats-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.stat-box {
+    width: 500px;
+    height: 200px;
+    background: lightpink;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Moves content higher */
+    align-items: flex-start;
+    text-align: left;
+    padding: 80px 20px; /* Increased padding to push text higher */
+}
+
+.stat-number {
+    font-size: 70px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px; /* Reduced spacing to bring text higher */
+}
+
+.stat-description {
+    font-size: 20px;
+    color: black;
+    max-width: 90%;
+    line-height: 1.4;
+    margin-top: 0; /* Removed extra space below the number */
+}
+/* Apply Now Section */
+.apply-now-section {
+    margin-top: 80px;
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.apply-now-subheadline {
+    font-size: 2rem;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.apply-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Make the rectangles clickable */
+.apply-box {
+    width: 500px;
+    height: 550px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Allows positioning of text */
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    text-decoration: none; /* Remove underline from link */
+    transition: opacity 0.3s ease;
+}
+
+/* Remove hover effect on clickable rectangles */
+.apply-box:hover {
+    opacity: 1;
+}
+
+/* Apply text styles */
+.apply-text {
+    color: white;
+    text-align: left;
+}
+
+/* Increase the size of the headlines */
+.apply-title {
+    font-size: 2.5rem; /* Increased from 1.8rem */
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+/* Keep "Apply Now →" the same size */
+.apply-link {
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 0.9;
+}
+/* COMMUNITY SECTION - FULL-WIDTH BACKGROUND */
+.community-section {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('assets/4007.jpg') no-repeat center center/cover; /* Full background */
+    margin: 80px 0 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Community Headline */
+.community-headline {
+    color: white;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+/* CONTACT SECTION (Get in Touch) */
+.contact-section {
+    width: 100%;
+    height: 500px; /* Large section */
+    background: url('assets/4009.jpg') no-repeat center center/cover; /* Background image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+/* Contact Headline */
+.contact-headline {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Contact Button */
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect - Turns Light Aqua and Oval */
+.contact-button:hover {
+    background: #7fffd4; /* Light Aqua */
+    color: black;
+    border-radius: 50px;
+}
+
+/* Newsletter Section */
+.newsletter {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    margin-top: 100px;
+    height: 250px;
+}
+
+/* Large Headline - Centered Vertically */
+.newsletter-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 30px;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+    margin-left: -50px;
+}
+
+/* Input Group (Ensures label is above input) */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.newsletter-form label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: black;
+}
+
+/* Light Blue Asterisk */
+.required {
+    color: #4A90E2; /* Light blue color */
+    font-size: 16px;
+}
+
+/* Email Input - Full Width */
+.newsletter-form input[type="email"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Name & Company Fields - Side by Side */
+.name-company {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Name & Company Input Fields */
+.name-company input {
+    width: 145px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.newsletter-form button {
+    width: 300px;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.newsletter-form button:hover {
+    background-color: #333;
+}
+
+/* Spinner animation */
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(0, 191, 255, 0.3); /* Light aqua color */
+    border-top: 4px solid #00BFFF; /* Full aqua for the rotating part */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Response message */
+.response-message {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+/* ✅ Success container (tick + message) */
+.success-container {
+    display: none; /* Initially hidden */
+    flex-direction: row; /* ✅ Align tick & message horizontally */
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0; /* Match the grey section */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* ✅ Black checkmark with pop-in animation */
+.checkmark {
+    font-size: 60px; /* Bigger tick */
+    font-weight: bold;
+    color: black; /* Black tick */
+    font-family: "Arial", sans-serif; /* ✅ Change tick font */
+    opacity: 0; /* Start hidden */
+    transform: scale(0); /* Start from zero size */
+    animation: popIn 0.4s ease-out forwards; /* Smooth pop-in */
+}
+
+/* ✅ Move message slightly to the right */
+.success-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin-left: 15px; /* ✅ Push text slightly to the right */
+    text-align: left;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.6s ease-in forwards 0.3s; /* Smooth fade-in delay */
+}
+
+/* ✅ Pop-in animation for the checkmark */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ✅ Smooth fade-in for the message */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ✅ Spinner (Under submit button) */
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(0, 191, 255, 0.3);
+    border-top-color: #00BFFF;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+    margin: 10px auto;
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Remove blue link color & underline for rectangle links */
+.rectangles a {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Keeps text black */
+    display: block; /* Ensures full area is clickable */
+}
+
+/* Rectangle styling remains the same */
+.rectangle {
+    width: 320px;
+    height: 100px;
+    background-color: #a7e6c7;
+    border-radius: 10px;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Footer Section (Full Width) */
+.footer-section {
+    background: rgb(0, 0, 0);
+    padding: 50px 20px;
+    width: 100%; /* Full width of the page */
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer Content (Aligning Logo & Links) */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+/* Left Section: Logo & Copyright */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    flex: 1;
+}
+
+/* Footer Logo */
+.footer-left img {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+/* Copyright & Privacy */
+.footer-text {
+    text-align: left;
+}
+
+.footer-text p {
+    font-size: 0.9rem;
+    color: rgb(255, 253, 253);
+    margin: 5px 0;
+}
+
+/* Footer Links (Centered & Evenly Spread) */
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+}
+
+/* Footer Columns (Now Centered) */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Footer Headings */
+.footer-column h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* Footer Links */
+.footer-column a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ff007f; /* Pink hover effect */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 140px;
+    margin-top: 10px;
+}
+/* Top Footer Styling */
+.top-footer {
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensures navigation stays in the center */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+/* Logo Container */
+.logo-container {
+    position: absolute;
+    left: 30px; /* Keeps logo on the left without affecting centering */
+}
+
+/* Logo Styling */
+.footer-logo {
+    height: 35px; /* Smaller logo */
+}
+
+/* Navigation Styling */
+.footer-nav {
+    display: flex;
+    gap: 60px; /* Space between links */
+    position: relative;
+}
+
+/* Footer Navigation Links */
+.footer-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Slide-Out Underline Effect */
+.footer-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footer-nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+.run-club-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.run-club-container {
+    background-color: #a7e0e8; /* Light Aqua Blue */
+    width: 1200px;
+    height: 600px; /* Reduced height */
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.run-club-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.run-club-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.run-club-description {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.run-club-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.run-club-image img {
+    max-width: 300px; /* Reduced size */
+    border-radius: 15px;
+}

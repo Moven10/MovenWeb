@@ -1,0 +1,928 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Strava-like font */
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Top section styles */
+.top-section {
+    position: relative;
+    background: url('assets/70.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.top-section h1 {
+    font-size: 1.5rem; /* Small headline */
+}
+
+/* Features section styles */
+.features-section {
+    background: white;
+    padding: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Content layout */
+.content {
+    display: flex;
+    justify-content: center; /* Center-align content */
+    align-items: flex-start; /* Align text and images vertically */
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Adjust for smaller screens */
+}
+
+/* Text content */
+.text-content {
+    max-width: 300px;
+    text-align: left; /* Left-align the text */
+}
+
+/* Subheadline (Moven Features) */
+.text-content h3 {
+    font-size: 1.5rem; /* Larger font for the headline */
+    font-weight: 700; /* Bold weight */
+    margin-bottom: 10px; /* Spacing between headline and paragraph */
+}
+
+/* Paragraph */
+.text-content p {
+    font-size: 1rem; /* Strava-style paragraph */
+    line-height: 1.5;
+}
+
+/* Images container */
+.images {
+    display: flex;
+    flex-direction: column; /* Stack images and extra text */
+    align-items: flex-start; /* Align images and text to the left */
+    gap: 20px;
+    position: relative;
+}
+
+/* Main feature image */
+.main-feature {
+    width: 400px; /* Larger main image */
+    height: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Supporting feature image */
+.supporting-feature {
+    width: 350px; /* Larger size */
+    height: auto;
+    margin-left: -100px; /* Move image slightly to the left */
+    margin-top: var(--supporting-image-top, -150px); /* Adjustable top position */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Extra text under supporting image */
+.extra-text-content {
+    margin-left: var(--extra-text-margin-left, -50px); /* Adjustable margin for fine-tuning */
+    text-align: left; /* Left-align the text */
+    max-width: var(--extra-text-width, 250px); /* Make the container narrower and adjustable */
+}
+
+.extra-text-content h3 {
+    font-size: 1.5rem; /* Larger font for headline */
+    font-weight: 700; /* Bold weight */
+    margin-bottom: 10px; /* Space below the headline */
+}
+
+.extra-text-content p {
+    font-size: 1rem; /* Same font size as other text */
+    line-height: 1.5;
+}
+
+
+/* Customizable styles */
+.supporting-feature.custom-adjustments {
+    width: var(--supporting-image-width, 350px); /* Adjustable size */
+    margin-left: var(--supporting-image-offset, -100px); /* Adjustable left offset */
+    margin-top: var(--supporting-image-top, 0px); /* Adjustable top offset */
+}
+/* App Features Section */
+.app-features-section {
+    position: relative;
+    background: url('assets/90.jpg') no-repeat center center/cover; /* Full-page background image */
+    height: 60vh; /* Large section height */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: flex-start; /* Keep content aligned to the left */
+    color: white;
+    overflow: hidden; /* Prevent extra content from spilling */
+}
+
+/* Headline styling */
+.app-features-headline {
+    font-size: 1.5rem; /* Slightly larger font size */
+    font-weight: 700; /* Bold text */
+    max-width: 60%; /* Limit the width to avoid text spilling */
+    margin-left: 10%; /* Position closer to the center but still on the left */
+    text-transform: uppercase; /* Optional: Make it all caps */
+    letter-spacing: 1px; /* Add spacing between letters */
+    line-height: 1.5; /* Improve readability */
+}
+/* Heart Rate Section */
+.heart-rate-section {
+    background: white; /* White background */
+    padding: 80px 10%; /* Increase padding for more spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the entire section */
+    text-align: center; /* Center-align the headline */
+    position: relative; /* Enable absolute positioning for inner elements if needed */
+    min-height: 800px; /* Make the section significantly taller */
+}
+
+/* Headline styling */
+.heart-rate-headline {
+    font-size: 2rem; /* Larger headline size */
+    font-weight: 700; /* Bold text */
+    color: #333; /* Dark text color */
+    margin-bottom: 40px; /* Add more space below the headline */
+}
+
+/* Content container */
+.heart-rate-content {
+    display: flex; /* Create a side-by-side layout */
+    justify-content: space-between; /* Space out the paragraph and right image */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Add space between the paragraph and the image */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    position: relative; /* Enable precise positioning of child elements */
+}
+
+/* Paragraph and below image container */
+.heart-rate-text {
+    flex: 1; /* Allow it to take up equal space */
+    max-width: 500px; /* Limit the width of the paragraph and image container */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center-align the paragraph text */
+    position: relative; /* Enable adjustment of content position */
+    top: var(--heart-rate-text-offset, 200px); /* Adjustable vertical offset (default: 200px) */
+}
+
+
+/* Paragraph styling */
+.heart-rate-text p {
+    font-size: 1rem; /* Normal font size */
+    color: #555; /* Slightly lighter text color */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 20px; /* Add space between the paragraph and the image */
+}
+
+/* Image below the paragraph (79.jpg) */
+.heart-rate-image-below {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    max-width: 100%; /* Ensure responsiveness */
+    width: 400px; /* Limit the image width */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the image */
+}
+
+/* Image to the right (74.jpg) */
+.heart-rate-image-right {
+    flex: 1; /* Allow it to take up equal space */
+    max-width: 400px; /* Limit the image width */
+    width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the image */
+}
+
+/* Compatible With Box */
+.compatible-with-box {
+    position: relative; /* Keep it relative to the heart rate section */
+    margin: 20px 0 40px; /* Adjust margin to move it slightly to the left */
+    background-color: #eaeaea; /* Lighter grey background */
+    padding: 20px; /* Add padding inside the box */
+    width: 60%; /* Keep the narrower box width (60% of the container width) */
+    text-align: center; /* Center-align text and images */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border: none; /* Remove the outline/border */
+    transform: translateX(-10%); /* Shift the box 10% to the left */
+}
+
+/* Headline inside the box */
+.compatible-with-box h3 {
+    font-size: 1.2rem; /* Slightly larger font size for the headline */
+    font-weight: 700; /* Bold text */
+    margin-bottom: 15px; /* Space below the headline */
+    color: #333; /* Dark text color */
+    text-transform: uppercase; /* Make it all caps */
+    letter-spacing: 1px; /* Add some spacing between letters */
+}
+
+/* Images inside the box */
+.compatible-with-box .compatible-images {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Spread out images evenly */
+    gap: 40px; /* Add more space between items */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    margin-top: 20px; /* Add spacing above the images */
+}
+
+.compatible-with-box .compatible-item {
+    text-align: center; /* Center-align each image and its text */
+}
+
+.compatible-with-box .compatible-item img {
+    width: 100px; /* Larger image size */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    border-radius: 8px; /* Optional: Slight rounding for a modern look */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.compatible-with-box .compatible-item p {
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #555; /* Grey color for "Coming Soon" text */
+    font-weight: 500; /* Medium weight for text */
+    margin: 0; /* Remove default margins */
+}
+
+
+/* Full-Width Background Section */
+.full-width-background {
+    background: url('assets/81.jpg') no-repeat center center/cover; /* Full-width background image */
+    height: 70vh; /* Increased height for larger background section */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: flex-start; /* Align headline slightly to the left */
+    padding-left: 10%; /* Push content slightly to the left */
+    position: relative; /* For additional customization */
+    color: white; /* White text color */
+    text-align: left;
+}
+
+.background-headline {
+    font-size: 1.8rem; /* Smaller headline size */
+    font-weight: 700; /* Bold text */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 1px; /* Spacing between letters */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Subtle text shadow for readability */
+    margin: 0; /* Remove extra margin */
+}
+
+
+/* White Section with Image and Text */
+.new-record-content-section {
+    background: white; /* White background */
+    padding: 50px 10%; /* Padding for spacing */
+}
+
+.new-record-content {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center-align content horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between image and text */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    text-align: left; /* Align text to the left */
+}
+
+.new-record-image {
+    flex: 1; /* Allow the image to take up equal space */
+    max-width: 400px; /* Limit image size for consistent layout */
+}
+
+.new-record-image img {
+    max-width: 100%; /* Ensure responsiveness */
+    width: 100%; /* Scale within the parent container */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow around the image */
+    border-radius: 8px; /* Slight rounding for a polished look */
+}
+
+.new-record-text {
+    flex: 1; /* Allow the text container to take up equal space */
+    max-width: 400px; /* Limit the width of the text */
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Improve text readability */
+    color: #333; /* Darker text color for contrast */
+}
+
+.new-record-text h4 {
+    font-size: 1.5rem; /* Larger font size for the headline */
+    font-weight: bold; /* Make the headline bold */
+    color: #333; /* Dark text color for contrast */
+    margin-bottom: 10px; /* Add space below the headline */
+    text-align: center; /* Center-align the headline */
+}
+
+/* New Feature Section */
+.new-feature {
+    margin-top: 20px; /* Add space between paragraph and new feature */
+    text-align: center; /* Center-align the image and text */
+}
+
+.new-feature img {
+    max-width: 100%; /* Ensure the image is responsive */
+    width: 300px; /* Limit the image width */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    border-radius: 8px; /* Slightly rounded corners for a polished look */
+    margin-bottom: 10px; /* Space between the image and the text */
+}
+
+.new-feature h4 {
+    font-size: 1.4rem; /* Larger font size for headline */
+    font-weight: bold; /* Make the headline bold */
+    color: #333; /* Dark text color for contrast */
+    margin-bottom: 5px; /* Add space below the headline */
+    text-align: center; /* Align headline to center */
+}
+
+.new-feature p {
+    font-size: 1rem; /* Standard font size for the text */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Lighter color for the text */
+    text-align: center; /* Center-align the paragraph */
+}
+/* Styles for the new overlapping image */
+.new-record-image {
+    position: relative; /* Enable positioning for child elements */
+}
+
+.new-record-image img.overlapping-image {
+    position: absolute; /* Position relative to the parent container */
+    bottom: -40px; /* Moved further down */
+    left: 15%; /* Shifted slightly to the left */
+    transform: translateX(-50%); /* Adjust for proper centering */
+    max-width: 80%; /* Set the size of the overlapping image */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Add a shadow to the image */
+    border-radius: 0; /* Remove rounded corners */
+    z-index: 1; /* Ensure it appears in front of the main image */
+}
+/* Container for the new text beside the overlapping image */
+.more-ways-text {
+    position: absolute; /* Position relative to the parent container */
+    top: var(--more-ways-top, 77%); /* Adjustable vertical position (default: 50%) */
+    left: var(--more-ways-left, -380px); /* Adjustable horizontal position (default: -150px) */
+    transform: translateY(-50%); /* Center-align vertically */
+    max-width: 200px; /* Limit the width of the text */
+    text-align: right; /* Align text to the right to balance layout */
+    color: #333; /* Dark text for contrast */
+}
+
+/* Headline styling */
+.more-ways-text h4 {
+    font-size: 1.2rem; /* Slightly smaller than main headlines */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 8px; /* Space below the headline */
+    color: #222; /* Slightly darker text color */
+}
+
+/* Paragraph styling */
+.more-ways-text p {
+    font-size: 0.9rem; /* Slightly smaller text */
+    line-height: 1.4; /* Improve readability */
+    color: #555; /* Neutral text color */
+}
+/* Personal Taste Section */
+.personal-taste-section {
+    background: url('assets/87.jpg') no-repeat center center/cover; /* Add the background image */
+    height: 60vh; /* Adjust the height as needed */
+    display: flex;
+    align-items: center; /* Vertically center the headline */
+    justify-content: flex-start; /* Align the headline to the left */
+    padding-left: 10%; /* Add left padding to offset the text */
+    position: relative; /* For additional customization */
+    color: white; /* White text color for contrast */
+    text-align: left;
+}
+
+/* Headline Styling */
+.personal-taste-headline {
+    font-size: 2rem; /* Larger headline size */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+    letter-spacing: 1px; /* Add some spacing between letters */
+    line-height: 1.5; /* Improve readability */
+    max-width: 50%; /* Limit the width of the text */
+}
+
+/* Personal Taste Content Section */
+.personal-taste-content-section {
+    background: white; /* White background */
+    padding: 40px 10%; /* Add spacing around the content */
+    text-align: center; /* Center-align the headline */
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Dark text color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the section */
+}
+
+/* New Headline Styling Above Paragraph */
+.personal-taste-headline-above {
+    font-size: 1.8rem; /* Larger font size for headline */
+    font-weight: bold; /* Bold text for emphasis */
+    margin-bottom: 20px; /* Add spacing below the headline */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center-align the headline */
+}
+
+/* Headline Above Paragraph */
+.personal-taste-paragraph-headline {
+    font-size: 1.5rem; /* Slightly smaller headline size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 10px; /* Spacing below the headline */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center-align the text */
+}
+
+/* Personal Taste Content Layout (Images and Text Side-by-Side, Opposite Layout) */
+.personal-taste-content {
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: center; /* Vertically center-align content */
+    justify-content: center; /* Horizontally center-align content */
+    gap: 20px; /* Space between image and text */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    text-align: center; /* Center-align text */
+}
+
+/* Alternating Layout for Opposite Positioning */
+.personal-taste-content:nth-child(odd) {
+    flex-direction: row; /* Default: Image on left, text on right */
+}
+
+.personal-taste-content:nth-child(even) {
+    flex-direction: row-reverse; /* Flip: Image on right, text on left */
+}
+
+/* Headline Styling in Personal Taste Section */
+.personal-taste-content h4 {
+    font-size: 1.5rem; /* Larger font size for headline */
+    font-weight: bold; /* Bold text for emphasis */
+    margin-bottom: 10px; /* Add space below the headline */
+    color: #333; /* Dark text color */
+}
+
+/* Paragraph Styling in Personal Taste Section */
+.personal-taste-content p {
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Improve readability */
+    max-width: 400px; /* Limit paragraph width for readability */
+    margin: 0; /* Reset margins */
+    color: #555; /* Slightly lighter text color */
+    text-align: center; /* Center-align the text */
+}
+
+/* Hover Effect for Personal Taste Images (95 and 96) */
+.personal-taste-image {
+    max-width: 300px; /* Keep current image size */
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Add hover effect */
+.personal-taste-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+}
+
+
+
+/* Move Tokens Rectangle (Light Aqua Blue) */
+.move-tokens-rectangle {
+    background-color: #e0f7f9; /* Light aqua blue */
+    padding: 40px 20px; /* Add padding for spacing */
+    margin-top: 30px; /* Space above the rectangle */
+    text-align: center; /* Center-align content */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners for a polished look */
+}
+
+/* Move Tokens Headline */
+.move-tokens-headline {
+    font-size: 1.8rem; /* Larger headline */
+    font-weight: bold; /* Bold text */
+    color: black; /* Black text for contrast */
+    margin-bottom: 20px; /* Space below the headline */
+}
+
+/* Move Tokens Cards */
+.move-tokens-cards {
+    display: flex; /* Flex layout for cards */
+    justify-content: space-around; /* Space out cards evenly */
+    flex-wrap: wrap; /* Wrap for responsiveness */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Space above cards */
+}
+
+/* Token Card */
+.token-card {
+    background-color: #fff; /* White card */
+    padding: 20px; /* Add padding inside cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 200px; /* Card size */
+    text-align: center; /* Center-align content */
+    transition: all 0.3s ease; /* Smooth hover animation */
+}
+
+.token-card img {
+    max-width: 100%; /* Responsive image */
+    width: 120px; /* Fixed size for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.token-card p {
+    font-size: 1.2rem; /* Larger text */
+    font-weight: bold; /* Bold text for names */
+    color: #333; /* Darker text color */
+}
+
+/* See All Move Tokens Button */
+.see-all-tokens-button {
+    background-color: black; /* Black button */
+    color: white; /* White text */
+    padding: 15px 30px; /* Button padding */
+    font-size: 1rem; /* Button text size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 20px; /* Space above button */
+    transition: all 0.3s ease; /* Smooth hover animation */
+}
+
+.see-all-tokens-button:hover {
+    background-color: #e0f7f9; /* Light aqua blue on hover */
+    color: black; /* Black text on hover */
+}
+
+/* New Background Section with Image 97 */
+.new-background-section {
+    background: url('assets/97.jpg') no-repeat center center/cover; /* Full-page background image */
+    height: 60vh; /* Adjust section height */
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Center content vertically */
+    justify-content: flex-start; /* Align headline to the left */
+    padding-left: 10%; /* Add padding to position headline */
+    color: white; /* White text for contrast */
+}
+
+/* Headline in the Background Section */
+.new-background-section h2 {
+    font-size: 2rem; /* Headline size */
+    font-weight: bold; /* Bold font */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+/* White Section Styling */
+.white-section {
+    background-color: white; /* White background */
+    padding: 40px 10%; /* Padding for spacing */
+    text-align: center; /* Center-align text */
+    color: #333; /* Dark text color */
+}
+
+/* Headline in White Section */
+.white-section h3, .white-section h4 {
+    font-size: 2rem; /* Large headline size */
+    font-weight: bold; /* Bold text */
+    margin-top: 40px; /* Space above headline */
+    color: #333; /* Darker text for contrast */
+}
+
+/* Paragraphs in White Section */
+.white-section p {
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px; /* Limit paragraph width */
+    margin: 20px auto; /* Center and space paragraphs */
+    color: #555; /* Lighter grey text */
+}
+
+/* Content Blocks Layout */
+.content-block {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space out text and image */
+    gap: 20px; /* Add spacing between elements */
+    margin-bottom: 40px; /* Add spacing between blocks */
+    text-align: left; /* Align text left */
+}
+
+/* Alternate Layout for Second Block */
+.content-block.reverse {
+    flex-direction: row-reverse; /* Reverse layout for even blocks */
+}
+
+/* Text Styling */
+.content-block .text {
+    flex: 1; /* Allow text to take up equal space */
+    max-width: 400px; /* Limit text width */
+}
+
+.content-block h3, .content-block h4 {
+    font-size: 1.8rem; /* Larger headline */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 15px; /* Add space below headline */
+}
+
+.content-block p {
+    font-size: 1rem; /* Standard paragraph size */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Neutral text color */
+}
+
+/* Image Styling */
+.content-block .image {
+    flex: 1; /* Allow image to take up equal space */
+    text-align: center; /* Center-align image */
+}
+
+.content-block .image img {
+    max-width: 100%; /* Make image responsive */
+    width: 400px; /* Limit image size */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners for a polished look */
+}
+/* Adjust Text Alignment for Content Blocks */
+.content-block .text {
+    flex: 1; /* Keep equal space for text */
+    max-width: 400px; /* Limit text width */
+    margin-left: 10%; /* Push text closer to the center */
+    margin-right: 10%; /* Keep consistent spacing for both sides */
+    text-align: left; /* Keep text left-aligned */
+}
+/* General Overlapping Image Styling */
+.image {
+    position: relative; /* Ensure the parent container is relative */
+}
+
+.overlapping-image {
+    position: absolute; /* Position relative to the parent container */
+    bottom: 10px; /* Offset slightly from the bottom */
+    width: 80px; /* Smaller size */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: none; /* Remove border */
+    border-radius: 0; /* No rounded corners */
+    z-index: 2; /* Ensure it appears in front of the main image */
+}
+
+/* Specific Styling for Left Overlap (100.jpg) */
+.left-overlap {
+    left: -40px; /* Position 10px from the left */
+    right: auto; /* Reset right positioning */
+}
+
+/* Specific Styling for Right Overlap (101.jpg) */
+.right-overlap {
+    left: auto; /* Reset left positioning */
+    right: 10px; /* Position 10px from the right */
+}
+/* New Background Section with Image 102 */
+.new-background-section {
+    background: url('assets/102.jpg') no-repeat center center/cover; /* Background image */
+    height: 60vh; /* Adjust section height */
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Vertically center the headline */
+    justify-content: flex-start; /* Align headline to the left */
+    padding-left: 10%; /* Add padding to position headline */
+    color: white; /* White text for contrast */
+    text-align: left;
+}
+
+.new-background-section .background-headline {
+    font-size: 2.5rem; /* Larger headline size */
+    font-weight: bold; /* Bold font */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+    letter-spacing: 1px; /* Add letter spacing for elegance */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Dark Grey Subscribe Section */
+.subscribe-section {
+    background-color: #333; /* Dark grey background */
+    padding: 40px 10%; /* Padding for spacing */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space text and button */
+    color: white; /* White text for contrast */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the section */
+}
+
+/* Enlarged Dark Grey Subscribe Section */
+.subscribe-section {
+    background-color: #333; /* Dark grey background */
+    padding: 80px 10%; /* Increase padding for larger spacing */
+    height: 30vh; /* Adjust height for a taller section */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space out text and button */
+    color: white; /* White text for contrast */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the section */
+}
+
+/* Subscribe Text Styling */
+.subscribe-section .subscribe-content {
+    max-width: 500px; /* Limit the width for the content */
+    text-align: left; /* Align text to the left */
+}
+
+.subscribe-section .subscribe-headline {
+    font-size: 2.5rem; /* Larger headline */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margins */
+    color: white; /* White text */
+}
+
+/* Button Styling */
+.subscribe-button {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 20px 40px; /* Increase button size */
+    font-size: 1.2rem; /* Larger button text */
+    font-weight: bold; /* Bold text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Start with a slight rounding */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Button */
+.subscribe-button:hover {
+    background-color: #e0f7f9; /* Light aqua blue on hover */
+    color: black; /* Black text on hover */
+    border-radius: 30px; /* Turn into an oval */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+/* Footer Section */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content within the section */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+/* Top Section */
+.top-section {
+    position: relative;
+    background: url('assets/70.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center headline */
+    color: white;
+    text-align: center;
+}
+
+/* Top Footer (at the top of the section) */
+.top-footer {
+    position: absolute;
+    top: 0; /* Position at the very top of the section */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center all content horizontally */
+    gap: 50px; /* Space between logo and options */
+    padding: 10px 20px; /* Add a bit of padding */
+    z-index: 10; /* Ensure it appears on top of everything */
+}
+
+/* Logo on the left */
+.top-footer-logo img {
+    position: absolute; /* Position relative to the footer */
+    left: 40px; /* Keep it slightly to the right */
+    width: 120px; /* Reasonably larger width */
+    height: 40px; /* Match height for proportional sizing */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+
+/* Centered options */
+.top-footer-options {
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 30px; /* Space between links */
+}
+
+/* Link styles */
+.top-footer-options a {
+    font-size: 1rem; /* Standard size */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    position: relative; /* For hover effect */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for links */
+.top-footer-options a:hover {
+    color: #e0f7f9; /* Change text color on hover */
+}
+
+/* Slide-out underline effect */
+.top-footer-options a::after {
+    content: ''; /* Empty content for the underline */
+    position: absolute; /* Positioned relative to the link */
+    bottom: -5px; /* Position below the text */
+    left: 50%; /* Start at the center */
+    width: 0; /* Initial underline width */
+    height: 2px; /* Underline thickness */
+    background-color: white; /* White underline */
+    transition: all 0.3s ease; /* Smooth transition */
+    transform: translateX(-50%); /* Center the underline */
+}
+
+.top-footer-options a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}

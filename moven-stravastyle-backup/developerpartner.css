@@ -1,0 +1,639 @@
+/* Apply Strava Font */
+body {
+    font-family: 'Strava', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: url('assets/900.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+/* Headline Text */
+.hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-left: 10%;
+}
+
+/* Get Started Button */
+.cta-button {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 10%;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: lightseagreen;
+    border-radius: 50px;
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+    padding: 50px 0;
+    background: white;
+}
+
+/* Subheadline */
+.content p {
+    font-size: 1.5rem;
+    color: black;
+}
+
+/* Large Light Aqua Blue Rectangle */
+.aqua-box {
+    width: 90%;
+    max-width: 1200px;
+    height: 550px;
+    background: #DDF7F4;
+    margin: 40px auto;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aqua Box Content Layout */
+.aqua-content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+
+/* Left Section (Text + Icon) */
+.text-section {
+    width: 50%;
+    text-align: left;
+}
+
+/* Vibrant Pink Tagline */
+.tagline {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #FF1493;
+    text-transform: none;
+}
+
+/* Small Satellite Icon */
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Subheadline */
+.subheadline {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+/* Paragraph */
+.text-section p {
+    font-size: 1rem;
+    color: black;
+    margin-top: 10px;
+}
+
+/* New Black Button */
+.moven-button {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.moven-button:hover {
+    background: #A7E9E0;
+    border-radius: 50px;
+}
+
+/* Right Section (Image) */
+.image-section {
+    width: 45%;
+}
+
+/* Image inside Rectangle */
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Pros Section Headline (Now Left-Aligned, Adjustable) */
+.pros-headline {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: normal;
+    text-align: left; /* Aligned left */
+    margin-left: 25%; /* Adjust this value to move it left or right */
+    margin-top: 60px;
+}
+
+
+/* Pros Container (Holds the 3 Light Blue Rectangles) */
+.pros-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+/* Empty Pros Boxes (Still Visible) */
+.pros-box {
+    width: 32%;
+    max-width: 350px;
+    height: 300px;
+    background: #DDF7F4; /* Light blue background */
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px;
+    position: relative;
+}
+
+/* Small Pink Label with Icon */
+.pros-label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40px; /* Keeps label slightly lower */
+    left: 30px; /* Keeps right shift */
+}
+
+/* Small Icons */
+.pros-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+/* Small Pink Text (Not Bold) */
+.pros-text {
+    font-size: 0.7rem;
+    color: #FF1493;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* Pros Box Content */
+.pros-box {
+    width: 32%;
+    max-width: 350px;
+    height: 300px;
+    background: #DDF7F4; /* Light blue background */
+    border-radius: 10px;
+    padding: 50px 25px 25px; /* Adjusted padding for better spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Bold Black Headline */
+.pros-title {
+    font-size: 1.3rem; /* Larger */
+    color: black;
+    font-weight: bold;
+    margin-top: 60px; /* Proper spacing under pink label */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Small, Lighter Black Paragraph (Left-Aligned) */
+.pros-description {
+    font-size: 0.7rem; /* Small size */
+    color: rgba(0, 0, 0, 0.7); /* Slightly lighter black */
+    font-weight: 300; /* Light font weight */
+    line-height: 1.4;
+    margin: 0;
+    text-align: left;
+}
+/* Coming Soon Section Headline */
+.coming-soon-headline {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 25%; /* Align with previous sections */
+    margin-top: 80px;
+}
+
+/* Coming Soon Container */
+.coming-soon-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Updated Skinny Long Rectangles (Now Light Blue & Taller) */
+.coming-soon-box {
+    width: 32%;
+    max-width: 350px;
+    height: 500px; /* Increased height */
+    background: #DDF7F4; /* Light blue background (matches the others) */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Small Bold Headline Inside Box */
+.coming-soon-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* Small Body Paragraph */
+.coming-soon-description {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Centered Image Inside Box */
+.coming-soon-image {
+    width: 80%; /* Make the image fit nicely */
+    max-height: 250px; /* Keep images a good size */
+    object-fit: cover; /* Ensure good display */
+    margin-top: auto; /* Pushes the image to the middle */
+}
+
+/* Start The Process Section */
+.start-process-section {
+    width: 100%;
+    height: 400px;
+    background: url('assets/901.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Headline */
+.start-process-headline {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Start Planning Now Button */
+.start-button {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.start-button:hover {
+    background: #A7E9E0; /* Light aqua blue */
+    border-radius: 50px;
+}
+
+/* Move With Sound Section */
+.white-section {
+    width: 100%;
+    padding: 80px 0;
+    background: white;
+    text-align: center;
+}
+
+/* Move With Sound Headline */
+.move-sound-headline {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 40px;
+}
+
+/* Light Pink Box */
+.pink-box {
+    width: 90%;
+    max-width: 1200px;
+    background: #FFC0CB; /* Light pink */
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Text Section */
+.text-section {
+    width: 50%;
+    text-align: left;
+    position: relative;
+    z-index: 10;
+}
+
+/* General Image Section */
+.image-section {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Unique Class for the Pink Box Image */
+.pink-image {
+    margin-right: 520px;
+    position: relative;
+    top: -80px;
+}
+
+/* Image Inside the Pink Box */
+.pink-box-image {
+    width: 110%;
+    max-width: 450px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transform: translateX(520px);
+}
+
+/* Move With Sound Button */
+.move-sound-button {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    position: relative;
+    z-index: 20;
+}
+
+/* Hover Effect: Light Aqua Blue & Oval Shape */
+.move-sound-button:hover {
+    background: #A7E9E0;
+    border-radius: 50px;
+}
+
+/* Got A Question Subheadline */
+.question-subheadline {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+/* Container for Both Rectangles */
+.question-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Increased gap for better spacing */
+    margin-bottom: 80px;
+}
+
+
+/* Make Entire Rectangle Clickable */
+.question-box-link {
+    width: 40%; /* Reduced width from 45% */
+    height: 280px; /* Slightly smaller height */
+    border-radius: 10px;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+}
+
+/* Ensure Rectangles Fill the Clickable Area */
+.question-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    /* Removed hover effect */
+}
+
+/* Left Rectangle (Image 207.jpg) */
+.box-one {
+    background-image: url('assets/902.jpg');
+}
+
+/* Right Rectangle (Image 208.jpg) */
+.box-two {
+    background-image: url('assets/903.jpg');
+}
+
+/* Question Box Text (Bottom-Left Placement) */
+.question-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+/* Headline Inside Rectangle */
+.question-text h3 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Click Here Link */
+.click-here {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Click Here Hover Effect */
+.click-here:hover {
+    color: #A7E9E0; /* Light aqua blue hover effect */
+}
+
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Center all content within the section */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+
+/* Top Footer */
+.top-footer {
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure space between logo and nav */
+    padding: 15px 5%;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    height: 55px; /* Keeps footer compact */
+}
+
+/* Logo - Positioned to the Left */
+.top-footer-logo {
+    height: 38px; /* Adjusted size */
+    position: absolute;
+    left: 5%;
+    transform: translateY(-5px); /* Moves the logo slightly up */
+}
+
+/* Navigation Links - Now Exactly Centered */
+.top-footer-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centers nav perfectly */
+    display: flex;
+    gap: 40px; /* Space between links */
+}
+
+/* Navigation Links Styling */
+.top-footer-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Slide-Out Underline on Hover */
+.top-footer-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease-in-out;
+}
+
+.top-footer-nav a:hover::after {
+    width: 100%;
+}

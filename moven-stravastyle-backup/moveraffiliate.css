@@ -1,0 +1,561 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Top Section */
+.top-section {
+    background-image: url('assets/300.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    padding: 20px;
+}
+
+.top-section h1 {
+    font-family: 'Strava', sans-serif;
+    font-size: 3rem;
+    margin-left: 20px;
+}
+
+/* Content Section */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+    position: relative;
+}
+
+/* Text Container */
+.text-container {
+    max-width: 500px;
+    text-align: left;
+}
+
+.text-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.text-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Image Container */
+.image-container {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.image-container .main-image {
+    width: 350px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+}
+
+.image-container .overhanging-image {
+    width: 300px;
+    position: absolute;
+    bottom: -50px;
+    right: -70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+}
+
+/* Background Section */
+.background-section {
+    background-image: url('assets/305.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    padding: 20px;
+}
+
+.background-section h2 {
+    font-family: 'Strava', sans-serif;
+    font-size: 2.5rem;
+    margin-left: 20px;
+}
+
+/* White Section */
+.white-section {
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.white-section .text-container {
+    max-width: 500px;
+    text-align: left;
+    flex: 1 1 auto;
+}
+
+.white-section .text-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.white-section .text-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.white-section .image-container {
+    flex: 1 1 auto;
+}
+
+.white-section .image-container img {
+    width: 350px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+}
+
+/* Parallax Images */
+.parallax-img, .reverse-parallax-img {
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+    will-change: transform;
+}
+/* New Section Layout: Perfectly Centered */
+.new-section {
+    display: flex;
+    align-items: center; /* Vertically align content in the center */
+    justify-content: center; /* Horizontally center content */
+    gap: 40px; /* Space between text and image */
+    text-align: center; /* Center-align everything visually */
+    margin: 0 auto; /* Center the section within the page */
+    width: 100%; /* Ensure the section spans the full width of the page */
+    height: auto; /* Adjust height dynamically based on content */
+    padding: 40px 20px; /* Add padding for breathing space */
+    position: relative;
+}
+
+
+.new-section .new-text-container {
+    max-width: 500px;
+    text-align: left; /* Keep text aligned to the left */
+}
+
+.new-section .new-text-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.new-section .new-text-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.new-section .new-image-container img {
+    width: 350px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for a subtle shadow */
+    border-radius: 0; /* Ensures the image is not rounded */
+}
+
+/* New Background Section for 309 */
+.new-background {
+    background-image: url('assets/309.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Adjust the height of the section */
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: flex-start; /* Align the text to the left */
+    color: white;
+    padding: 20px;
+}
+
+.new-background .background-text h2 {
+    font-family: 'Strava', sans-serif; /* Use Strava font for the headline */
+    font-size: 3rem;
+    margin-left: 40px; /* Add spacing from the left side */
+}
+
+/* General Centered Section */
+.centered-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 60vh; /* Adjust height for smaller sections */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the box model */
+}
+
+.centered-section .centered-container {
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    gap: 40px; /* Space between text and image */
+}
+
+/* General Centered Section */
+.centered-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the box model */
+}
+
+/* Smaller Section for Image 310 and 311 */
+.smaller-section {
+    height: 40vh; /* Smaller height for compact layout */
+}
+
+.centered-section .centered-container {
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    gap: 30px; /* Space between text and image */
+}
+
+/* General Centered Section */
+.centered-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the box model */
+}
+
+/* Smaller Section for Image 310 and 311 */
+.smaller-section {
+    height: 80vh; /* Smaller height for compact layout */
+}
+
+.centered-section .centered-container {
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    gap: 30px; /* Space between text and image */
+}
+
+/* Text Container Styling */
+.centered-section .text-container {
+    max-width: 400px; /* Limit text width */
+    text-align: center; /* Center-align the text */
+}
+
+.centered-section .text-container h2 {
+    font-size: 1.6rem; /* Slightly smaller headline */
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.centered-section .text-container p {
+    font-size: 0.9rem; /* Compact paragraph text */
+    line-height: 1.6; /* Adjust line spacing */
+    margin: 0; /* Remove default margins */
+}
+
+/* Larger Image Styling for 310 and 311 */
+.centered-section .image-container img {
+    width: 400px; /* Larger image size */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 0; /* No rounded corners */
+}
+
+/* New Background Section for Image 312 */
+.new-background-section {
+    background-image: url('assets/312.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Adjust height */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: flex-start; /* Align text to the left */
+    color: white;
+    padding: 20px;
+}
+
+.new-background-section .background-text h2 {
+    font-family: 'Strava', sans-serif; /* Keep consistent font styling */
+    font-size: 3rem; /* Large headline */
+    margin-left: 40px; /* Add spacing from the left */
+}
+
+/* Black Section with "Coming Soon" */
+.black-section {
+    background-color: black;
+    height: 40vh; /* Height for the section */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.black-section .centered-text h2 {
+    font-family: 'Arial', sans-serif; /* Clean font styling */
+    font-size: 3rem; /* Larger text size */
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+}
+/* Join Moven Button */
+.join-button {
+    display: inline-block;
+    background-color: pink;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 50px; /* Increased width by adding more horizontal padding */
+    border-radius: 4px; /* Slightly rounded edges */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: 20px; /* Space above the button */
+}
+
+.join-button:hover {
+    background-color: lightblue; /* Light aqua blue on hover */
+    border-radius: 50px; /* Turns into an oval */
+    color: black; /* Changes text color to black */
+    cursor: pointer;
+}
+
+.join-button:active {
+    transform: scale(0.95); /* Slightly shrink button on click for effect */
+}
+/* Footer Styling */
+.top-footer {
+    position: absolute; /* Place the footer at the top of the section */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out logo and menu */
+    padding: 10px 20px; /* Add spacing inside the footer */
+    z-index: 10; /* Ensure the footer stays above the background */
+    box-sizing: border-box;
+}
+
+/* Moven Logo Styling */
+.moven-logo {
+    width: 120px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer Styling */
+.top-footer {
+    position: absolute; /* Place the footer at the top of the section */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center all content horizontally */
+    padding: 10px 20px; /* Add spacing inside the footer */
+    z-index: 10; /* Ensure the footer stays above the background */
+    box-sizing: border-box;
+}
+
+/* Moven Logo Styling */
+.moven-logo {
+    position: absolute; /* Keep logo in the top-left */
+    left: 20px; /* Adjust position from the left edge */
+    width: 120px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer Navigation Menu */
+.footer-nav {
+    display: flex;
+    gap: 30px; /* Space between each menu item */
+}
+
+/* Footer Links */
+.footer-link {
+    color: white; /* White text color */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    font-size: 1rem; /* Text size */
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    position: relative; /* For the sliding effect */
+    overflow: hidden;
+}
+
+.footer-link::after {
+    content: ''; /* Pseudo-element for the sliding effect */
+    position: absolute;
+    bottom: 0;
+    left: -100%; /* Initially hide the underline */
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Thickness of the underline */
+    background-color: white; /* White underline */
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+.footer-link:hover::after {
+    left: 0; /* Slide in from the left when hovered */
+}
+
+/* Remove Text Color Change on Hover */
+.footer-link:hover {
+    color: white; /* Keep the text color white */
+}
+
+
+.footer-list a {
+    position: relative;
+    text-decoration: none;
+    color: inherit; /* Keeps the text color same as the surrounding text */
+    padding-bottom: 3px; /* Adds some space for the underline effect */
+}
+
+.footer-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Uses the same color as the text */
+    transition: width 0.3s ease-in-out; /* Animation effect */
+}
+
+.footer-list a:hover::after {
+    width: 100%; /* Expands the underline from left to right */
+}
+
+/*bottom footer*/
+/* Bottom Section */
+.offwhite-section {
+    background-color: #292929; /* Subtle cream color */
+    padding: 70px 8%; /* Generous padding with a slight shift to the right */
+}
+
+.footer-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 40px; /* Space between columns */
+    align-items: flex-start; /* Align content to the top of each column */
+    justify-content: center; /* Center the entire grid */
+}
+
+.footer-column {
+    text-align: center; /* Center align all content within each column */
+    color: white; /* Ensure all text in footer columns is white */
+}
+
+/* First Column: Vertical Alignment */
+.footer-column:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    height: 100%; /* Ensure column takes up full height of the grid */
+}
+
+/* Footer Logo */
+.footer-logo {
+    width: 160px; /* Increased logo size */
+    margin-bottom: 15px; /* Space below the logo */
+}
+
+/* Black Apple Store Button */
+.apple-store-button {
+    display: block;
+    margin: 15px auto; /* Center align the button */
+    width: 120px; /* Smaller button size */
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px; /* Footer text size */
+    color: white; /* Change text color to white */
+    line-height: 1.6; /* Line spacing for readability */
+    margin-top: 10px; /* Space above the text */
+    text-align: center; /* Ensure footer text is also centered */
+}
+
+/* Footer Links in Text */
+.footer-text a {
+    color: white; /* Change link color to white */
+    font-weight: bold; /* Bold for emphasis */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #007aff; /* Blue hover effect */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    justify-content: center; /* Center align icons */
+    margin-top: 15px; /* Add space above social icons */
+}
+
+.social-icon {
+    width: 30px; /* Larger icon size for emphasis */
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add hover scaling effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Footer Lists */
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px; /* List item text size */
+    line-height: 1.6; /* Line spacing for readability */
+    color: white; /* Change list text color to white */
+}
+
+.footer-list li {
+    margin-bottom: 10px; /* Space between list items */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: white; /* Ensure list items remain white */
+}
+
+.footer-list li a {
+    text-decoration: none;
+    color: white; /* Ensure links inside the footer remain white */
+    transition: color 0.3s ease;
+}
+
+.footer-list li:hover {
+    color: #007aff; /* Blue hover effect */
+}

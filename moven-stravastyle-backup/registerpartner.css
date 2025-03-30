@@ -1,0 +1,435 @@
+/* Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper for Form Section */
+.white-section {
+    background-color: white;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* Left Content Section */
+.content {
+    width: 50%;
+    text-align: left;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #000;
+}
+
+p {
+    font-size: 17px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #333;
+}
+
+/* Wider Form */
+.form-container {
+    width: 65%;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    background-color: #f9f9f9;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #0071e3;
+    background-color: white;
+    box-shadow: 0px 0px 6px rgba(0, 113, 227, 0.2);
+}
+
+/* Horizontal Layout for Fields with Proper Gap */
+.input-group {
+    display: flex;
+    gap: 40px;
+}
+
+/* Ensures spacing between horizontally aligned fields */
+.input-group > div {
+    flex: 1;
+    min-width: 48%;
+}
+
+/* Properly align radio buttons */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.radio-group input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    color: white;
+    background-color: #0071e3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* New Light Grey Section (Now Below the Form) */
+.fitness-section {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.fitness-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subheadline {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Images & Text */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    width: 400px;
+    text-align: left;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-box p {
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .white-section {
+        padding: 30px 0;
+    }
+    
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content, .form-container {
+        width: 90%;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-box {
+        width: 90%;
+    }
+}
+/* Footer Section - Full Width */
+.footer-section {
+    background-color: #222; /* Dark gray background */
+    width: 100%; /* Make footer span full width */
+    padding: 3rem 1rem; /* Maintain compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align columns and logo horizontally */
+    justify-content: center; /* Keep everything centered */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between logo and columns */
+}
+
+
+/* Logo and Copyright Section */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: center; /* Center-align logo and text */
+    align-items: flex-start; /* Align to the left */
+    max-width: 150px; /* Restrict width of the logo section */
+    gap: 1rem; /* Space between logo and text */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Links Section */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align columns at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all content in columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+
+/* Top White Footer */
+.top-footer {
+    width: 100%;
+    background-color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo - Keep it on the left with correct sizing */
+.top-footer .logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.top-footer .logo-link img {
+    height: 40px; /* Keep logo size fixed */
+    width: auto;
+}
+
+/* Centered Navigation */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Allows it to take up remaining space */
+    gap: 30px;
+}
+
+/* Navigation Links */
+.top-nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Slide-Out Underline on Hover */
+.top-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    left: 50%;
+    bottom: -3px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.top-nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+/* Styles for the added image */
+.moven-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.moven-image {
+    width: 100%; /* Make it responsive */
+    max-width: 500px; /* Set a max width */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+/* Centered response container */
+#responseContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(0, 217, 255, 0.3);
+    border-top-color: #00d9ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success message in black */
+.success-message {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Checkmark animation */
+.checkmark {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0);
+    animation: checkmark-pop 0.4s ease-out forwards;
+}
+
+@keyframes checkmark-pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+

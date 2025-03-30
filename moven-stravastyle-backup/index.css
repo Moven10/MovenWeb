@@ -1,0 +1,1223 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Footer styles */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 15px 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Footer Logo Styles */
+.footer-logo {
+    width: 120px; /* Adjusted width to make it less wide */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space below the logo */
+}
+
+/* Footer navigation styles */
+.footer-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #a0e7e5;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Menu Trigger (for 'Ways to Move') */
+.footer-dropdown {
+    position: relative; /* Position relative to parent for dropdown placement */
+}
+
+/* Updated Dropdown Menu Styles */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: calc(200% - 2px); /* Slight overlap with the trigger */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95); /* Slightly transparent black background */
+    padding: 20px;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 100; /* Ensure it appears above other elements */
+    opacity: 0; /* Start fully hidden */
+    transform: translateY(-5px); /* Start slightly above default position */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth dropdown effect */
+    width: 600px; /* Increased width for more content space */
+    border-radius: 6px; /* Slightly rounded corners */
+    display: flex; /* Flex layout to include both options and images */
+    gap: 20px; /* Space between the options and images */
+}
+
+/* Show dropdown on hover */
+.footer-dropdown:hover .dropdown-menu {
+    display: flex; /* Show the dropdown */
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Slide into place */
+    pointer-events: auto; /* Enable interaction */
+}
+
+/* Dropdown Options Section */
+.dropdown-options {
+    flex: 1; /* Take up one part of the space */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+.dropdown-small-headline {
+    font-size: 18px; /* Small headline size */
+    font-weight: bold;
+    color: #a0e7e5; /* Light aqua blue */
+    margin-bottom: 10px;
+}
+
+.dropdown-list {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between options */
+}
+
+.dropdown-list li {
+    display: flex;
+    align-items: center; /* Vertically align the text and image */
+    gap: 10px; /* Space between image and text */
+}
+
+.dropdown-item {
+    color: white; /* White text */
+    text-decoration: none;
+    font-size: 16px; /* Slightly larger text for readability */
+    transition: color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    color: #a0e7e5; /* Light aqua blue on hover */
+}
+
+/* Option Images */
+.dropdown-option-image {
+    width: 30px; /* Small thumbnail size */
+    height: 30px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 0; /* No rounding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Divider */
+.dropdown-divider {
+    width: 2px;
+    background-color: white;
+    height: auto;
+    margin: 0 20px; /* Space around the divider */
+}
+
+/* Dropdown Images Section */
+.dropdown-images {
+    flex: 1; /* Take up one part of the space */
+    display: flex;
+    flex-direction: row; /* Align images side by side */
+    gap: 20px; /* Space between image blocks */
+    align-items: center; /* Center align images and captions */
+}
+
+.dropdown-image-block {
+    text-align: center; /* Center align each block */
+}
+
+.dropdown-image {
+    width: 150px; /* Larger width for images */
+    height: 150px; /* Larger height for images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    border-radius: 0; /* No rounding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.dropdown-caption {
+    font-size: 16px; /* Caption font size */
+    font-weight: bold; /* Bold text for emphasis */
+    color: white; /* White text color */
+    margin-top: 10px; /* Space between image and caption */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        flex-direction: column; /* Stack options and images vertically */
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .dropdown-divider {
+        display: none; /* Hide the divider on smaller screens */
+    }
+
+    .dropdown-images {
+        flex-direction: row; /* Keep images in a row */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: center; /* Center the images */
+    }
+
+    .dropdown-image {
+        width: 120px; /* Slightly smaller images */
+        height: 120px;
+    }
+}
+
+
+/* Remove the margin from the last dropdown item */
+.dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer Styles */
+.footer {
+    position: relative; /* Stacking context for dropdown */
+    z-index: 10; /* Ensure footer content appears above other elements */
+    padding: 20px 200px; /* Space around footer content */
+    background-color: black; /* Footer background color */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Footer Navigation Links */
+.footer-nav {
+    display: flex;
+    gap: 20px; /* Space between links */
+    align-items: center;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #a0e7e5; /* Light aqua blue on hover */
+}
+
+/* Underline effect on hover */
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #a0e7e5;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%; /* Underline expands on hover */
+}
+
+
+.image-section {
+    position: relative; /* Needed for overlay positioning */
+    background-image: url('assets/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px 150px;
+}
+
+/* Dark overlay */
+.image-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+    z-index: 1; /* Places overlay above the background image */
+}
+
+/* Ensures text appears above overlay */
+.image-content {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+}
+
+
+.headline {
+    font-size: 72px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* White section styles */
+.white-section {
+    background-color: white;
+    padding: 50px 100px;
+    text-align: center;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1440" height="150" viewBox="0 0 1440 150"%3E%3Cpath fill="none" stroke="%23a0e7e5" stroke-width="4" d="M0 100c80-60 160 60 240 0s160-60 240 0 160 60 240 0 160-60 240 0 160 60 240 0 160-60 240 0"%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.white-headline {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.white-paragraph {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Three images layout */
+.three-images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.image-block {
+    text-align: center;
+    max-width: 300px;
+}
+
+.info-image {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+.center-button {
+    margin: 40px 0;
+}
+
+.cta-button {
+    background-color: lightgreen;
+    color: black;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: aqua;
+    border-radius: 30px;
+}
+
+/* Milestone section styles */
+.milestone-headline {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.milestone-paragraph {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.milestones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.milestone-image {
+    width: 12%;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Transparent Button */
+.transparent-button {
+    background-color: transparent;
+    border: 2px solid aqua;
+    color: aqua;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.transparent-button:hover {
+    background-color: aqua;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Black section */
+.black-section {
+    background-color: black;
+    color: white;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.black-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.black-row:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.black-row:nth-child(even) {
+    flex-direction: row;
+}
+
+/* Image styles */
+.static-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Text block styles */
+.black-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.small-headline {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+.black-text {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Cream button */
+.cream-button {
+    background-color: #f5f5dc;
+    color: black;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cream-button:hover {
+    background-color: #e0ffff;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .black-row {
+        flex-direction: column;
+    }
+
+    .static-image {
+        max-width: 300px;
+    }
+
+    .black-content {
+        max-width: 90%;
+    }
+}
+
+/* Small White Section */
+.small-white-section {
+    background-color: white;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.small-white-subheadline {
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Rounded Images (iOS and WatchOS) */
+.rounded-images {
+    display: flex;
+    justify-content: center; /* Center the images */
+    gap: 70px; /* Space between the images */
+}
+
+.rounded-image-block {
+    width: 500px; /* Increased width for wider rectangles */
+    height: 300px; /* Proportionally adjusted height */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure images don’t overflow the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.rounded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales proportionally */
+}
+
+
+/* "See What's Coming Up" Text */
+.coming-up-text {
+    font-size: 14px; /* Smaller text size */
+    color: #004080; /* Darker blue color */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 40px; /* Move the text much lower */
+}
+
+
+/* Slightly Darker White Section */
+.slightly-darker-white-section {
+    background-color: #f7f7f7;
+    padding: 80px 120px; /* Generous padding for a larger section */
+    text-align: center;
+    position: relative;
+}
+
+/* Section headline */
+.affiliate-headline {
+    font-size: 36px; /* Larger font size for the headline */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin-bottom: 40px; /* Spacing below the headline */
+}
+
+/* Maintain original grid layout */
+.affiliate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Keep 4 columns for images */
+    gap: 20px; /* Original gap between images */
+    margin-top: 30px;
+}
+
+.affiliate-block {
+    text-align: center;
+}
+
+.affiliate-image {
+    width: 100%; /* Ensure images stretch fully within their block */
+    max-width: 500px; /* Maintain a maximum width */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure images fit dimensions without distortion */
+    border-radius: 0; /* No rounding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.affiliate-title {
+    font-size: 18px; /* Maintain same font size */
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+/* Spacer at the bottom of the section */
+.slightly-darker-white-section::after {
+    content: '';
+    display: block;
+    height: 80px; /* Larger spacer height */
+    background-color: transparent; /* Transparent spacer */
+}
+
+
+
+/* Foreground Image (Image 30) */
+.foreground-image {
+    position: absolute;
+    left: 50%; /* Centers the image horizontally */
+    top: -200px; /* Moves the image above the Join Move Section */
+    height: 300%; /* Extends the image to be much larger */
+    transform: translateX(-50%); /* Keeps the image centered */
+    z-index: 2; /* Ensures the image is in front of the Join Move Section */
+    object-fit: cover; /* Ensures the image scales proportionally */
+    opacity: 1; /* Full visibility */
+    pointer-events: none; /* Prevents the image from interfering with interactions */
+}
+
+/* Floating Image */
+.floating-image {
+    position: absolute;
+    top: -70px; /* Adjusted to move 20px higher (-50px to -70px) */
+    left: 210px; /* No changes here */
+    width: 430px; /* Keeps the same width */
+    height: 500px; /* Keeps the same height */
+    z-index: 2; /* Ensures it remains above other sections */
+    opacity: 1; /* Fully visible */
+    object-fit: cover; /* Ensures the image scales properly */
+    pointer-events: none; /* Prevents the image from interfering with clicks */
+}
+
+/* Join Move Section */
+.join-move-section {
+    background-color: black;
+    color: white;
+    padding: 50px 10%; /* Adjusted padding for better responsiveness */
+    position: relative; /* Keeps the floating image positioning intact */
+    overflow: visible; /* Ensures the floating image and headline aren't cut off */
+    z-index: 1;
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    text-align: left; /* Left-aligns the text within the section */
+}
+
+/* Join Move Content */
+.join-move-content {
+    position: relative; /* Keeps content above the floating image */
+    z-index: 3; /* Ensures text and buttons are on top */
+    max-width: 90%; /* Allows the content to span up to 90% of the section width */
+    width: 100%; /* Ensure the content takes the full width of the container */
+    text-align: left; /* Left-aligns text inside the container */
+    font-family: 'Inter', sans-serif; /* Use Strava-like font */
+    margin: 0 auto; /* Centers the block horizontally */
+}
+
+/* Subtitle */
+.join-move-subtitle {
+    font-size: 14px; /* Smaller text size */
+    color: #a0e7e5; /* Light aqua blue */
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500; /* Semi-bold weight for better readability */
+}
+
+/* Title */
+.join-move-title {
+    font-size: 48px; /* Large font size for emphasis */
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    margin-top: 0;
+    margin-bottom: 20px; /* Space below the title */
+    line-height: 1.2; /* Slightly tighter line spacing */
+    text-align: left; /* Left-align the text itself */
+    word-break: break-word; /* Ensures clean line wrapping if needed */
+    width: 100%; /* Allows the title to span the full width of the container */
+}
+
+/* Highlight "Moven." specifically */
+.moven-highlight {
+    color: white; /* Change to white */
+    font-weight: bold; /* Keep it bold for emphasis */
+}
+
+/* Button Row Styles */
+.button-row {
+    margin-top: 20px; /* Space between the title and buttons */
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+/* Outlined Button */
+.outlined-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.outlined-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Blue Outlined Button */
+.blue-outlined-button {
+    background-color: transparent;
+    color: #a0e7e5;
+    border: 2px solid #a0e7e5;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blue-outlined-button:hover {
+    background-color: #a0e7e5;
+    color: black;
+}
+
+/* Plain Button */
+.plain-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+.plain-button:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .floating-image {
+        width: 250px; /* Smaller width for smaller screens */
+        height: 300px; /* Adjusted height for smaller screens */
+        top: -100px; /* Keeps the image higher on smaller devices */
+        left: -20px; /* Adjust positioning for smaller screens */
+    }
+
+    .join-move-section {
+        padding: 30px 50px;
+    }
+
+    .join-move-content {
+        max-width: 100%;
+    }
+
+    .button-row {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: flex-start; /* Keep buttons left-aligned */
+        gap: 10px; /* Smaller gap for vertical stacking */
+    }
+}
+
+
+
+
+/* Large White Section */
+.large-white-section {
+    background-color: white;
+    padding: 100px 100px; /* Larger padding for a spacious look */
+    text-align: center;
+}
+
+.large-section-headline {
+    font-size: 36px; /* Headline size for emphasis */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Floating Image Between Sections */
+.floating-image-between {
+    position: relative; /* Relative to the document flow */
+    width: 100%; /* Full-width container */
+    display: flex;
+    justify-content: flex-end; /* Align image near the right */
+    margin: -120px 0 50px; /* Lift image higher between sections */
+    z-index: 2; /* Ensure it appears above other sections */
+    pointer-events: none; /* Prevent interference with other elements */
+}
+
+.image-between {
+    height: 450px; /* Increase the height for a larger size */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure proper scaling */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for emphasis */
+    transform: translateY(-30px) translateX(-140px); /* Shift image up and slightly left */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    pointer-events: auto; /* Allow hover effects on the image */
+}
+
+.image-between:hover {
+    transform: translateY(-50px) translateX(-30px); /* Lift higher on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+/* Large White Section (FAQ Section) */
+.large-white-section {
+    background-color: white; /* White background for a clean look */
+    color: black; /* Black text for readability */
+    padding: 30px 5%; /* Reduced spacing at the top */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Full-width layout */
+    position: relative; /* Allows precise positioning */
+}
+
+/* FAQ Headline */
+.faq-headline {
+    font-size: 32px; /* Large font size for the headline */
+    font-family: 'Inter', sans-serif; /* Strava-like font */
+    font-weight: normal; /* No bold styling */
+    color: black; /* Black text for emphasis */
+    margin-bottom: 20px; /* Slightly smaller space below the headline */
+    text-align: left; /* Align the headline to the left */
+    margin-left: 210px; /* Align headline with the 30 image */
+}
+
+/* FAQ Container */
+.faq-container {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px; /* Space between FAQ items */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Prevents it from stretching too wide */
+    margin: 0 auto; /* Centers the FAQ section */
+    padding: 0 20px; /* Adds space on both sides */
+}
+
+/* FAQ Items */
+.faq-item {
+    text-align: left; /* Align each question to the left */
+    padding: 15px 0; /* Slightly reduced padding for a compact layout */
+    border-bottom: 1px solid #ddd; /* Light gray line to separate questions */
+}
+
+/* FAQ Subheadline (Question) */
+.faq-subheadline {
+    font-size: 20px; /* Medium size for subheadlines */
+    font-family: 'Inter', sans-serif; /* Strava-inspired font */
+    font-weight: normal; /* No bold styling */
+    color: black; /* Black text for questions */
+    margin-bottom: 10px; /* Space below the question */
+}
+
+/* FAQ Text (Answer) */
+.faq-text {
+    font-size: 16px; /* Standard text size */
+    font-family: 'Inter', sans-serif; /* Consistent font with subheadline */
+    color: black; /* Black text for answers */
+    line-height: 1.6; /* Comfortable line spacing */
+    margin: 0; /* Remove default margin */
+}
+
+/* FAQ Links */
+.faq-link {
+    color: blue; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: normal; /* Keep link text weight normal */
+    transition: color 0.3s ease; /* Smooth color transition for hover */
+}
+
+.faq-link:hover {
+    color: darkblue; /* Slightly darker blue on hover */
+    text-decoration: none; /* Ensure underline doesn’t appear on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .faq-headline {
+        margin-left: 0; /* Remove large left margin */
+        text-align: center; /* Center headline for smaller screens */
+    }
+
+    .faq-container {
+        margin-left: 0; /* Reset alignment for smaller screens */
+        padding: 0 10px; /* Add padding on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-headline {
+        font-size: 28px; /* Slightly smaller font size */
+    }
+
+    .faq-container {
+        padding: 0 10px; /* Extra padding for smaller screens */
+    }
+
+    .faq-subheadline {
+        font-size: 18px; /* Slightly smaller for subheadlines */
+    }
+
+    .faq-text {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+}
+
+/* Bottom Section */
+.offwhite-section {
+    background-color: #fefaf3; /* Subtle cream color */
+    padding: 70px 8%; /* Generous padding with a slight shift to the right */
+}
+
+.footer-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 40px; /* Space between columns */
+    align-items: flex-start; /* Align content to the top of each column */
+    justify-content: center; /* Center the entire grid */
+}
+
+.footer-column {
+    text-align: center; /* Center align all content within each column */
+}
+
+/* First Column: Vertical Alignment */
+.footer-column:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    height: 100%; /* Ensure column takes up full height of the grid */
+}
+
+/* Footer Logo */
+.footer-logo {
+    width: 160px; /* Increased logo size */
+    margin-bottom: 15px; /* Space below the logo */
+}
+
+/* Black Apple Store Button */
+.apple-store-button {
+    display: block;
+    margin: 15px auto; /* Center align the button */
+    width: 120px; /* Smaller button size */
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px; /* Footer text size */
+    color: black; /* Black text for the Privacy Policy and general footer text */
+    line-height: 1.6; /* Line spacing for readability */
+    margin-top: 10px; /* Space above the text */
+    text-align: center; /* Ensure footer text is also centered */
+}
+
+/* Footer Links in Text */
+.footer-text a {
+    color: black; /* Ensure the "Privacy Policy" link is black */
+    font-weight: bold; /* Bold for emphasis */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #007aff; /* Blue hover effect */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    justify-content: center; /* Center align icons */
+    margin-top: 15px; /* Add space above social icons */
+}
+
+.social-icon {
+    width: 30px; /* Larger icon size for emphasis */
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add hover scaling effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Footer Lists */
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px; /* List item text size */
+    line-height: 1.6; /* Line spacing for readability */
+}
+
+.footer-list li {
+    margin-bottom: 10px; /* Space between list items */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-list li:hover {
+    color: #007aff; /* Blue hover effect */
+}
+
+/* Light Blue Link */
+.light-blue-link {
+    color: #007aff; /* Light blue color for emphasis */
+    font-size: 14px; /* Same size as other footer text */
+    font-weight: bold; /* Bold to stand out */
+    text-decoration: none;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+.light-blue-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        gap: 30px; /* Reduce gap between stacked columns */
+    }
+
+    .footer-logo {
+        width: 120px; /* Reduce logo size for smaller screens */
+    }
+
+    .apple-store-button {
+        width: 100px; /* Smaller Apple button on mobile */
+    }
+
+    .footer-list {
+        font-size: 12px; /* Reduce list item font size */
+    }
+
+    .footer-text {
+        font-size: 12px; /* Smaller footer text */
+    }
+
+    .social-icon {
+        width: 25px; /* Reduce icon size */
+        height: 25px;
+    }
+}
+.light-aqua-button {
+    background-color: #7fdbff; /* Light Aqua Blue */
+    color: #ffffff; /* White Text */
+    font-size: 20px; /* Slightly Larger Font */
+    font-family: 'Poppins', sans-serif; /* Font Style */
+    padding: 15px 60px; /* Increased Padding for Width */
+    border: none; /* Remove Border */
+    border-radius: 8px; /* Rounded Corners */
+    cursor: pointer; /* Pointer Cursor */
+    transition: background-color 0.3s ease; /* Smooth Hover Effect */
+    margin-top: 20px; /* Add Space Below the Headline */
+    text-align: center;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase; /* Make Text Uppercase */
+    width: 60%; /* Make Button Much Wider (80% of Parent) */
+    max-width: 600px; /* Limit Maximum Width for Large Screens */
+}
+
+.light-aqua-button:hover {
+    background-color: #5bc8e7; /* Darker Aqua on Hover */
+}
+
+.hover-button {
+    text-decoration: none; /* Removes underline by default */
+    color: #000000; /* Default text color */
+    padding: 5px 15px; /* Add padding to give it a button-like feel */
+    border-radius: 8px; /* Rounded corners for the button look */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.hover-button:hover {
+    background-color: #40e0d0; /* Light green-turquoise background */
+    color: #ffffff; /* Change text color to white when hovered */
+    text-decoration: none; /* Ensures no underline on hover */
+    transform: scale(1.1); /* Makes the button 10% larger on hover */
+    padding: 10px 20px; /* Expands padding for a larger button effect */
+}
+.affiliate-link {
+    text-decoration: none; /* No underline by default */
+    color: #000000; /* Black text color */
+    font-size: 18px; /* Default font size for the text under the images */
+    font-weight: 500; /* Slightly bold */
+    display: block; /* Make the link clickable as a block under the image */
+    text-align: center; /* Center align the text */
+    margin-top: 10px; /* Add spacing between the image and text */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Underline the text when hovered over */
+.affiliate-link:hover {
+    text-decoration: underline; /* Add black underline on hover */
+    color: #000000; /* Ensure the text remains black */
+}
+
+/* Wide images */
+.affiliate-image {
+    width: 100%; /* Ensure images take up full container width */
+    max-width: 400px; /* Increased maximum width for larger images */
+    cursor: pointer; /* Show pointer to indicate clickable */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Underline the text when hovering over the image */
+.affiliate-image:hover + .affiliate-link {
+    text-decoration: underline; /* Add black underline to the text */
+}
+.affiliate-block:hover .affiliate-link {
+    text-decoration: underline;
+}
+/* Footer Buttons Container */
+.footer-buttons {
+    margin-left: auto; /* Push buttons to the right */
+    display: flex;
+    gap: 15px; /* Space between the buttons */
+    align-items: center; /* Vertically center the buttons */
+}
+
+/* Login Button Styles */
+.login-button {
+    background-color: black; /* Black background */
+    color: #ff69b4; /* Vibrant pink text */
+    font-size: 14px; /* Font size */
+    font-family: 'Poppins', sans-serif; /* Font style */
+    font-weight: bold; /* Bold text */
+    padding: 12px 30px; /* Padding for button size */
+    border: 2px solid #ff69b4; /* Pink outline */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.login-button:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text on hover */
+    border: none; /* Remove the pink outline on hover */
+}
+
+/* Join For Free Button Styles */
+.join-free-button {
+    background-color: #a0e7e5; /* Light aqua green */
+    color: black; /* Black text */
+    font-size: 14px; /* Font size */
+    font-family: 'Poppins', sans-serif; /* Font style */
+    font-weight: bold; /* Bold text */
+    padding: 12px 30px; /* Padding for button size */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.join-free-button:hover {
+    background-color: #5bc8e7; /* Slightly darker aqua blue on hover */
+    color: black; /* Keep the text black */
+    border-radius: 4px; /* Maintain the rectangular shape */
+}
+
+/* Footer Icon Styles */
+.footer-icon {
+    width: 40px; /* Circle diameter */
+    height: 40px; /* Circle diameter */
+    border-radius: 50%; /* Fully round circle */
+    background-color: white; /* White circle */
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.person-icon {
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.footer-list a {
+    position: relative;
+    text-decoration: none;
+    color: inherit; /* Keeps the text color same as the surrounding text */
+    padding-bottom: 3px; /* Adds some space for the underline effect */
+}
+
+.footer-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Uses the same color as the text */
+    transition: width 0.3s ease-in-out; /* Animation effect */
+}
+
+.footer-list a:hover::after {
+    width: 100%; /* Expands the underline from left to right */
+}

@@ -1,0 +1,571 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background: url('assets/259.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+}
+
+.info-box {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    background: #d3d3d3;
+    color: #555;
+    margin: 5px;
+}
+
+.info-box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.description {
+    padding: 20px;
+    background: white;
+}
+
+.description h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.description-image {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+/* Discounts Section */
+.discounts-section {
+    background: url('assets/51.jpg') no-repeat center center/cover;
+    padding: 50px 20px;
+    color: white;
+}
+
+.discounts-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Fully align everything to the left inside the discount section */
+.discount-details {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Moves all content to the left */
+    justify-content: center;
+}
+
+/* Left-align the heading */
+.discount-heading {
+    font-size: 1.4rem;
+    font-weight: bold;
+    max-width: 90%;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+/* Left-align text and ensure proper spacing */
+.discount-text, .performance-text {
+    font-size: 1rem;
+    color: #bbb;
+    max-width: 90%;
+    text-align: left;
+    margin: 0 0 20px 0;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* Move discount image to the left */
+.discount-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Left-align the performance heading */
+.performance-heading {
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 30px;
+    text-align: left;
+    max-width: 90%;
+}
+
+/* Ensure performance text is fully left-aligned */
+.performance-text {
+    font-size: 1rem;
+    color: #bbb;
+    max-width: 90%;
+    text-align: left;
+    margin: 0;
+    word-wrap: break-word;
+    line-height: 1.5;
+    display: block;
+}
+
+
+/* Events Section */
+.events-section {
+    background: url('assets/56.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: white;
+}
+
+.events-details {
+    background: white;
+    padding: 40px 20px;
+}
+
+.events-details h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.events-details p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+/* Adjusted Register Section */
+.register-section {
+    background: white;
+    padding: 40px 20px;
+}
+
+.register-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.register-section p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+/* Move To Earn Events Section inside Register */
+.register-section .event-info-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.register-section .event-info-text {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.event-info-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* New Background Section */
+.new-background-section {
+    background: url('assets/64.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.upcoming-events h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.upcoming-events p {
+    font-size: 1rem;
+    color: #bbb;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.upcoming-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+/* New Background Section */
+.move-to-earn-bg {
+    background: url('assets/60.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.move-to-earn-bg h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+/* Dark Grey Section */
+.join-moven-section {
+    background: #333; /* Dark Grey Background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Light Aqua Button */
+.join-moven-btn {
+    background-color: #7fdbff; /* Light Aqua */
+    color: #333; /* Dark Text for Contrast */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.join-moven-btn:hover {
+    background-color: #66c2e0; /* Slightly Darker Aqua on Hover */
+}
+
+
+/* Top Footer Section */
+.top-footer {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Menu Button (Three lines ☰) - Moved slightly higher */
+.menu-button {
+    font-size: 34px;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -3px; /* Moves the menu icon slightly higher */
+}
+
+/* Larger Moven Logo */
+.moven-logo {
+    height: 40px;
+    width: auto;
+    margin-left: -110px;
+}
+
+/* Smaller Sign Up Button & Moved Slightly Left */
+.signup-button {
+    background-color: #5fd3eb;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.signup-button:hover {
+    background-color: #48bdd7;
+}
+
+/* Remove underline from the link */
+.signup-button-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Ensures proper button alignment */
+}
+
+
+/* Slide-Out Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    padding-top: 20px;
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Close (X) Button - Now Larger */
+.close-menu {
+    font-size: 34px;  /* Increased size */
+    color: black;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    font-weight: 400; /* Slightly bolder */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add slight hover effect for better UX */
+.close-menu:hover {
+    transform: scale(1.1);
+}
+
+/* Overlay (Covers screen when menu is open, clicking it closes menu) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.442); /* Fully black */
+    display: none; /* Hidden by default */
+    z-index: 1050;
+    pointer-events: all;
+}
+
+/* Prevent scrolling and interactions behind menu */
+body.menu-open {
+    background-color: black;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Menu List */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 20px 0; /* Adjusted margin to make space for X */
+}
+
+/* Menu Items */
+.side-menu ul li {
+    padding: 12px 20px;
+}
+
+/* Menu Links */
+.side-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: block;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Light Grey Divider */
+.menu-divider {
+    width: 85%;
+    height: 1px;
+    background: #ddd;
+    margin: 15px auto;
+}
+
+/* Small Non-Bold Options (Smaller & Grey) */
+.small-options p {
+    font-size: 14px; /* Smaller font */
+    color: grey; /* Grey text */
+    padding: 10px 20px;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+}
+
+.small-options p a {
+    text-decoration: none;
+    color: grey; /* Matches text color */
+}
+
+/* Remove underline from the link */
+.get-app-button-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Makes the button behave properly inside the link */
+    width: 80%; /* Matches the button width */
+    margin: 20px auto; /* Centers the link */
+}
+
+/* "Get The App" Button (Now Rectangular) */
+.get-app-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0px; /* Makes it fully rectangular */
+    cursor: pointer;
+    display: block;
+    width: 100%; /* Ensures it takes full width */
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.get-app-button:hover {
+    background-color: #333;
+}
+
+
+/* Moven Logo at the bottom */
+.moven-logo-footer {
+    width: 120px;
+    display: block;
+    margin: 20px auto;
+}
+/* Footer Section */
+.footer-section {
+    background-color: #f8f8f8; /* Light grey */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: flex-start; /* Align to left */
+}
+
+/* Footer Content Wrapper */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align everything */
+    max-width: 300px; /* Keeps content neatly stacked */
+}
+
+/* Moven Logo */
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Copyright Text */
+.copyright-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Apple Store Button (Made Smaller) */
+.apple-store-button {
+    width: 140px; /* Reduced width */
+    margin-bottom: 15px;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Privacy Policy Link */
+.footer-text a {
+    color: #5fd3eb;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    width: 20px; /* Slightly smaller */
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Footer Links (Now Left-Aligned) */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left align */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

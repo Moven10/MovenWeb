@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Track your progress and grow your community with the Moven dashboard." />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>Dashboard - Moven</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- ✅ Navigation Bar -->
+    <div class="top-nav">
+        <div class="nav-left">
+            <a href="index.html" aria-label="Go to homepage">
+                <img src="assets/MovenLogoblack.jpg" alt="Moven Logo" class="nav-logo" />
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Activities</a>
+                <a href="features.html">Features</a>
+                <a href="comingsoon.html">Coming Soon</a>
+                <a href="partner.html">Build With Us</a>
+            </nav>
+        </div>
+        <nav>
+            <div id="account-btn">
+                <!-- ✅ Circle with First Letter Instead of Profile Picture -->
+                <div id="profile-initial" class="profile-initial">U</div>
+                <span class="chevron">&#9660;</span>
+                
+                <!-- ✅ Dropdown Menu -->
+                <div class="dropdown-menu">
+                    <a href="about.html">About</a>
+                    <a href="MoverProDeepdive.html">MoverPro DeepDive</a>
+                    <a href="partner.html">Explore A Vision</a>
+                    <a href="move-to-earn.html">Move To Earn</a>
+                    <a href="#" id="logout-btn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ✅ Top Section for Side-by-Side Layout -->
+    <div class="top-section">
+        <!-- ✅ Left Section -->
+        <div class="left-section">
+            <!-- ✅ User Info + Stats Container -->
+            <div class="user-section">
+                <div class="user-info">
+                    <!-- ✅ Circle with First Letter Instead of Profile Picture -->
+                    <div id="username-initial" class="profile-initial">U</div>
+                    <span id="username">Welcome, User</span>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-box small-stat-box">
+                        <h3 id="followers-title">Followers<br><span>(0)</span></h3>
+                    </div>
+                    <div class="stat-box">
+                        <h2 id="following-title">Following<br><span>(0)</span></h2>
+                    </div>
+                    <div class="stat-box">
+                        <h2 id="friends-title">Friends<br><span>(0)</span></h2>
+                    </div>
+                </div>
+                <div class="divider-section">
+                    Discover what your friends are up to.
+                </div>
+                <!-- ✅ Image Below Divider Section -->
+                <img src="assets/8000.jpg" alt="Motivation Image" class="user-section-image" loading="lazy" />
+            </div>
+
+            <!-- ✅ Claimed Tokens Section -->
+            <div class="claimed-images-section">
+                <h2>Claimed Move Tokens</h2>
+                <div id="claimed-images-list" class="claimed-images-list">
+                    <div class="claimed-image-wrapper">
+                        <img src="assets/default-sneaker.jpg" alt="Claimed Token" class="claimed-image" loading="lazy" />
+                    </div>
+                    <div class="claimed-image-wrapper">
+                        <img src="assets/default-sneaker.jpg" alt="Claimed Token" class="claimed-image" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✅ Total Distance Section -->
+            <div class="total-distance">
+                <p>
+                    Total Distance 
+                    <img src="assets/totaldistance.png" alt="AI Icon" class="total-distance-icon" />
+                </p>
+                <span id="total-distance-value">0</span>
+                
+                <img src="assets/8002.jpg" alt="Distance Background" class="total-distance-background" loading="lazy" />
+            </div>
+        </div>
+
+        <!-- ✅ Right Section -->
+        <div class="right-section">
+            <div class="centered-section">
+                <img src="assets/8001.jpg" alt="Welcome Image" loading="lazy" />
+                <div class="content">
+                    <h2>Get moving with Moven.</h2>
+                    <p>Your personalized dashboard to track your progress and grow your community.</p>
+                    
+                    <div class="divider"></div>
+
+                    <!-- ✅ Tokens Section -->
+                    <div class="tokens-header">
+                        <h3 class="tokens-headline">Discover Your Tokens</h3>
+                    </div>
+                    <img src="assets/discovery.png" alt="AI Icon" class="tokens-ai-icon" />
+                    <p class="tokens-description">
+                        Find the Move Token that suits you. Everyone’s journey is different—discover tokens tailored to your activity and goals.
+                    </p>
+                    <button class="tokens-button" type="button" onclick="location.href='movetokengallery.html'">View Tokens</button>
+
+                    <div class="grey-divider"></div>
+
+                    <!-- ✅ Become A Mover Athlete Section -->
+                    <div class="friends-header">
+                        <h3 class="friends-headline">Become A Mover Athlete</h3>
+                    </div>
+                    <img src="assets/athlete.png" alt="AI Icon" class="friends-ai-icon" />
+                    <p class="friends-description">
+                        Join the Moven Athlete program and share your journey with a community of motivated athletes. Build your audience, connect with others, and inspire with your content.
+                    </p>
+                    <button class="find-friends-button" type="button" onclick="location.href='creatorspartner.html'">Moven Athlete</button>
+                </div>
+            </div>
+
+            <!-- ✅ Get Our App Section -->
+            <div class="get-app-section">
+                <h2>Get Our App for Free</h2>
+                <p>
+                    Download the Moven app on your mobile device to track your progress on the go and stay connected with your community.
+                </p>
+                <div class="get-app-images">
+                    <img src="assets/50.jpg" alt="Get Our App" class="get-app-image" />
+                    <a href="https://www.apple.com/app-store/" target="_blank">
+                        <img src="assets/appstore.jpg" alt="App Store" class="appstore-image" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Followers Modal -->
+    <div id="followers-modal" class="modal">
+        <div class="modal-content">
+            <h2>Followers</h2>
+            <div id="followers-modal-list" class="modal-list"></div>
+        </div>
+    </div>
+
+    <!-- ✅ Following Modal -->
+    <div id="following-modal" class="modal">
+        <div class="modal-content">
+            <h2>Following</h2>
+            <div id="following-modal-list" class="modal-list"></div>
+        </div>
+    </div>
+
+    <!-- ✅ Friends Modal -->
+    <div id="friends-modal" class="modal">
+        <div class="modal-content">
+            <h2>Friends</h2>
+            <div id="friends-modal-list" class="modal-list"></div>
+        </div>
+    </div>
+
+     <!-- Footer Section -->
+ <div class="footer-section">
+    <!-- Left: Logo and Copyright -->
+    <div class="footer-logo">
+        <a href="index.html">
+            <img src="assets/MovenLogo.png" alt="Moven Logo">
+        </a>
+        <div class="footer-text">
+            <p class="copyright">© 2025 Moven. All rights reserved.</p>
+            <p class="privacy-policy">Privacy Policy</p>
+        </div>
+    </div>
+
+    <!-- Middle: Links Section -->
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Browse</h4>
+            <a href="moverpro.html">MoverPro</a>
+            <a href="features.html">Features</a>
+            <a href="About.html">About</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="partner.html">Partner</a>
+        </div>
+        <div class="footer-column">
+            <h4>Follow and Support</h4>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.youtube.com/">Twitter</a>
+            <a href="https://x.com/?lang=en&mx=2">YouTube</a>
+            <a href="moveraffiliate.html">MoverAffiliate</a>
+            <a href="clothingqr.html">MoverClothingQr</a>
+        </div>
+        <div class="footer-column">
+            <h4>Get Started</h4>
+            <a href="create-account.html">Sign Up</a>
+            <a href="youraccount.html">Login</a>
+            <!-- Official App Store Button -->
+            <a href="#" class="app-store-button">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+    </div>
+</div>
+
+    <!-- ✅ Modal Backdrop -->
+    <div id="modal-backdrop" class="modal-backdrop"></div>
+
+    <!-- ✅ Link to JS -->
+    <script src="dashboard.js" type="module"></script>
+</body>
+</html>

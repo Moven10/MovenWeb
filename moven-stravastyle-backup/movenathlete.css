@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
+
+body {
+    background-color: #e0faf8; /* Light blue cream */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh; /* Increased page height to allow even more vertical space */
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Helvetica, Arial, sans-serif; /* Apple-style font */
+}
+
+
+
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    top: 400px; /* Moves EVERYTHING much lower down */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: -80px;
+    top: 0px;
+    max-width: 600px;
+}
+
+.image {
+    width: 600px;
+    height: auto;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.text {
+    color: hotpink;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.headline {
+    font-size: 18px;
+    color: black;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.body-text {
+    font-size: 14px;
+    color: grey;
+    margin-top: 5px;
+    font-weight: normal;
+    max-width: 400px;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    position: relative;
+    top: 0px;
+}
+
+/* Row for side-by-side images */
+.image-row {
+    display: flex;
+    gap: 15px;
+}
+
+/* First set of images (622 & 623) */
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.small-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.small-text {
+    max-width: 250px;
+}
+
+/* New image below the first set of images */
+.wide-image {
+    width: 510px;
+    height: 320px;
+    margin-top: 120px; /* Moved further down */
+}
+
+/* Text below the wide image */
+.wide-text {
+    max-width: 510px;
+    margin-bottom: 150px; /* Added space below the paragraph */
+}
+
+/* Second set of side-by-side images (604 & 603) */
+.lower-image-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 100px; /* Moved 604 & 603 further away from the paragraph */
+}
+.fixed-section {
+    position: sticky;
+    top: 20px; /* Keeps it visible while scrolling */
+    align-self: flex-start; /* Ensures it behaves correctly in a flex container */
+    z-index: 10;
+}
+
+.stop-scrolling {
+    position: relative; /* This will help the sticky behavior to release at the bottom */
+}
+.future-section {
+    position: relative;
+    width: 100%;
+    margin-top: 120px; /* Ensures it's below the 603 image */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Keeps everything aligned to the left */
+    margin-left: -100px; /* Moves the entire section further left */
+}
+
+/* Make it full width when user scrolls down to the 602 images */
+@media (min-height: 800px) { 
+    .future-section {
+        align-items: center; /* Centers content */
+        text-align: center; /* Centers text */
+        margin-left: 0; /* Resets left alignment to make it full-width */
+    }
+}
+
+.future-title {
+    margin-top: 100px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    margin-left: -600px; /* Moves headline further left */
+}
+
+/* Three Side-by-Side Images */
+.future-athletes-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-start; /* Aligns images to the left */
+    width: 100%;
+    margin-left: -35px; /* Moves images further left */
+}
+
+.future-athletes-row .image-box {
+    flex: 1;
+    max-width: 250px; /* Keeps the size of images controlled */
+}
+/* Community Section - Move It Further Left */
+.community-section {
+    position: relative;
+    width: 100%;
+    margin-top: 100px; /* Space from previous section */
+    margin-left: -15px; /* Moves section to the LEFT (Adjust this as needed) */
+}
+
+/* Community Section Title */
+.community-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Community Row Layout */
+.community-row {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Adjustable positioning for each community image box */
+.community-row .image-box {
+    flex: 1;
+    max-width: 250px;
+}
+.fixed-section {
+    position: sticky;
+    top: 20px;
+    z-index: 5; /* Ensures it's behind the Future Moven Athletes */
+    transition: transform 0.5s ease-in-out;
+}
+
+.future-section {
+    position: relative;
+    z-index: 10; /* Ensure it's above 623.jpg */
+    background: #e0faf8;
+    transition: transform 0.5s ease-in-out, margin-left 0.5s ease-in-out;
+    padding: 20px; /* Ensures content inside has space */
+    width: 150%; /* Adjust this to control the width */
+    max-width: 800px; /* Adjust as needed */
+    margin-left: -620px; /* Adjust this to move it left */
+    
+}
+/* Community Section - Background Pocket */
+.community-pocket {
+    position: relative;
+    z-index: 10; /* Make sure it overlays content properly */
+    background: #e0faf8; /* White pocket */
+    transition: transform 0.5s ease-in-out, margin-left 0.5s ease-in-out;
+    padding: 20px; /* Add padding for better spacing */
+    width: 150%; /* Similar to future-section */
+    max-width: 800px; /* Keep it aligned */
+    margin-left: -620px; /* Moves it to align with content */
+    top: -120px;
+    
+}
+
+/* Adjust spacing so the pocket smoothly overlays */
+.community-section {
+    position: relative;
+    z-index: 11; /* Ensure it's above other elements */
+}
+/* Top Footer Styling */
+.top-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50; /* Ensures it's above other content */
+}
+
+/* Logo */
+.footer-logo {
+    height: 40px; /* Adjust logo size as needed */
+    margin-right: 30px;
+}
+
+/* Navigation Styling */
+.footer-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Slide-Out Underline Effect */
+.footer-nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.footer-nav a:hover::after {
+    width: 100%;
+}
+/* Wrapper to Contain Pockets + Section */
+.get-moven-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* White Background Pockets */
+.white-pocket {
+    background-color: white;
+    position: absolute;
+    top: 0;
+}
+
+/* Left Pocket (Now in Front of 623.jpg but Behind 360.jpg) */
+.left-pocket {
+    width: 800px; /* Your adjusted width */
+    height: 500px; /* Your adjusted height */
+    left: -630px; /* Your adjusted left position */
+    top: -270px; /* Your adjusted top position */
+    background-color: #e0faf8; /* Matches background */
+    position: absolute;
+    z-index: 5; /* Keeps it in front of 623.jpg but behind 360.jpg */
+}
+
+/* Keep the Right Pocket Behind Become A Moven Athlete Section */
+.get-moven-section {
+    width: 800px;
+    background-color: #e0faf8; /* Matches background */
+    padding: 60px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10; /* Ensures it's above the left pocket */
+}
+
+/* Get Moven Content */
+.get-moven-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Title */
+.get-moven-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Image (Same Size as 623.jpg) */
+.moven-athlete-image {
+    width: 600px;
+    height: auto;
+}
+
+/* Black Button */
+.moven-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+/* Hover Effect - Light Aqua Blue + Oval Shape */
+.moven-button:hover {
+    background-color: #7FFFD4;
+    color: black;
+    border-radius: 50px; /* Makes it oval */
+}
+
+.moven-middle-section {
+    width: 90%;
+    background-color: #e0faf8; /* Match the page background */
+    text-align: left;
+    padding: 60px 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 50px;
+    position: relative;
+    left: -700px; /* Adjust this value to move the entire section */
+    top: 0px; /* Adjust this value to move the section up/down */
+}
+
+/* Headline (Now Adjustable Separately) */
+.moven-middle-title {
+    font-size: 22px; /* Match other section headlines */
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+    position: relative;
+    left: 60px; /* Adjust this to move the headline left/right */
+    top: 0px;  /* Adjust this to move the headline up/down */
+}
+
+/* Container for Image & Text (Moves Together) */
+.moven-middle-content {
+    position: relative;
+    left: 60px; /* Adjust this value to move everything left/right */
+    top: 0px;  /* Adjust this value to move everything up/down */
+}
+
+/* Image Styling (Same Size as 360.jpg) */
+.moven-middle-content img {
+    width: 600px; /* Same size as 360.jpg */
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+/* Text Container Below Image */
+.moven-middle-content .text-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.moven-middle-content .icon {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.moven-middle-content .text {
+    color: hotpink;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.moven-middle-content .body-text {
+    font-size: 14px;
+    color: grey;
+    margin-top: 5px;
+    font-weight: normal;
+    max-width: 400px;
+}
+
+/* White Cover Pocket (At the Very Top of the Section) */
+.moven-cover-pocket {
+    width: 650px; /* Same width as 371.jpg */
+    height: 800px; /* Adjust height as needed */
+    background-color: #e0faf8;
+    position: absolute;
+    top: -700px; /* Puts it at the top of the section */
+    left: 60px; /* Aligns with the section */
+    z-index: 5; /* Behind 370 & 371 but in front of 623 */
+}
+/* Learn More Button (Same Style as Moven Button) */
+.learn-more-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+/* Hover Effect - Light Aqua Blue + Oval Shape */
+.learn-more-button:hover {
+    background-color: #7FFFD4;
+    color: black;
+    border-radius: 50px; /* Makes it oval */
+}
+/* Footer Section - Moved Left */
+.footer-section {
+    background-color: #e0faf8;; /* Dark gray background */
+    padding: 3rem 1rem; /* Compact padding */
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Center the footer content as a group */
+    align-items: center; /* Vertically center the content */
+    gap: 2rem; /* Space between columns */
+    width: 100%; /* Ensure the footer spans the full width */
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Include padding in width calculation */
+    position: relative;
+    left: -300px; /* Moves the entire footer section to the left */
+}
+
+/* Footer Logo and Copyright */
+.footer-logo {
+    display: flex; /* Flex layout to align logo and text */
+    flex-direction: column; /* Stack logo and copyright */
+    justify-content: flex-start; /* Align to the top of the column */
+    align-items: flex-start; /* Left-align logo and text */
+    gap: 1rem; /* Space between logo and text */
+    max-width: 150px; /* Restrict width of the logo section */
+}
+
+.footer-logo img {
+    width: 80px; /* Smaller logo size */
+}
+
+.footer-logo .footer-text {
+    text-align: left; /* Left-align the text */
+}
+
+.footer-logo .copyright,
+.footer-logo .privacy-policy {
+    font-size: 0.8rem; /* Small text */
+    color: #aaa; /* Light gray text */
+    margin: 0; /* Remove margins */
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex; /* Align columns horizontally */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: flex-start; /* Align content toward the left */
+    align-items: center; /* Vertically center the columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between columns */
+}
+
+.footer-column {
+    text-align: left; /* Left-align all text in the columns */
+    min-width: 150px; /* Minimum width for smaller screens */
+}
+
+.footer-column h4 {
+    font-size: 1rem; /* Small headline */
+    font-weight: bold; /* Bold text */
+    color: #000000; /* White text */
+    margin-bottom: 1rem; /* Space below headline */
+    text-align: left; /* Ensure header is also left-aligned */
+}
+
+.footer-column a {
+    display: block; /* Make links block-level */
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: #aaa; /* Light gray */
+    margin-bottom: 0.5rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effect */
+    text-align: left; /* Left-align the links */
+}
+
+.footer-column a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #00d9ff; /* Light aqua blue text on hover */
+}
+
+/* App Store Button */
+.app-store-button img {
+    width: 150px; /* Standard size for the App Store button */
+    margin-top: 1rem; /* Space above the button */
+    display: block; /* Ensure proper alignment */
+}
+
+/* White Pocket Behind 371 (Higher Up & Pure White) */
+.white-pocket-371 {
+    width: 750px; /* Make it larger than 371 image */
+    height: 550px; /* Taller for a noticeable effect */
+    background-color: #e0faf8; /* PURE WHITE */
+    position: absolute;
+    top: -200px; /* Moves the pocket even higher */
+    left: -50px; /* Slight shift left for better positioning */
+    z-index: 6; /* Ensures it's behind 371 but in front of 623 */
+    
+}
+
+/* Ensure 371 is positioned properly */
+.moven-middle-content img {
+    position: relative;
+    z-index: 7; /* Higher than the white pocket to appear in front */
+}
+
+/* Ensure 623 is behind everything */
+.fixed-section {
+    z-index: 5; /* Lower than the white pocket to stay behind */
+}
+
+/* Smoothly hide first section */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
