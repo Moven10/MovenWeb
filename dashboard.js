@@ -95,7 +95,7 @@ if (followingTitle) {
 
     // ✅ Load user data from backend
     async function loadUserData() {
-        const url = `http://52.62.119.117:8080/get-user-details?username=${username}`;
+        const url = `https://api.startmoven.com/get-user-details?username=${username}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch user data: ${response.status}`);
@@ -113,7 +113,7 @@ if (followingTitle) {
 
     // ✅ Load total distance from backend
     async function loadTotalDistance() {
-        const url = `http://52.62.119.117:8080/get-total-distance?username=${username}`;
+        const url = `https://api.startmoven.com/get-total-distance?username=${username}`;
 
         try {
             const response = await fetch(url);
@@ -191,7 +191,7 @@ if (followingTitle) {
 
     // ✅ Fetch Followers
     async function fetchFollowers() {
-        const url = `http://52.62.119.117:8080/get-followers?username=${username}`;
+        const url = `https://api.startmoven.com/get-followers?username=${username}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch followers: ${response.status}`);
@@ -207,7 +207,7 @@ if (followingTitle) {
 
     // ✅ Fetch Following Accounts
     async function fetchFollowingAccounts() {
-        const url = `http://52.62.119.117:8080/get-followed-accounts?username=${username}`;
+        const url = `https://api.startmoven.com/get-followed-accounts?username=${username}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch following accounts: ${response.status}`);
@@ -234,7 +234,7 @@ if (followingTitle) {
 
     // ✅ Load Claimed Sneakers (UNCHANGED)
     async function loadClaimedImages() {
-        const url = `http://52.62.119.117:8080/get-claimed-sneakers?username=${username}`;
+        const url = `https://api.startmoven.com/get-claimed-sneakers?username=${username}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch claimed sneakers: ${response.status}`);
