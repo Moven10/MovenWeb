@@ -48,7 +48,7 @@ form.addEventListener('submit', async (event) => {
     };
 
     try {
-        const response = await fetch('http://52.62.119.117:8080/cancel-subscription', {
+        const response = await fetch('https://api.startmoven.com/cancel-subscription', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
