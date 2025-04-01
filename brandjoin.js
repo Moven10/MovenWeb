@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("📡 Sending form data:", JSON.stringify(formData, null, 2)); // Debugging
 
         try {
-            const response = await fetch("https://alpaca-bursting-koala.ngrok-free.app/submit-partnership-form", {
+            const response = await fetch("https://api.startmoven.com/submit-partnership-form", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
