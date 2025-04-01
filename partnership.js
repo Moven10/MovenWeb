@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 country: document.getElementById("country").value,
             };
 
-            const apiUrl = "http://52.62.119.117:8080/send-form-email";
+            const apiUrl = "https://api.startmoven.com/send-form-email";
 
             pageContent.style.filter = "blur(5px)";
 
