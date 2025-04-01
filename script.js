@@ -47,7 +47,7 @@ usernameInput.addEventListener('input', async (event) => {
 
     try {
         // Send a request to the backend to check username availability
-        const response = await fetch('http://localhost:8080/check-username', {
+        const response = await fetch('https://api.startmoven.com/check-username', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username })
@@ -110,7 +110,7 @@ form.addEventListener('submit', async (event) => {
         formData.paymentMethodId = paymentMethod.id;
 
         try {
-            const response = await fetch('http://localhost:8080/create-premium-account', {
+            const response = await fetch('https://api.startmoven.com/create-premium-account', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
