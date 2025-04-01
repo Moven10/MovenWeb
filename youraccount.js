@@ -24,7 +24,7 @@ async function loginUser(event) {
             loginForm.style.display = 'none';
         }
 
-        const response = await fetch('http://52.62.119.117:8080/sign-in', {
+        const response = await fetch('https://api.startmoven.com/sign-in', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
