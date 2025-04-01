@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("🔹 Sending form data:", formData); // Debugging log
 
         try {
-            const response = await fetch("http://52.62.119.117:8080/submit-run-club-form", {
+            const response = await fetch("https://api.startmoven.com/submit-run-club-form", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
