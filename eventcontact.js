@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const responseMessage = document.getElementById("responseMessage");
     const loadingSpinner = document.getElementById("loadingSpinner");
 
-    const API_URL = "http://52.62.119.117:8080/subscribe-newsletter";
+    const API_URL = "https://api.startmoven.com/subscribe-newsletter";
 
     if (!newsletterForm) {
         console.error("❌ Form not found! JavaScript may not be linked properly.");
