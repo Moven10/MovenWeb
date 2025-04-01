@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showMessage("Processing...", "processing");
 
         try {
-            const response = await fetch("http://52.62.119.117:8080/register-partner", {
+            const response = await fetch("https://api.startmoven.com/register-partner", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
