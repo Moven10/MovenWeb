@@ -234,7 +234,7 @@ if (followingTitle) {
 
     // ✅ Load Claimed Sneakers (UNCHANGED)
     async function loadClaimedImages() {
-        const url = `https://api.startmoven.com/get-claimed-sneakers?username=${username}`;
+        const url = `http://52.62.119.117:8080/get-claimed-sneakers?username=${username}`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`Failed to fetch claimed sneakers: ${response.status}`);
