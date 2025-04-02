@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+html {
+  font-size: 112.5%;
+}
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 40rem;
+  padding: 2rem;
+  margin: auto;
+  color: #1a1a1a;
+  background: #fff;
+}
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+ul {
+  padding-left: 1.25rem;
+}
+li {
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+li strong {
+  color: #000;
+  display: block;
+}
+pre,
+code {
+  background: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  color: #666;
+  margin: 1.5rem 0;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+footer {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 3rem;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #f0f0f0;
+    background: #121212;
+  }
+  a {
+    color: #71baff;
+  }
+  pre,
+  code {
+    background: #1e1e1e;
+  }
+  blockquote {
+    border-left-color: #444;
+    color: #aaa;
+  }
+  hr {
+    border-top-color: #444;
+  }
+  footer {
+    color: #aaa;
+  }
+}
+
+
+/* Top Footer (Header) with Logo + Nav */
+.top-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.top-footer .logo-link img {
+  height: 40px;
+  object-fit: contain;
+}
+
+.top-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.top-nav a {
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Compatibility */
+@media (prefers-color-scheme: dark) {
+  .top-footer {
+    background-color: #121212;
+    border-bottom: 1px solid #444;
+  }
+
+  .top-nav a {
+    color: #f0f0f0;
+  }
+}
