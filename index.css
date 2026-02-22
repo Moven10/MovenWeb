@@ -544,7 +544,7 @@ body.hide-footer .minimal-footer {
   .mobile-menu-toggle span {
     height: 2px;
     width: 100%;
-    background: #ffffff;
+    background: #53CAFC;
     border-radius: 2px;
     transition: all 0.3s ease;
   }
