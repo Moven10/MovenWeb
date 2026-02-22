@@ -85,7 +85,7 @@ body {
 /* (Same Layout, Smoother Performance)  */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .parallax-container {
     position: fixed;
@@ -314,7 +314,7 @@ body {
 /* (Same Layout, Clean Scaling)         */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Scroll-over section */
   .content {
@@ -590,7 +590,7 @@ body {
 /* (Same Layout, Product Images Fit)     */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   #moven-gear-intro {
     padding: 4rem 1.25rem;
@@ -899,7 +899,7 @@ body {
 /* (Same Layout, Clean Scaling)         */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   #moven-sports {
     padding: 4rem 1.25rem;
@@ -1084,7 +1084,7 @@ body {
 /* (Hide Scroll + Lower Paragraph)      */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   #locker-section {
     padding: 4rem 1.25rem;
@@ -1390,7 +1390,7 @@ body {
 /* (Same Layout + 3 Club Menu Only)     */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ───────── GEAR INFO SECTION ───────── */
 

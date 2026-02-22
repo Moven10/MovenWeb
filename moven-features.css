@@ -437,7 +437,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -738,7 +738,7 @@ html, body {
 /* 📱 FEATURES SECTION – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .features-section {
     padding: 5rem 1.5rem 3rem 1.5rem; /* ⬆️ added top spacing */
@@ -832,7 +832,7 @@ html, body {
 /* 📱 HEADLINE + IMAGE – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Headline Section */
   .headline-section {
@@ -948,7 +948,7 @@ html, body {
 /* 📱 MOVE TOGETHER – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .move-together {
     grid-template-columns: 1fr 1fr; /* keep 2-column layout */
@@ -1335,7 +1335,7 @@ html, body {
 /* 📱 INFO IMAGE SECTION – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .info-image {
     padding: 4rem 1.5rem;
@@ -1609,7 +1609,7 @@ html, body {
 /* 📱 GEAR INFO + DISPLAY – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ---------------- GEAR INFO SECTION ---------------- */
 
@@ -1799,7 +1799,7 @@ html, body {
 /* 📱 WEATHER SECTION – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .weather-section {
     padding: 4rem 0 3rem;
@@ -2003,7 +2003,7 @@ html, body {
 /* 📱 MOVEN GEAR SECTION – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .moven-gear-section {
     padding: 4rem 0;
@@ -2294,7 +2294,7 @@ html, body {
 /* 📱 SPEED ZONES SECTION – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .speed-zones-section {
     padding: 4rem 1.5rem;
@@ -2635,7 +2635,7 @@ html, body {
 
 
 /* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-bottom-footer {
     padding: 70px 24px;

@@ -509,7 +509,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -760,7 +760,7 @@ body.hide-footer .minimal-footer {
 /* 📱 TOP FOOTER – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .top-footer {
     height: 55px;                     
@@ -955,7 +955,7 @@ body.hide-footer .minimal-footer {
 /* (5 Items, Fully Centered, No Extra Space) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ============================= */
   /* Intro Section */
@@ -1274,7 +1274,7 @@ body.hide-footer .minimal-footer {
 /* (Same Layout, Clean Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ============================= */
   /* Moven Collection Section */
@@ -1497,7 +1497,7 @@ body.hide-footer .minimal-footer {
 /* (Hide Jogger Speed Only) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ============================= */
   /* Just In Section */
@@ -1973,7 +1973,7 @@ body.hide-footer .minimal-footer {
 /* (Centered Product Images + Static Blue) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ─── Static Blue Background (NEVER fades) ─── */
 
@@ -2288,7 +2288,7 @@ body.hide-footer .minimal-footer {
 /* (Same Layout, Clean Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Section Padding */
   .other-sports-section {
@@ -2614,7 +2614,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-bottom-footer {
     padding: 70px 24px;

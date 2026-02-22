@@ -437,7 +437,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -998,7 +998,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Display Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🔥 Move section lower */
   .display-section {
@@ -1386,7 +1386,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Explore Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Section spacing */
   .explore-section {
@@ -1768,7 +1768,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Token Section – HIDDEN ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .token-info-section {
     display: none !important;
@@ -1983,7 +1983,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Subscribe Section (True Center Fix) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Remove desktop padding bias completely */
   .subscribe-section {
@@ -2227,7 +2227,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Describe Sport Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .describe-sport-inner {
     padding: 40px 16px;
@@ -2676,7 +2676,7 @@ body.hide-footer .minimal-footer {
   z-index: 3;
 }
 /* ───────── iPhone Sneaker Preview Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🚫 Completely Disable TabView + Scroll Logic */
   .tabview-viewport,
@@ -2848,7 +2848,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Parallax Running Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .parallax-running-section {
     background-attachment: scroll; /* 🔥 Disable fixed (iOS issue) */
@@ -3038,7 +3038,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone MovenGear Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .movengear-view-section {
     padding: 80px 16px;
@@ -3350,7 +3350,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone New Sports Section – HARD CENTER RESET ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🔥 Kill any inherited side padding / offsets */
   .new-sports-section,
@@ -3839,7 +3839,7 @@ body.pill-background-active {
 
 
 /* ───────── iPhone Snow Sports – TRUE CENTERED RESET ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🔥 Hard reset all layout containers */
   .snow-sports-section,
@@ -4244,7 +4244,7 @@ body.pill-background-active {
 
 
 /* ───────── iPhone Extreme Sports Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Section spacing */
   .more-sports-section.plain-sports-section {
@@ -4574,7 +4574,7 @@ body.pill-background-active {
 
 
 /* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-bottom-footer {
     padding: 70px 24px;

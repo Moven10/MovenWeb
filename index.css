@@ -514,7 +514,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -863,7 +863,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Optimised Layout ───────── */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 768px) {
 
   /* 🔥 Disable only scroll/fade animations (not sticky footer) */
   .fade-item,
@@ -1120,7 +1120,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Display Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .display-section {
     min-height: auto; /* remove huge desktop height */
@@ -1442,7 +1442,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone iOS Section Optimisation (Single Image Clean Version) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🔥 Global mobile containment */
   *, *::before, *::after {
@@ -1920,7 +1920,7 @@ body.hide-footer .minimal-footer {
 }
 
 /* ───────── iPhone Info Cards (Large + Centered Content + White Text + CTA Fix) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Grid */
   .info-cards-grid {
@@ -2134,7 +2134,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Inspire Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .inspire-section {
     flex-direction: column;
@@ -2398,7 +2398,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Premium Collection Redesign ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .collection-section {
     padding: 100px 20px;
@@ -2566,7 +2566,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Activity Gallery 2x2 Grid ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .activity-gallery-section {
     width: 100vw;
@@ -2805,7 +2805,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Subscription Section Redesign ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .subscription-section {
     padding: 80px 20px;
@@ -3027,7 +3027,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone FAQ Section Redesign ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .faq-section {
     padding: 70px 20px;
@@ -3309,7 +3309,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-bottom-footer {
     padding: 70px 24px;

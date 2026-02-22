@@ -295,7 +295,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -720,7 +720,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Gear Cards Layout (Image Optimised) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Section spacing */
   .gearview-section {
@@ -808,7 +808,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Gear Footer Layout (Stacked Story Mode) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Center everything */
   .gearview-footer {
@@ -952,7 +952,7 @@ body.hide-footer .minimal-footer {
 }
 
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .know-scroll-wrapper,
   .know-scroll {
@@ -1465,7 +1465,7 @@ body.hide-footer .minimal-footer {
 /* 📱 CREATOR SECTION – iOS WHITE + MOCKUP */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Make section white */
   .creator-section {
@@ -1678,7 +1678,7 @@ body.hide-footer .minimal-footer {
 /* 📱 UNIQUE BOX – PHONE OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Remove rectangle look */
   .unique-box {
@@ -1982,7 +1982,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-bottom-footer {
     padding: 70px 24px;

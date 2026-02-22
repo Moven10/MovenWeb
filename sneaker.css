@@ -538,7 +538,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -914,7 +914,7 @@ body.hide-footer .minimal-footer {
 /* (Sports Label + Tight Scroll Row) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Proper header offset */
   body {
@@ -1155,7 +1155,7 @@ body.hide-footer .minimal-footer {
 /* (2 Columns, Centered Product Style) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 2-column grid like Nike */
   .product-grid {

@@ -491,7 +491,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -1003,7 +1003,7 @@ body.hide-footer .minimal-footer {
 /* (Same Layout, Clean Scaling)         */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
 /* ───── Section ───── */
 .create-card-section {

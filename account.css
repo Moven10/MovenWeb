@@ -178,7 +178,7 @@ body {
 /* (Centered Top Layout + Black Text + Blue Logo) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-pill-nav {
     position: fixed;                 
@@ -292,7 +292,7 @@ body {
 /* (Same Layout, Clean Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .logout-card {
     padding: 2rem 1.5rem;      /* reduced from 3rem 4rem */
@@ -582,7 +582,7 @@ body {
 /* (Moved Lower + Clean Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .top-user-bar {
     top: 80px;                       /* ⬅️ moved down */
@@ -944,7 +944,7 @@ body {
   display: none !important;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Hide promotional cards */
   .activities-float-card,

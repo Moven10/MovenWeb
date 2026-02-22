@@ -78,7 +78,7 @@ body {
 /* 📱 GLOBAL MOBILE FIXES */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* Prevent horizontal drag on iPhone */
   html,
@@ -480,7 +480,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -819,7 +819,7 @@ body.hide-footer .minimal-footer {
 /* 📱 AI INTRO SECTION – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .ai-intro {
     padding: 8rem 1.5rem 6rem; /* reduced vertical spacing */
@@ -1078,7 +1078,7 @@ body.hide-footer .minimal-footer {
 /* 📱 MOVEN AI FEATURE – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .ai-feature {
     padding: 4rem 1.5rem;
@@ -1409,7 +1409,7 @@ body.hide-footer .minimal-footer {
   display: none; /* hidden everywhere by default */
 }
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ─── Hide Dive In Section Completely ─── */
 
@@ -1682,7 +1682,7 @@ body.hide-footer .minimal-footer {
 /* 📱 FREE MOVEN AI – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .free-moven-ai-section {
     padding: 4rem 1.5rem;
@@ -1939,7 +1939,7 @@ body.hide-footer .minimal-footer {
 /* 📱 AI CARDS – iOS OPTIMISED (Same Layout) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🔥 Remove sticky behavior on phone to prevent overlap */
   .ai-cards-section {
@@ -2011,7 +2011,7 @@ body.hide-footer .minimal-footer {
 /* 📱 SLIDE OVER IMAGE – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .slide-over-image-section {
     height: 100svh;        /* better iOS dynamic viewport handling */
@@ -2232,7 +2232,7 @@ body.hide-footer .minimal-footer {
 /* 📱 DIVE IN NEXT SECTION – iOS OPTIMISED */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🌑 Section Container */
   .dive-in-next-section {
@@ -2505,7 +2505,7 @@ body.hide-footer .minimal-footer {
 /* (Centered Visual Layout) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🌑 Section Wrapper */
   .ai-deep-dive-section {
@@ -2792,7 +2792,7 @@ body.hide-footer .minimal-footer {
 /* (Same Layout, Scaled Cleanly) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🌌 Section */
   .pro-ai-section {
@@ -3046,7 +3046,7 @@ body.hide-footer .minimal-footer {
 /* (Same Layout, Scaled Cleanly) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🎯 Section */
   .goals-with-ai-section {
@@ -3205,7 +3205,7 @@ body.hide-footer .minimal-footer {
 /* (Same Layout, Scaled Cleanly) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🖤 Section */
   .moven-ai-outro-section {
@@ -3497,7 +3497,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-bottom-footer {
     padding: 70px 24px;

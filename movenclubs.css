@@ -439,7 +439,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -686,7 +686,7 @@ body {
 /* (Same Layout, Better Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .club1 {
     height: 65vh;              /* Reduced from 80vh */
@@ -983,7 +983,7 @@ body {
 /* (Same Layout, Clean Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ─── Section Spacing ─── */
 
@@ -1297,7 +1297,7 @@ body {
 /* (Same Layout, Clean Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .club-stats {
     padding: 100px 0; /* reduced from 160px */
@@ -1654,7 +1654,7 @@ body {
 /* (Same Layout, Clean Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .create-club {
     padding: 110px 20px; /* reduced from 180px 10% */
@@ -2082,7 +2082,7 @@ body {
 /* (Same Layout, Clean Scaling) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .event-section {
     padding: 120px 20px; /* reduced from 200px 10% */
@@ -2479,7 +2479,7 @@ body {
 /* (Same Layout, Smaller Rectangle) */
 /* ===================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ─── Section Spacing ─── */
 
@@ -2822,7 +2822,7 @@ body {
 
 
 /* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-bottom-footer {
     padding: 70px 24px;

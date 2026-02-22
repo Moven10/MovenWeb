@@ -454,7 +454,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== Minimal Glass Top Footer ===== */
 
@@ -833,7 +833,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Optimisations ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ===== 3 Metric Cards Stay in One Row ===== */
 
@@ -1176,7 +1176,7 @@ body.hide-footer .minimal-footer {
 }
 
 /* ───────── iPhone Sports Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* 🔥 Disable fade / reveal animations */
   .sports-section,
@@ -1383,7 +1383,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Weather Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .weather-section {
     padding: 4rem 1.2rem;
@@ -1643,7 +1643,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Moven Intelligence Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .moven-ai-section {
     padding: 5rem 1.5rem 4rem;
@@ -2143,7 +2143,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone MoverPro Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ───────── Section Spacing ───────── */
   .moverpro-section {
@@ -2371,7 +2371,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Parallax Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .parallax-section {
     background-attachment: scroll;   /* 🔥 disable fixed (Safari safe) */
@@ -2757,7 +2757,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Sign User Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ───────── Section Spacing ───────── */
   .sign-user-section {
@@ -3055,7 +3055,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Run Club Section Optimisation ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   /* ───────── Section Spacing ───────── */
   .run-club-section {
@@ -3363,7 +3363,7 @@ body.hide-footer .minimal-footer {
 
 
 /* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
-@media (max-width: 430px) {
+@media (max-width: 768px) {
 
   .glass-bottom-footer {
     padding: 70px 24px;
