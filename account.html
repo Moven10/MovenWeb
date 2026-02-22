@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Account | Moven</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+
+  <!-- ✅ Mapbox Dependencies (MUST be included before using mapboxgl) -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="account.css" />
+</head>
+
+<body>
+
+  
+
+  <main class="page-content">
+    <!-- 🔵 Glowing blue blur -->
+    <div class="blue-blur"></div>
+
+<!-- 💎 Top-Left Glass Pill Nav -->
+<div class="glass-pill-nav">
+  <a href="index.html">
+    <img src="MOVENLOGOWHITE.png" alt="Moven Logo" class="pill-logo" />
+  </a>
+  <nav class="pill-links">
+    <a href="Discover.html">Discover</a>
+    <div class="pill-divider"></div>
+    <a href="MoverPro.html">Subscribe</a>
+    <div class="pill-divider"></div>
+    <a href="create-account.html">Create Account</a>
+    <div class="pill-divider"></div>
+    <a href="moven-features.html">Features</a>
+  </nav>
+</div>
+
+
+
+  <!-- ⏳ Optional Progress View (initially hidden, shown via JS) -->
+  <div id="logout-progress" class="logout-progress">Logging out...</div>
+
+  <!-- 👤 Top User Bar -->
+  <div class="top-user-bar">
+    <!-- Profile -->
+    <div class="user-info">
+      <img src="default-avatar.jpg" alt="Profile Picture" class="profile-pic" id="account-avatar" />
+      <span class="username" id="account-username">Guest</span>
+    </div>
+
+    <!-- Stats -->
+    <div class="user-stats">
+      <div class="stat-block">
+  <div class="label">Following</div>
+  <div class="value" id="following-count">0</div>
+</div>
+<div class="divider">|</div>
+<div class="stat-block">
+  <div class="label">Followers</div>
+  <div class="value" id="followers-count">0</div>
+</div>
+<div class="divider">|</div>
+<div class="stat-block">
+  <div class="label">Friends</div>
+  <div class="value" id="friends-count">0</div>
+</div>
+
+    </div>
+
+
+    <!-- Status -->
+    <div class="status-tag">Regular Mover</div>
+
+   <!-- 🕒 Most Recent Move (Styled Display) -->
+<div class="recent-move">
+  <div class="recent-move-label">Recent Activity</div>
+  <div class="recent-move-content">
+    <span id="recent-move-type" class="move-type">Golf</span>
+    <span class="tilde-separator">~</span>
+    <span id="most-recent-move-date" class="move-date">Jan 30, 2026</span>
+  </div>
+</div>
+
+
+    <!-- Actions -->
+    <div class="account-actions">
+      <button class="btn-subscribe" id="subscribeBtn">Subscribe</button>
+      <button class="btn-logout" id="logoutBtn">Logout</button>
+    </div>
+  </div>
+
+  
+<button class="account-toggle-btn" id="accountToggle">
+  Account
+</button>
+
+
+<!-- 🎯 Activities Card (Right of Top User Bar) -->
+<div class="activities-float-card">
+  <div class="activity-header">
+  <div class="activity-circle" id="total-session-count">0</div>
+  <div class="activity-title">Move Sessions</div>
+</div>
+
+  <div class="activity-divider"></div>
+
+  <div class="activity-item">
+    <img src="cyclewhite.svg" alt="Cycle Icon" class="activity-icon" />
+    <div class="activity-label">Compete against others</div>
+  </div>
+
+  <p class="activity-description">
+    Challenge your friends and track your progress in real-time using live session data.
+  </p>
+
+  <div class="activity-coming-soon">Coming Soon</div>
+</div>
+
+
+<!-- 🕒 Apple Watch Section -->
+<div class="applewatch-card">
+
+  <!-- Header -->
+  <div class="applewatch-header">
+    <div class="applewatch-title">Move with your AppleWatch</div>
+    <img src="AppleWatchWhite.png" alt="Cycle Icon" class="applewatch-icon" />
+  </div>
+
+  <!-- Description -->
+  <p class="applewatch-description">
+    Sync your watch to track sessions, heart rate, distance, and more — automatically and effortlessly.
+  </p>
+
+  <!-- Learn More Link -->
+  <a href="moven-features.html" class="applewatch-link">Learn More</a>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- 📊 Session Filter -->
+  <div class="session-filter-section">
+    <h4 class="session-filter-title">Session Filter</h4>
+    <div class="session-type-label">iOS Sessions (0)</div>
+    <div class="session-type-label">Apple Watch Sessions (0)</div>
+  </div>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- 🏃‍♂️ Moven Clubs Section -->
+<div class="clubs-section">
+  <h4 class="clubs-title">
+    Moven Clubs
+    <img src="Moveiconblue.svg" alt="Moven Icon" class="clubs-icon" />
+  </h4>
+  <div class="clubs-subtitle">Join or create</div>
+  <p class="clubs-description">
+    Join a club in your favorite sport — running, cycling, hiking, or create your own to bring others together. Moven Clubs aren't limited to runners only!
+  </p>
+  <a href="movenclubs.html" class="clubs-link">Moven Clubs</a>
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- 🧾 Centered Main Content Wrapper -->
+<div class="centered-layout">
+
+  <!-- 🧑‍💼 LEFT COLUMN (Account + Gear) -->
+  <div class="account-gear-wrapper">
+    <div class="account-section">
+      <!-- 🧑 Dynamic Profile Block (Populated via JS) -->
+      <div id="account-panel-profile" class="account-panel-profile">
+        <!-- JavaScript will insert user avatar, name, email, phone here -->
+      </div>
+    </div>
+
+    <!-- ⚙️ Gear Rectangle -->
+    <div class="gear-rectangle">
+      <h3>Your Gear</h3>
+      <div class="gear-divider"></div>
+      <div id="gear-images-container" class="gear-images-container">
+        <!-- Images populated by fetchimages.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 📄 RIGHT COLUMN (Session Display) -->
+  <div class="session-display-section">
+    <div id="allSessionsContainer" class="session-type-group">
+      <!-- Session cards inserted here -->
+    </div>
+  </div>
+
+</div>
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+  <!-- External JS -->
+  <script src="account.js"></script>
+  <script src="logout.js"></script>
+  <script src="fetchsession.js"></script>
+  <script src="accountrectangle.js"></script>
+  <script src="fetchimages.js"></script>
+  <script src="Socials.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moven AI | The Future Of Fitness</title>
+   <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+  <link rel="stylesheet" href="movenai.css" />
+</head>
+<body>
+  
+
+<!-- 🔝 Sticky Top Bar (Hidden by default) -->
+<header id="stickyTopBar" class="sticky-top-bar">
+  <div class="top-bar-content">
+    <!-- Circle with Icon -->
+    <a href="index.html" class="top-bar-dot" aria-label="Go to Home"></a>
+
+    <!-- ✨ Normal Mode -->
+    <nav class="top-bar-nav nav-full">
+      <a href="discover.html">Discover</a>
+      <span class="divider"></span>
+      <a href="movengallery.html">Moven Gear</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Mover Pro</a>
+      <span class="divider"></span>
+      <a href="movenclubs.html">Moven Clubs</a>
+    </nav>
+
+    <!-- ✨ Compact Mode -->
+    <nav class="top-bar-nav nav-compact">
+      <a href="create-account.html">Join For Free</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Subscribe Now</a>
+      <span class="divider"></span>
+      <a href="movenai.html">Moven Ai</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Footer (hidden while sticky bar is shown) -->
+<footer class="minimal-footer">
+  <div class="footer-inner">
+
+    <!-- 🍔 iPhone Hamburger (hidden on desktop via CSS) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Left: Logo -->
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <!-- Right: Nav + User -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="discover.html">Discover</a>
+        <a href="ways-to-move.html">Ways To Move</a>
+        <a href="movengear.html">Moven Gear</a>
+        <a href="moven-features.html">Features</a>
+      </nav>
+
+      <div class="footer-buttons">
+        <!-- 🔹 Sign In button (only shown when logged out) -->
+        <button id="signin-btn" class="btn-signin-outline" style="display: none;">
+          Sign In
+        </button>
+
+        <!-- 👤 Logged-in user profile -->
+        <div id="user-profile" class="user-profile">
+          <img
+            id="profile-avatar"
+            src="default-avatar.jpg"
+            alt="Profile Picture"
+            class="profile-avatar"
+          />
+          <span id="profile-username" class="profile-username">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- 📱 iPhone Glass Dropdown Menu -->
+<div class="mobile-glass-menu" id="mobileGlassMenu">
+  <a href="discover.html">Discover</a>
+  <a href="ways-to-move.html">Ways To Move</a>
+  <a href="movengear.html">Moven Gear</a>
+  <a href="moven-features.html">Features</a>
+</div>
+
+
+<section class="ai-intro">
+  <div class="ai-intro-inner moven-message-heading">
+    <h1 class="ai-intro-title">
+      <span>Everything else is just data.</span><br />
+      <span class="moven-line">MovenAi</span>
+    </h1>
+    <h2 class="ai-intro-subheadline">Engineered for progress.</h2>
+    <p class="ai-intro-description">
+      Moven AI interprets your training beyond surface metrics.
+It identifies patterns across effort, pace, load, and recovery — highlighting trends, early fatigue signals, and meaningful changes over time.
+The result is clarity around how you’re progressing, when to push, and when to hold back.
+    </p>
+    <img src="AiMockup1.jpg" alt="Moven mockup" class="ai-intro-image" />
+  </div>
+</section>
+
+
+<!-- Moven AI Feature Section -->
+<section class="ai-feature">
+  <div class="ai-feature-inner moven-feature-fade">
+    
+    <!-- Left: Image -->
+    <div class="feature-image">
+      <img src="AiMockupHalf1.png" alt="Moven Half Mockup" />
+    </div>
+
+    <!-- Right: Content -->
+    <div class="feature-content">
+      <h4 class="feature-small-headline gradient-text">Conditions matter. Intelligence knows.</h4>
+
+      <h2 class="feature-main-title">
+        Everything else is<br />
+        just tracking.
+      </h2>
+
+      <p class="feature-description">
+        Moven AI reads beyond the workout.
+It understands how conditions shape performance — interpreting weather, terrain, and load together to deliver insight that tracking alone cannot.
+      </p>
+    </div>
+
+    <!-- Full-width Image + Overhang -->
+    <div class="feature-image-stack">
+      <img src="Movenai1.jpg" alt="Full Width Graphic" class="wide-image" />
+      <img src="Mockupside1.png" alt="Floating Mockup" class="overlay-mockup" />
+    </div>
+
+    <!-- 🔽 Centered Headline + Paragraph -->
+    <div class="feature-centered-content">
+      <h2 class="feature-centered-title">
+        Structure meets <span>intelligence</span>
+      </h2>
+
+      <p class="feature-centered-description">
+        Set the goal.
+Moven AI designs the path — shaping structure around your performance, conditions, and recovery.
+Progress isn’t prescribed. It’s engineered
+      </p>
+    </div>
+
+
+    <!-- Full-width Image + Overhang -->
+    <div class="feature-image-stack">
+      <img src="Movenai2.jpg" alt="Full Width Graphic" class="wide-image" />
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 🌊 Dive In Scroll-Controlled SVG Path -->
+<section class="dive-in-section scroll-lock-section">
+  <svg class="dive-in-path" viewBox="0 0 1000 350" preserveAspectRatio="none">
+    <path
+      id="scroll-line"
+      d="M0,300
+         C100,100 200,500 300,300
+         S500,300 700,250
+         S900,120 1000,160"
+      fill="none"
+      stroke="#53CAFC"
+      stroke-width="12"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      transform="translate(0, -80)" <!-- 👈 shifts path up -->
+    />
+  </svg>
+
+  <!-- 💬 Fading Headline + Paragraph -->
+  <div class="dive-in-text">
+    <h2 class="dive-in-headline">
+      Now, let’s really <span>dive in</span>
+    </h2>
+    <p class="dive-in-paragraph">
+      This is where the details come into focus.
+Every insight, adjustment, and decision is built from how you actually move.
+    </p>
+  </div>
+</section>
+
+
+<!-- 🎬 Playback Route Section -->
+<section class="playback-route-section">
+  <div class="playback-route-inner">
+    
+    <!-- 🔠 Section Title -->
+    <h2 class="playback-route-title">
+      Your <span>Playback Route</span>
+    </h2>
+
+    <!-- 🖼 Two Side-by-Side Images -->
+    <div class="playback-images-row">
+      <img src="ai1.jpg" alt="Route Map 1" />
+      <img src="ai2.jpg" alt="Route Map 2" />
+    </div>
+
+    <!-- 📄 Grey Paragraph -->
+    <p class="playback-route-description">
+      Replay your session as it happened.
+Watch pace, effort, and movement unfold along your route — revealing how performance changed moment by moment.
+    </p>
+
+    <!-- 🖼 Centered Mockup Image -->
+    <img src="Movenai9.png" alt="Device Mockup" class="mockup-centered" />
+  </div>
+
+  <!-- 📜 Full-Width Horizontal Scroll View -->
+<div class="scroll-card-wrapper">
+  <div class="scroll-card-container">
+
+    
+    <!-- Card 1 -->
+<div class="scroll-card">
+  <img src="scrollai1.jpg" alt="Speed Zones" />
+</div>
+<div class="scroll-card-text">
+  <h4>Training Intelligence</h4>
+  <p>Moven AI interprets your training beyond surface metrics. By analyzing effort, load, recovery, and trends over time, it delivers insight that explains how you’re progressing — and what to do next.</p>
+</div>
+
+<!-- Card 2 -->
+<div class="scroll-card">
+  <img src="scrollai2.jpg" alt="Heart Rate" />
+</div>
+<div class="scroll-card-text">
+  <h4>Adaptive Training Plans</h4>
+  <p>Set a goal and Moven AI builds the plan around it. As you train, structure adjusts to performance, conditions, and recovery — keeping progression aligned with how you’re actually movin.</p>
+</div>
+
+<!-- Card 3 -->
+<div class="scroll-card">
+  <img src="scrollai3.jpg" alt="Split Timing" />
+</div>
+<div class="scroll-card-text">
+  <h4>Evolving Intelligence</h4>
+  <p>Moven AI learns from every session. As your habits change, the intelligence adapts — refining analysis and guidance to stay aligned with your progression.</p>
+</div>
+
+<!-- Card 4 -->
+<div class="scroll-card">
+  <img src="scrollai4.jpg" alt="Recovery Gaps" />
+</div>
+<div class="scroll-card-text">
+  <h4>Performance Trends</h4>
+  <p>Moven AI tracks how your fitness evolves across weeks and months. It identifies meaningful changes, consistency shifts, and long-term patterns — revealing progress that single sessions can’t show.</p>
+</div>
+
+<!-- Card 5 -->
+<div class="scroll-card">
+  <img src="scrollai5.jpg" alt="AI Highlights" />
+</div>
+<div class="scroll-card-text">
+  <h4>Load & Fatigue Analysis</h4>
+  <p>Moven AI monitors stress accumulation across training. By identifying early fatigue signals and load patterns, it helps guide smarter progression and recovery decisions.</p>
+</div>
+
+  </div>
+</div>
+
+  <!-- 📎 Footer Headline & Paragraph -->
+<div class="scroll-card-footer">
+  <h3>Predictive Insights</h3>
+  <p>
+   By learning from your training history, Moven AI anticipates trends before they peak. It helps you stay ahead of plateaus, overtraining, and performance drops.
+  </p>
+</div>
+
+<!-- 🖼 Wide Full‑Width Image (not constrained) -->
+<div class="footer-wide-image-wrapper">
+  <img src="ai4.jpg" alt="Full Summary Visual" class="footer-wide-image" />
+</div>
+
+<p class="mobile-extra-paragraph">
+  Add your custom paragraph text here. This can be edited and styled independently in CSS.
+</p>
+
+
+<!-- 🖼 Centered Mockup Image -->
+    <img src="Mocupsidedark1.png" alt="Device Mockup" class="mockup-centered" />
+    <img src="Movenai4.png" alt="Device Mockup" class="mockup-centered" />
+    <p>
+    Moven intelligently organizes your route data, recovery stats, and performance metrics — so you can focus on getting better, not sorting through screens.
+  </p>
+  </div>
+
+</section>
+
+
+
+
+
+
+<!-- 🎁 Free Moven AI Section -->
+<!-- 🎁 Free Moven AI Section -->
+<section class="free-moven-ai-section">
+  <div class="free-moven-ai-inner">
+    
+    <!-- ✨ Main Headline -->
+    <h2 class="free-moven-ai-title">
+      Go Deeper <span class="static-gradient-text">With Moven Ai</span> Pro.
+    </h2>
+
+    <!-- 🔹 Subheadline with Icon on the right -->
+    <div class="free-moven-ai-subheadline">
+      <p>Advanced intelligence unlocks more.</p>
+      <img src="IconMove.svg" alt="Cycle Icon" class="subheadline-icon" />
+    </div>
+
+    <!-- 🔳 Image + Text Block Row -->
+    <div class="free-moven-ai-content">
+      <img src="movenai10.jpg" alt="Moven AI Overview" class="free-moven-wide" />
+
+      <div class="free-moven-text-block">
+        <h3>Moven AI in Action</h3>
+        <p>
+          Discover how AI adapts to your movement patterns, predicts progress, and gives you
+          personalized feedback every step of the way — no subscriptions required. But advanced Ai is that next step.
+        </p>
+      </div>
+    </div>
+
+    <!-- 🖼 Full-width stacked image under both columns -->
+    <div class="free-moven-ai-bottom-full">
+      <img src="movenai11.jpg" alt="AI Visualization" class="free-moven-bottom-full-image" />
+    </div>
+
+    <!-- 🆕 New Row: Headline + Paragraph (Left) and Image (Right) -->
+    <div class="free-moven-lower-row">
+      <div class="lower-text-block">
+        <h3>Smarter tracking. Less guessing.</h3>
+        <p>
+          With adaptive insights built into every step, Moven helps you train, recover, and perform
+          with precision. You don’t need to move — We do the work for you.
+        </p>
+      </div>
+
+      <div class="lower-image-block">
+        <img src="movenai12.jpg" alt="Insight Visual" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="ai-cards-section">
+
+  <!-- 🎆 Reveal Headline (center aligned) -->
+<h2 class="ai-cards-intro-headline">
+  <span class="reveal-text">To bring you a new way to move.</span>
+</h2>
+
+
+ <div class="ai-cards-inner">
+  <div class="ai-card">
+    <img src="aicard1.jpg" alt="AI Driven Insights" />
+  </div>
+
+  <div class="ai-card">
+    <img src="aicard2.jpg" alt="Predictive Performance" />
+  </div>
+
+  <div class="ai-card">
+    <img src="aicard3.jpg" alt="Motion Optimization" />
+  </div>
+
+  <div class="ai-card">
+    <img src="aicard4.jpg" alt="Injury Prevention" />
+  </div>
+
+  <div class="ai-card">
+    <img src="aicard5.jpg" alt="Adaptive Routines" />
+  </div>
+
+  <div class="ai-card">
+    <img src="aicard6.jpg" alt="Smart Recovery" />
+  </div>
+
+  <div class="ai-card">
+    <img src="aicard7.jpg" alt="Daily Recommendations" />
+  </div>
+</div>
+
+  
+
+</section>
+
+
+
+
+
+
+
+<!-- 🔳 Scroll Over Section -->
+<section class="slide-over-image-section"></section>
+
+<!-- 🔳 Dive In Section (Continued) -->
+<section class="dive-in-next-section">
+  <div class="dive-in-content-expanded">
+
+    <!-- 🔠 Headline Only -->
+    <div class="dive-in-header-row">
+      <h2 class="dive-in-big-headline">
+        Built-in intelligence<br />
+        <span class="moven-green"> MovenAi</span>
+      </h2>
+    </div>
+
+    <!-- 🔲 Enlarged Rectangle Layout -->
+    <div class="rectangle-layout">
+      <div class="large-rectangle"></div>
+      <div class="right-rectangle-group">
+        <div class="small-rectangle"></div>
+        <div class="rectangle-text-block">
+          <p class="green-white-paragraph">
+            <span>Learn how</span> you can ask Moven AI anything about training or recovery.
+It understands your sport and your data, guiding decisions with clarity and precision.
+          </p>
+         <a href="MoverPro.html" class="blue-link">
+  Subscribe for more
+  <span class="blue-underline"></span>
+</a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼 Mockup Image -->
+    <div class="mockup-image">
+      <img src="Aimockup2.jpg" alt="Device Mockup" />
+    </div>
+
+    <!-- 📝 Large White Paragraph -->
+    <p class="white-paragraph-text">
+      Designed to work silently in the background, MovenAI observes, learns,
+      and enhances your routine without interruptions.
+    </p>
+
+    <!-- 🖼 Wide Image -->
+    <div class="wide-image-wrapper">
+      <img src="ai7.jpg" alt="Full width visual" />
+    </div>
+
+  </div>
+
+  <!-- 💚 Section-wide Glow -->
+  <div class="fullscreen-green-glow"></div>
+</section>
+
+
+
+
+
+
+
+<!-- 🧠 AI Deep Dive Section -->
+<section class="ai-deep-dive-section">
+  <div class="ai-deep-dive-inner">
+
+    <!-- 🟢 Headline & Subheadline -->
+    <h2 class="deep-dive-headline">
+      Intelligence integrated into <span class="moven-green">training</span>
+    </h2>
+    <p class="deep-dive-subheadline">
+      Designed for real progression.
+    </p>
+
+    <!-- 📦 Main Grid Row -->
+    <div class="deep-dive-layout">
+      <!-- Left Column: Two small boxes + paragraph -->
+      <div class="left-column">
+        <div class="small-boxes">
+          <div class="deep-dive-rect small-rect"></div>
+          <div class="deep-dive-rect small-rect"></div>
+        </div>
+        <p class="deep-dive-description">
+          Focused on progress that lasts.
+Guided by how you actually train.
+        </p>
+      </div>
+
+      <!-- Right Column: Large rectangle -->
+      <div class="deep-dive-rect large-rect"></div>
+    </div>
+
+    
+
+     
+     <!-- 🖼 Mockup Image -->
+    <div class="mockup-image">
+      <img src="aimockup3.jpg" alt="Device Mockup" />
+    </div>
+
+      <!-- 🌸 Pink Glow on Right Side -->
+  <div class="pink-glow-overlay"></div>
+
+  </div>
+</section>
+
+
+
+
+<!-- 💠 Pro AI Section -->
+<section class="pro-ai-section">
+  <div class="pro-ai-inner">
+
+    <!-- 💙 Blue Glow Top -->
+    <div class="blue-glow-overlay"></div>
+
+    <!-- 🟢 Headline -->
+    <h2 class="pro-ai-headline">
+      Built to dominate
+      <span class="moven-gradient-text">Perfomance.</span>
+    </h2>
+
+    <!-- 📱 Main Mockup Image -->
+    <div class="pro-ai-mockup">
+      <img src="ai20.png" alt="Mockup" />
+    </div>
+
+    <!-- 🔠 Text + Image Row -->
+    <div class="pro-ai-content-row">
+      <div class="pro-ai-text-block">
+        <h4 class="pro-ai-small-headline">Elite-Level Metrics</h4>
+        <p class="pro-ai-subheadline">Designed for those who want the edge.</p>
+        <p class="pro-ai-paragraph">
+          Moven AI Pro unlocks advanced feedback loops and predictive analytics to help you
+          train like an elite athlete — adapting your efforts in real-time.
+        </p>
+      </div>
+
+      <div class="pro-ai-side-image">
+        <img src="ai40.jpg" alt="Pro AI Visual" />
+      </div>
+    </div>
+
+    <!-- 🔷 Extra Content Under Right Image -->
+<div class="pro-ai-extra-layout">
+  <!-- 📦 Left Rectangle -->
+  <div class="extra-left-rectangle"></div>
+
+  <!-- 📦 Right Stack: Small Rectangle + Text -->
+  <div class="extra-right-stack">
+    <div class="extra-small-rectangle"></div>
+    <p class="extra-white-paragraph">
+      Unlock even more real-time guidance, recovery tracking, and movement diagnostics tailored to your performance level.
+    </p>
+    <a href="MoverPro.html" class="extra-blue-link">Subscribe for full insights.</a>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="goals-with-ai-section">
+  <div class="goals-content-wrapper">
+
+    <!-- 🔠 Headline -->
+    <h2 class="goals-headline">
+      Move toward what’s <span class="blue-word">possible</span>
+    </h2>
+    <p class="goals-subheadline">
+      Progress, with direction.
+    </p>
+
+   <div class="goals-chip-row">
+  <div class="poker-chip-group">
+    <img src="pokerchip1.jpg" class="goal-chip" />
+    <img src="pokerchip2.jpg" class="goal-chip" />
+    <img src="pokerchip3.jpg" class="goal-chip" />
+    <img src="pokerchip4.jpg" class="goal-chip" />
+    <img src="pokerchip5.jpg" class="goal-chip" />
+  </div>
+</div>
+
+
+    <!-- 📝 Subheadline -->
+    <p class="goals-final-subheadline">
+      By adapting to how you train and recover, Moven AI helps you achieve goals that once seemed impossible.
+    </p>
+
+    <!-- 🖼 Mockup Image -->
+    <div class="goals-mockup-image">
+      <img src="movenai5.png" alt="Mockup" />
+
+
+    <!-- 📝 Subheadline -->
+    <p class="goals-final-subheadline">
+      Know your progress. Track your patterns. Improve every move.
+    </p>
+
+    <!-- 🖼 Mockup Image -->
+    <div class="goals-mockup-image">
+      <img src="Movenai12.png" alt="Mockup" />
+    </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- 🖤 Moven AI Outro Section -->
+<section class="moven-ai-outro-section">
+  <div class="moven-ai-outro-inner">
+
+    <!-- 🔠 Headline + Subheadline -->
+    <h2 class="moven-outro-headline">
+      Turn effort into progress. With the help from <span class="blue-word">MovenAi.</span>
+    </h2>
+    <p class="moven-outro-subheadline">
+      Guidance that adapts as you move.
+    </p>
+
+    <!-- 🖼 Image Grid -->
+    <div class="moven-image-grid">
+      <img src="ai100.jpg" alt="Grid Image" />
+      <img src="ai101.jpg" alt="Grid Image" />
+      <img src="ai102.jpg" alt="Grid Image" />
+      <img src="ai103.jpg" alt="Grid Image" />
+    </div>
+
+    <!-- 📝 Center Paragraph -->
+    <p class="moven-grid-paragraph">
+      Real insights. Real movement. True evolution with MovenAI.
+    </p>
+
+    <!-- 🖼 Wide Image with Overhanging Overlay -->
+    <div class="moven-wide-image-wrapper">
+      <img src="ai104.jpg" alt="Wide Visual" class="wide-main-image" />
+      <img src="movenai4.png" alt="Overlay Image" class="overlay-bottom-image" />
+    </div>
+
+
+     <p class="moven-grid-paragraph">
+      Every session matters — MovenAI helps turn your effort into momentum.
+    </p>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<footer class="glass-bottom-footer">
+  <div class="glass-footer-content">
+    <!-- 🔹 Left Section -->
+    <div class="footer-col left-col">
+      <img src="MOVENLOGOWHITE.png" alt="Moven Logo" class="footer-logobottom" />
+      <p class="footer-small-text">© 2025 Moven. All rights reserved.</p>
+      <p class="footer-small-text">
+        <a href="privacypolicy.html">Privacy Policy</a>
+      </p>
+    </div>
+
+    <!-- 🔹 Middle Left -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">Find out more</h4>
+      <ul class="footer-list">
+        <li><a href="moven-features.html">Features</a></li>
+        <li><a href="movengear.html">Moven Gear</a></li>
+        <li><a href="movenclubs.html">Sport Clubs</a></li>
+        <li><a href="MoverPro.html">MoverPro</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Middle Right -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">More</h4>
+      <ul class="footer-list">
+        <li><a href="movencollection.html">Moven Collection</a></li>
+        <li><a href="movenclubs.html">Moven Clubs</a></li>
+        <li><a href="ways-to-move.html">Sports</a></li>
+        <li><a href="create-account.html">Create Account</a></li>
+        <li><a href="moverpro.html">Subscribe</a></li>
+        <li><a href="create-account.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Reach Out Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Reach Out</h4>
+      <p class="footer-email">moven@startmoven.com</p>
+      <div class="footer-socials">
+        <img src="tik-tok.png" alt="TikTok" />
+        <img src="twitter.png" alt="Twitter" />
+        <img src="instagram.png" alt="Instagram" />
+      </div>
+    </div>
+
+    <!-- 🔹 Download Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Download Now</h4>
+
+      <div class="download-block">
+        <img src="MovenQr.png" alt="Move QR Icon" class="qr-icon" />
+        <p class="footer-small-text">Scan to download</p>
+      </div>
+
+      <div class="store-icons">
+        <img src="AppStore.png" alt="App Store" />
+        <img src="watchos.png" alt="WatchOS" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="index.js"></script>
+<script src="DynamicIsland.js"></script>
+<script src="fadeinheadline.js"></script>
+<script src="Pathline.js"></script>
+<script src="aicard.js"></script>
+<script src="landoreveal.js"></script>
+<script src="galleryreveal.js"></script>
+<script src="pokerchip.js"></script>
+
+</body>
+
+
+
+</html>

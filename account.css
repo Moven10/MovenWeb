@@ -1,0 +1,1424 @@
+/* ─── Satoshi Font Setup ─────────────────────────────────────────── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype"),
+       url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+       url("./fonts/Satoshi-Regular.woff") format("woff"),
+       url("./fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Medium.otf") format("opentype"),
+       url("./fonts/Satoshi-Medium.ttf") format("truetype"),
+       url("./fonts/Satoshi-Medium.woff") format("woff"),
+       url("./fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype"),
+       url("./fonts/Satoshi-Bold.ttf") format("truetype"),
+       url("./fonts/Satoshi-Bold.woff") format("woff"),
+       url("./fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Black.otf") format("opentype"),
+       url("./fonts/Satoshi-Black.ttf") format("truetype"),
+       url("./fonts/Satoshi-Black.woff") format("woff"),
+       url("./fonts/Satoshi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+/* ─── Global Reset & Layout ───────────────────────────────────────── */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;          /* ✅ allow page to grow */
+  overflow-x: hidden;        /* ✅ no horizontal scroll */
+  overflow-y: auto;          /* ✅ unlock vertical scroll */
+  background-color: #000;    /* true black base */
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+}
+
+/* Preserve your centered layout */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ─── Top‑Left Blue Glow (Strava‑style) ───────────────────────────── */
+
+.blue-blur {
+  position: absolute;
+  top: -600px;
+  left: -700px;
+  width: 1900px;
+  height: 1900px;
+  background: radial-gradient(
+    1100px circle at 45% 45%,
+    rgba(83, 202, 252, 1) 0%,           /* vivid blue core */
+    rgba(83, 202, 252, 0.9) 25%,        
+    rgba(83, 202, 252, 0.75) 45%,       
+    rgba(0, 0, 0, 0.2) 70%,             
+    transparent 90%
+  );
+  filter: blur(240px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Top-Left Glass Pill Nav ───────────────────────────── */
+.glass-pill-nav {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  padding: 10px 20px;
+  border-radius: 9999px;
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-pill-nav:hover {
+  background: rgba(0, 0, 0, 0.75);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Logo */
+.pill-logo {
+  height: 24px;
+  width: auto;
+  margin-right: 1rem;
+  display: block;
+}
+
+/* Links container */
+.pill-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Anchor links styled like spans */
+.pill-links a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect */
+.pill-links a:hover {
+  color: #53CAFC; /* 🔵 Electric Blue */
+  opacity: 1;
+}
+
+/* Divider */
+.pill-divider {
+  width: 1px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* ===================================== */
+/* 📱 GLASS PILL NAV – PHONE OPTIMISED  */
+/* (Centered Top Layout + Black Text + Blue Logo) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .glass-pill-nav {
+    position: fixed;                 
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);     
+
+    padding: 8px 14px;               
+    border-radius: 999px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    max-width: 95vw;
+
+    /* Updated styling for phone */
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  /* Logo swap to blue version */
+  .pill-logo {
+    height: 18px;
+    margin-right: 0.6rem;
+    content: url("MOVENLOGOBLUE.png");
+  }
+
+  /* Links container */
+  .pill-links {
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  /* Black text on phone */
+  .pill-links a {
+    white-space: nowrap;
+    color: #000;
+  }
+
+  .pill-links a:hover {
+    color: #53CAFC;
+  }
+
+  /* Dividers smaller + darker */
+  .pill-divider {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Logout Card ────────────────────────────────────────────────── */
+
+.logout-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ─── Title ──────────────────────────────────────────────────────── */
+
+.logout-title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+/* ─── Logout Button ──────────────────────────────────────────────── */
+
+.logout-btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  color: white;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logout-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ===================================== */
+/* 📱 LOGOUT CARD – PHONE OPTIMISED */
+/* (Same Layout, Clean Scaling) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .logout-card {
+    padding: 2rem 1.5rem;      /* reduced from 3rem 4rem */
+    border-radius: 14px;       /* slightly tighter */
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Title */
+  .logout-title {
+    font-size: 1.4rem;         /* scaled from 2rem */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Button */
+  .logout-btn {
+    padding: 12px 24px;        /* slightly smaller */
+    font-size: 0.9rem;
+    border-radius: 8px;
+    width: 100%;               /* cleaner mobile feel */
+    max-width: 280px;
+  }
+
+  .logout-btn:hover {
+    transform: none;           /* disable hover scale on touch devices */
+    opacity: 1;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Top User Bar ───────────────────────────────────────────────── */
+
+.top-user-bar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 10px 10px;
+
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+}
+
+/* 🔗 Wrap profile + username in a horizontal row */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* 👤 Profile image */
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #53CAFC;
+}
+
+/* 🧑 Username */
+.username {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 600;
+  color: #111;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+
+
+/* 🧑 Username stays as is */
+
+.user-stats {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  font-family: 'Satoshi', sans-serif;
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  color: #111;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.divider {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ccc;
+  align-self: center;
+  padding: 0 0.25rem;
+}
+
+
+
+
+.status-tag {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  background-color: transparent;          /* ⬅️ No fill */
+  color: #666;                            /* softer grey text */
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 1.5px solid #ccc;               /* grey outline */
+  border-radius: 4px;                     /* still a rectangle */
+  user-select: none;
+}
+
+
+
+
+
+
+
+/* 🕒 Recent move */
+.recent-move {
+  margin-top: auto;                     /* ⬇️ Push to bottom if in flex container */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding-bottom: 0.5rem;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* 🪪 Label: "Recent Activity" */
+.recent-move-label {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 📄 Line with: sessionType ~ date */
+.recent-move-content {
+  font-size: 1rem;
+  color: #fff;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+/* 🏷️ Session Type (e.g. Golf, Run) */
+.move-type {
+  font-style: italic;
+  color: #111;         /* Jet black */
+  font-weight: 600;    /* Thicker font */
+}
+
+/* 📆 Session Date */
+.move-date {
+  font-style: normal;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* ~ Separator */
+.tilde-separator {
+  font-weight: 500;
+  color: #888;
+}
+
+/* 🖼️ Optional Move Icon if you want to re-add it */
+.move-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+
+
+
+
+.account-actions {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* 🔵 Subscribe Button */
+.btn-subscribe {
+  background-color: #53CAFC;
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 14px;                 /* 👈 thinner */
+  border: none;
+  border-radius: 6px;
+  cursor: default;
+  user-select: none;
+}
+
+.btn-logout {
+  background-color: transparent;
+  color: #ff4d4d;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 14px;                 /* 👈 thinner */
+  border: 1.5px solid #ff4d4d;
+  border-radius: 6px;
+  cursor: default;
+  user-select: none;
+}
+
+
+/* ——— Progress Overlay ———————————————— */
+
+.progress-overlay {
+  position: fixed;
+  inset: 0; /* full screen */
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.progress-spinner {
+  text-align: center;
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.progress-spinner img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  animation: spin 1.5s linear infinite;
+}
+
+.progress-spinner p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Optional spinning animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===================================== */
+/* 📱 TOP USER BAR – PHONE OPTIMISED */
+/* (Moved Lower + Clean Scaling) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .top-user-bar {
+    top: 80px;                       /* ⬅️ moved down */
+    width: 94vw;                     /* full width feel */
+    height: 260px;
+    padding: 1.25rem 1.25rem;
+    border-radius: 0 0 14px 14px;
+  }
+
+  /* Profile row */
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .username {
+    font-size: 1rem;
+  }
+
+  /* Stats */
+  .user-stats {
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+
+  .value {
+    font-size: 0.9rem;
+  }
+
+  .divider {
+    font-size: 1rem;
+  }
+
+  /* Status Tag */
+  .status-tag {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Recent Move */
+  .recent-move-label {
+    font-size: 0.65rem;
+  }
+
+  .recent-move-content {
+    font-size: 0.9rem;
+  }
+
+  .move-date {
+    font-size: 0.9rem;
+  }
+
+  /* Buttons */
+  .account-actions {
+    right: 1.25rem;
+    bottom: 1rem;
+    gap: 0.5rem;
+  }
+
+  .btn-subscribe,
+  .btn-logout {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+
+  /* Progress Spinner */
+  .progress-spinner img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .progress-spinner p {
+    font-size: 1rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🧲 Flex container that horizontally centers both sections */
+/* 🧾 Main layout wrapper */
+.centered-layout {
+  position: absolute;
+  top: 320px;
+  left: 43.6%;                    /* ✅ moved from 50% to 45% */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* 🧱 Left column: Account + Gear */
+.account-gear-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 260px;
+  flex-shrink: 0;
+}
+
+/* 📄 Right column: Sessions */
+.session-display-section {
+  width: 720px;                 /* ✅ EXACTLY matches top-user-bar */
+  height: 810px;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-right: 8px;
+  scroll-behavior: smooth;
+  flex-shrink: 0;               /* ✅ Prevents shrinking in flex layout */
+}
+
+
+
+/* 📦 Each group of sessions (e.g., saved, apple watch) */
+.session-type-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;              /* space between cards */
+  margin-bottom: 2rem;    /* bottom padding between groups */
+}
+
+/* 🧊 Individual Session Card (both saved + apple watch) */
+.saved-session-card,
+.session-card {
+  width: 100%;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* — HEADER: PROFILE + USER — */
+.session-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.session-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #53CAFC;
+}
+
+.session-username {
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #111;
+}
+
+.session-date-loc {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.15rem;
+}
+
+/* — SPACING — */
+.space-small {
+  height: 0.8rem;
+}
+
+/* — SESSION TYPE & MAIN IMAGE — */
+.session-type-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #111;
+}
+
+.session-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0.7rem;
+}
+
+/* — STATS — */
+.session-stats {
+  font-size: 1rem;
+  font-style: italic;
+  color: #111;
+  margin-top: 0.7rem;
+}
+
+/* — MAP + PATH — */
+.session-map-container {
+  margin-top: 1rem;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  background-color: #e8e8e8; /* placeholder for SVG or map */
+}
+
+.session-path-map {
+  width: 100%;
+  height: 100%;
+}
+
+.no-path {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
+
+.session-type-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* ⬅️ Slightly more space than 0.5rem */
+}
+
+.session-main-img-inline {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+
+.session-map {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+
+.map-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+
+
+
+.session-stat-labels {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 0.2rem;
+}
+
+.session-stats {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #000;             /* Black */
+  font-style: italic;      /* Italic */
+  font-weight: bold;       /* Bold */
+  gap: 1rem;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 1.2rem;
+  background-color: #ccc;
+}
+
+
+
+
+
+.session-map {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.map-skeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    #e0e0e0 20%,
+    #f5f5f5 40%,
+    #e0e0e0 60%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
+}
+
+/* ===================================== */
+/* 📱 ACCOUNT PAGE – MOBILE CLEAN VIEW */
+/* (Sessions Only – Lowered) */
+/* ===================================== */
+
+/* Ensure toggle button never appears anywhere */
+.account-toggle-btn {
+  display: none !important;
+}
+
+@media (max-width: 430px) {
+
+  /* Hide promotional cards */
+  .activities-float-card,
+  .applewatch-card {
+    display: none !important;
+  }
+
+  /* Stack layout properly */
+  .centered-layout {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0 1rem;
+
+    margin-top: 380px;   /* ⬅️ increased from 300px */
+    max-width: 100%;
+  }
+
+  /* ✅ Show sessions full width */
+  .session-display-section {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  /* ❌ Hide account + gear completely on phone */
+  .account-gear-wrapper {
+    display: none !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* 🧑‍💼 Updated Account Panel Layout */
+.account-section {
+  width: 260px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  font-family: 'Satoshi', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden; /* ✅ Prevent content from overflowing */
+}
+
+/* 👤 Dynamic user profile info inside Account Panel */
+.account-panel-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.5rem;
+  overflow-y: auto;  /* ✅ If needed, allow scroll inside */
+  padding-right: 4px; /* ✅ Scrollbar padding */
+}
+
+/* 🖼 Avatar */
+.account-panel-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #53CAFC;
+  object-fit: cover;
+  align-self: center;
+  margin-bottom: 0.25rem;
+}
+
+/* 🧑 Name (Bold) */
+.account-panel-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111;
+  text-align: center;
+  width: 100%;
+}
+
+/* ─── Divider Line ─── */
+.account-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0.5rem 0;
+  border: none;
+}
+
+/* 📄 Info Fields */
+.account-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.9rem;
+  gap: 0.25rem;
+}
+
+.account-label {
+  color: #888;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.account-value {
+  color: #111;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.account-value.italic {
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ⚙️ Gear Panel — fixed height, scroll-safe */
+.gear-rectangle {
+  width: 260px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  font-family: 'Satoshi', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* ─── Divider under title ─── */
+.gear-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0.75rem 0 1rem 0;
+}
+
+/* 🖼 Scrollable area for images */
+.gear-images-container {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding-right: 4px;
+  padding-bottom: 2px;
+  max-height: 100%;
+  scrollbar-width: none;
+}
+.gear-images-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* 📦 Wrapper for each gear item (image + label) */
+.gear-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* 🖼 Image box */
+.gear-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  padding: 6px;
+  box-shadow: none;
+}
+
+/* 🏷️ Image label */
+.gear-image-label {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #111;
+  text-align: center;
+  word-break: break-word;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Activities Card Floating Near Top Bar ───────────────────── */
+.activities-float-card {
+  position: absolute;
+  top: 1.5rem;
+  left: calc(50% + 380px);  /* Adjust to the right of top-user-bar */
+  width: 260px;
+  background-color: rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-family: 'Satoshi', sans-serif;
+  color: #fff;
+  z-index: 3;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* 🔘 Circle + Title */
+.activity-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.activity-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Divider line */
+.activity-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 🚴 Activity item with icon + label */
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.activity-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.activity-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* 📝 Supporting paragraph */
+.activity-description {
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-top: -0.25rem;
+}
+
+/* 💙 Coming Soon */
+.activity-coming-soon {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #53CAFC;
+}
+
+
+
+
+
+
+/* ─── Apple Watch CTA Card ───────────────────────────── */
+.applewatch-card {
+  position: absolute;
+  top: calc(1.5rem + 320px); /* stacked below the activities card */
+  left: calc(50% + 380px);
+  width: 260px;
+  background-color: rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-family: 'Satoshi', sans-serif;
+  color: #fff;
+  z-index: 3;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ─── Header Row ───────────────────────────── */
+.applewatch-header {
+  display: inline-flex;      /* keeps icon tight to text */
+  align-items: center;
+  gap: 0.3rem;               /* close spacing */
+}
+
+.applewatch-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.applewatch-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-bottom: 1px; /* subtle baseline alignment */
+}
+
+/* ─── Description Paragraph ───────────────────────────── */
+.applewatch-description {
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-top: -0.25rem;
+}
+
+/* ─── Learn More Link ───────────────────────────── */
+.applewatch-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #53CAFC;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.applewatch-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+/* ─── Session Filter Section ───────────────────────────── */
+.session-filter-section {
+  margin-top: 2rem; /* clean vertical separation */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.session-filter-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.session-type-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+
+
+
+/* ─── Reusable Thin Divider ───────────────────────────── */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 1rem 0; /* vertical spacing */
+}
+
+/* ─── Moven Clubs Section ───────────────────────────── */
+.clubs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.clubs-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.clubs-subtitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.clubs-description {
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.clubs-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #53CAFC;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.clubs-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+
+
+.clubs-icon {
+  width: 30px;
+  height: 22px;
+  object-fit: contain;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+
+
+
+

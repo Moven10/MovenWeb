@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features | More Then Just Tracking</title>
+ <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="moven-features.css" />
+  <link rel="stylesheet" href="satoshi.css" />
+</head>
+
+<body>
+
+  
+
+<!-- 🔝 Sticky Top Bar (Hidden by default) -->
+<header id="stickyTopBar" class="sticky-top-bar">
+  <div class="top-bar-content">
+    <!-- Circle with Icon -->
+    <a href="index.html" class="top-bar-dot" aria-label="Go to Home"></a>
+
+    <!-- ✨ Normal Mode -->
+    <nav class="top-bar-nav nav-full">
+      <a href="discover.html">Discover</a>
+      <span class="divider"></span>
+      <a href="movengallery.html">Moven Gear</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Mover Pro</a>
+      <span class="divider"></span>
+      <a href="movenclubs.html">Moven Clubs</a>
+    </nav>
+
+    <!-- ✨ Compact Mode -->
+    <nav class="top-bar-nav nav-compact">
+      <a href="create-account.html">Join For Free</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Subscribe Now</a>
+      <span class="divider"></span>
+      <a href="movenai.html">Moven Ai</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Footer (hidden while sticky bar is shown) -->
+<footer class="minimal-footer">
+  <div class="footer-inner">
+
+    <!-- 🍔 iPhone Hamburger (hidden on desktop via CSS) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Left: Logo -->
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <!-- Right: Nav + User -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="discover.html">Discover</a>
+        <a href="ways-to-move.html">Ways To Move</a>
+        <a href="movengear.html">Moven Gear</a>
+        <a href="moven-features.html">Features</a>
+      </nav>
+
+      <div class="footer-buttons">
+        <!-- 🔹 Sign In button (only shown when logged out) -->
+        <button id="signin-btn" class="btn-signin-outline" style="display: none;">
+          Sign In
+        </button>
+
+        <!-- 👤 Logged-in user profile -->
+        <div id="user-profile" class="user-profile">
+          <img
+            id="profile-avatar"
+            src="default-avatar.jpg"
+            alt="Profile Picture"
+            class="profile-avatar"
+          />
+          <span id="profile-username" class="profile-username">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- 📱 iPhone Glass Dropdown Menu -->
+<div class="mobile-glass-menu" id="mobileGlassMenu">
+  <a href="discover.html">Discover</a>
+  <a href="ways-to-move.html">Ways To Move</a>
+  <a href="movengear.html">Moven Gear</a>
+  <a href="moven-features.html">Features</a>
+</div>
+
+
+
+<section class="features-section">
+  <div class="features-container">
+
+    <!-- Animated Headline -->
+    <h2 class="features-headline">
+      <span class="reveal">Get</span>
+      <span class="reveal">to</span>
+      <span class="reveal">know</span>
+      <span class="reveal">how</span>
+      <span class="reveal">we</span>
+      <span class="reveal blue">Move!</span>
+    </h2>
+
+    <!-- Subtext -->
+    <p class="features-subtext">
+      Figure out how we do what we do, feel secure with the way we track your physical activity.
+    </p>
+
+    <!-- Icons -->
+    <div class="features-icons">
+      <img src="IconJogblack.svg" alt="Jog Icon">
+      <img src="IconMoveblack.svg" alt="Move Icon">
+      
+    </div>
+
+  </div>
+</section>
+
+  
+
+  <!-- IMAGE SECTION -->
+  <section class="image-section">
+    <img src="355.jpg" alt="Hero Image" />
+  </section>
+
+  <!-- MOVE TOGETHER SECTION -->
+  <section class="move-together">
+    <div class="move-left">
+      <h2>Let’s Move toge<span class="pink">ther</span></h2>
+      <p>
+      Scan the QR code to download free and join people around the world who are choosing to move more, train harder, and push further every day. Wherever you start and whatever drives you, you’re part of a global movement built on progress, discipline, and momentum.
+      </p>
+     <a href="https://apps.apple.com/au/app/moven-move-your-way/id6744375683" 
+   class="btn-black" 
+   target="_blank" 
+   rel="noopener noreferrer">
+   Download Now
+</a>
+
+    </div>
+    <div class="move-right">
+      <img src="MovenQr.png" alt="Move Together" />
+    </div>
+  </section>
+
+<!-- INFO IMAGE SECTION -->
+<section class="info-image">
+
+  <!-- First hero image -->
+  <img src="Features1.jpg" alt="Tracking Visual" class="main-image" />
+
+<!-- Text + Two Images Side by Side -->
+<div class="info-text-image-wrapper">
+
+  <!-- Text block -->
+  <div class="info-text-block">
+    <h2>We track what you can't.</h2>
+    <p>
+      Track heart rate, calories, weather, path, speed and more — turning every session into measurable progress.
+    </p>
+  </div>
+
+  <!-- Dual Watch images -->
+  <div class="info-watch-image-group">
+    <img src="WatchUltra1.png" alt="Watch Mockup 1" />
+    <img src="WatchUltra2.png" alt="Watch Mockup 2" />
+  </div>
+
+</div>
+
+
+
+  <!-- Second image -->
+  <img src="Feature2.jpg" alt="Movement Data" class="secondary-image" />
+
+  <!-- Off-centered subheadline + text -->
+  <div class="info-subtext-block">
+    <h3 class="subheadline">Every Move, Mapped.</h3>
+    <p class="subtext">
+    Your path is captured in real time on our custom-built maps, delivering highly accurate tracking across every run, walk, and ride. From streets to trails, every turn, pace change, and distance is recorded with precision — so you always see exactly how you moved.
+    </p>
+  </div>
+
+ <!-- Card Slide -->
+<div class="info-card-fan-layout">
+
+  <div class="info-card" data-index="0">
+    <div class="info-card-inner">
+      <img src="Card200.jpg" alt="Challenge 1" />
+    </div>
+  </div>
+
+  <div class="info-card" data-index="1">
+    <div class="info-card-inner">
+      <img src="Card201.jpg" alt="Challenge 2" />
+    </div>
+  </div>
+
+  <div class="info-card" data-index="2">
+    <div class="info-card-inner">
+      <img src="Card202.jpg" alt="Challenge 3" />
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Additional Info Section 1 -->
+<div class="info-extra-block">
+  <h3 class="info-extra-headline">Built for the Water.</h3>
+  <p class="info-extra-text">
+    Water demands precision. Traditional GPS struggles in the pool and open water, often delivering inconsistent and inaccurate results. That’s why Moven takes a different approach. Instead of relying on GPS alone, we use advanced motion and stroke detection to measure distance, pace, and performance with greater accuracy — giving you metrics you can trust, every session.
+  </p>
+
+  <!-- Side-by-side mockups ABOVE the full image -->
+  <div class="info-extra-image-row">
+    <img src="MockupHalf1.png" alt="Mockup 4" />
+    <img src="IosMockup1.png" alt="Mockup Side" />
+  </div>
+
+  <!-- Full-width image at the bottom -->
+  <img src="Features2.jpg" alt="Movement Tracking Image" class="info-extra-image" />
+</div>
+
+
+
+<!-- Additional Info Section 2 -->
+<div class="info-extra-block">
+  <h3 class="info-extra-headline">Always Connected.</h3>
+  <p class="info-extra-text">
+   Currently optimized for Apple Watch, Moven delivers industry-leading accuracy across every session. Support for Garmin and additional devices is in progress, expanding how you connect and move.
+  </p>
+  <img src="Features4.jpg" alt="Session Data Visual" class="info-extra-image" />
+</div>
+
+
+<!-- Additional Info Section 2 -->
+<div class="info-extra-block">
+  <h3 class="info-extra-headline">Every Step. Every Rise.</h3>
+  <p class="info-extra-text">
+    Track elevation gain and loss with precision, capturing every climb, descent, and change in terrain as you move. Combined with highly accurate step tracking, every effort is measured clearly and consistently — giving you a true picture of distance, intensity, and progress across every session.
+  </p>
+  <img src="Features3.jpg" alt="Session Data Visual" class="info-extra-image" />
+
+  <!-- NEW headline + paragraph under image -->
+<h3 class="info-extra-headline">Designed to Move.</h3>
+<p class="info-extra-text">
+  Moven Gear transforms every session into something personal, making the way you move feel unique, expressive, and different every time. With fully customizable gear coming soon, your movement won’t just be tracked — it will reflect your style, your identity, and how you choose to move.
+</p>
+
+<!-- 3 Watch mockups side by side -->
+<div class="info-extra-image-row">
+  <img src="Watchmockup2.png" alt="Watch Mockup 1" />
+  <img src="Watchmockupgear.png" alt="Watch Mockup 2" />
+  <img src="Watchmockup10.png" alt="Watch Mockup 3" />
+</div>
+
+
+
+</section>
+
+
+
+<!-- GEAR INFO SECTION -->
+<section class="gear-info-section">
+  <h2 class="gear-headline">Move with complete style</h2>
+  <p class="gear-subtext">For those who move differently</p>
+  <a href="movengallery.html" class="btn-gear">Moven Gear</a>
+</section>
+
+
+<!-- GEAR DISPLAY SECTION -->
+<section class="gear-display-section">
+  <div class="gear-grid">
+
+    <!-- Card 1 -->
+    <div class="gear-card" style="background-image: url('split10.jpg');">
+      <div class="gear-card-content">
+        <p class="gear-label">Walk Your Way</p>
+        <h3 class="gear-title">Built for Everyday Movement</h3>
+        <a href="sneaker.html" class="gear-btn">View Walk Gear</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="gear-card" style="background-image: url('Split11.jpg');">
+      <div class="gear-card-content">
+        <p class="gear-label">Run Further. Run Faster</p>
+        <h3 class="gear-title">Built for Speed</h3>
+        <a href="sneaker.html" class="gear-btn">View Running Gear</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="gear-card" style="background-image: url('Split12.jpg');">
+      <div class="gear-card-content">
+        <p class="gear-label">Built for the Ride</p>
+        <h3 class="gear-title">Power Through Every Mile</h3>
+        <a href="sneaker.html" class="gear-btn">View Cycling Gear</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="gear-card" style="background-image: url('split13.jpg');">
+      <div class="gear-card-content">
+        <p class="gear-label">Move Through Water</p>
+        <h3 class="gear-title">Power Every Stroke.</h3>
+        <a href="sneaker.html" class="gear-btn">View Swim Gear</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="weather-section">
+
+  <!-- Headline Inside Section -->
+  <h2 class="weather-headline">Weather Intelligence</h2>
+
+  <!-- Top Image -->
+  <div class="weather-top-image">
+    <img src="Features5.jpg" alt="Weather Visual" />
+  </div>
+
+  <!-- Text Content -->
+  <div class="weather-text">
+    <h2>Check the weather</h2>
+    <h4>Stay ready no matter the forecast</h4>
+    <p>
+      Our smart system syncs real-time weather with your planned activity so you're never caught off guard — rain or shine.
+    </p>
+  </div>
+
+  <!-- Mockup Images -->
+  <div class="weather-mockup-row">
+    <img src="Watchmockupweather1.png" alt="Watch Mockup" />
+    <img src="mockup6.png" alt="Phone Mockup" />
+  </div>
+
+  <!-- Large Centered Paragraph -->
+  <div class="weather-description">
+    <p>
+      Live weather updates show you exactly what’s happening around you, helping you plan and adapt every move with clarity and confidence.
+    </p>
+  </div>
+
+</section>
+
+
+
+<section class="moven-gear-section">
+
+  <!-- Headline & Subheadline -->
+  <div class="gear-text-block">
+    <h2 class="gear-headline heart-section-title">
+     Track your <span class="red-flash">heart rate</span> and more
+
+    </h2>
+    <p class="gear-subheadline">
+      View your heart rate live during your session, then review it in clear, detailed charts within the iOS app.
+    </p>
+  </div>
+
+  <!-- Mockup Images Row -->
+  <div class="gear-mockup-row">
+    <img src="Watchmockupbpm.png" alt="Watch Mockup Left" />
+    <img src="Mockupheartrate.png" alt="Phone Mockup Center" />
+    <img src="Watchbpm1.png" alt="Watch Mockup Right" />
+  </div>
+
+  <!-- Side-by-Side Image Section -->
+  <div class="gear-double-image-row">
+    <img src="Feature6.jpg" alt="Heart Rate Visual Left" />
+    <img src="Feature7.jpg" alt="Heart Rate Visual Right" />
+  </div>
+
+  <!-- Centered Text Section -->
+  <div class="gear-info-text">
+    <h2 class="gear-info-headline">Track Every Calorie Burned</h2>
+    <h4 class="gear-info-subheadline">See how hard you’re working, in real time.</h4>
+    <p class="gear-info-paragraph">
+     By using live heart rate data, Moven measures energy burn with precision, giving you real-time insight into how hard you’re working and how your body is performing. Every session becomes clearer, more focused, and easier to improve.
+    </p>
+  </div>
+
+  <div class="gear-double-image-row">
+    <img src="Feature8.jpg" alt="Heart Rate Visual Left" />
+    <img src="Feature9.jpg" alt="Heart Rate Visual Right" />
+  </div>
+
+
+</section>
+
+
+
+
+
+
+<!-- Parallax Section -->
+<section class="speed-zones-section">
+  <!-- Main Headline -->
+  <h2 class="speed-headline">Measure your speed</h2>
+  <h4 class="speed-subheadline">Track pace, push limits, and build momentum.</h4>
+  <p class="speed-paragraph">
+    Advanced sensors capture your speed in real time, delivering accurate, responsive updates as your speed changes.
+  </p>
+
+  <!-- First Image Block -->
+  <div class="speed-image-block">
+    <img src="Mockupside.png" alt="Speed Tracking Visual" />
+  </div>
+
+  <!-- Dual Image Section with Bottom-right Watch -->
+  <div class="speed-dual-images">
+    <img src="Feature10.jpg" alt="Main Speed Visual" class="main-speed-image" />
+    <img src="Watchmockupspeed.png" alt="Watch Overlay" class="watch-overlay" />
+  </div>
+
+  <!-- Second Text Block -->
+  <div class="speed-info-block">
+    <h2 class="speed-info-headline">Speed Zones</h2>
+    <h4 class="speed-info-subheadline">Understand your speed ranges and train with purpose.</h4>
+    <p class="speed-info-paragraph">
+      Your speed is tracked continuously throughout each session and organized into five performance zones based on km/h. View your speed live as you move, then explore detailed zone breakdowns inside the iOS app.
+    </p>
+  </div>
+
+  <!-- Final Section -->
+  <div class="speed-final-block">
+    <img src="Feature11.jpg" alt="Performance Visual" class="final-speed-image" />
+    <h2 class="speed-final-headline">Every Step Counts</h2>
+    <h4 class="speed-final-subheadline">Measure progress in every movement you make.</h4>
+    <p class="speed-final-paragraph">
+      Beyond speed, live step count and steps per minute are measured using highly accurate motion sensors for precise, real-time tracking.
+    </p>
+  </div>
+
+
+
+<!-- Image Grid Section -->
+<div class="speed-image-grid-section">
+  <img src="Feature15.jpg" alt="Performance Visual" class="final-speed-image" />
+  <p class="speed-grid-intro">
+    Top speed is captured accurately throughout each session, highlighting your fastest moments and peak performance.
+  </p>
+
+  <!-- 2×2 Image Grid -->
+  <div class="speed-image-grid">
+    <img src="Feature12.jpg" alt="Grid Image 1">
+    <img src="Feature13.jpg" alt="Grid Image 2">
+    <img src="Feature14.jpg" alt="Grid Image 3">
+    <img src="Feature16.jpg" alt="Grid Image 4">
+  </div>
+
+  <!-- Paragraph Below Grid -->
+  <p class="speed-grid-text">
+    See your average speed to understand consistency, efficiency, and long-term progress.
+  </p>
+</div>
+
+<!-- First Image Block -->
+  <div class="speed-image-block">
+    <img src="Mocupsidedark1.png" alt="Speed Tracking Visual" />
+  </div>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+<footer class="glass-bottom-footer">
+  <div class="glass-footer-content">
+    <!-- 🔹 Left Section -->
+    <div class="footer-col left-col">
+      <img src="MovenLogoblack.jpg" alt="Moven Logo" class="footer-logobottom" />
+      <p class="footer-small-text">© 2025 Moven. All rights reserved.</p>
+      <p class="footer-small-text">
+        <a href="privacypolicy.html">Privacy Policy</a>
+      </p>
+    </div>
+
+    <!-- 🔹 Middle Left -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">Find out more</h4>
+      <ul class="footer-list">
+        <li><a href="moven-features.html">Features</a></li>
+        <li><a href="movengear.html">Moven Gear</a></li>
+        <li><a href="movenclubs.html">Sport Clubs</a></li>
+        <li><a href="MoverPro.html">MoverPro</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Middle Right -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">More</h4>
+      <ul class="footer-list">
+        <li><a href="movencollection.html">Moven Collection</a></li>
+        <li><a href="movenclubs.html">Moven Clubs</a></li>
+        <li><a href="ways-to-move.html">Sports</a></li>
+        <li><a href="create-account.html">Create Account</a></li>
+        <li><a href="moverpro.html">Subscribe</a></li>
+        <li><a href="create-account.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Reach Out Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Reach Out</h4>
+      <p class="footer-email">moven@startmoven.com</p>
+      <div class="footer-socials">
+        <img src="tik-tok.png" alt="TikTok" />
+        <img src="twitter.png" alt="Twitter" />
+        <img src="instagram.png" alt="Instagram" />
+      </div>
+    </div>
+
+    <!-- 🔹 Download Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Download Now</h4>
+
+      <div class="download-block">
+        <img src="MovenQr.png" alt="Move QR Icon" class="qr-icon" />
+        <p class="footer-small-text">Scan to download</p>
+      </div>
+
+      <div class="store-icons">
+        <img src="AppStore.png" alt="App Store" />
+        <img src="watchos.png" alt="WatchOS" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="index.js"></script>
+<script src="DynamicIsland.js"></script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moven Gear | Pick Your Style</title>
+   <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+  <link rel="stylesheet" href="sneaker.css" />
+</head>
+<body>
+  <!-- 🔝 Sticky Top Bar (Hidden by default) -->
+<header id="stickyTopBar" class="sticky-top-bar">
+  <div class="top-bar-content">
+    <!-- Circle with Icon -->
+    <a href="index.html" class="top-bar-dot" aria-label="Go to Home"></a>
+
+    <!-- ✨ Normal Mode -->
+    <nav class="top-bar-nav nav-full">
+      <a href="discover.html">Discover</a>
+      <span class="divider"></span>
+      <a href="movengallery.html">Moven Gear</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Mover Pro</a>
+      <span class="divider"></span>
+      <a href="movenclubs.html">Moven Clubs</a>
+    </nav>
+
+    <!-- ✨ Compact Mode -->
+    <nav class="top-bar-nav nav-compact">
+      <a href="create-account.html">Join For Free</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Subscribe Now</a>
+      <span class="divider"></span>
+      <a href="movenai.html">Moven Ai</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Footer (hidden while sticky bar is shown) -->
+<footer class="minimal-footer">
+  <div class="footer-inner">
+
+    <!-- 🍔 iPhone Hamburger (hidden on desktop via CSS) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Left: Logo -->
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <!-- Right: Nav + User -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="discover.html">Discover</a>
+        <a href="ways-to-move.html">Ways To Move</a>
+        <a href="movengear.html">Moven Gear</a>
+        <a href="moven-features.html">Features</a>
+      </nav>
+
+      <div class="footer-buttons">
+        <!-- 🔹 Sign In button (only shown when logged out) -->
+        <button id="signin-btn" class="btn-signin-outline" style="display: none;">
+          Sign In
+        </button>
+
+        <!-- 👤 Logged-in user profile -->
+        <div id="user-profile" class="user-profile">
+          <img
+            id="profile-avatar"
+            src="default-avatar.jpg"
+            alt="Profile Picture"
+            class="profile-avatar"
+          />
+          <span id="profile-username" class="profile-username">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- 📱 iPhone Glass Dropdown Menu -->
+<div class="mobile-glass-menu" id="mobileGlassMenu">
+  <a href="discover.html">Discover</a>
+  <a href="ways-to-move.html">Ways To Move</a>
+  <a href="movengear.html">Moven Gear</a>
+  <a href="moven-features.html">Features</a>
+</div>
+
+
+
+
+
+  <main class="main-layout">
+  <!-- Sidebar Filters -->
+  <aside class="gear-section">
+  <h2 class="gear-title">Sports</h2>
+  <div class="gear-list">
+
+    <!-- 🏃 Standard Filters -->
+    <div class="gear-item" data-filter="walk">
+      <div class="gear-row">
+        <span>Walk</span>
+        <img src="IconWalkblack.svg" alt="Walk Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="run">
+      <div class="gear-row">
+        <span>Run</span>
+        <img src="IconJogblack.svg" alt="Run Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="cycle">
+      <div class="gear-row">
+        <span>Cycle</span>
+        <img src="IconCycleblack.svg" alt="Cycle Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="swim">
+      <div class="gear-row">
+        <span>Swim</span>
+        <img src="IconSwimblack.svg" alt="Swim Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="golf">
+      <div class="gear-row">
+        <span>Golf</span>
+        <img src="IconGolfblack.svg" alt="Golf Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="padel">
+      <div class="gear-row">
+        <span>Padel</span>
+        <img src="IconPadelblack.svg" alt="Padel Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="tennis">
+      <div class="gear-row">
+        <span>Tennis</span>
+        <img src="IconTennisblack.svg" alt="Tennis Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="squash">
+      <div class="gear-row">
+        <span>Squash</span>
+        <img src="IconSquashblack.svg" alt="Squash Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="pickleball">
+      <div class="gear-row">
+        <span>PickleBall</span>
+        <img src="IconPickleballblack.svg" alt="PickleBall Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="soccer">
+      <div class="gear-row">
+        <span>Soccer</span>
+        <img src="IconSoccerblack.svg" alt="Soccer Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <div class="gear-item" data-filter="rowing">
+      <div class="gear-row">
+        <span>Rowing</span>
+        <img src="IconRowblack.svg" alt="Rowing Icon" width="14" height="14" />
+      </div>
+      <div class="gear-divider"></div>
+    </div>
+
+    <!-- 🧩 Collection Section Header -->
+    <div class="gear-collection-header">Collections</div>
+
+    <!-- 💙 Moven Collection Option -->
+<a href="movencollection.html" class="gear-link">
+  <div class="gear-item gear-footer-option" data-filter="collection">
+    <div class="gear-row gear-footer-row">
+      <span class="gear-footer-label">Moven</span>
+      <img src="Moveiconblack.svg" alt="Moven Icon" class="gear-footer-icon" />
+    </div>
+  </div>
+</a>
+
+
+  </div>
+</aside>
+
+
+   <section class="product-grid">
+<div class="product-item">
+  <div class="product-card has-image">
+    <div class="product-label">
+      <span>Walk Gear</span>
+      <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+    </div>
+    <img src="WalkerActive.png" alt="Walker Stroll" class="product-image" />
+  </div>
+  <div class="product-info">
+   <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+    <h3 class="image-name">Walker Active</h3>
+    <p class="info-collection">Commonly Used</p>
+  </div>
+</div>
+
+  <div class="product-item">
+  <div class="product-card has-image">
+    <div class="product-label">
+      <span>Walk Gear</span>
+      <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+    </div>
+    <img src="WalkerAura.png" alt="Walker Stroll" class="product-image" />
+  </div>
+  <div class="product-info">
+    <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+    <h3 class="image-name">Walker Aura</h3>
+    <p class="info-collection pink-drop">Hot Drop</p>
+  </div>
+</div>
+
+   <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerBalance.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Balance</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+   <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerBase.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Base</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+   <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerBlush.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Blush</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+   <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerCore.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Core</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerEase.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Ease</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerElite.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Elite</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerHiker.jpg" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Hiker</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerPlus.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Plus</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerStealth.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Stealth</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerStrider.jpg" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Strider</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerStroll.jpg" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Stroll</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerTempo.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Tempo</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ <div class="product-item">
+    <div class="product-card has-image">
+      <div class="product-label">
+        <span>Walk Gear</span>
+        <img src="IconWalkblack.svg" alt="Move Icon" class="product-icon" />
+      </div>
+      <img src="WalkerTrek.png" alt="Walker Air" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="sneaker-name">Moven <span class="moven-blue">Gear</span></p>
+      <h3 class="image-name">Walker Trek</h3>
+      <p class="info-collection pink-drop">Hot Drop</p>
+    </div>
+  </div>
+ 
+    
+</section>
+
+  </main>
+
+
+
+  <script src="sneaker.js"></script>
+   <script src="movengearclaim.js"></script>
+    <script src="index.js"></script>
+    <script src="DynamicIsland.js"></script>
+     <script src="imagechange.js"></script>
+
+</body>
+</html>

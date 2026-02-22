@@ -1,0 +1,4654 @@
+/* ─── Satoshi Font Setup ─────────────────────────────────────────── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype"),
+       url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+       url("./fonts/Satoshi-Regular.woff") format("woff"),
+       url("./fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Medium.otf") format("opentype"),
+       url("./fonts/Satoshi-Medium.ttf") format("truetype"),
+       url("./fonts/Satoshi-Medium.woff") format("woff"),
+       url("./fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype"),
+       url("./fonts/Satoshi-Bold.ttf") format("truetype"),
+       url("./fonts/Satoshi-Bold.woff") format("woff"),
+       url("./fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Black.otf") format("opentype"),
+       url("./fonts/Satoshi-Black.ttf") format("truetype"),
+       url("./fonts/Satoshi-Black.woff") format("woff"),
+       url("./fonts/Satoshi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+
+
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+  background-color: white;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* ───── FOOTER STYLES ────────────────────────────────────────────── */
+.minimal-footer {
+  background: linear-gradient(
+    135deg,
+    rgba(83, 202, 252, 0.25),
+    rgba(255, 255, 255, 0.1),
+    rgba(83, 202, 252, 0.2)
+  );
+
+  backdrop-filter: blur(48px) saturate(250%);
+  -webkit-backdrop-filter: blur(48px) saturate(250%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 18px 64px rgba(83, 202, 252, 0.25),
+    inset 0 0 60px rgba(255, 255, 255, 0.08);
+
+  padding: 0.4rem 0;
+  width: 100%;
+  min-height: 56px;
+
+  position: fixed;      /* ✅ Locks it in place */
+  top: 0;               /* ✅ Sticks to top instead */
+  left: 0;
+  z-index: 9998;
+  overflow: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between; /* 👈 Clean two-sided layout */
+  align-items: center;
+  padding: 0 4rem;
+  height: 56px;
+  position: relative;
+}
+
+
+.footer-logo {
+  height: 48px;         /* ⬆️ Taller logo */
+  width: auto;
+  display: block;
+  margin-left: 2rem;    /* ⬅️ Narrower spacing */
+  margin-top: 16px;     /* ⬇️ Slightly reduced vertical offset */
+}
+.footer-right {
+  position: absolute;
+  right: 4rem; /* 👈 Shifted closer to center */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;        /* ⬆️ Upgraded to Black */
+  font-style: italic;      /* ⬅️ Now italic */
+  transition: color 0.3s ease;
+}
+
+
+.footer-nav a:hover {
+  color: #53CAFC;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-join,
+.btn-subscribe {
+  box-sizing: border-box;
+}
+
+.btn-join {
+  padding: 8px 16px;
+  border: 2px solid #53CAFC;
+  background: transparent;
+  color: #B0B0B0;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-join:hover {
+  background-color: #53CAFC;
+  color: white;
+  border-color: #53CAFC;
+}
+
+.btn-subscribe {
+  padding: 8px 16px;
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-subscribe::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid white;
+  border-radius: 8px;
+  opacity: 0;
+  animation: snake-outline 1s linear infinite;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.btn-subscribe:hover::before {
+  opacity: 1;
+}
+
+/* 👤 Logged-in user display */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(83, 202, 252, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Invisible placeholder to reserve space */
+.user-profile::after {
+  content: "Username"; /* Match expected username length */
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+}
+
+
+.user-profile:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05); /* 👈 grow on hover */
+}
+
+
+.profile-avatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #53CAFC;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.07);
+}
+
+.profile-username {
+  color: #000000;            /* ⬅️ Changed to white */
+  font-weight: 900;          /* ⬆️ Satoshi Black */
+  font-style: italic;        /* ⬅️ Italic style */
+  font-size: 0.95rem;
+  font-family: 'Satoshi', sans-serif;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+
+@keyframes snake-outline {
+  0% { clip-path: inset(0 100% 100% 0); }
+  25% { clip-path: inset(0 0 100% 0); }
+  50% { clip-path: inset(0 0 0 0); }
+  75% { clip-path: inset(100% 0 0 0); }
+  100% { clip-path: inset(0 100% 100% 0); }
+}
+
+/* ✅ Hide main footer when sticky bar is active using body class */
+body.hide-footer .minimal-footer {
+  display: none !important;
+}
+
+
+
+
+.btn-signin-outline {
+  padding: 8px 16px;
+  border: 2px solid #53CAFC;
+  background-color: transparent;
+  color: #53CAFC;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.btn-signin-outline:hover {
+  background-color: #53CAFC;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───── STICKY TOP BAR (Two‑Stage Drop Reveal) ───────────────────────────── */
+
+.sticky-top-bar {
+  position: fixed;
+  top: -120px;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  /* Hidden state */
+  opacity: 0;
+  transform: translateY(-40px) scale(0.95);
+  pointer-events: none;
+}
+
+/* First notch reveal */
+.sticky-top-bar.show-full {
+  animation: notchDropIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Second notch reveal */
+.sticky-top-bar.show-compact {
+  animation: notchDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Drop animation */
+@keyframes notchDropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(6px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    top: 0;
+  }
+}
+
+/* Layout */
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 🔵 Icon Circle */
+.top-bar-dot {
+  height: 44px;
+  width: 44px;
+  background-color: #53CAFC;
+  border-radius: 50%;
+  background-image: url("Moveiconwhite.svg");
+  background-size: 29px 29px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Rounded nav island */
+.top-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.35rem 0.85rem;
+  background-color: #53CAFC;
+  border-radius: 999px;
+  transition: all 0.35s ease;
+}
+
+/* Hide both navs by default */
+.nav-full,
+.nav-compact {
+  display: none;
+}
+
+/* Show only the correct nav */
+.sticky-top-bar.show-full .nav-full {
+  display: flex;
+}
+
+.sticky-top-bar.show-compact .nav-compact {
+  display: flex;
+}
+
+/* Compact notch slightly smaller */
+.sticky-top-bar.show-compact .top-bar-nav {
+  padding: 0.25rem 0.6rem;
+  transform: scale(0.92);
+}
+
+/* Nav links */
+.top-bar-nav a {
+  color: #ffffff;             /* ⬅️ White text */
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;           /* ⬆️ Satoshi Black */
+  font-style: italic;         /* ⬅️ Italic */
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+
+.top-bar-nav a:hover {
+  color: #FEE0FF;
+}
+
+/* Divider */
+.top-bar-nav .divider {
+  width: 1px;
+  height: 1rem;
+  background-color: white;
+  opacity: 0.6;
+}
+
+
+/* Hide mobile-only elements on desktop */
+.mobile-menu-toggle,
+.mobile-glass-menu {
+  display: none;
+}
+
+
+/* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
+@media (max-width: 430px) {
+
+  /* ===== Minimal Glass Top Footer ===== */
+
+  .minimal-footer {
+    padding: 0.6rem 0.6rem 0.6rem 0.2rem; /* reduced LEFT padding */
+    min-height: 60px;
+  }
+
+  .footer-inner {
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 🍔 Hamburger */
+  .mobile-menu-toggle {
+  display: flex;
+  width: 26px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 15px;   /* 🔥 pushes it right */
+  margin-right: 4px;
+}
+
+  .mobile-menu-toggle span {
+    height: 2px;
+    width: 100%;
+    background: #53CAFC;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Keep container stable */
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* 🔥 Shift ONLY the logo left */
+  .footer-logo {
+    height: 40px;
+    margin: 0;
+    margin-left: -120px; /* controls logo position only */
+  }
+
+  /* Remove absolute positioning */
+  .footer-right {
+    position: static;
+    transform: none;
+    gap: 1rem;
+    margin-right: 6px;
+  }
+
+  /* Hide desktop nav */
+  .footer-nav {
+    display: none;
+  }
+
+  .footer-buttons {
+    gap: 0.5rem;
+  }
+
+  .profile-avatar {
+    height: 32px;
+    width: 32px;
+  }
+
+  .profile-username {
+    display: none;
+  }
+
+
+  /* ===== Glass Dropdown (Original Style Kept) ===== */
+
+  .mobile-glass-menu {
+    display: flex;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 30px 24px;
+
+    background: linear-gradient(
+      135deg,
+      rgba(83, 202, 252, 0.25),
+      rgba(255, 255, 255, 0.1),
+      rgba(83, 202, 252, 0.2)
+    );
+
+    backdrop-filter: blur(48px) saturate(250%);
+    -webkit-backdrop-filter: blur(48px) saturate(250%);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(83, 202, 252, 0.25);
+
+    flex-direction: column;
+    gap: 24px;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+    z-index: 9997;
+  }
+
+  .mobile-glass-menu a {
+    text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #000000;
+  }
+
+  .mobile-glass-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+  /* ===== Sticky Blue Drop Bar (Unchanged) ===== */
+
+  .sticky-top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    top: 18px;
+  }
+
+  .top-bar-content {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .top-bar-dot {
+    height: 30px;
+    width: 30px;
+    background-size: 18px 18px;
+  }
+
+  .top-bar-nav {
+    width: auto;
+    padding: 0.2rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .top-bar-nav a {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.35rem;
+  }
+
+  .top-bar-nav .divider {
+    height: 0.7rem;
+  }
+
+  .nav-full a:nth-of-type(1),
+  .nav-full .divider:nth-of-type(1) {
+    display: none;
+  }
+
+  .nav-full a:nth-of-type(3),
+  .nav-full .divider:nth-of-type(3) {
+    display: none;
+  }
+
+}
+
+
+/*iphone css*/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fade-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Display Section Styles --- */
+.display-section {
+  background-color: #f2f2f2;
+  padding: 80px 20px;
+  display: block;
+}
+
+/* Container Stack: holds all rectangles */
+.display-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: center;
+}
+
+.display-stack > * {
+  width: 100%;
+  max-width: 1440px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Main White Rectangle */
+.display-container {
+  background-color: #fff;
+  border-radius: 18px;
+  max-width: 1440px;
+  width: 100%;
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.display-image {
+  max-width: 450px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.display-content {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-bottom: -100px;
+}
+
+.display-text {
+  max-width: 700px;
+}
+
+.display-text h2 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.display-text p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.indicator-icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.indicator-icons img {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+}
+
+.display-buttons {
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn-blue {
+  background-color: #53CAFC;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-blue:hover {
+  background-color: #2DB8ED;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #53CAFC;
+  border: 2px solid #53CAFC;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #E7F8FE;
+}
+
+/* Icon Hover Underline */
+.icon-wrapper {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-wrapper img {
+  height: 28px;
+  width: 28px;
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #53CAFC;
+  transition: width 0.3s ease;
+}
+
+.icon-wrapper:hover::after {
+  width: 24px;
+}
+
+/* Image Rectangle with background and content */
+.image-rectangle {
+  background-image: url('Rectangle1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 18px;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 460px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+  /* New content layout styles */
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  color: white;
+}
+
+/* Overlay content wrapper */
+.image-overlay-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Left text block */
+.image-text-block {
+  max-width: 600px;
+}
+
+.image-text-block h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.image-text-block p {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Icon section */
+.image-text-block .indicator-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.image-text-block .indicator-icons img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Right button group */
+.image-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* White pill button */
+.btn-pill-white {
+  background-color: white;
+  color: #000;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-pill-white:hover {
+  background-color: #f0f0f0;
+}
+
+/* White outline button */
+.btn-outline-white {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-white:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Second White Rectangle (same style as first) */
+.display-container-second {
+  background-color: #fff;
+  border-radius: 18px;
+  max-width: 1440px;
+  width: 100%;
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+
+
+
+.headline-behind-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.display-headline-behind {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.display-container.headline-behind-container {
+  padding: 80px 32px; /* increase top/bottom padding */
+}
+
+
+
+.display-headline-behind h2 {
+  font-size: 140px; /* BIGGER */
+  font-weight: 900;
+  color: black;
+  line-height: 1;
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 4px; /* WIDER spacing */
+}
+
+/* Make sure the image stacks above the headline */
+.display-container img.display-image {
+  position: relative;
+  z-index: 1;
+}
+
+/* Target the specific display-container with the headline behind */
+.headline-behind-container .indicator-icons img {
+  width: 48px;
+  height: 48px;
+}
+
+
+
+
+.watch-image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.watch-image-row .display-image {
+  max-width: 420px; /* try 320px or more */
+  width: 100%;
+  height: auto;
+}
+
+
+/* ───────── iPhone Display Section Optimisation ───────── */
+@media (max-width: 430px) {
+
+  /* 🔥 Move section lower */
+  .display-section {
+    padding: 110px 16px 60px;
+  }
+
+  .display-stack {
+    gap: 24px;
+  }
+
+  /* 🔥 REMOVE ALL FADE / SCROLL ANIMATION */
+  .display-container,
+  .image-rectangle,
+  .display-container.headline-behind-container,
+  .fade-item {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Keep all rectangles visually identical */
+  .display-container,
+  .image-rectangle,
+  .display-container.headline-behind-container {
+    border-radius: 18px;
+    padding: 32px 20px;
+    min-height: auto;
+  }
+
+  /* Watch row */
+  .watch-image-row {
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .watch-image-row .display-image {
+    max-width: 110px;
+  }
+
+  /* Main images */
+  .display-image {
+    max-width: 220px;
+    margin-bottom: 20px;
+  }
+
+  /* Text */
+  .display-content {
+    align-self: center;
+    padding: 0;
+    text-align: center;
+  }
+
+  .display-text {
+    text-align: center;
+  }
+
+  .display-text h2 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .display-text p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+
+  /* Icons */
+  .indicator-icons {
+    gap: 12px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .indicator-icons img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Buttons */
+  .display-buttons,
+  .image-buttons {
+    position: static;
+    width: 100%;
+    margin-top: 14px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn-blue,
+  .btn-outline {
+    width: 100%;
+    max-width: 200px;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  /* Image rectangle content */
+  .image-overlay-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .image-text-block h2 {
+    font-size: 24px;
+  }
+
+  .image-text-block p {
+    font-size: 14px;
+  }
+
+  .image-text-block .indicator-icons img {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Headline behind */
+  .display-headline-behind h2 {
+    font-size: 48px;
+    letter-spacing: 1px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .headline-behind-container .indicator-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full-width grey background */
+.explore-section {
+  background-color: #f2f2f2;
+  padding: 80px 0;
+  width: 100%;
+}
+
+/* Inner content stays centered */
+.explore-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Headline Centered */
+.explore-headline {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.explore-headline h2 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Gradient "best" */
+.gradient-text {
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ✅ CENTERED layout wrap for menu + walker features */
+.explore-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* CHANGED */
+  gap: 40px;
+}
+
+/* Menu bar wrapper — centered */
+.explore-menu-box {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 0;
+  display: inline-block;
+}
+
+/* Menu layout */
+.explore-menu {
+  display: flex;
+  justify-content: center; /* CHANGED */
+  height: 100px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Each item */
+.menu-item {
+  position: relative;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+  font-family: 'Satoshi', sans-serif;
+  color: #333;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+/* Custom divider */
+.menu-item:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background-color: #e0e0e0;
+}
+
+/* Wrap visible text */
+.menu-item span {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+/* Fade text out on hover */
+.menu-item.hover-icon:hover span {
+  opacity: 0;
+}
+
+/* Icon pop-in */
+.menu-item.hover-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-item.hover-icon:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  background-image: var(--hover-icon-url);
+}
+
+.menu-item.hover-icon:hover {
+  background-color: #fafafa;
+}
+
+/* Walker feature styles — already centered */
+.walker-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+  padding: 60px 0 0;
+}
+
+.walker-item {
+  max-width: 240px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.walker-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.walker-item p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+/* Button */
+.walker-item .btn-blue {
+  background-color: #53CAFC;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.walker-item .btn-blue:hover {
+  background-color: #2DB8ED;
+}
+
+.walker-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #53CAFC;          /* Blue color */
+  margin: 8px 0 4px;
+  width: 100%;
+  text-align: left;
+  padding-left: 4px;        /* Optional: nudges in slightly */
+}
+
+
+
+.walker-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #53CAFC !important; /* 🔵 Force blue */
+  margin: 8px 0 4px;
+  width: 100%;
+  text-align: left;
+  padding-left: 4px;
+}
+
+
+.walker-item .walker-label {
+  width: 100%;
+  text-align: left; /* ← aligns with where center title would start */
+  padding-left: 4px; /* Optional: small spacing inside */
+}
+
+
+
+.dual-image-section {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* smaller gap between images */
+  flex-wrap: wrap;
+}
+
+.custom-image {
+  width: 48%;        /* wider images */
+  max-width: none;   /* allow full width */
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+.custom-caption {
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+
+
+/* ───────── iPhone Explore Section Optimisation ───────── */
+@media (max-width: 430px) {
+
+  /* Section spacing */
+  .explore-section {
+    padding: 60px 0;
+  }
+
+  .explore-inner {
+    padding: 0 16px;
+  }
+
+  /* Headline */
+  .explore-headline h2 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  /* ───────── MENU (5 evenly spaced items) ───────── */
+
+  .explore-menu-box {
+    width: 100%;
+    overflow: hidden; /* 🔥 remove scroll */
+    border-radius: 14px;
+  }
+
+  .explore-menu {
+    justify-content: space-between; /* 🔥 evenly distribute */
+    align-items: center;
+    height: 70px;
+    padding: 0 6px;
+    gap: 0;
+  }
+
+  /* Show ONLY first 5 options */
+  .explore-menu .menu-item:nth-child(n+6) {
+    display: none;
+  }
+
+  .menu-item {
+    flex: 1; /* 🔥 evenly fill width */
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Remove hover behavior on phone */
+  .menu-item span {
+    opacity: 1 !important;
+  }
+
+  .menu-item.hover-icon::after {
+    display: none !important;
+  }
+
+  /* ───────── Walker Features ───────── */
+
+  .walker-features {
+    gap: 28px;
+    padding-top: 40px;
+  }
+
+  .walker-item {
+    max-width: 100%;
+  }
+
+  .walker-item img {
+    border-radius: 12px;
+  }
+
+  .walker-label {
+    font-size: 12px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .walker-item h4 {
+    font-size: 18px;
+  }
+
+  .walker-item p {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .walker-item .btn-blue {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* ───────── Dual Images ───────── */
+
+  .dual-image-section {
+    gap: 10px;
+  }
+
+  .custom-image {
+    width: 48%;
+    border-radius: 10px;
+  }
+
+  .custom-caption {
+    font-size: 13px;
+    margin-top: 14px;
+  }
+
+  /* Remove fade effects */
+  .fade-item {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Token / Gear Info Section – taller cards version */
+.token-info-section {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  min-height: 600px; /* ✅ starts at 600px, grows if needed */
+  padding: 160px 0;
+  transition: min-height 0.4s ease; /* ✅ smooth transition when expanding */
+}
+
+.token-info-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative; /* ✅ for stacking detail view */
+}
+
+.token-info-headline {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.token-info-headline .gradient-text {
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Fan layout container */
+.gear-card-fan-layout {
+  position: relative;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  z-index: 1;
+}
+
+/* Base card */
+.gear-card {
+  width: 240px;
+  height: 400px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, 50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  overflow: hidden;
+}
+
+/* Reveal */
+.fan-card.reveal {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Card hover interaction */
+.gear-card-inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.gear-card:hover .gear-card-inner {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Text/Image area inside card */
+.card-text {
+  flex: 1 1 40%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-image-wrapper {
+  flex: 1 1 60%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fan positions */
+.fan-card[data-index="3"] { transform: translate(-50%, 0); z-index: 6; }
+.fan-card[data-index="2"] { transform: translate(calc(-50% - 150px), 6px); z-index: 5; }
+.fan-card[data-index="4"] { transform: translate(calc(-50% + 150px), 6px); z-index: 5; }
+.fan-card[data-index="1"] { transform: translate(calc(-50% - 300px), 12px); z-index: 4; }
+.fan-card[data-index="5"] { transform: translate(calc(-50% + 300px), 12px); z-index: 4; }
+.fan-card[data-index="6"] { transform: translate(calc(-50% + 450px), 18px); z-index: 3; }
+.fan-card[data-index="0"] { transform: translate(calc(-50% - 450px), 18px); z-index: 3; }
+
+/* Text styles */
+.card-headline {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.card-body {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ============================= */
+/* DETAIL VIEW (OVERLAY) */
+/* ============================= */
+.gear-card-detail-view {
+  position: absolute; /* overlay over fan layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 40px 60px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 5;
+}
+
+.gear-card-detail-view.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(30px); /* slight downward offset on show */
+}
+
+/* Small rounded image preview inside detail view */
+.detail-image-preview {
+  position: absolute;
+  top: 100px;
+  left: 60%;
+  transform: translateX(-50%) scale(0.95);
+  width: 280px;
+  height: 180px;
+  border-radius: 16px; /* ✅ Rounded rectangle */
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+
+.detail-image-preview.visible {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+
+
+.detail-image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Detail text inside overlay */
+.detail-headline {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #000;
+  max-width: 800px;
+  text-align: left;
+}
+
+.detail-body {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 32px;
+  max-width: 800px;
+  text-align: left;
+}
+
+/* (Optional) close button — can hide or remove if not used */
+.detail-close-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #53CAFC;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.detail-close-btn:hover {
+  background-color: #2DB8ED;
+}
+
+
+.detail-content img {
+  width: 100%;
+  max-width: 720px;
+  margin: 40px auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.gear-card:hover {
+  z-index: 99 !important; /* forces it above the rest temporarily */
+}
+
+
+
+
+.gear-card-fan-layout.shift-up {
+  transform: translateY(-80px);
+  transition: transform 0.4s ease;
+}
+
+
+
+
+
+
+
+/* ───────── iPhone Token Section – HIDDEN ───────── */
+@media (max-width: 430px) {
+
+  .token-info-section {
+    display: none !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* subscribe section */
+/* ============================= */
+
+.subscribe-section {
+  background-color: #f2f2f2;
+  padding: 80px 40px;
+  width: 100%;
+}
+
+.subscribe-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.subscribe-headline {
+  font-size: 48px;
+  font-weight: 800;
+  color: #000;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* Layout row: image + text + buttons */
+.subscribe-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Rounded image */
+.subscribe-image {
+  width: 300px;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
+
+/* Text block (middle) */
+.subscribe-text-block {
+  flex: 1;
+  max-width: 600px;
+}
+
+.subscribe-right-headline {
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.subscribe-right-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Button group on far right */
+.subscribe-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.subscribe-buttons a {
+  width: 160px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Blue outline button */
+.btn-outline-blue {
+  padding: 12px 24px;
+  border: 2px solid #53CAFC;
+  background-color: transparent;
+  color: #53CAFC;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-blue:hover {
+  text-decoration: underline;
+}
+
+/* Pink filled button */
+.btn-pink {
+  padding: 12px 24px;
+  background-color: hotpink;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-pink:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* Overlapping circle image group */
+/* ============================= */
+
+.subscribe-circle-group {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Circle images */
+.subscribe-circle-group .circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  margin-left: -40px;
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* First image no overlap */
+.subscribe-circle-group .circle:first-child {
+  margin-left: 0;
+}
+
+/* Reveal animation */
+.subscribe-circle-group .circle.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hover effect */
+.subscribe-circle-group .circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+  z-index: 10;
+}
+
+/* ============================= */
+/* Centered text below circles */
+/* ============================= */
+
+.subscribe-text-center {
+  margin-top: 40px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subscribe-main-headline {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.subscribe-subtext {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+
+/* ───────── iPhone Subscribe Section (True Center Fix) ───────── */
+@media (max-width: 430px) {
+
+  /* Remove desktop padding bias completely */
+  .subscribe-section {
+    padding: 60px 16px;
+  }
+
+  .subscribe-inner {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Headline */
+  .subscribe-headline {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 30px 0;
+    width: 100%;
+  }
+
+  /* Stack layout */
+  .subscribe-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 28px;
+    width: 100%;
+  }
+
+  /* Replace image */
+  .subscribe-image {
+    content: url("mockuplightside.png");
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 18px;
+  }
+
+  /* Text block */
+  .subscribe-text-block {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .subscribe-right-headline {
+    font-size: 22px;
+    text-align: center;
+    margin: 0 auto 10px auto;
+  }
+
+  .subscribe-right-text {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 auto;
+  }
+
+  /* Buttons */
+  .subscribe-buttons {
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  .subscribe-buttons a {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* Circles */
+  .subscribe-circle-group {
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .subscribe-circle-group .circle {
+    width: 70px;
+    height: 70px;
+    margin-left: -20px;
+
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Center bottom text */
+  .subscribe-text-center {
+    width: 100%;
+    max-width: 320px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+  }
+
+  .subscribe-main-headline {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .subscribe-subtext {
+    font-size: 14px;
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*describe section*/
+
+/* Describe Sport Section — same bg as subscribe */
+.describe-sport-section {
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 0; /* we control spacing inside */
+}
+
+.describe-sport-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Icon row layout */
+.sport-icon-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.sport-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 140px;
+}
+
+.sport-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.icon-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.icon-divider {
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  opacity: 0.3;
+  margin-bottom: 0;
+}
+
+/* More‑move block below icons */
+.sport-more-move {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.sport-icon-large {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.more-text p {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  margin: 4px 0;
+}
+
+
+/* Extra icon row under more-move */
+.sport-extra-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Hoverable icons */
+.sport-icon.hoverable {
+  transition: transform 0.3s ease;
+}
+
+.sport-icon-item:hover .sport-icon.hoverable {
+  transform: scale(1.1);
+}
+
+/* Divider changes color on hover */
+.sport-icon-item:hover .icon-divider {
+  background-color: #53CAFC;
+  opacity: 1;
+}
+
+
+/* ───────── iPhone Describe Sport Section Optimisation ───────── */
+@media (max-width: 430px) {
+
+  .describe-sport-inner {
+    padding: 40px 16px;
+  }
+
+  /* Icon rows → 2 per row */
+  .sport-icon-row {
+    justify-content: center;
+    gap: 28px 24px; /* vertical / horizontal */
+    margin-bottom: 40px;
+  }
+
+  .sport-icon-item {
+    max-width: 45%;   /* two per row */
+    flex: 0 0 45%;
+  }
+
+  .sport-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 8px;
+  }
+
+  .icon-label {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .icon-divider {
+    width: 28px;
+    height: 2px;
+  }
+
+  /* More Move Block */
+  .sport-more-move {
+    gap: 16px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .sport-icon-large {
+    width: 60px;
+    height: 60px;
+  }
+
+  .more-text p {
+    font-size: 14px;
+    margin: 2px 0;
+  }
+
+  /* Remove hover effects on mobile */
+  .sport-icon.hoverable {
+    transition: none;
+  }
+
+  .sport-icon-item:hover .sport-icon.hoverable {
+    transform: none;
+  }
+
+  .sport-icon-item:hover .icon-divider {
+    background-color: #000;
+    opacity: 0.3;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* Sneaker Preview Rebuild - TabView Version */
+/* ============================= */
+
+.sneaker-preview-section {
+  background-color: white;
+  padding: 160px 40px; /* ⬆️ More breathing room */
+  min-height: 160vh;   /* ⬆️ Taller section */
+  overflow: hidden;
+}
+
+
+
+.sneaker-preview-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+/* Header Row */
+.sneaker-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Headline + Icon Row */
+.sneaker-headline-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sneaker-title-wrap {
+  max-width: 700px;
+}
+
+.sneaker-headline {
+  font-size: 52px;
+  font-weight: 900;
+  color: black;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.sneaker-headline span {
+  color: #53CAFC;
+}
+
+.sneaker-subheadline {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Icon next to headline */
+.sneaker-header-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin: 0;
+}
+
+/* Spacer */
+.sneaker-spacer {
+  height: 80px;
+}
+
+/* ============================= */
+/* TabView Section */
+/* ============================= */
+
+
+
+
+.tabview-viewport {
+  overflow: hidden;
+  width: 96vw;           /* ✅ slightly wider than main content */
+  max-width: 1600px;     /* ✅ prevent excessive width on large screens */
+  margin: 0 auto;        /* ✅ center it */
+}
+
+
+.tabview-track {
+  display: flex;
+  width: 400%; /* ✅ 4 tabs → 4 x 100% of the viewport */
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.tabview-tab {
+  width: 25%;             /* ✅ 1/4 of the track */
+  padding-right: 60px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+
+/* Headline inside tab */
+.tab-headline {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+/* Subheadline */
+.tab-subheadline {
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* ============================= */
+/* Layout Split */
+/* ============================= */
+
+.tab-tab-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  flex-wrap: wrap;
+
+  /* 🔽 Push the entire tab content lower */
+  padding-top: 120px;
+}
+
+/* Left Text Block */
+.tab-left-text {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  /* 🔽 Moves text lower visually */
+  padding-bottom: 60px;
+}
+
+/* Right Visual Block */
+.tab-right-visual {
+  flex: 1;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center SVGs + card */
+  gap: 28px;
+}
+
+/* SVG Images Row */
+.tab-media {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* Larger SVGs */
+.tab-media img {
+  height: 160px;        /* ⬆️ Bigger icons */
+  width: auto;
+  border-radius: 12px;
+}
+
+/* Description block */
+.tab-description {
+  font-size: 15px;
+  max-width: 420px;
+  margin-top: 20px;
+  color: #333;
+}
+
+
+
+
+/* ============================= */
+/* Product Card */
+/* ============================= */
+
+.walk-product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 360px;
+}
+
+.walk-card {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.walk-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 16px;
+}
+
+.walk-card-header img {
+  width: 22px;
+  height: 22px;
+}
+
+.walk-product-image {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.walk-product-info {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.walk-gear-label {
+  font-style: italic;
+  font-weight: 700;
+  color: black;
+  margin: 0 0 6px 0;
+}
+
+.walk-gear-label span {
+  color: #53CAFC;
+}
+
+.walk-product-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+  color: black;
+}
+
+.walk-product-desc {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Find More Pill Button */
+.find-more-btn {
+  width: fit-content;
+  padding: 6px 18px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.find-more-btn:hover {
+  background-color: #53CAFC;
+  color: white;
+  border-color: #53CAFC;
+}
+
+
+
+/* ============================= */
+/* Move Your Way Callout Section */
+/* ============================= */
+
+.move-your-way-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  margin-top: 140px;
+  padding: 0 40px;
+  flex-wrap: wrap;
+}
+
+.move-your-way-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.move-your-way-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.move-your-way-right img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+/* Headline */
+.move-headline {
+  font-size: 56px;
+  font-weight: 900;
+  color: black;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* Late fade-in blue text */
+.move-fade-late {
+  opacity: 0;
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: fadeBlueLate 2s ease forwards;
+  animation-delay: 1.4s;
+}
+
+@keyframes fadeBlueLate {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Paragraph */
+.move-description {
+  font-size: 17px;
+  font-weight: 500;
+  color: #333;
+  max-width: 620px;
+  line-height: 1.65;
+}
+
+/* Main wrapper with relative positioning */
+.main-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 80px; /* allows space for overhang */
+}
+
+/* Main image */
+.main-move-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+/* Overhanging image in bottom-right corner */
+.overlay-ios-img {
+  position: absolute;
+  bottom: -300px; /* ⬇️ deeper downward */
+  right: -80px;   /* ⬅️ further off to the right */
+  width: 100px;   /* compact size for balance */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  background: white;
+  padding: 4px;
+  z-index: 3;
+}
+/* ───────── iPhone Sneaker Preview Optimisation ───────── */
+@media (max-width: 430px) {
+
+  /* 🚫 Completely Disable TabView + Scroll Logic */
+  .tabview-viewport,
+  .tabview-track,
+  .tabview-tab {
+    display: none !important;
+    pointer-events: none !important;
+  }
+
+  .tabview-track {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Section spacing */
+  .sneaker-preview-section {
+    padding: 70px 16px 40px 16px;
+    min-height: auto;
+  }
+
+  /* Center header */
+  .sneaker-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sneaker-headline {
+    font-size: 30px;
+  }
+
+  .sneaker-subheadline {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .sneaker-headline-row {
+    justify-content: center;
+  }
+
+  .sneaker-header-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Remove spacer height */
+  .sneaker-spacer {
+    height: auto;
+    margin: 0;
+  }
+
+  /* ───────── Mockup Image (Correct Placement) ───────── */
+  .sneaker-spacer::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 340px;
+    margin: 0 auto 50px auto;
+
+    background-image: url("mockuplightside.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: relative;
+  }
+
+  /* ───────── Move Your Way Section ───────── */
+
+  .move-your-way-block {
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .move-headline {
+    font-size: 34px;
+    margin-top: 20px;
+  }
+
+  .move-description {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  /* Ensure image wrapper allows proper overhang */
+  .main-image-wrap {
+    position: relative;
+    margin-bottom: 140px;
+  }
+
+  /* ───────── Show ONLY One Overhang Image ───────── */
+
+  /* Hide all overlay images */
+  .overlay-ios-img {
+    display: none !important;
+  }
+
+  /* Show only the first overhang image */
+  .main-image-wrap .overlay-ios-img:first-of-type {
+    display: block !important;
+    position: absolute;
+
+    bottom: -100px;
+    right: -25px;
+
+    width: 110px;
+
+    border-radius: 14px;
+    box-shadow: none;
+    padding: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Parallax Running Section */
+.parallax-running-section {
+  background-image: url('PARALAX5.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.parallax-running-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+}
+
+.parallax-heading {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.parallax-subtext {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+
+/* ───────── iPhone Parallax Running Optimisation ───────── */
+@media (max-width: 430px) {
+
+  .parallax-running-section {
+    background-attachment: scroll; /* 🔥 Disable fixed (iOS issue) */
+    height: 45vh;                  /* Slightly shorter for phone */
+    padding: 0 16px;
+  }
+
+  /* Slightly stronger overlay for readability */
+  .parallax-running-section::before {
+    background: rgba(0,0,0,0.5);
+  }
+
+  .parallax-content {
+    padding: 20px;
+  }
+
+  .parallax-heading {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .parallax-subtext {
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* MovenGear Custom Section */
+/* ============================= */
+
+.movengear-view-section {
+  background-color: white;
+  padding: 160px 40px;
+}
+
+.movengear-view-inner.new-layout {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Main Headline */
+.custom-gear-headline {
+  font-size: 56px;
+  font-weight: 900;
+  color: black;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  max-width: 1100px;
+}
+
+/* Gradient text */
+.gradient-text-2 {
+  background: linear-gradient(to right, #FEE0FF, #53CAFC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subheadline Row */
+.gear-subheadline-wrap {
+  margin-bottom: 80px;
+}
+
+.gear-subheadline-with-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.gear-subheadline {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+/* Icons inline */
+.gear-sub-icons-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gear-sub-icons-inline img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Image Block - Larger Images */
+.gear-image-block {
+  display: flex;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.gear-image-block img {
+  width: 50%;
+  height: 640px; /* ⬆️ Larger images */
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* Lower Text Content */
+.gear-lower-content {
+  max-width: 720px;
+  margin-bottom: 120px;
+}
+
+.gear-mini-headline {
+  font-size: 28px;
+  font-weight: 900;
+  color: black;
+  margin-bottom: 16px;
+}
+
+.gear-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  margin-bottom: 32px;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Learn More Button */
+.btn-learn-more {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-family: 'Satoshi', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-learn-more:hover {
+  background-color: #53CAFC;
+  color: white;
+}
+
+/* QR Section */
+.gear-qr-block {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.qr-image {
+  width: 160px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.qr-caption {
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+
+
+
+
+/* ───────── iPhone MovenGear Section Optimisation ───────── */
+@media (max-width: 430px) {
+
+  .movengear-view-section {
+    padding: 80px 16px;
+  }
+
+  .movengear-view-inner.new-layout {
+    text-align: center;
+  }
+
+  /* Headline */
+  .custom-gear-headline {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  /* Subheadline */
+  .gear-subheadline-wrap {
+    margin-bottom: 40px;
+  }
+
+  .gear-subheadline-with-icons {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .gear-subheadline {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .gear-sub-icons-inline img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Image Block → Stack vertically */
+  .gear-image-block {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .gear-image-block img {
+    width: 100%;
+    height: 300px; /* much shorter for phone */
+    border-radius: 16px;
+  }
+
+  /* Lower Content */
+  .gear-lower-content {
+    margin: 0 auto 60px auto;
+    max-width: 100%;
+  }
+
+  .gear-mini-headline {
+    font-size: 22px;
+  }
+
+  .gear-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .btn-learn-more {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  /* QR Section */
+  .gear-qr-block {
+    margin-top: 40px;
+  }
+
+  .qr-image {
+    width: 120px;
+  }
+
+  .qr-caption {
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* NEW SPORTS SECTION STYLES */
+/* ============================= */
+
+.new-sports-section {
+  background-color: #fff;
+  padding: 120px 40px;
+  width: 100%;
+}
+
+.new-sports-section.new-sports-dark {
+  background-color: #000;
+}
+
+.new-sports-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+.snow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.snow-grid img {
+  width: 100%;
+  height: 240px; /* Adjust this value as needed */
+  object-fit: cover;
+  border-radius: 12px; /* optional: for clean corners */
+}
+
+/* ============================= */
+/* Section Headline (Main h2) */
+/* ============================= */
+
+.new-sports-headline {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 80px;
+  color: black;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.new-sports-section.new-sports-dark .new-sports-headline {
+  color: white;
+}
+
+/* ============================= */
+/* Block Headline (h3) */
+/* ============================= */
+
+.new-sports-side-headline {
+  font-size: 28px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 14px;
+  opacity: 0.3;
+  transform: translateY(12px);
+  transition: all 1.2s ease;
+}
+
+.new-sports-section.new-sports-dark .new-sports-side-headline {
+  color: white;
+}
+
+.new-sports-side-headline.fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* Gradient Accent Text */
+/* ============================= */
+
+.blue-text {
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ============================= */
+/* Row Layout */
+/* ============================= */
+
+.new-sports-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 120px;
+  flex-wrap: nowrap;
+}
+
+/* ============================= */
+/* Text Column */
+/* ============================= */
+
+.text-col {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.text-col p {
+  max-width: 85%;
+}
+
+.new-sports-small-italic {
+  font-size: 18px;
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 12px;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* ============================= */
+/* Fading Paragraph Body Text */
+/* ============================= */
+
+.new-sports-bold {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  font-family: 'Satoshi', sans-serif;
+
+  color: #777;
+  opacity: 0.3;
+  transform: translateY(12px);
+  transition:
+    color 1.2s ease,
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+.new-sports-bold.fade-visible {
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* Image Column */
+/* ============================= */
+
+.image-col {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sports-image {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  max-height: 440px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================= */
+/* Image Fade-in Animation */
+/* ============================= */
+
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-on-scroll.fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* Responsive Layout */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .new-sports-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .text-col,
+  .image-col {
+    max-width: 100%;
+  }
+
+  .sports-image {
+    max-width: 100%;
+  }
+}
+
+
+
+/* ───────── iPhone New Sports Section – HARD CENTER RESET ───────── */
+@media (max-width: 430px) {
+
+  /* 🔥 Kill any inherited side padding / offsets */
+  .new-sports-section,
+  .new-sports-inner,
+  .new-sports-row,
+  .text-col,
+  .image-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .new-sports-section {
+    padding: 90px 16px !important;
+  }
+
+  .new-sports-inner {
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  /* ✅ Main headline centered + slightly larger */
+  .new-sports-headline {
+    text-align: center !important;
+    font-size: 32px !important;
+    line-height: 1.25 !important;
+    margin: 0 auto 60px auto !important;
+    padding: 0 6px !important;
+  }
+
+  /* ✅ Insert image directly under headline */
+  .new-sports-headline::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 380px;
+    margin: 30px auto 60px auto;
+    background-image: url("Watchmockupweather1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* ✅ Force clean vertical stack */
+  .new-sports-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 30px !important;
+    margin: 0 auto 100px auto !important;
+  }
+
+  /* 🔥 Ensure text ALWAYS comes before image */
+  .text-col {
+    order: 1 !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .image-col {
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Paragraph sizing for Apple feel */
+  .text-col p {
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .new-sports-side-headline {
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    margin: 0 auto 12px auto !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .new-sports-small-italic {
+    font-size: 14px !important;
+    margin: 0 auto 12px auto !important;
+    text-align: center !important;
+  }
+
+  .new-sports-bold {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 4px !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    text-align: center !important;
+  }
+
+  /* ✅ Image always directly under text */
+  .sports-image {
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 6px auto 0 auto !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.14) !important;
+  }
+
+  /* ✅ Remove fade-on-scroll completely */
+  .fade-on-scroll,
+  .new-sports-side-headline,
+  .new-sports-bold {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* PILL SECTION / BACKGROUND EXPAND */
+/* ============================= */
+
+.pill-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #000; /* fallback behind wrapper */
+  z-index: 0;
+}
+
+.pill-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Wrapper — now controls fullscreen + white */
+.pill-image-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: auto;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 999px;
+  transition: transform 0.15s ease;
+  z-index: 5;
+}
+
+/* Fullscreen mode */
+.pill-image-wrapper.fullscreen {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  border-radius: 0 !important;
+  transform: scale(1) !important;
+  z-index: 1;
+}
+
+/* ✅ White background only *after* deeper scroll */
+.pill-image-wrapper.white-bg {
+  background-color: white;
+}
+
+/* The image inside — fades out when white-bg */
+.pill-image-wrapper.white-bg .pill-image {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.pill-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: opacity 0.6s ease;
+  opacity: 1;
+}
+
+/* Body state */
+body.pill-background-active {
+  overflow-x: hidden;
+  background-color: white;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.scroll-over-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+
+.next-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -100vh;
+}
+
+
+
+
+
+
+
+/* ============================= */
+/* REWORKED SNOW SPORTS SECTION */
+/* ============================= */
+
+.snow-sports-section {
+  background-color: white;
+  padding: 140px 40px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.section-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Left-aligned intro heading */
+.intro-heading {
+  font-size: 36px;
+  font-weight: 900;
+  color: #111;
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+/* 2x2 Grid */
+.snow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 100px;
+}
+
+.snow-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Centered Headline */
+.main-heading {
+  font-size: 44px;
+  font-weight: 900;
+  text-align: center;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.main-heading .blue-accent {
+  color: #53CAFC;
+}
+
+/* Centered Paragraph */
+.main-description {
+  max-width: 700px;
+  margin: 0 auto 80px;
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  font-family: 'Satoshi', sans-serif;
+  line-height: 1.6;
+}
+
+/* Wide Image */
+.wide-image-container {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.wide-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Split Layout */
+.final-split-layout {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+  text-align: left;
+}
+
+.text-content .sub-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.text-content .sub-subheading {
+  font-size: 20px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Side Image */
+.side-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.side-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* Overhanging Image */
+.overhang-image {
+  position: absolute;
+  bottom: -80px;
+  right: -40px;
+  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+}
+
+/* ❄️ Snow Sport Rectangles */
+.snow-sport-rectangles {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 120px;
+  flex-wrap: wrap;
+}
+
+.sport-rectangle {
+  background: #eeeeee;
+  border-radius: 14px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sport-rectangle:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.rectangle-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.rectangle-label img {
+  width: 18px;
+  height: 18px;
+}
+
+.rectangle-image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* View More Hover */
+.view-more {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-more:hover {
+  color: #53CAFC;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 900px) {
+  .final-split-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .side-image,
+  .text-content {
+    max-width: 100%;
+  }
+
+  .main-heading {
+    font-size: 36px;
+  }
+
+  .main-description {
+    font-size: 16px;
+  }
+
+  .overhang-image {
+    width: 130px;
+    bottom: -20px;
+    right: -20px;
+  }
+
+  .sport-rectangle {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+
+
+
+
+/* ───────── iPhone Snow Sports – TRUE CENTERED RESET ───────── */
+@media (max-width: 430px) {
+
+  /* 🔥 Hard reset all layout containers */
+  .snow-sports-section,
+  .section-inner,
+  .final-split-layout,
+  .text-content,
+  .side-image,
+  .snow-sport-rectangles {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .snow-sports-section {
+    padding: 90px 16px !important;
+  }
+
+  /* Intro Heading */
+  .intro-heading {
+    font-size: 24px !important;
+    text-align: center !important;
+    margin: 0 auto 36px auto !important;
+  }
+
+  /* 2x2 Grid */
+  .snow-grid {
+    gap: 12px !important;
+    margin: 0 auto 60px auto !important;
+    justify-items: center !important;
+  }
+
+  .snow-grid img {
+    width: 100% !important;
+    max-width: 170px !important;
+    border-radius: 14px !important;
+  }
+
+  /* Main Heading */
+  .main-heading {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    margin: 0 auto 18px auto !important;
+    text-align: center !important;
+  }
+
+  /* Description */
+  .main-description {
+    font-size: 15px !important;
+    max-width: 340px !important;
+    margin: 0 auto 60px auto !important;
+    text-align: center !important;
+  }
+
+  /* Wide image */
+  .wide-image-container {
+    margin: 0 auto 70px auto !important;
+  }
+
+  .wide-image-container img {
+    max-width: 340px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    border-radius: 18px !important;
+  }
+
+  /* Split Layout */
+  .final-split-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+  }
+
+  .text-content {
+    max-width: 340px !important;
+  }
+
+  .text-content .sub-heading {
+    font-size: 20px !important;
+    margin: 0 auto 8px auto !important;
+  }
+
+  .text-content .sub-subheading {
+    font-size: 16px !important;
+    margin: 0 auto 16px auto !important;
+  }
+
+  .text-content p {
+    font-size: 14px !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Side image */
+  .side-image {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .side-image img {
+    max-width: 340px !important;
+    margin: 0 auto !important;
+    border-radius: 18px !important;
+  }
+
+  /* Overhang centered instead of right */
+  .overhang-image {
+    position: absolute !important;
+    bottom: -30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 110px !important;
+  }
+
+  /* Snow rectangles */
+  .snow-sport-rectangles {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 80px auto 0 auto !important;
+  }
+
+  .sport-rectangle {
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+
+  /* View More */
+  .view-more {
+    margin: 30px auto 0 auto !important;
+    text-align: center !important;
+  }
+
+}
+
+
+
+
+
+
+
+.more-sports-section.plain-sports-section {
+  background-color: white;
+  padding: 160px 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.more-sports-section .section-inner {
+  max-width: 1280px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.more-sports-section .section-heading {
+  font-size: 48px;
+  font-weight: 800;
+  color: #000;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.more-sports-section .section-subheading {
+  font-size: 20px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.split-image-row {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  margin-left: calc(-50vw + 50%);
+}
+
+.split-image {
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  /* 🧼 No border */
+}
+
+.split-image.left,
+.split-image.right {
+  border: none;
+}
+
+
+
+
+/* ========================= */
+/* EXTREME SPORTS EXTENSION */
+/* ========================= */
+
+.centered-intro {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.headline {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.highlight-extreme {
+  color: #A3FFFC;
+}
+
+.highlight-moven {
+  color: #53CAFC;
+}
+
+.subheadline {
+  font-size: 18px;
+  color: #555;
+  font-weight: 400;
+}
+
+.inline-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* 🔄 Modified for overlap effect */
+.full-image-wrapper {
+  position: relative;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 1280px;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 💥 iOS image overlaps right side */
+.extreme-image {
+  position: absolute;
+  right: -60px;
+  bottom: 30px;
+  width: 250px;
+  z-index: 2;
+}
+
+.extreme-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+/* 👇 Pushed down so text doesn't collide with floating image */
+.two-column-extreme {
+  display: flex;
+  flex-direction: column;
+  margin-top: 140px;
+  position: relative;
+}
+
+.extreme-text {
+  flex: 1 1 50%;
+  max-width: 600px;
+}
+
+.left-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.left-subheadline {
+  font-size: 20px;
+  color: #777;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.left-paragraph {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.learn-more-link {
+  font-size: 16px;
+  color: grey;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.learn-more-link:hover {
+  color: #53CAFC;
+  font-weight: bold;
+}
+
+/* ========================= */
+/* MIRRORED BLOCK EXTENSION */
+/* ========================= */
+
+.full-image-wrapper.mirror-layout {
+  margin-top: 140px;
+  position: relative;
+  width: 90%;
+  max-width: 1280px;
+}
+
+.extreme-image.left-overlap {
+  position: absolute;
+  left: -60px;
+  bottom: 30px;
+  width: 250px;
+  z-index: 2;
+}
+
+.extreme-image.left-overlap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+/* Right-align the mirrored block to edge of layout */
+.two-column-extreme.mirror-text {
+  margin-top: 140px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Align second text block to the right side + right-align text */
+.extreme-text.right-aligned {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+.extreme-text.right-aligned .left-heading,
+.extreme-text.right-aligned .left-subheadline,
+.extreme-text.right-aligned .left-paragraph {
+  text-align: right;
+}
+
+
+
+/* ========================= */
+/* FINAL ROUNDED IMAGE BLOCK */
+/* ========================= */
+
+.full-image-wrapper.final-rounded-image {
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+
+.final-rounded-image .full-width-image {
+  border-radius: 24px;
+}
+
+
+
+
+.final-tagline {
+  margin-top: 100px;
+  margin-bottom: 120px;
+}
+
+.highlight-moven-pink {
+  color: #FEE0FF;
+  margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+/* ───────── iPhone Extreme Sports Section Optimisation ───────── */
+@media (max-width: 430px) {
+
+  /* Section spacing */
+  .more-sports-section.plain-sports-section {
+    padding: 100px 0 !important;
+  }
+
+  .more-sports-section .section-inner {
+    padding: 0 18px !important;
+    text-align: center !important;
+  }
+
+  /* Headline */
+  .headline {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
+  .subheadline {
+    font-size: 15px !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Full width images */
+  .full-image-wrapper,
+  .full-image-wrapper.mirror-layout,
+  .full-image-wrapper.final-rounded-image {
+    width: 100% !important;
+    margin: 50px auto !important;
+  }
+
+  .full-width-image {
+    width: 100% !important;
+    border-radius: 18px !important;
+  }
+
+  /* Overlapping iOS images */
+  .extreme-image,
+  .extreme-image.left-overlap {
+    position: absolute !important;
+    width: 140px !important;
+    right: -10px !important;
+    bottom: -20px !important;
+  }
+
+  .extreme-image.left-overlap {
+    left: -10px !important;
+    right: auto !important;
+  }
+
+  .extreme-image img {
+    border-radius: 18px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18) !important;
+  }
+
+  /* Text blocks */
+  .two-column-extreme,
+  .two-column-extreme.mirror-text {
+    margin-top: 100px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .extreme-text,
+  .extreme-text.right-aligned {
+    margin: 0 auto !important;
+    text-align: center !important;
+    max-width: 340px !important;
+  }
+
+  .left-heading {
+    font-size: 22px !important;
+    text-align: center !important;
+  }
+
+  .left-subheadline {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .left-paragraph {
+    font-size: 15px !important;
+    text-align: center !important;
+  }
+
+  .learn-more-link {
+    display: inline-block !important;
+    margin-top: 10px !important;
+  }
+
+  /* Final headline */
+  .final-tagline .headline {
+    font-size: 26px !important;
+    line-height: 1.3 !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🌟 Glass Bottom Footer Container */
+.glass-bottom-footer {
+  background: linear-gradient(
+    135deg,
+    rgba(83, 202, 252, 0.25),
+    rgba(255, 255, 255, 0.1),
+    rgba(83, 202, 252, 0.2)
+  );
+  backdrop-filter: blur(48px) saturate(250%);
+  -webkit-backdrop-filter: blur(48px) saturate(250%);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 48px rgba(83, 202, 252, 0.35),
+    inset 0 0 60px rgba(255, 255, 255, 0.08);
+  padding: 100px 70px;
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  z-index: 2;
+  color: #B0B0B0;
+  font-family: 'Satoshi', sans-serif;
+  margin-top: 0;
+  position: relative;
+}
+
+/* ✨ Shimmer Overlay */
+.glass-bottom-footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 70%
+  );
+  animation: shimmerMove 8s infinite ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 🏷 Top Title */
+.footer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 50px;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+/* 📦 Footer Layout */
+.glass-footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-col {
+  min-width: 180px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-logobottom {
+  width: 160px;
+  margin: 40px auto 16px auto;
+  display: block;
+}
+
+.footer-small-text {
+  font-size: 0.9rem;
+  color: #8f8f8f;
+  margin: 6px 0;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-small-text a {
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-small-text a:hover {
+  color: #53CAFC;
+  text-decoration: underline;
+}
+
+/* 📰 Section Headlines */
+.footer-headline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #bdbdbd;
+  padding-bottom: 6px;
+  width: max-content;
+}
+
+/* 📋 Lists */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #8f8f8f;
+  transition: color 0.3s ease;
+}
+
+.footer-list li a {
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-list li a:hover {
+  color: #53CAFC;
+  text-decoration: underline;
+}
+
+/* 📧 Email */
+.footer-email {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #8f8f8f;
+}
+
+/* 🌐 Social Icons */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-socials img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.footer-socials img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* 📱 QR Icon */
+.qr-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 0 10px 0;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.download-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* 🛒 Store Icons */
+.store-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.store-icons img {
+  width: 105px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.store-icons img:hover {
+  transform: scale(1.05);
+}
+
+.store-icons img[alt="WatchOS"] {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+
+/* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
+@media (max-width: 430px) {
+
+  .glass-bottom-footer {
+    padding: 70px 24px;
+  }
+
+  .glass-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    text-align: left;
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  /* 🔥 Move logo + copyright column to bottom */
+  .glass-footer-content .footer-col:first-child {
+    order: 99;
+    margin-top: 40px;
+  }
+
+  .footer-logobottom {
+    width: 140px;
+    margin: 40px 0 12px 0;
+  }
+
+  .footer-small-text {
+    font-size: 0.85rem;
+    text-align: left;
+    margin-top: 6px;
+  }
+
+  /* Section Headlines */
+  .footer-headline {
+    font-size: 1.1rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Lists */
+  .footer-list li {
+    font-size: 0.9rem;
+  }
+
+  .footer-email {
+    font-size: 0.9rem;
+  }
+
+  /* Social icons */
+  .footer-socials {
+    justify-content: flex-start;
+  }
+
+  /* Download Block */
+  .download-block {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .qr-icon {
+    width: 70px;
+  }
+
+  .store-icons {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .store-icons img {
+    width: 95px;
+  }
+
+}

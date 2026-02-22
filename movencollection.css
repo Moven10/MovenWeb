@@ -1,0 +1,1499 @@
+/* ─── Satoshi Font Setup ─────────────────────────────────────────── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype"),
+       url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+       url("./fonts/Satoshi-Regular.woff") format("woff"),
+       url("./fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Medium.otf") format("opentype"),
+       url("./fonts/Satoshi-Medium.ttf") format("truetype"),
+       url("./fonts/Satoshi-Medium.woff") format("woff"),
+       url("./fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype"),
+       url("./fonts/Satoshi-Bold.ttf") format("truetype"),
+       url("./fonts/Satoshi-Bold.woff") format("woff"),
+       url("./fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Black.otf") format("opentype"),
+       url("./fonts/Satoshi-Black.ttf") format("truetype"),
+       url("./fonts/Satoshi-Black.woff") format("woff"),
+       url("./fonts/Satoshi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Reset & Global Styles ───────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  overflow-x: hidden;
+  background: transparent;
+}
+
+/* ─── Parallax Hero Background (Fixed Behind Content) ────────────── */
+.parallax-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; /* ensures smooth scrolling */
+}
+
+.hero {
+  background: url('movenbackground.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* ===================================== */
+/* 📱 PARALLAX HERO – PHONE OPTIMISED  */
+/* (Same Layout, Smoother Performance)  */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .parallax-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .hero {
+    background: url('movenbackground.jpg') no-repeat center center;
+    background-size: cover;
+
+    /* ❌ Remove fixed attachment (causes mobile lag) */
+    background-attachment: scroll;
+
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Scroll-over Content ────────────────────────────────────────── */
+.content {
+  position: relative;
+  z-index: 1;
+  margin-top: 80vh;
+  min-height: auto;
+
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 6rem 2rem;
+  color: #000;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-left {
+  text-align: left;
+}
+
+.about-headline {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.about-subheadline {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.about-right {
+  text-align: right;
+}
+
+.about-paragraph {
+  max-width: 600px;
+  margin-left: auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.about-image {
+  max-width: 600px;
+  margin-left: auto;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Label block under the image, left aligned */
+.about-left-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Vertical line matches the label-text height */
+.label-line {
+  width: 3px;
+  background-color: #000;
+}
+
+/* Dynamic height sync */
+.label-text {
+  padding-left: 0.5rem;
+}
+
+/* Pill container with blue background */
+.label-pill {
+  background-color: #53CAFC;
+  border-radius: 100px;            /* More oval shape */
+  padding: 2rem 3rem;              /* More horizontal spacing */
+  color: #000;
+  display: inline-block;
+  max-width: 600px;
+}
+
+
+/* Ensure text styles stay clean */
+.label-text h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.label-text p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Reuse from before */
+.about-left-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.label-line {
+  width: 3px;
+  background-color: #000;
+  height: auto;
+  flex-shrink: 0;
+}
+
+
+
+
+/* Two side-by-side images */
+.about-image-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-image-row img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Full-width wide image */
+.about-image-full {
+  margin-top: 3rem;
+}
+
+.about-image-full img {
+  width: 100%;
+  height: 300px;               /* Set shorter height */
+  border-radius: 8px;
+  object-fit: cover;           /* Ensures it crops nicely */
+}
+
+
+.about-wide-paragraph {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.about-wide-paragraph p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #000;
+}
+
+
+
+/* ===================================== */
+/* 📱 ABOUT SECTION – PHONE OPTIMISED   */
+/* (Same Layout, Clean Scaling)         */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  /* Scroll-over section */
+  .content {
+    margin-top: 75vh;              /* slightly tighter */
+    padding: 4rem 1.25rem;
+  }
+
+  .about-inner {
+    gap: 1.5rem;
+  }
+
+  .about-main-content {
+    gap: 1.5rem;
+  }
+
+  /* Left text */
+  .about-headline {
+    font-size: 1.9rem;             /* scaled from 3rem */
+    line-height: 1.2;
+  }
+
+  .about-subheadline {
+    font-size: 1rem;               /* scaled from 1.5rem */
+  }
+
+  /* Right text */
+  .about-right {
+    text-align: right;             /* keep same layout feel */
+  }
+
+  .about-paragraph {
+    font-size: 0.95rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+
+  .about-image img {
+    border-radius: 10px;
+  }
+
+  /* Label block */
+  .about-left-label {
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .label-line {
+    width: 2px;
+  }
+
+  .label-pill {
+    padding: 1.25rem 1.5rem;       /* reduced pill size */
+    border-radius: 40px;
+    max-width: 100%;
+  }
+
+  .label-text h3 {
+    font-size: 1rem;
+  }
+
+  .label-text p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* Two image row */
+  .about-image-row {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-image-row img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Wide paragraph */
+  .about-wide-paragraph {
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-wide-paragraph p {
+    font-size: 1rem;               /* scaled from 1.2rem */
+    line-height: 1.6;
+  }
+
+  /* Full-width image */
+  .about-image-full {
+    margin-top: 2rem;
+  }
+
+  .about-image-full img {
+    height: 220px;                 /* scaled from 300px */
+    border-radius: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Moven Gear Intro Section (Solid White) ─────────────────────── */
+#moven-gear-intro {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 2rem;
+  background: #ffffff;
+  color: #000;
+}
+
+/* ─── Inner Wrapper ──────────────────────────────── */
+.moven-gear-intro-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ─── Headline with Blue Word ───────────────────── */
+.moven-gear-intro-inner h2.gear-headline {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.highlight-blue {
+  color: #53CAFC;
+}
+
+/* ─── Wide Image Under Headline ─────────────────── */
+.gear-image-full img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ─── Wide Paragraph Under Image ────────────────── */
+.gear-paragraph p {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ─── Gear Category Title with Icon ─────────────── */
+.gear-category {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0 2rem;
+}
+
+.gear-category-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* ─── Icon ──────────────────────────────────────── */
+.gear-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.gear-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ─── Gear Cards Layout ─────────────────────────── */
+.gear-card-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+/* Wrapper holds card + text underneath */
+.gear-card-wrapper {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ─── Card (IMAGE ONLY) ─────────────────────────── */
+.gear-card {
+  background: #ffffff;
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.card-logo {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Product Image Inside Card ─────────────────── */
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ─── Text UNDER Card (NOT inside) ──────────────── */
+.card-details {
+  margin-top: 0.8rem;
+  text-align: left;
+}
+
+.product-name {
+  font-weight: 700;
+  color: #000;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-details p {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ─── Highlighted Gear Type ─────────────────────── */
+.gear-highlight {
+  color: #53CAFC;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Optional: Add spacing if needed */
+.gear-image-offset {
+  margin-top: 4rem; /* Push it lower so it doesn’t clip */
+}
+
+.gear-image-offset img {
+  width: 100%;
+  height: auto; /* Ensure full image is shown */
+  object-fit: contain; /* Prevent top cropping */
+  border-radius: 8px;
+}
+
+
+/* ===================================== */
+/* 📱 MOVEN GEAR INTRO – PHONE OPTIMISED */
+/* (Same Layout, Product Images Fit)     */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  #moven-gear-intro {
+    padding: 4rem 1.25rem;
+  }
+
+  .moven-gear-intro-inner {
+    max-width: 100%;
+  }
+
+  /* ─── Headline ─── */
+  .moven-gear-intro-inner h2.gear-headline {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ─── Wide Image ─── */
+  .gear-image-full img {
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  /* ─── Paragraph ─── */
+  .gear-paragraph p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1.5rem auto;
+    padding: 0 0.5rem;
+  }
+
+  /* ─── Category Title + Icon ─── */
+  .gear-category {
+    gap: 0.75rem;
+    margin: 2.25rem 0 1.25rem;
+  }
+
+  .gear-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .gear-title {
+    font-size: 1.25rem;
+  }
+
+  /* ─── Gear Cards Layout ─── */
+  .gear-card-row {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .gear-card-wrapper {
+    width: 48%;
+  }
+
+  /* ─── Card ─── */
+  .gear-card {
+    height: 220px;
+    border-radius: 10px;
+    padding: 0.75rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center product */
+    justify-content: flex-start;
+  }
+
+  .card-logo {
+    width: 36px;
+    margin-bottom: 0.4rem;
+  }
+
+  /* ✅ PRODUCT IMAGE FIX */
+  .product-image {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;      /* 👈 shows full product */
+    object-position: center;  /* 👈 keeps centered */
+    border-radius: 6px;
+  }
+
+  /* ─── Card Text ─── */
+  .card-details {
+    margin-top: 0.6rem;
+  }
+
+  .product-name {
+    font-size: 0.85rem;
+  }
+
+  .card-details p {
+    font-size: 0.8rem;
+  }
+
+  .gear-highlight {
+    font-size: 0.8rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Moven Sports Section (Solid White) ─────────────────────────── */
+#moven-sports {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 2rem;
+  min-height: 50vh;
+  background: #ffffff;
+  color: #000;
+}
+
+/* ─── Inner Wrapper ───────────────────────────── */
+.moven-sports-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Reveal Headline ─────────────────────────── */
+.ai-cards-intro-headline {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  text-align: left;
+  overflow: hidden;
+  padding: 0.2em 0;
+  color: #000;
+}
+
+.ai-cards-intro-headline .reveal-text {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.6s;
+  position: relative;
+  z-index: 2;
+  color: #000;
+}
+
+.ai-cards-intro-headline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #53CAFC, #A6F2FF);
+  z-index: 1;
+  transition: transform 0.6s ease;
+}
+
+.ai-cards-intro-headline.revealed::before {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.2s ease 0.6s;
+}
+
+.ai-cards-intro-headline.revealed .reveal-text {
+  opacity: 1;
+}
+
+/* ─── Highlighted Blue Text ───────────────────── */
+.highlight-blue {
+  color: #53CAFC;
+}
+
+/* ─── Image Under Headline ────────────────────── */
+.sports-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+/* ─── AI Cards Container ─────────────────────── */
+.ai-cards-inner {
+  position: relative;
+  height: 550px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ─── AI Card Base Style ─────────────────────── */
+.ai-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 300px;
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ai-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ─── Visibility Control ──────────────────────── */
+.ai-card.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ─── Fan Layout (5 Cards) ───────────────────── */
+.ai-card:nth-child(1).visible { transform: translate(-50%, -50%) rotate(-16deg) translateX(-260px); z-index: 1; }
+.ai-card:nth-child(2).visible { transform: translate(-50%, -50%) rotate(-8deg)  translateX(-130px); z-index: 2; }
+.ai-card:nth-child(3).visible { transform: translate(-50%, -50%) rotate(0deg)   translateX(0);      z-index: 3; }
+.ai-card:nth-child(4).visible { transform: translate(-50%, -50%) rotate(8deg)   translateX(130px); z-index: 2; }
+.ai-card:nth-child(5).visible { transform: translate(-50%, -50%) rotate(16deg)  translateX(260px); z-index: 1; }
+
+/* ─── Hover Push-Out Effect ───────────────────── */
+.ai-card:nth-child(1).visible:hover { transform: translate(-50%, -50%) rotate(-16deg) translateX(-320px) scale(1.05); z-index: 10; }
+.ai-card:nth-child(2).visible:hover { transform: translate(-50%, -50%) rotate(-8deg)  translateX(-190px) scale(1.05); z-index: 10; }
+.ai-card:nth-child(3).visible:hover { transform: translate(-50%, -50%) rotate(0deg)   translateX(0)       scale(1.05); z-index: 10; }
+.ai-card:nth-child(4).visible:hover { transform: translate(-50%, -50%) rotate(8deg)   translateX(190px)  scale(1.05); z-index: 10; }
+.ai-card:nth-child(5).visible:hover { transform: translate(-50%, -50%) rotate(16deg)  translateX(320px)  scale(1.05); z-index: 10; }
+
+/* 👇 Prevent section from turning black */
+.ai-cards-section.fade-to-black {
+  background-color: #ffffff !important;
+}
+
+/* 👇 Still fade out the cards */
+.ai-cards-section.fade-to-black .ai-card {
+  opacity: 0 !important;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+/* ─── Subheadline Under Cards ───────────────────────── */
+.moven-sports-subheadline {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 4rem 0 2rem;
+  color: #000;
+}
+
+/* ─── Double Image Layout ───────────────────────────── */
+.moven-double-image {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.moven-double-image img {
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ─── Paragraph Under Images ───────────────────────── */
+.moven-sports-paragraph {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.moven-sports-paragraph p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+/* ===================================== */
+/* 📱 MOVEN SPORTS – PHONE OPTIMISED    */
+/* (Same Layout, Clean Scaling)         */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  #moven-sports {
+    padding: 4rem 1.25rem;
+    min-height: auto;
+  }
+
+  .moven-sports-inner {
+    max-width: 100%;
+  }
+
+  /* ─── Headline ─── */
+  .ai-cards-intro-headline {
+    font-size: 1.9rem;       /* scaled from 3rem */
+    margin-bottom: 2rem;
+  }
+
+  /* ─── Image Under Headline ─── */
+  .sports-image img {
+    border-radius: 10px;
+    margin-bottom: 2.5rem;   /* reduced spacing */
+  }
+
+  /* ─── AI Fan Cards ─── */
+  .ai-cards-inner {
+    height: 420px;           /* reduced from 550px */
+  }
+
+  .ai-card {
+    width: 130px;            /* scaled from 200px */
+    height: 200px;           /* scaled from 300px */
+    border-radius: 16px;
+  }
+
+  /* Adjust fan spacing for small screens */
+  .ai-card:nth-child(1).visible { transform: translate(-50%, -50%) rotate(-14deg) translateX(-160px); }
+  .ai-card:nth-child(2).visible { transform: translate(-50%, -50%) rotate(-7deg)  translateX(-80px); }
+  .ai-card:nth-child(3).visible { transform: translate(-50%, -50%) rotate(0deg)   translateX(0); }
+  .ai-card:nth-child(4).visible { transform: translate(-50%, -50%) rotate(7deg)   translateX(80px); }
+  .ai-card:nth-child(5).visible { transform: translate(-50%, -50%) rotate(14deg)  translateX(160px); }
+
+  /* Disable hover push on mobile (no hover anyway) */
+  .ai-card:hover {
+    transform: none !important;
+  }
+
+  /* ─── Subheadline ─── */
+  .moven-sports-subheadline {
+    font-size: 1.4rem;       /* scaled from 2rem */
+    margin: 2.5rem 0 1.5rem;
+  }
+
+  /* ─── Double Images ─── */
+  .moven-double-image {
+    gap: 1rem;
+  }
+
+  .moven-double-image img {
+    max-width: 100%;
+    height: 200px;           /* scaled from 280px */
+    border-radius: 12px;
+  }
+
+  /* ─── Paragraph ─── */
+  .moven-sports-paragraph {
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .moven-sports-paragraph p {
+    font-size: 0.95rem;      /* scaled from 1.15rem */
+    line-height: 1.5;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#locker-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 2rem;
+  background: #ffffff;
+  color: #000;
+  text-align: center;
+}
+
+.locker-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* ⬅️ Centers all content */
+}
+
+.locker-content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  text-align: left; /* ⬅️ Keeps text left-aligned */
+  max-width: 1000px;
+}
+
+.locker-text-block {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.locker-icon {
+  width: 60px;
+  margin-bottom: 2rem;
+}
+
+.locker-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.black-highlight {
+  color: #000;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.locker-subtext {
+  font-size: 0.95rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.locker-link {
+  color: #53CAFC;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.locker-image-block {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.locker-image {
+  width: 100%;
+  max-width: 1000px; /* 🟦 Scaled up */
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+/* Hide mobile paragraph everywhere by default (desktop) */
+.gear-scroll-mobile-text {
+  display: none;
+}
+
+
+/* ===================================== */
+/* 📱 LOCKER SECTION – PHONE OPTIMISED  */
+/* (Hide Scroll + Lower Paragraph)      */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  #locker-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .locker-section-inner {
+    max-width: 100%;
+  }
+
+  .locker-content-grid {
+    gap: 1.75rem;
+    max-width: 100%;
+  }
+
+  /* Text Block */
+  .locker-text-block {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .locker-icon {
+    width: 42px;
+    margin-bottom: 1.25rem;
+  }
+
+  .locker-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .black-highlight {
+    margin-bottom: 0.4rem;
+  }
+
+  .locker-subtext {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .locker-link {
+    font-size: 0.9rem;
+  }
+
+  /* Image Block */
+  .locker-image-block {
+    flex: 1 1 100%;
+  }
+
+  .locker-image {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  /* ❌ Hide horizontal scroll view */
+  .gear-scroll-container {
+    display: none !important;
+  }
+
+  /* ✅ Show centered paragraph LOWER DOWN */
+  .gear-scroll-mobile-text {
+    display: block;
+    text-align: center;
+    max-width: 90%;
+    margin: 4rem auto 0;   /* ⬅️ moved lower */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Gear Info Section (Solid Light Grey) ───────────────────────── */
+#gear-info-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0;
+  background: #f5f5f5;
+  color: #000;
+  width: 100%;
+  overflow-x: hidden; /* prevent page overflow */
+}
+
+/* ─── Inner Content ───────────────────────────── */
+.gear-info-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+/* ─── Headline ────────────────────────────────── */
+.gear-info-section-inner h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Full-Width Scroll View ───────────────────── */
+.gear-scroll-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  margin-top: 3rem;
+
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+
+  padding-left: 2rem;   /* aligns first card with headline */
+  padding-right: 2rem;  /* allows last card to fully scroll */
+  box-sizing: border-box;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gear-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Card Wrapper (Image + Caption) ───────────────────────── */
+.gear-card-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 600px;
+}
+
+/* ─── Image Card ────────────────────────── */
+.gear-card-info {
+  background: #ffffff;
+  width: 600px;
+  height: 500px;
+  border-radius: 40px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 0; /* remove padding so image fills fully */
+}
+
+/* ─── Image Fill ───────────────────────── */
+.gear-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Caption Under Card ───────────────────────── */
+.gear-card-caption {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444;
+  margin-top: 0.8rem;
+  max-width: 560px;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Other Sport Section (Solid Background) ─────────────────────── */
+#other-sport-section {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 2rem;
+  min-height: 50vh;
+  background: #ffffff;
+  color: #000;
+}
+
+.other-sport-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Headline Styling */
+.other-sport-section-inner h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+/* Paragraph Styling */
+.other-sport-section-inner p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #777;
+  max-width: 750px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Emphasized Words in Black */
+.emphasize-black {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Mockup Image */
+.mockup-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  border-radius: 12px;
+}
+
+
+
+
+
+
+
+/* Rounded Selector Container */
+.rounded-icon-menu {
+  background: #333;
+  border-radius: 40px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Individual Option */
+.icon-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+/* Smaller Icons */
+.icon-option img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Active Style */
+.icon-option.active {
+  background: #fff;
+  color: #000;
+}
+
+
+
+
+
+/* ===================================== */
+/* 📱 GEAR INFO + OTHER SPORT – PHONE   */
+/* (Same Layout + 3 Club Menu Only)     */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  /* ───────── GEAR INFO SECTION ───────── */
+
+  #gear-info-section {
+    padding: 4rem 0;
+  }
+
+  .gear-info-section-inner {
+    padding: 0 1.25rem;
+  }
+
+  .gear-info-section-inner h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Horizontal Scroll */
+  .gear-scroll-container {
+    gap: 1.25rem;
+    margin-top: 2rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Card Wrapper */
+  .gear-card-info-wrapper {
+    width: 260px;
+  }
+
+  /* Image Card */
+  .gear-card-info {
+    width: 260px;
+    height: 320px;
+    border-radius: 24px;
+  }
+
+  .gear-card-image {
+    object-fit: cover;
+  }
+
+  /* Caption */
+  .gear-card-caption {
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+    max-width: 240px;
+  }
+
+
+  /* ───────── OTHER SPORT SECTION ───────── */
+
+  #other-sport-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .other-sport-section-inner h2 {
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+  }
+
+  .other-sport-section-inner p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .mockup-image {
+    margin: 2rem auto;
+    border-radius: 16px;
+  }
+
+
+  /* ───────── ROUNDED ICON MENU (3 ONLY) ───────── */
+
+  /* Hide Cycle + Golf */
+  .rounded-icon-menu .icon-option:nth-child(4),
+  .rounded-icon-menu .icon-option:nth-child(5) {
+    display: none !important;
+  }
+
+  /* Resize container for 3 evenly */
+  .rounded-icon-menu {
+    padding: 0.75rem 1.25rem;
+    border-radius: 28px;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    max-width: 320px;           /* tailored width */
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+  }
+
+  /* Make each option balanced */
+  .icon-option {
+    flex: 1;
+    padding: 0.6rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .icon-option img {
+    width: 22px;
+    height: 22px;
+  }
+
+}

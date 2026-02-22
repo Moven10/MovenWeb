@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moven Clubs | Move As One</title>
+     <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movenclubs.css">
+</head>
+<body>
+
+    
+<!-- 🔝 Sticky Top Bar (Hidden by default) -->
+<header id="stickyTopBar" class="sticky-top-bar">
+  <div class="top-bar-content">
+    <!-- Circle with Icon -->
+    <a href="index.html" class="top-bar-dot" aria-label="Go to Home"></a>
+
+    <!-- ✨ Normal Mode -->
+    <nav class="top-bar-nav nav-full">
+      <a href="discover.html">Discover</a>
+      <span class="divider"></span>
+      <a href="movengallery.html">Moven Gear</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Mover Pro</a>
+      <span class="divider"></span>
+      <a href="movenclubs.html">Moven Clubs</a>
+    </nav>
+
+    <!-- ✨ Compact Mode -->
+    <nav class="top-bar-nav nav-compact">
+      <a href="create-account.html">Join For Free</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Subscribe Now</a>
+      <span class="divider"></span>
+      <a href="movenai.html">Moven Ai</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Footer (hidden while sticky bar is shown) -->
+<footer class="minimal-footer">
+  <div class="footer-inner">
+
+    <!-- 🍔 iPhone Hamburger (hidden on desktop via CSS) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Left: Logo -->
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <!-- Right: Nav + User -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="discover.html">Discover</a>
+        <a href="ways-to-move.html">Ways To Move</a>
+        <a href="movengear.html">Moven Gear</a>
+        <a href="moven-features.html">Features</a>
+      </nav>
+
+      <div class="footer-buttons">
+        <!-- 🔹 Sign In button (only shown when logged out) -->
+        <button id="signin-btn" class="btn-signin-outline" style="display: none;">
+          Sign In
+        </button>
+
+        <!-- 👤 Logged-in user profile -->
+        <div id="user-profile" class="user-profile">
+          <img
+            id="profile-avatar"
+            src="default-avatar.jpg"
+            alt="Profile Picture"
+            class="profile-avatar"
+          />
+          <span id="profile-username" class="profile-username">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- 📱 iPhone Glass Dropdown Menu -->
+<div class="mobile-glass-menu" id="mobileGlassMenu">
+  <a href="discover.html">Discover</a>
+  <a href="ways-to-move.html">Ways To Move</a>
+  <a href="movengear.html">Moven Gear</a>
+  <a href="moven-features.html">Features</a>
+</div>
+
+
+    <!-- Club 1 Section -->
+    <section class="club1"></section>
+
+ <!-- Club Intro Section -->
+<section class="club-intro">
+    <div class="content">
+
+        <p class="section-label">Moven Clubs</p>
+
+        <h2>
+            Exercise Was Never Meant To Be Solo
+            <span class="highlight">Move With Moven Clubs</span>
+        </h2>
+
+        <p class="intro-paragraph">
+            Moven Clubs bring people together through shared exercise. Join a club, follow progress in real time, take on challenges, and stay connected beyond the session. Whether you're training locally or virtually, every effort contributes to something bigger. It’s structured, motivating, and built to keep you moving — together.
+        </p>
+
+        <div class="image-wrapper">
+            <img src="clubmockup4.jpg" alt="Moven Club Mockup">
+        </div>
+
+        <!-- Interactive Toggle Switch -->
+        <div class="club-toggle" id="clubToggle">
+
+            <div class="toggle-knob" id="toggleKnob">
+                <img src="IconWalk.svg" alt="Club Icon" id="toggleIcon">
+            </div>
+
+            <span class="toggle-label" id="toggleLabel">
+                Walk Club
+            </span>
+
+        </div>
+
+
+
+<!-- Closer Look Section -->
+<div class="closer-look">
+
+    <h3 class="closer-heading">Lets take a closer look</h3>
+
+    <div class="closer-container">
+
+        <!-- Left Side Sport Options -->
+        <div class="sport-list">
+
+            <div class="sport-item active">
+                <span class="sport-text">
+                    <span class="blue-dot"></span>
+                    All Sport
+                </span>
+                <img src="IconMove.svg" alt="All Sport Icon">
+            </div>
+
+            <div class="sport-item">
+                <span class="sport-text">Walk</span>
+                <img src="IconWalk.svg" alt="Walk Icon">
+            </div>
+
+            <div class="sport-item">
+                <span class="sport-text">Run</span>
+                <img src="IconJog.svg" alt="Run Icon">
+            </div>
+
+            <div class="sport-item">
+                <span class="sport-text">Cycle</span>
+                <img src="IconCycle.svg" alt="Cycle Icon">
+            </div>
+
+            <div class="sport-item">
+                <span class="sport-text">Swim</span>
+                <img src="IconSwim.svg" alt="Swim Icon">
+            </div>
+
+            <div class="sport-item">
+                <span class="sport-text">Soccer</span>
+                <img src="IconSoccer.svg" alt="Soccer Icon">
+            </div>
+
+            <div class="sport-item">
+                <span class="sport-text">Golf</span>
+                <img src="IconGolf.svg" alt="Golf Icon">
+            </div>
+
+            <div class="sport-item">
+                <span class="sport-text">Tennis</span>
+                <img src="IconTennis.svg" alt="Tennis Icon">
+            </div>
+
+        </div>
+
+        <!-- Right Side Mockup -->
+        <div class="closer-image">
+            <img src="clubmockup10.png" alt="App Mockup">
+        </div>
+
+    </div>
+</div>
+
+
+    </div>
+</section>
+
+
+<!-- Club Stats Section -->
+<section class="club-stats">
+
+    <div class="stats-header">
+        <p class="stats-label">Club Overview</p>
+        <h3 class="stats-title">
+            Move in more then 150+ countries
+        </h3>
+    </div>
+
+    <!-- Hero Stats Row -->
+    <div class="stats-hero">
+
+        <!-- Large Edge Image -->
+        <div class="stats-hero-image">
+            <img src="mockupsideclub.png" alt="Global Stats Mockup">
+        </div>
+
+        <!-- Right Text Content -->
+        <div class="stats-hero-text">
+
+            <div class="stats-block">
+                <p class="grey-text">Up to</p>
+                <h4 class="blue-number">12+</h4>
+                <p class="grey-text">sport types to choose from.</p>
+            </div>
+
+            <div class="stats-block">
+                <p class="grey-text">Post about your session to</p>
+                <h4 class="blue-number">24/7</h4>
+                <p class="grey-text">live activity feed.</p>
+            </div>
+
+               </div>
+    </div>
+
+    <!-- Large Grey Paragraph -->
+    <div class="stats-paragraph-wrapper">
+        <p class="stats-paragraph">
+            Thousands of sessions completed. Hundreds of thousands of kilometres logged. Week after week consistency. The data speaks clearly — movement increases, goals are reached faster, and progress compounds when it’s shared.
+        </p>
+    </div>
+
+    <!-- Stats Heading -->
+    <div class="stats-subheading-wrapper">
+        <h3 class="stats-subheading">
+            See what others are up to
+        </h3>
+    </div>
+
+   <!-- Counting Stats -->
+<div class="stats-grid" id="statsGrid">
+
+    <div class="stat-card">
+        <img src="uparrow.svg" alt="Members Icon" class="stat-icon">
+        <h4 class="count" data-target="340234">0</h4>
+        <p> Moven Club Users And Growing</p>
+    </div>
+
+    <div class="stat-card">
+        <img src="star.svg" alt="Countries Icon" class="stat-icon">
+        <h4 class="count" data-target="4.8">0</h4>
+        <p>Average Club Rating</p>
+    </div>
+
+    <div class="stat-card">
+        <img src="Consitsant.svg" alt="Sessions Icon" class="stat-icon">
+        <h4 class="count" data-target="26332">0</h4>
+        <p>Recorded Clubs</p>
+    </div>
+
+    <div class="stat-card">
+        <img src="timeicon.svg" alt="Events Icon" class="stat-icon">
+        <h4 class="count" data-target="1410650">0</h4>
+        <p> Minutes In Motion</p>
+    </div>
+
+</div>
+
+
+    <!-- Bottom Wide Image -->
+    <div class="stats-bottom-image">
+        <img src="club4.jpg" alt="Wide Stats Image">
+    </div>
+
+
+</section>
+
+
+
+
+<!-- Create Club Section -->
+<section class="create-club">
+
+    <div class="create-content">
+
+        <p class="create-label">Create Club</p>
+
+        <h2 class="create-title">
+           Create the Crew.
+            <span class="blue-text">Set the pace.</span>
+        </h2>
+
+        <p class="create-paragraph">
+            Start your own club and shape the culture around how you move. 
+            <span class="highlight-white">Set the goals, create the challenges, bring people together, and build consistent momentum week after week.</span>
+            Whether it’s a small local crew or a 
+            <span class="highlight-white">growing global community,</span> 
+           you control the pace, the purpose, and the progress.
+            <span class="highlight-white">Dont let the pace drop,</span> 
+            create your club and Move
+            <span class="highlight-white">now.</span>
+        </p>
+
+        <!-- Large Mockup Image -->
+        <div class="create-main-image">
+            <img src="clubmockup1 (2).jpg" alt="Create Club Mockup">
+        </div>
+
+        <!-- Secondary Layout -->
+        <div class="create-secondary">
+
+            <!-- Left Rounded Image -->
+            <div class="create-secondary-image">
+                <img src="club2.jpg" alt="Club Community Image">
+            </div>
+
+            <!-- Right Text -->
+            <div class="create-secondary-text">
+                <h3>Build something bigger than yourself.</h3>
+                <p>
+                    Create your own club, invite members, and set shared goals that
+                    bring people together. From small local groups to global
+                    communities, you have the tools to inspire and lead movement
+                    wherever you are.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Final Create Block -->
+<div class="create-final">
+
+    <h2 class="create-final-heading">
+        Create something for <span class="blue-text">everyone.</span>
+    </h2>
+
+  <div class="create-final-slider">
+
+    <div class="slider-viewport">
+        <div class="slider-track" id="sliderTrack">
+            <img src="createeventmockup.png" alt="Mockup 1">
+            <img src="iphoneimagemockup2.png" alt="Mockup 2">
+            <img src="eventmockup1.png" alt="Mockup 3">
+            <img src="mockupsideevent.png" alt="Mockup 4">
+            <img src="mockuplightside.png" alt="Mockup 5">
+            <img src="publicangle.png" alt="Mockup 6">
+              <img src="halfmockup1.png" alt="Mockup 6">
+                <img src="eventanglepost.png" alt="Mockup 6">
+        </div>
+    </div>
+
+    <div class="slider-dots" id="sliderDots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        
+       
+    </div>
+
+</div>
+
+
+
+    <p class="create-final-paragraph">
+    Whether your community is built around walking, running, cycling, or competing, 
+    Moven gives you the freedom to design experiences that connect people of all 
+    <span class="highlight-white">skill levels.</span>
+    Lead with <span class="highlight-white">purpose</span>, 
+    build <span class="highlight-white">momentum</span>, 
+    and make exercise accessible for everyone who wants to be part of it.
+</p>
+
+
+</div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!-- Event Section -->
+<section class="event-section">
+
+    <div class="event-content">
+
+        <p class="event-label">Club Events</p>
+
+        <h2 class="event-title">
+            <span>Move your people</span>
+             <span class="blue-text">not just yourself</span></span>
+        </h2>
+
+        <div class="event-image">
+            <img src="clubmockup3.jpg" alt="Club Events Mockup">
+        </div>
+
+        <p class="event-paragraph">
+            Organize local meetups, create global events, and build 
+            <span class="highlight-white">shared experiences</span> 
+            that unite your members. Turn everyday exercise into 
+            <span class="highlight-white">meaningful events,</span> 
+            strengthen your 
+            <span class="highlight-white">community</span>, 
+            and inspire others to train together with purpose.
+        </p>
+
+
+        <!-- Wide Image -->
+<div class="event-wide-image">
+    <img src="club3.jpg" alt="Event Showcase">
+</div>
+
+<!-- Blue Sentence -->
+<p class="event-blue-sentence">
+    Create events that bring your entire community together
+</p>
+
+<!-- Rectangle Grid -->
+<div class="event-grid">
+
+    <div class="event-rectangle">
+        <img src="club5.jpg" alt="Event 1">
+    </div>
+
+    <div class="event-rectangle">
+        <img src="club6.jpg" alt="Event 2">
+    </div>
+
+    <div class="event-rectangle">
+        <img src="club7.jpg" alt="Event 3">
+    </div>
+
+    <div class="event-rectangle">
+        <img src="club8.jpg" alt="Event 4">
+    </div>
+
+</div>
+
+<!-- Bottom Mockup Image -->
+<div class="event-bottom-mockup">
+    <img src="mockupsideevent.png" alt="Final Event Mockup">
+</div>
+
+<!-- Feature Specs Section -->
+<div class="event-specs">
+
+     <div class="spec-card">
+        <h3 class="spec-title">Join Events</h3>
+        <div class="spec-divider"></div>
+        <p class="spec-paragraph">
+            Discover and join events designed to bring movement to life, from competitive challenges 
+            to community-driven milestones. Track progress in real time, compete alongside others, 
+            and be part of something bigger than a single session. Built for 
+            <span class="highlight-white">performance</span> and shared 
+            <span class="highlight-white">energy.</span>
+        </p>
+</div>
+
+
+
+     <div class="spec-card">
+        <h3 class="spec-title">Create Events</h3>
+        <div class="spec-divider"></div>
+        <p class="spec-paragraph">
+            Design your own event and set the challenge your way — choose the distance, define the rules, 
+            and invite others to take part. Monitor participation live, track collective results, and 
+            shape an experience that brings people together. Built for 
+            <span class="highlight-white">leadership</span> and lasting 
+            <span class="highlight-white">impact.</span>
+        </p>
+</div>
+
+
+
+    <div class="spec-card">
+        <h3 class="spec-title">Move Together</h3>
+        <div class="spec-divider"></div>
+        <p class="spec-paragraph">
+            Experience movement as a shared effort, where every session contributes to collective progress. 
+            See how others are performing, stay aligned with group goals, and build consistency side by side. 
+            Built for <span class="highlight-white">connection</span> and sustained 
+            <span class="highlight-white">momentum.</span>
+        </p>
+</div>
+
+
+
+</div>
+
+<!-- Battery Block -->
+<div class="battery-block">
+
+    <h2 class="battery-title">
+        <span>Where Every Run</span>
+        <span>Connects</span>
+    </h2>
+
+    <p class="battery-paragraph">
+       Every run contributes to more than just distance — it builds improvement. Training alongside others <span class="highlight-white">increases consistency, sharpens pace,</span> and raises your standard with every session. 
+       Shared progress keeps you accountable, motivated, and pushing further than you would alone. When every run connects, performance compounds.
+    </p>
+
+   <div class="battery-images-wrapper">
+    <div class="battery-images">
+        <img src="halfeventiphone.png" alt="Battery Mockup 1">
+        <img src="eventmockup1.png" alt="Battery Mockup 2">
+    </div>
+</div>
+
+
+<!-- Battery Stats Row -->
+<div class="battery-stats">
+
+    <div class="battery-stat">
+        <p class="stat-small">Host up to</p>
+        <p class="stat-large-blue">100+</p>
+        <p class="stat-medium">events with members all</p>
+        <p class="stat-medium">across the globe.</p>
+    </div>
+
+    <div class="battery-stat">
+        <p class="stat-small">Create up to</p>
+        <p class="stat-large-blue">1,000+</p>
+        <p class="stat-medium">memories in</p>
+        <p class="stat-medium">200+ cities.</p>
+    </div>
+
+    <div class="battery-stat">
+        <p class="stat-small">Bring Together</p>
+        <p class="stat-large-blue">50,000+</p>
+        <p class="stat-medium">participants from</p>
+        <p class="stat-medium">5,000+ locations.</p>
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- Post Section -->
+<section class="post-section">
+
+    
+
+    <div class="post-content">
+
+        
+
+        <h2 class="post-title">
+            Not Finding The Right Event?
+            <span class="blue-text">Create It!</span>
+        </h2>
+
+        <div class="post-image">
+            <img src="mockupview.jpg" alt="Create Your Event Mockup">
+        </div>
+
+        <p class="post-paragraph">
+            Design an event that reflects how you want to move. Choose the <span class="highlight-white"> terrain — road, trail, track or mixed routes — set the distance, define the pace,</span>
+            and customise the challenge. Decide whether it’s competitive or community-driven, local or global. Invite others, <span class="highlight-white">track progress live, and watch participation grow.</span>
+            <span class="highlight-white">When the right event doesn’t exist,</span>
+            build it — and lead the movement your way.
+        </p>
+
+       <div class="post-placeholder-rectangle">
+
+    <!-- Top Row -->
+    <div class="post-rectangle-top">
+        <h3 class="rectangle-title">Create a club</h3>
+
+        <div class="rectangle-pill">
+            <span>Create a club</span>
+            <span class="rectangle-plus">+</span>
+        </div>
+    </div>
+
+    <!-- Options -->
+    <div class="rectangle-options">
+
+        <div class="rectangle-option">
+            <p class="option-label">Find your sport</p>
+            <p class="option-main">All Sports</p>
+            <p class="option-sub">Keep it your way</p>
+        </div>
+
+        <div class="rectangle-option">
+            <p class="option-label">Run your route</p>
+            <p class="option-main">Run Club</p>
+            <p class="option-sub">Run together</p>
+        </div>
+
+        <div class="rectangle-option">
+            <p class="option-label">Swim your stroke</p>
+            <p class="option-main">Swim Club</p>
+            <p class="option-sub">Hit the water</p>
+        </div>
+
+        <div class="rectangle-option">
+            <p class="option-label">Cycle that bend</p>
+            <p class="option-main">Cycle Club</p>
+            <p class="option-sub">Pedal to the max</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Split Images Section -->
+<div class="post-split-images">
+
+    <div class="split-left">
+        <img src="club9.jpg" alt="Left Image">
+    </div>
+
+    <div class="split-right">
+        <img src="club10.jpg" alt="Right Image">
+    </div>
+
+</div>
+
+<p class="post-split-paragraph">
+    Bring together people from different places, backgrounds, and abilities. 
+    Create experiences that feel 
+    <span class="highlight-white">inclusive,</span> 
+    foster real 
+    <span class="highlight-white">connection,</span>
+    and inspire lasting 
+    <span class="highlight-white">movement.</span>
+</p>
+
+
+
+    </div>
+
+</section>
+
+
+
+<footer class="glass-bottom-footer">
+  <div class="glass-footer-content">
+    <!-- 🔹 Left Section -->
+    <div class="footer-col left-col">
+      <img src="MovenLogoblack.jpg" alt="Moven Logo" class="footer-logobottom" />
+      <p class="footer-small-text">© 2025 Moven. All rights reserved.</p>
+      <p class="footer-small-text">
+        <a href="privacypolicy.html">Privacy Policy</a>
+      </p>
+    </div>
+
+    <!-- 🔹 Middle Left -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">Find out more</h4>
+      <ul class="footer-list">
+        <li><a href="moven-features.html">Features</a></li>
+        <li><a href="movengear.html">Moven Gear</a></li>
+        <li><a href="movenclubs.html">Sport Clubs</a></li>
+        <li><a href="MoverPro.html">MoverPro</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Middle Right -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">More</h4>
+      <ul class="footer-list">
+        <li><a href="movencollection.html">Moven Collection</a></li>
+        <li><a href="movenclubs.html">Moven Clubs</a></li>
+        <li><a href="ways-to-move.html">Sports</a></li>
+        <li><a href="create-account.html">Create Account</a></li>
+        <li><a href="moverpro.html">Subscribe</a></li>
+        <li><a href="create-account.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Reach Out Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Reach Out</h4>
+      <p class="footer-email">moven@startmoven.com</p>
+      <div class="footer-socials">
+        <img src="tik-tok.png" alt="TikTok" />
+        <img src="twitter.png" alt="Twitter" />
+        <img src="instagram.png" alt="Instagram" />
+      </div>
+    </div>
+
+    <!-- 🔹 Download Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Download Now</h4>
+
+      <div class="download-block">
+        <img src="MovenQr.png" alt="Move QR Icon" class="qr-icon" />
+        <p class="footer-small-text">Scan to download</p>
+      </div>
+
+      <div class="store-icons">
+        <img src="AppStore.png" alt="App Store" />
+        <img src="watchos.png" alt="WatchOS" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="switch.js"></script>
+<script src="numbercount.js"></script>
+<script src="index.js"></script>
+<script src="DynamicIsland.js"></script>
+</body>
+</html>

@@ -1,0 +1,1123 @@
+/* ─── Satoshi Font Setup ─────────────────────────────────────────── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype"),
+       url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+       url("./fonts/Satoshi-Regular.woff") format("woff"),
+       url("./fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Medium.otf") format("opentype"),
+       url("./fonts/Satoshi-Medium.ttf") format("truetype"),
+       url("./fonts/Satoshi-Medium.woff") format("woff"),
+       url("./fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype"),
+       url("./fonts/Satoshi-Bold.ttf") format("truetype"),
+       url("./fonts/Satoshi-Bold.woff") format("woff"),
+       url("./fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Black.otf") format("opentype"),
+       url("./fonts/Satoshi-Black.ttf") format("truetype"),
+       url("./fonts/Satoshi-Black.woff") format("woff"),
+       url("./fonts/Satoshi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+  background-color: white;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+
+/* ───── FOOTER STYLES ────────────────────────────────────────────── */
+.minimal-footer {
+  background: linear-gradient(
+    135deg,
+    rgba(83, 202, 252, 0.25),
+    rgba(255, 255, 255, 0.1),
+    rgba(83, 202, 252, 0.2)
+  );
+
+  backdrop-filter: blur(48px) saturate(250%);
+  -webkit-backdrop-filter: blur(48px) saturate(250%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 18px 64px rgba(83, 202, 252, 0.25),
+    inset 0 0 60px rgba(255, 255, 255, 0.08);
+
+  padding: 0.4rem 0;
+  width: 100%;
+  min-height: 56px;
+
+  position: fixed;      /* ✅ Locks it in place */
+  top: 0;               /* ✅ Sticks to top instead */
+  left: 0;
+  z-index: 9998;
+  overflow: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between; /* 👈 Clean two-sided layout */
+  align-items: center;
+  padding: 0 4rem;
+  height: 56px;
+  position: relative;
+}
+
+
+.footer-logo {
+  height: 48px;         /* ⬆️ Taller logo */
+  width: auto;
+  display: block;
+  margin-left: 2rem;    /* ⬅️ Narrower spacing */
+  margin-top: 16px;     /* ⬇️ Slightly reduced vertical offset */
+}
+.footer-right {
+  position: absolute;
+  right: 4rem; /* 👈 Shifted closer to center */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;        /* ⬆️ Upgraded to Black */
+  font-style: italic;      /* ⬅️ Now italic */
+  transition: color 0.3s ease;
+}
+
+
+.footer-nav a:hover {
+  color: #53CAFC;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-join,
+.btn-subscribe {
+  box-sizing: border-box;
+}
+
+.btn-join {
+  padding: 8px 16px;
+  border: 2px solid #53CAFC;
+  background: transparent;
+  color: #B0B0B0;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-join:hover {
+  background-color: #53CAFC;
+  color: white;
+  border-color: #53CAFC;
+}
+
+.btn-subscribe {
+  padding: 8px 16px;
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-subscribe::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid white;
+  border-radius: 8px;
+  opacity: 0;
+  animation: snake-outline 1s linear infinite;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.btn-subscribe:hover::before {
+  opacity: 1;
+}
+
+/* 👤 Logged-in user display */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(83, 202, 252, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Invisible placeholder to reserve space */
+.user-profile::after {
+  content: "Username"; /* Match expected username length */
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+}
+
+
+.user-profile:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05); /* 👈 grow on hover */
+}
+
+
+.profile-avatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #53CAFC;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.07);
+}
+
+.profile-username {
+  color: #ffffff;            /* ⬅️ Changed to white */
+  font-weight: 900;          /* ⬆️ Satoshi Black */
+  font-style: italic;        /* ⬅️ Italic style */
+  font-size: 0.95rem;
+  font-family: 'Satoshi', sans-serif;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+
+@keyframes snake-outline {
+  0% { clip-path: inset(0 100% 100% 0); }
+  25% { clip-path: inset(0 0 100% 0); }
+  50% { clip-path: inset(0 0 0 0); }
+  75% { clip-path: inset(100% 0 0 0); }
+  100% { clip-path: inset(0 100% 100% 0); }
+}
+
+/* ✅ Hide main footer when sticky bar is active using body class */
+body.hide-footer .minimal-footer {
+  display: none !important;
+}
+
+
+
+
+.btn-signin-outline {
+  padding: 8px 16px;
+  border: 2px solid #53CAFC;
+  background-color: transparent;
+  color: #53CAFC;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.btn-signin-outline:hover {
+  background-color: #53CAFC;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───── STICKY TOP BAR (Two‑Stage Drop Reveal) ───────────────────────────── */
+
+.sticky-top-bar {
+  position: fixed;
+  top: -120px;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  /* Hidden state */
+  opacity: 0;
+  transform: translateY(-40px) scale(0.95);
+  pointer-events: none;
+}
+
+/* First notch reveal */
+.sticky-top-bar.show-full {
+  animation: notchDropIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Second notch reveal */
+.sticky-top-bar.show-compact {
+  animation: notchDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Drop animation */
+@keyframes notchDropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(6px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    top: 0;
+  }
+}
+
+/* Layout */
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 🔵 Icon Circle */
+.top-bar-dot {
+  height: 44px;
+  width: 44px;
+  background-color: #53CAFC;
+  border-radius: 50%;
+  background-image: url("Moveiconwhite.svg");
+  background-size: 29px 29px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Rounded nav island */
+.top-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.35rem 0.85rem;
+  background-color: #53CAFC;
+  border-radius: 999px;
+  transition: all 0.35s ease;
+}
+
+/* Hide both navs by default */
+.nav-full,
+.nav-compact {
+  display: none;
+}
+
+/* Show only the correct nav */
+.sticky-top-bar.show-full .nav-full {
+  display: flex;
+}
+
+.sticky-top-bar.show-compact .nav-compact {
+  display: flex;
+}
+
+/* Compact notch slightly smaller */
+.sticky-top-bar.show-compact .top-bar-nav {
+  padding: 0.25rem 0.6rem;
+  transform: scale(0.92);
+}
+
+/* Nav links */
+.top-bar-nav a {
+  color: #ffffff;             /* ⬅️ White text */
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;           /* ⬆️ Satoshi Black */
+  font-style: italic;         /* ⬅️ Italic */
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+
+.top-bar-nav a:hover {
+  color: #FEE0FF;
+}
+
+/* Divider */
+.top-bar-nav .divider {
+  width: 1px;
+  height: 1rem;
+  background-color: white;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Top Footer Glass Effect */
+.top-footer {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ height: 60px;
+ backdrop-filter: blur(10px);
+ background: rgba(255, 255, 255, 0.1);
+ border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 30px;
+ z-index: 1000;
+}
+
+.top-footer img {
+ height: 40px;
+}
+
+.nav-links {
+ display: flex;
+ gap: 25px;
+}
+
+.nav-links a {
+ text-decoration: none;
+ color: #ffffffcc;
+ font-weight: 500;
+ transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+ color: #ffffff;
+}
+
+
+
+
+/* Hide mobile-only elements on desktop */
+.mobile-menu-toggle,
+.mobile-glass-menu {
+  display: none;
+}
+
+
+/* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
+@media (max-width: 430px) {
+
+  /* ===== Minimal Glass Top Footer ===== */
+
+  .minimal-footer {
+    padding: 0.6rem 0.6rem 0.6rem 0.2rem; /* reduced LEFT padding */
+    min-height: 60px;
+  }
+
+  .footer-inner {
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 🍔 Hamburger */
+  .mobile-menu-toggle {
+  display: flex;
+  width: 26px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 15px;   /* 🔥 pushes it right */
+  margin-right: 4px;
+}
+
+  .mobile-menu-toggle span {
+    height: 2px;
+    width: 100%;
+    background: #53CAFC;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Keep container stable */
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* 🔥 Shift ONLY the logo left */
+  .footer-logo {
+    height: 40px;
+    margin: 0;
+    margin-left: -120px; /* controls logo position only */
+  }
+
+  /* Remove absolute positioning */
+  .footer-right {
+    position: static;
+    transform: none;
+    gap: 1rem;
+    margin-right: 6px;
+  }
+
+  /* Hide desktop nav */
+  .footer-nav {
+    display: none;
+  }
+
+  .footer-buttons {
+    gap: 0.5rem;
+  }
+
+  .profile-avatar {
+    height: 32px;
+    width: 32px;
+  }
+
+  .profile-username {
+    display: none;
+  }
+
+
+  /* ===== Glass Dropdown (Original Style Kept) ===== */
+
+  .mobile-glass-menu {
+    display: flex;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 30px 24px;
+
+    background: linear-gradient(
+      135deg,
+      rgba(83, 202, 252, 0.25),
+      rgba(255, 255, 255, 0.1),
+      rgba(83, 202, 252, 0.2)
+    );
+
+    backdrop-filter: blur(48px) saturate(250%);
+    -webkit-backdrop-filter: blur(48px) saturate(250%);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(83, 202, 252, 0.25);
+
+    flex-direction: column;
+    gap: 24px;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+    z-index: 9997;
+  }
+
+  .mobile-glass-menu a {
+    text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #000000;
+  }
+
+  .mobile-glass-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+  /* ===== Sticky Blue Drop Bar (Unchanged) ===== */
+
+  .sticky-top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    top: 18px;
+  }
+
+  .top-bar-content {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .top-bar-dot {
+    height: 30px;
+    width: 30px;
+    background-size: 18px 18px;
+  }
+
+  .top-bar-nav {
+    width: auto;
+    padding: 0.2rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .top-bar-nav a {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.35rem;
+  }
+
+  .top-bar-nav .divider {
+    height: 0.7rem;
+  }
+
+  .nav-full a:nth-of-type(1),
+  .nav-full .divider:nth-of-type(1) {
+    display: none;
+  }
+
+  .nav-full a:nth-of-type(3),
+  .nav-full .divider:nth-of-type(3) {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───── Create Account Card Section ───── */
+.create-card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 1rem 4rem;  /* ⬅ Increased top padding to move card lower */
+  background: url('MovenBackground1.jpg') center/cover no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
+
+/* ───── Glassmorphic Account Card ───── */
+.account-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+  transition: height 0.3s ease;
+}
+
+/* Logo in Card */
+.account-logo {
+  display: block;
+  margin: 0 auto 2rem auto;
+  height: 64px;
+}
+
+/* Title & Subtitle */
+.account-title {
+  font-style: italic;
+  color: #000;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.account-subtitle {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Form Fields */
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.account-form input {
+  padding: 0.75rem;
+  border: 2px solid #53CAFC;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.account-form input:focus {
+  border-color: #0e1540;
+}
+
+/* Privacy Checkbox */
+.privacy-check {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #333;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.privacy-check input {
+  transform: scale(1.1);
+  margin-right: 6px;
+}
+
+.privacy-check a {
+  color: #53CAFC;
+  text-decoration: underline;
+}
+
+/* Submit Button Styles */
+.btn-create {
+  background-color: #53CAFC;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-create:hover {
+  background-color: #0e1540;
+}
+
+.btn-create.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ✨ Eye Icon Toggle */
+.eye-toggle {
+  position: absolute;
+  right: 36px;
+  top: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Stronger, Taller Blue Glow Blur */
+.account-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(83, 202, 252, 0.35) 0%,
+    rgba(83, 202, 252, 0.15) 40%,
+    transparent 75%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Already Have Account Text */
+.already-have-account {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1.2rem;
+  color: #000;
+}
+
+.already-have-account a {
+  color: #53CAFC;
+  text-decoration: underline;
+  margin-left: 4px;
+  font-weight: 500;
+}
+
+.already-have-account a:hover {
+  text-decoration: none;
+}
+
+/* App Store Download Section */
+.appstore-download {
+  margin-top: 1.8rem;
+  text-align: center;
+}
+
+.appstore-img {
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.appstore-img:hover {
+  transform: scale(1.05);
+}
+
+.download-now-text {
+  font-size: 0.85rem;
+  color: #000;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* ───── FORM PANEL TOGGLE ───── */
+.form-panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.form-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Login Panel Override */
+.login-panel .account-form {
+  margin-top: 1.5rem;
+}
+
+/* 🔄 Progress Overlay */
+.progress-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 21, 64, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.progress-spinner img {
+  width: 64px;
+  margin-bottom: 1rem;
+  animation: pulseLogo 1.4s infinite ease-in-out;
+}
+
+.progress-spinner p {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: 'Satoshi', sans-serif;
+  text-align: center;
+}
+
+@keyframes pulseLogo {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 🔄 Form Field Wrapper */
+.field-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 14px;
+}
+
+/* 🔵 Status Dot */
+.field-status {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  pointer-events: none;
+  transition: background-color 0.25s ease;
+}
+
+.field-status.valid {
+  background-color: #53CAFC;
+}
+.field-status.invalid {
+  background-color: #ff4c4c;
+}
+.field-status.default {
+  background-color: #ccc;
+}
+
+/* ❗ Field Error */
+.field-error {
+  font-size: 0.75rem;
+  color: #ff4c4c;
+  margin: 0;
+  padding-left: 2px;
+  line-height: 1.2;
+  min-height: 14px;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.field-error.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+/* ===================================== */
+/* 📱 CREATE ACCOUNT – PHONE OPTIMISED  */
+/* (Same Layout, Clean Scaling)         */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+/* ───── Section ───── */
+.create-card-section {
+  padding: 8rem 1.25rem 3rem;   /* ⬅ moved significantly lower */
+  align-items: flex-start;      
+  min-height: 100vh;
+}
+
+
+  /* ───── Account Card ───── */
+  .account-card {
+    padding: 1rem 1.5rem;             /* reduced from 3rem 2rem */
+    max-width: 100%;
+    border-radius: 18px;
+  }
+
+  /* Logo */
+  .account-logo {
+    height: 52px;                     /* scaled from 64px */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Titles */
+  .account-title {
+    font-size: 1.3rem;                /* scaled from 1.5rem */
+  }
+
+  .account-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Form */
+  .account-form {
+    gap: 0.85rem;
+  }
+
+  .account-form input {
+    padding: 0.8rem;                  /* slightly taller for touch */
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  /* Field Wrap */
+  .field-wrap {
+    padding-bottom: 12px;
+  }
+
+  /* Status Dot */
+  .field-status {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 14px;
+  }
+
+  /* Error */
+  .field-error {
+    font-size: 0.7rem;
+  }
+
+  /* Privacy */
+  .privacy-check {
+    font-size: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .privacy-check input {
+    transform: scale(1.05);
+    margin-top: 2px;
+  }
+
+  /* Button */
+  .btn-create {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+
+  /* Already have account */
+  .already-have-account {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  /* App Store */
+  .appstore-download {
+    margin-top: 1.5rem;
+  }
+
+  .appstore-img {
+    height: 42px;                     /* scaled from 48px */
+  }
+
+  .download-now-text {
+    font-size: 0.8rem;
+  }
+
+  /* Glow effect slightly reduced */
+  .account-card::after {
+    height: 120px;
+  }
+
+  /* Login panel spacing */
+  .login-panel .account-form {
+    margin-top: 1.2rem;
+  }
+
+  /* Progress Spinner */
+  .progress-spinner img {
+    width: 52px;
+  }
+
+  .progress-spinner p {
+    font-size: 1rem;
+  }
+
+}

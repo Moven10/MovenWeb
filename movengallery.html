@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Find Your Fit</title>
+
+ <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+
+ <link rel="stylesheet" href="movengallery.css" />
+</head>
+<body>
+
+   
+<!-- 🔝 Sticky Top Bar (Hidden by default) -->
+<header id="stickyTopBar" class="sticky-top-bar">
+  <div class="top-bar-content">
+    <!-- Circle with Icon -->
+    <a href="index.html" class="top-bar-dot" aria-label="Go to Home"></a>
+
+    <!-- ✨ Normal Mode -->
+    <nav class="top-bar-nav nav-full">
+      <a href="discover.html">Discover</a>
+      <span class="divider"></span>
+      <a href="movengallery.html">Moven Gear</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Mover Pro</a>
+      <span class="divider"></span>
+      <a href="movenclubs.html">Moven Clubs</a>
+    </nav>
+
+    <!-- ✨ Compact Mode -->
+    <nav class="top-bar-nav nav-compact">
+      <a href="create-account.html">Join For Free</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Subscribe Now</a>
+      <span class="divider"></span>
+      <a href="movenai.html">Moven Ai</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Footer (hidden while sticky bar is shown) -->
+<footer class="minimal-footer">
+  <div class="footer-inner">
+
+    <!-- 🍔 iPhone Hamburger (hidden on desktop via CSS) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Left: Logo -->
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <!-- Right: Nav + User -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="discover.html">Discover</a>
+        <a href="ways-to-move.html">Ways To Move</a>
+        <a href="movengear.html">Moven Gear</a>
+        <a href="moven-features.html">Features</a>
+      </nav>
+
+      <div class="footer-buttons">
+        <!-- 🔹 Sign In button (only shown when logged out) -->
+        <button id="signin-btn" class="btn-signin-outline" style="display: none;">
+          Sign In
+        </button>
+
+        <!-- 👤 Logged-in user profile -->
+        <div id="user-profile" class="user-profile">
+          <img
+            id="profile-avatar"
+            src="default-avatar.jpg"
+            alt="Profile Picture"
+            class="profile-avatar"
+          />
+          <span id="profile-username" class="profile-username">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- 📱 iPhone Glass Dropdown Menu -->
+<div class="mobile-glass-menu" id="mobileGlassMenu">
+  <a href="discover.html">Discover</a>
+  <a href="ways-to-move.html">Ways To Move</a>
+  <a href="movengear.html">Moven Gear</a>
+  <a href="moven-features.html">Features</a>
+</div>
+
+
+ <!-- Intro Section -->
+<section class="gear-intro-section">
+ <h2>Find what fits you!</h2>
+ <p>Designed to make moving feel unique and different.</p>
+</section>
+
+<!-- Updated Gear Menu -->
+<section class="gear-menu-section">
+  <div class="explore-menu-box">
+    <div class="explore-menu">
+      <div class="menu-item" data-icon="IconWalkblack.svg"><span>Walk</span></div>
+      <div class="menu-item" data-icon="IconJogblack.svg"><span>Run</span></div>
+      <div class="menu-item" data-icon="IconCycleblack.svg"><span>Cycle</span></div>
+      <div class="menu-item" data-icon="IconSwimblack.svg"><span>Swim</span></div>
+      <div class="menu-item" data-icon="IconGolfblack.svg"><span>Golf</span></div>
+      <div class="menu-item" data-icon="IconTennisblack.svg"><span>Tennis</span></div>
+      <div class="menu-item" data-icon="IconPadelblack.svg"><span>Padel</span></div>
+      <div class="menu-item" data-icon="IconSquashblack.svg"><span>Squash</span></div>
+      <div class="menu-item" data-icon="IconPickleBallblack.svg"><span>PickleBall</span></div>
+      <div class="menu-item" data-icon="IconSoccerblack.svg"><span>Soccer</span></div>
+      <div class="menu-item" data-icon="IconRowblack.svg"><span>Row</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Hero Image Section -->
+<section class="gear-hero-image">
+ <div class="slide current-slide"></div>
+ <div class="slide next-slide"></div>
+
+ <div class="image-timer-circle">
+ <svg width="40" height="40">
+ <circle cx="20" cy="20" r="18"></circle>
+ </svg>
+ </div>
+</section>
+
+<!-- Moven Collection Section -->
+<section class="moven-collection-section">
+  <div class="moven-message-heading">
+    <p class="section-subtitle">Moven Collection</p>
+    <h2 class="section-title">View what we have to offer</h2>
+    <p class="section-description">Our First Ever Collection, Don’t Miss Out!</p>
+    <a href="movencollection.html">
+      <button class="collection-btn">View Moven Collection</button>
+    </a>
+  </div>
+</section>
+
+
+
+<!-- Image Description Section -->
+<section class="image-description-section">
+ <div class="image-box" style="background-image: url('split1.jpg')">
+ <div class="image-text">
+ <p class="image-sub">Explore Walk</p>
+ <h3 class="image-title">Power In Every Walk</h3>
+ <button class="image-btn" onclick="location.href='sneaker.html'">View</button>
+
+ </div>
+ </div>
+
+ <div class="image-box" style="background-image: url('split2.jpg')">
+ <div class="image-text">
+ <p class="image-sub">Run Free</p>
+ <h3 class="image-title">Time Your Splits</h3>
+ <button class="image-btn" onclick="location.href='sneaker.html'">View</button>
+
+ </div>
+ </div>
+
+ <div class="image-box" style="background-image: url('split3.jpg')">
+ <div class="image-text">
+ <p class="image-sub">Your Zone</p>
+ <h3 class="image-title">Cycle To The Next Level</h3>
+ <button class="image-btn" onclick="location.href='sneaker.html'">View</button>
+
+ </div>
+ </div>
+
+ <div class="image-box" style="background-image: url('split4.jpg')">
+ <div class="image-text">
+ <p class="image-sub">Stroke The Lap Out</p>
+ <h3 class="image-title">Swim with style</h3>
+ <button class="image-btn" onclick="location.href='sneaker.html'">View</button>
+
+ </div>
+ </div>
+</section>
+
+
+<!-- Just In Section -->
+<section class="just-in-section">
+  <h2 class="just-in-heading">Just In</h2>
+
+  <div class="just-in-grid">
+    <!-- Item 1 -->
+    <a href="sneaker.html" class="just-in-item">
+      <div class="image-placeholder">
+        <img src="WalkerCore.png" alt="Walker Core" />
+      </div>
+      <p class="image-label">Walk Gear</p>
+      <p class="image-name">Walker Core</p>
+      <p class="image-type">Walk Collection</p>
+    </a>
+
+    <!-- Item 2 -->
+    <a href="sneaker.html" class="just-in-item">
+      <div class="image-placeholder">
+        <img src="WalkerBase.png" alt="Walker Base" />
+      </div>
+      <p class="image-label">Walk Gear</p>
+      <p class="image-name">Walker Base</p>
+      <p class="image-type">Walk Collection</p>
+    </a>
+
+    <!-- Item 3 -->
+    <a href="sneaker.html" class="just-in-item">
+      <div class="image-placeholder">
+        <img src="JoggerSpeed.png" alt="Jogger Speed" />
+      </div>
+      <p class="image-label">Run Gear</p>
+      <p class="image-name">Jogger Speed</p>
+      <p class="image-type">Run Collection</p>
+    </a>
+  </div>
+
+  <!-- See What Else -->
+  <div class="see-what-else-wrapper">
+    <h2 class="see-what-else-heading">See what else</h2>
+
+    <div class="just-in-grid">
+      <!-- Pod 1 -->
+      <a href="sneaker.html" class="just-in-item">
+        <div class="image-placeholder">
+          <img src="JoggerAir.png" alt="Jogger Air" />
+        </div>
+        <p class="image-label">Run Gear</p>
+        <p class="image-name">Jogger Air</p>
+        <p class="image-type">Run Collection</p>
+      </a>
+
+      <!-- Pod 2 -->
+      <a href="sneaker.html" class="just-in-item">
+        <div class="image-placeholder">
+          <img src="JoggerFlow.png" alt="Jogger Flow" />
+        </div>
+        <p class="image-label">Run Gear</p>
+        <p class="image-name">Jogger Flow</p>
+        <p class="image-type">Run Collection</p>
+      </a>
+
+      <!-- Pod 3 -->
+      <a href="sneaker.html" class="just-in-item">
+        <div class="image-placeholder">
+          <img src="BikeStealth.png" alt="Bike Stealth" />
+        </div>
+        <p class="image-label">Cycling Gear</p>
+        <p class="image-name">Bike Stealth</p>
+        <p class="image-type">Cycle Collection</p>
+      </a>
+
+      <!-- Pod 4 -->
+      <a href="sneaker.html" class="just-in-item">
+        <div class="image-placeholder">
+          <img src="BikeAir.png" alt="Bike Air" />
+        </div>
+        <p class="image-label">Cycling Gear</p>
+        <p class="image-name">Bike Air</p>
+        <p class="image-type">Cycle Collection</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<div id="moven-gear-trigger"></div>
+
+<!-- Moven Gear Collection Section -->
+<section id="moven-gear-collection" class="moven-gear-collection-section">
+  <div class="moven-gear-collection-content">
+    
+    <h2 class="gear-headline">Moven Collection</h2>
+    <p class="gear-subtext">If our regular collections aren’t enough, try these.</p>
+
+    <div class="gear-card-container">
+      <!-- Gear Card 1 -->
+      <a href="movencollection.html" class="gear-card-link">
+        <div class="gear-card fade-card clickable-card">
+          <div class="gear-card-top-label with-icon">
+            Walk Gear
+            <img src="IconWalkblack.svg" alt="Walk Gear Icon" class="gear-icon-inline" />
+          </div>
+
+          <img src="MovenWalker.png" alt="Walker Air" class="gear-product-image" />
+          <div class="gear-card-bottom-label">Moven Walker</div>
+          <div class="tile-hover-icon"></div>
+        </div>
+      </a>
+
+      <!-- Gear Card 2 -->
+      <a href="movencollection.html" class="gear-card-link">
+        <div class="gear-card fade-card clickable-card">
+          <div class="gear-card-top-label with-icon">
+            Run Gear
+            <img src="IconJogblack.svg" alt="Run Gear Icon" class="gear-icon-inline" />
+          </div>
+
+          <img src="MovenJogger.png" alt="Jogger Air" class="gear-product-image" />
+          <div class="gear-card-bottom-label">Moven Jogger</div>
+          <div class="tile-hover-icon"></div>
+        </div>
+      </a>
+
+      <!-- Gear Card 3 -->
+      <a href="movencollection.html" class="gear-card-link">
+        <div class="gear-card fade-card clickable-card">
+          <div class="gear-card-top-label with-icon">
+            Cycle Gear
+            <img src="IconCycleblack.svg" alt="Cycle Gear Icon" class="gear-icon-inline" />
+          </div>
+
+          <img src="MovenBike.png" alt="Bike Air" class="gear-product-image" />
+          <div class="gear-card-bottom-label">Moven Bike</div>
+          <div class="tile-hover-icon"></div>
+        </div>
+      </a>
+    </div>
+<!-- 🔗 Discover More Link -->
+<div class="other-sports-discover-link">
+    <a href="sneaker.html"> View Other Gear</a>
+
+    <!-- Horizontal Scroll View -->
+    <div class="scroll-strip-wrapper">
+      <div class="scroll-strip">
+        <div class="scroll-item"><img src="collection1.jpg" alt="Moven Slide" /></div>
+        <div class="scroll-item"><img src="collection2.jpg" alt="Moven Slide" /></div>
+        <div class="scroll-item"><img src="collection3.jpg" alt="Moven Slide" /></div>
+        <div class="scroll-item"><img src="collection4.jpg" alt="Moven Slide" /></div>
+        <div class="scroll-item"><img src="collection5.jpg" alt="Moven Slide" /></div>
+        <div class="scroll-item"><img src="collection6.jpg" alt="Moven Slide" /></div>
+        <div class="scroll-item"><img src="collection7.jpg" alt="Moven Slide" /></div>
+        <div class="scroll-item"><img src="collection8.jpg" alt="Moven Slide" /></div>
+      </div>
+    </div>
+
+    <!-- Promo Content -->
+    <div class="promo-content">
+      <h2 class="promo-headline">Brought to you by Moven</h2>
+      <p class="promo-subtext">
+        Designed to elevate every movement with precision, performance, and style.
+      </p>
+
+      <div class="promo-image-wrapper">
+        <img src="collection9.jpg" alt="Moven Display" class="promo-main-image" />
+        <img src="iosdisplay6.jpg" alt="iOS Display" class="promo-overlay-image" />
+      </div>
+    </div>
+
+    <div class="promo-image-wrapper promo-image-left">
+      <img src="collection10.jpg" alt="Moven Display" class="promo-main-image" />
+      <img src="iosdisplay7.jpg" alt="iOS Display Left" class="promo-overlay-image left-overhang" />
+    </div>
+
+    <!-- 🔥 Personalized Gear Section -->
+    <div class="personalized-section">
+      <h2 class="personalized-headline">To make Moving feel personal to you</h2>
+      
+      <div class="gear-tile-grid">
+
+        <!-- Tile 1 -->
+        <a href="movencollection.html" class="gear-tile-link">
+          <div class="gear-tile clickable-card">
+            <div class="tile-header">
+              <span class="tile-label">Running Gear</span>
+              <img src="IconJogblack.svg" alt="Walk Icon" class="tile-icon" />
+            </div>
+            <img src="MovenJoggerUltra.png" alt="Walker Air" class="tile-product-img" />
+            <div class="tile-footer">Moven Jogger Ultra</div>
+            <div class="tile-hover-icon"></div>
+          </div>
+        </a>
+
+        <!-- Tile 2 -->
+        <a href="movencollection.html" class="gear-tile-link">
+          <div class="gear-tile clickable-card">
+            <div class="tile-header">
+              <span class="tile-label">Walk Gear</span>
+              <img src="IconWalkblack.svg" alt="Walk Icon" class="tile-icon" />
+            </div>
+            <img src="MovenWalkerUltra.png" alt="Walker Air" class="tile-product-img" />
+            <div class="tile-footer">Moven Walker Ultra</div>
+            <div class="tile-hover-icon"></div>
+          </div>
+        </a>
+
+        <!-- Tile 3 -->
+        <a href="movencollection.html" class="gear-tile-link">
+          <div class="gear-tile clickable-card">
+            <div class="tile-header">
+              <span class="tile-label">Golf Gear</span>
+              <img src="IconGolfblack.svg" alt="Walk Icon" class="tile-icon" />
+            </div>
+            <img src="MovenGolfer.png" alt="Walker Air" class="tile-product-img" />
+            <div class="tile-footer">Moven Golfer</div>
+            <div class="tile-hover-icon"></div>
+          </div>
+        </a>
+
+        <!-- Tile 4 -->
+        <a href="movencollection.html" class="gear-tile-link">
+          <div class="gear-tile clickable-card">
+            <div class="tile-header">
+              <span class="tile-label">Swim Gear</span>
+              <img src="IconSwimblack.svg" alt="Walk Icon" class="tile-icon" />
+            </div>
+            <img src="MovenSwimmerPro.png" alt="Walker Air" class="tile-product-img" />
+            <div class="tile-footer">Moven Swimmer Pro</div>
+            <div class="tile-hover-icon"></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Place this at the bottom of the section -->
+<div id="moven-gear-trigger" style="height: 0px;"></div>
+
+
+<!-- Other Sports Section -->
+<section class="other-sports-section">
+  <div class="other-sports-content">
+
+    <!-- 🌟 Headline -->
+    <h2 class="other-sports-headline">
+      See what else you can 
+      <span class="gradient-text">Move</span>
+      with
+    </h2>
+
+    <!-- 📸 First Image + Overlay -->
+    <div class="other-sports-image-wrapper">
+      <img src="collection11.jpg" alt="Other Sports Main" class="other-sports-main-img" />
+      <img src="iosdisplay8.jpg" alt="Other Sports Overlay" class="other-sports-overlay-img" />
+    </div>
+
+    <!-- 📝 Text Block Under Image -->
+    <div class="other-sports-text-block">
+      <h3 class="other-sports-subheadline">More gear is on the way</h3>
+      <p class="other-sports-grey-sub">
+        Coming soon — gear for your movement is on the horizon
+      </p>
+      <p class="other-sports-paragraph">
+        Get ready to use your creators own collection, don’t move by yourself... 
+        move with them. Move with global stars.
+      </p>
+    </div>
+
+    <!-- 📸 Clean Second Image (No Overlay) -->
+    <div class="other-sports-image-wrapper no-overhang">
+      <img src="collection12.jpg" alt="Other Sports Full Image" class="other-sports-main-image" />
+    </div>
+
+    <!-- ➡️ Text + Image Row (Still inside same section) -->
+    <div class="other-sports-feature-content">
+
+      <!-- Left Text -->
+      <div class="feature-text">
+        <h2 class="feature-headline">Figure your style out</h2>
+        <h3 class="feature-subheadline">Choose what makes you Move</h3>
+        <p class="feature-paragraph">
+          Moven Gear is about more than what you wear — it’s about what drives you to move. Every piece is designed to reflect your mindset, your pace, and your purpose, giving you the freedom to choose what fuels your movement. Whether it’s pushing limits, finding flow, or simply getting outside, your gear becomes a statement of who you are and why you move. Built to move with you, built to move like you.
+        </p>
+      </div>
+
+     <!-- Right Image (Natural, No Shadow / No Box) -->
+<div class="feature-image-wrapper">
+  <img
+    src="Mockup5.3.png"
+    alt="Feature Image"
+    style="width: 100%; max-width: 520px; height: auto;"
+  />
+</div>
+
+</div> <!-- closes .other-sports-feature-content -->
+
+<!-- 🔗 Discover More Link -->
+<div class="other-sports-discover-link">
+  <a href="sneaker.html">Discover More</a>
+</div>
+
+
+
+  </div>
+</section>
+
+
+
+
+
+
+<footer class="glass-bottom-footer">
+  <div class="glass-footer-content">
+    <!-- 🔹 Left Section -->
+    <div class="footer-col left-col">
+      <img src="MovenLogoblack.jpg" alt="Moven Logo" class="footer-logobottom" />
+      <p class="footer-small-text">© 2025 Moven. All rights reserved.</p>
+      <p class="footer-small-text">
+        <a href="privacypolicy.html">Privacy Policy</a>
+      </p>
+    </div>
+
+    <!-- 🔹 Middle Left -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">Find out more</h4>
+      <ul class="footer-list">
+        <li><a href="moven-features.html">Features</a></li>
+        <li><a href="movengear.html">Mover Gear</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="movenpartner.html">Partner</a></li>
+        <li><a href="movenpartner.html">Collab</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Middle Right -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">More</h4>
+      <ul class="footer-list">
+        <li><a href="moven-collection.html">Moven Collection</a></li>
+        <li><a href="ways-to-move.html">Moven Clubs</a></li>
+        <li><a href="ways-to-move.html">Sports</a></li>
+        <li><a href="create-account.html">Create Account</a></li>
+        <li><a href="moverpro.html">Subscribe</a></li>
+        <li><a href="create-account.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Reach Out Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Reach Out</h4>
+      <p class="footer-email">moven@startmoven.com</p>
+      <div class="footer-socials">
+        <img src="tik-tok.png" alt="TikTok" />
+        <img src="twitter.png" alt="Twitter" />
+        <img src="instagram.png" alt="Instagram" />
+      </div>
+    </div>
+
+    <!-- 🔹 Download Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Download Now</h4>
+
+      <div class="download-block">
+        <img src="MovenQr.png" alt="Move QR Icon" class="qr-icon" />
+        <p class="footer-small-text">Scan to download</p>
+      </div>
+
+      <div class="store-icons">
+        <img src="AppStore.png" alt="App Store" />
+        <img src="watchos.png" alt="WatchOS" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+ <script src="movengallery.js"></script>
+ <script src="Headlinecover.js"></script>
+ <script src="fadeinheadline.js"></script>
+ <script src="index.js"></script>
+<script src="DynamicIsland.js"></script>
+<script src="indexdisplay.js"></script>
+<script src="Backgroundfadein.js"></script>
+<script src="menu.js"></script>
+
+
+</body>
+</html>

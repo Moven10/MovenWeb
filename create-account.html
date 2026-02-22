@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account | Moven</title>
+   <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="create-account.css" />
+</head>
+<body>
+
+  
+<!-- 🔝 Sticky Top Bar (Hidden by default) -->
+<header id="stickyTopBar" class="sticky-top-bar">
+  <div class="top-bar-content">
+    <!-- Circle with Icon -->
+    <a href="index.html" class="top-bar-dot" aria-label="Go to Home"></a>
+
+    <!-- ✨ Normal Mode -->
+    <nav class="top-bar-nav nav-full">
+      <a href="discover.html">Discover</a>
+      <span class="divider"></span>
+      <a href="movengallery.html">Moven Gear</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Mover Pro</a>
+      <span class="divider"></span>
+      <a href="movenclubs.html">Moven Clubs</a>
+    </nav>
+
+    <!-- ✨ Compact Mode -->
+    <nav class="top-bar-nav nav-compact">
+      <a href="create-account.html">Join For Free</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Subscribe Now</a>
+      <span class="divider"></span>
+      <a href="movenai.html">Moven Ai</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Footer (hidden while sticky bar is shown) -->
+<footer class="minimal-footer">
+  <div class="footer-inner">
+
+    <!-- 🍔 iPhone Hamburger (hidden on desktop via CSS) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Left: Logo -->
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <!-- Right: Nav + User -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="discover.html">Discover</a>
+        <a href="ways-to-move.html">Ways To Move</a>
+        <a href="movengear.html">Moven Gear</a>
+        <a href="moven-features.html">Features</a>
+      </nav>
+
+      <div class="footer-buttons">
+        <!-- 🔹 Sign In button (only shown when logged out) -->
+        <button id="signin-btn" class="btn-signin-outline" style="display: none;">
+          Sign In
+        </button>
+
+        <!-- 👤 Logged-in user profile -->
+        <div id="user-profile" class="user-profile">
+          <img
+            id="profile-avatar"
+            src="default-avatar.jpg"
+            alt="Profile Picture"
+            class="profile-avatar"
+          />
+          <span id="profile-username" class="profile-username">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- 📱 iPhone Glass Dropdown Menu -->
+<div class="mobile-glass-menu" id="mobileGlassMenu">
+  <a href="discover.html">Discover</a>
+  <a href="ways-to-move.html">Ways To Move</a>
+  <a href="movengear.html">Moven Gear</a>
+  <a href="moven-features.html">Features</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ✨ Create/Login Card Section -->
+<section class="create-card-section">
+  <div class="account-card">
+    <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="account-logo" />
+
+    <!-- Create Account Form Panel -->
+    <div class="form-panel create-panel active">
+      <h1 class="account-title">Create Free Moven Account</h1>
+      <p class="account-subtitle">Start tracking how you move.</p>
+
+      <form class="account-form" id="createAccountForm">
+
+        <!-- Name Field -->
+        <div class="field-wrap">
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            autocomplete="name"
+            required
+          />
+          <span class="field-status default"></span>
+          <p class="field-error name-error"></p>
+        </div>
+
+        <!-- Username Field -->
+        <div class="field-wrap">
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            autocomplete="username"
+            required
+          />
+          <span class="field-status default"></span>
+          <p class="field-error username-error"></p>
+        </div>
+
+        <!-- Email Field -->
+        <div class="field-wrap">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="email"
+            required
+          />
+          <span class="field-status default"></span>
+          <p class="field-error email-error"></p>
+        </div>
+
+        <!-- Phone Field -->
+        <div class="field-wrap">
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number"
+            autocomplete="tel"
+            required
+          />
+          <span class="field-status default"></span>
+          <p class="field-error phone-error"></p>
+        </div>
+
+        <!-- Password Field -->
+        <div class="field-wrap">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            autocomplete="new-password"
+            required
+          />
+        
+
+          <span class="field-status default"></span>
+          <p class="field-error password-error"></p>
+        </div>
+
+        <!-- Repeat Password Field -->
+        <div class="field-wrap">
+          <input
+            type="password"
+            id="repeatPassword"
+            placeholder="Repeat Password"
+            autocomplete="new-password"
+            required
+          />
+       
+
+          <span class="field-status default"></span>
+          <p class="field-error repeat-error"></p>
+        </div>
+
+        <!-- Privacy Agreement -->
+        <div class="privacy-check">
+          <input type="checkbox" id="privacy" required />
+          <label for="privacy">
+            I agree to the <a href="privacypolicy.html">Privacy Code of Conduct</a>
+          </label>
+        </div>
+
+        <!-- Create Button -->
+        <button
+          type="submit"
+          class="btn-create disabled"
+          disabled
+        >
+          Create Account
+        </button>
+      </form>
+
+      <p class="already-have-account">
+        Already have an account?
+        <a href="#" id="switchToLogin" type="button">Log in</a>
+      </p>
+
+      <div class="appstore-download">
+        <img
+          src="AppStore.png"
+          alt="Download on the App Store"
+          class="appstore-img"
+        />
+        <p class="download-now-text">Download Now</p>
+      </div>
+    </div>
+
+    <!-- Login Form Panel -->
+    <div class="form-panel login-panel">
+      <h1 class="account-title">Log In</h1>
+      <p class="account-subtitle">Log in to see your moves!</p>
+
+      <form class="account-form">
+
+        <div class="field-wrap">
+          <input
+            type="text"
+            id="login-username"
+            placeholder="Username"
+            autocomplete="username"
+            required
+          />
+          <span class="field-status default"></span>
+        </div>
+
+        <div class="field-wrap">
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Password"
+            autocomplete="current-password"
+            required
+          />
+          
+
+          <span class="field-status default"></span>
+        </div>
+
+        <button type="submit" class="btn-create">
+          Log In
+        </button>
+      </form>
+
+      <p class="already-have-account">
+        Don’t have an account?
+        <a href="#" id="switchToCreate" type="button">Create one</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Scripts -->
+  <script src="create-account.js"></script>
+   <script src="index.js"></script>
+<script src="DynamicIsland.js"></script>
+</body>
+</html>

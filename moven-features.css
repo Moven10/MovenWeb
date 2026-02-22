@@ -1,0 +1,2715 @@
+/* ─── Satoshi Font Setup ─────────────────────────────────────────── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype"),
+       url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+       url("./fonts/Satoshi-Regular.woff") format("woff"),
+       url("./fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Medium.otf") format("opentype"),
+       url("./fonts/Satoshi-Medium.ttf") format("truetype"),
+       url("./fonts/Satoshi-Medium.woff") format("woff"),
+       url("./fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype"),
+       url("./fonts/Satoshi-Bold.ttf") format("truetype"),
+       url("./fonts/Satoshi-Bold.woff") format("woff"),
+       url("./fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Black.otf") format("opentype"),
+       url("./fonts/Satoshi-Black.ttf") format("truetype"),
+       url("./fonts/Satoshi-Black.woff") format("woff"),
+       url("./fonts/Satoshi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+
+
+/* ───── FOOTER STYLES ────────────────────────────────────────────── */
+.minimal-footer {
+  background: linear-gradient(
+    135deg,
+    rgba(83, 202, 252, 0.25),
+    rgba(255, 255, 255, 0.1),
+    rgba(83, 202, 252, 0.2)
+  );
+
+  backdrop-filter: blur(48px) saturate(250%);
+  -webkit-backdrop-filter: blur(48px) saturate(250%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 18px 64px rgba(83, 202, 252, 0.25),
+    inset 0 0 60px rgba(255, 255, 255, 0.08);
+
+  padding: 0.4rem 0;
+  width: 100%;
+  min-height: 56px;
+
+  position: fixed;      /* ✅ Locks it in place */
+  top: 0;               /* ✅ Sticks to top instead */
+  left: 0;
+  z-index: 9998;
+  overflow: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between; /* 👈 Clean two-sided layout */
+  align-items: center;
+  padding: 0 4rem;
+  height: 56px;
+  position: relative;
+}
+
+
+.footer-logo {
+  height: 48px;         /* ⬆️ Taller logo */
+  width: auto;
+  display: block;
+  margin-left: 2rem;    /* ⬅️ Narrower spacing */
+  margin-top: 16px;     /* ⬇️ Slightly reduced vertical offset */
+}
+.footer-right {
+  position: absolute;
+  right: 4rem; /* 👈 Shifted closer to center */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;        /* ⬆️ Upgraded to Black */
+  font-style: italic;      /* ⬅️ Now italic */
+  transition: color 0.3s ease;
+}
+
+
+.footer-nav a:hover {
+  color: #53CAFC;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-join,
+.btn-subscribe {
+  box-sizing: border-box;
+}
+
+.btn-join {
+  padding: 8px 16px;
+  border: 2px solid #53CAFC;
+  background: transparent;
+  color: #B0B0B0;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-join:hover {
+  background-color: #53CAFC;
+  color: white;
+  border-color: #53CAFC;
+}
+
+.btn-subscribe {
+  padding: 8px 16px;
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-subscribe::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid white;
+  border-radius: 8px;
+  opacity: 0;
+  animation: snake-outline 1s linear infinite;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.btn-subscribe:hover::before {
+  opacity: 1;
+}
+
+/* 👤 Logged-in user display */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(83, 202, 252, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Invisible placeholder to reserve space */
+.user-profile::after {
+  content: "Username"; /* Match expected username length */
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+}
+
+
+.user-profile:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05); /* 👈 grow on hover */
+}
+
+
+.profile-avatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #53CAFC;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.07);
+}
+
+.profile-username {
+  color: #000000;            /* ⬅️ Changed to white */
+  font-weight: 900;          /* ⬆️ Satoshi Black */
+  font-style: italic;        /* ⬅️ Italic style */
+  font-size: 0.95rem;
+  font-family: 'Satoshi', sans-serif;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+
+@keyframes snake-outline {
+  0% { clip-path: inset(0 100% 100% 0); }
+  25% { clip-path: inset(0 0 100% 0); }
+  50% { clip-path: inset(0 0 0 0); }
+  75% { clip-path: inset(100% 0 0 0); }
+  100% { clip-path: inset(0 100% 100% 0); }
+}
+
+/* ✅ Hide main footer when sticky bar is active using body class */
+body.hide-footer .minimal-footer {
+  display: none !important;
+}
+
+
+
+
+.btn-signin-outline {
+  padding: 8px 16px;
+  border: 2px solid #53CAFC;
+  background-color: transparent;
+  color: #53CAFC;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.btn-signin-outline:hover {
+  background-color: #53CAFC;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───── STICKY TOP BAR (Two‑Stage Drop Reveal) ───────────────────────────── */
+
+.sticky-top-bar {
+  position: fixed;
+  top: -120px;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  /* Hidden state */
+  opacity: 0;
+  transform: translateY(-40px) scale(0.95);
+  pointer-events: none;
+}
+
+/* First notch reveal */
+.sticky-top-bar.show-full {
+  animation: notchDropIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Second notch reveal */
+.sticky-top-bar.show-compact {
+  animation: notchDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Drop animation */
+@keyframes notchDropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(6px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    top: 0;
+  }
+}
+
+/* Layout */
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 🔵 Icon Circle */
+.top-bar-dot {
+  height: 44px;
+  width: 44px;
+  background-color: #53CAFC;
+  border-radius: 50%;
+  background-image: url("Moveiconwhite.svg");
+  background-size: 29px 29px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Rounded nav island */
+.top-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.35rem 0.85rem;
+  background-color: #53CAFC;
+  border-radius: 999px;
+  transition: all 0.35s ease;
+}
+
+/* Hide both navs by default */
+.nav-full,
+.nav-compact {
+  display: none;
+}
+
+/* Show only the correct nav */
+.sticky-top-bar.show-full .nav-full {
+  display: flex;
+}
+
+.sticky-top-bar.show-compact .nav-compact {
+  display: flex;
+}
+
+/* Compact notch slightly smaller */
+.sticky-top-bar.show-compact .top-bar-nav {
+  padding: 0.25rem 0.6rem;
+  transform: scale(0.92);
+}
+
+/* Nav links */
+.top-bar-nav a {
+  color: #ffffff;             /* ⬅️ White text */
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;           /* ⬆️ Satoshi Black */
+  font-style: italic;         /* ⬅️ Italic */
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+
+.top-bar-nav a:hover {
+  color: #FEE0FF;
+}
+
+/* Divider */
+.top-bar-nav .divider {
+  width: 1px;
+  height: 1rem;
+  background-color: white;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Hide mobile-only elements on desktop */
+.mobile-menu-toggle,
+.mobile-glass-menu {
+  display: none;
+}
+
+
+/* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
+@media (max-width: 430px) {
+
+  /* ===== Minimal Glass Top Footer ===== */
+
+  .minimal-footer {
+    padding: 0.6rem 0.6rem 0.6rem 0.2rem; /* reduced LEFT padding */
+    min-height: 60px;
+  }
+
+  .footer-inner {
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 🍔 Hamburger */
+  .mobile-menu-toggle {
+  display: flex;
+  width: 26px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 15px;   /* 🔥 pushes it right */
+  margin-right: 4px;
+}
+
+  .mobile-menu-toggle span {
+    height: 2px;
+    width: 100%;
+    background: #53CAFC;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Keep container stable */
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* 🔥 Shift ONLY the logo left */
+  .footer-logo {
+    height: 40px;
+    margin: 0;
+    margin-left: -120px; /* controls logo position only */
+  }
+
+  /* Remove absolute positioning */
+  .footer-right {
+    position: static;
+    transform: none;
+    gap: 1rem;
+    margin-right: 6px;
+  }
+
+  /* Hide desktop nav */
+  .footer-nav {
+    display: none;
+  }
+
+  .footer-buttons {
+    gap: 0.5rem;
+  }
+
+  .profile-avatar {
+    height: 32px;
+    width: 32px;
+  }
+
+  .profile-username {
+    display: none;
+  }
+
+
+  /* ===== Glass Dropdown (Original Style Kept) ===== */
+
+  .mobile-glass-menu {
+    display: flex;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 30px 24px;
+
+    background: linear-gradient(
+      135deg,
+      rgba(83, 202, 252, 0.25),
+      rgba(255, 255, 255, 0.1),
+      rgba(83, 202, 252, 0.2)
+    );
+
+    backdrop-filter: blur(48px) saturate(250%);
+    -webkit-backdrop-filter: blur(48px) saturate(250%);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(83, 202, 252, 0.25);
+
+    flex-direction: column;
+    gap: 24px;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+    z-index: 9997;
+  }
+
+  .mobile-glass-menu a {
+    text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #000000;
+  }
+
+  .mobile-glass-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+  /* ===== Sticky Blue Drop Bar (Unchanged) ===== */
+
+  .sticky-top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    top: 18px;
+  }
+
+  .top-bar-content {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .top-bar-dot {
+    height: 30px;
+    width: 30px;
+    background-size: 18px 18px;
+  }
+
+  .top-bar-nav {
+    width: auto;
+    padding: 0.2rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .top-bar-nav a {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.35rem;
+  }
+
+  .top-bar-nav .divider {
+    height: 0.7rem;
+  }
+
+  .nav-full a:nth-of-type(1),
+  .nav-full .divider:nth-of-type(1) {
+    display: none;
+  }
+
+  .nav-full a:nth-of-type(3),
+  .nav-full .divider:nth-of-type(3) {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+  background-color: white;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+
+
+
+
+
+
+.features-section {
+  background-color: white;
+  padding: 4rem 2rem;
+}
+
+.features-container {
+  max-width: none; /* remove center constraint */
+  width: 100%;
+  text-align: left;
+  padding-left: 4vw; /* stronger left anchor */
+}
+
+.features-headline {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;
+  font-size: 2.75rem;
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.features-headline span {
+  color: #53CAFC;
+}
+
+.features-subtext {
+  font-family: 'Satoshi', sans-serif;
+  font-style: normal;
+  color: #000;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.features-icons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.features-icons img {
+  height: 64px;
+}
+
+
+/* 🎬 Headline Reveal Animation */
+
+.features-headline .reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideReveal 0.6s ease forwards;
+  color: #000; /* Force all default text to black */
+}
+
+/* Blue word */
+.features-headline .blue {
+  color: #53CAFC !important; /* Ensure blue overrides any black */
+}
+
+/* Stagger timing */
+.features-headline .reveal:nth-child(1) { animation-delay: 0.1s; }
+.features-headline .reveal:nth-child(2) { animation-delay: 0.25s; }
+.features-headline .reveal:nth-child(3) { animation-delay: 0.4s; }
+.features-headline .reveal:nth-child(4) { animation-delay: 0.55s; }
+.features-headline .reveal:nth-child(5) { animation-delay: 0.7s; }
+.features-headline .reveal:nth-child(6) { animation-delay: 0.85s; }
+
+@keyframes slideReveal {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ===================================== */
+/* 📱 FEATURES SECTION – iOS OPTIMISED */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .features-section {
+    padding: 5rem 1.5rem 3rem 1.5rem; /* ⬆️ added top spacing */
+  }
+
+  .features-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 1.5rem; /* ⬇️ pushes content lower */
+  }
+
+  .features-headline {
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+  }
+
+  .features-subtext {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .features-icons {
+    gap: 1.25rem;
+  }
+
+  .features-icons img {
+    height: 44px;
+  }
+
+  /* Slightly soften animation movement for phone */
+  .features-headline .reveal {
+    transform: translateX(-12px);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Headline Section */
+.headline-section {
+  padding: 2rem 4rem 1rem;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.headline-section h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  color: black;
+}
+
+.headline-section .blue {
+  color: #53CAFC;
+}
+
+/* Image Section */
+.image-section img {
+  width: 100%;
+  height: 100vh; /* Larger height */
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ===================================== */
+/* 📱 HEADLINE + IMAGE – iOS OPTIMISED */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  /* Headline Section */
+  .headline-section {
+    padding: 3.5rem 1.5rem 1rem 1.5rem; /* better mobile spacing */
+  }
+
+  .headline-section h1 {
+    font-size: 1.9rem;  /* scale down cleanly */
+    line-height: 1.2;
+  }
+
+  /* Image Section */
+  .image-section img {
+    height: 70vh;       /* avoid 100vh mobile jump issue */
+    min-height: 420px;  /* ensures strong presence */
+    object-fit: cover;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Move Together Section */
+.move-together {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 8vw; /* Spacious padding like Nike layout */
+  font-family: 'Satoshi', sans-serif;
+  background-color: white;
+}
+
+/* Left Column (Text) */
+.move-left {
+  max-width: 100%;
+}
+
+.move-left h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.move-left .pink {
+  color: #53CAFC;
+}
+
+.move-left p {
+  font-size: 1rem;
+  color: #1a1a1a;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 1.75rem;
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-black:hover {
+  background-color: #333;
+}
+
+/* Right Column (Image) */
+.move-right {
+  display: flex;
+  justify-content: center;
+}
+
+.move-right img {
+  width: 280px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+
+
+/* ===================================== */
+/* 📱 MOVE TOGETHER – iOS OPTIMISED */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .move-together {
+    grid-template-columns: 1fr 1fr; /* keep 2-column layout */
+    gap: 1.5rem;                    /* reduce spacing */
+    padding: 4rem 1.5rem;           /* tighter padding */
+  }
+
+  /* Text adjustments */
+  .move-left h2 {
+    font-size: 1.5rem;              /* scale headline */
+    line-height: 1.2;
+  }
+
+  .move-left p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  /* Button scaling */
+  .btn-black {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Image scaling */
+  .move-right img {
+    width: 100%;                    /* scale with column */
+    max-width: 160px;               /* prevent oversized */
+    border-radius: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Info Image Section */
+.info-image {
+  padding: 6rem 8vw;
+  background-color: #fff;
+  font-family: 'Satoshi', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* First full-width image */
+.info-image img.main-image {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Left-shifted headline + paragraph */
+.info-text-block {
+  align-self: flex-start;
+  max-width: 700px;
+  transform: translateX(10vw);
+}
+
+.info-text-block h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.info-text-block p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #666;
+  text-align: left;
+  margin-top: 0;
+}
+
+/* Second image */
+.info-image img.secondary-image {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left-shifted subheadline + paragraph */
+.info-subtext-block {
+  align-self: flex-start;
+  max-width: 700px;
+  transform: translateX(10vw);
+}
+
+.info-subtext-block .subheadline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.info-subtext-block .subtext {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #666;
+  text-align: left;
+  margin: 0;
+}
+
+/* ============================= */
+/* Fan Card Layout (3 cards) — always visible */
+/* ============================= */
+.info-card-fan-layout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 440px;        /* ⬆️ more vertical room */
+  margin-top: 80px;    /* ⬇️ pushes cards lower */
+}
+
+/* Base card */
+.info-card {
+  width: 280px;
+  height: 450px;       /* ⬆️ taller cards */
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+  display: flex;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease;
+}
+
+/* Hover lift */
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.18);
+}
+
+.info-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+
+/* Fan positions (adjusted for taller cards) */
+.info-card[data-index="1"] {
+  transform: translate(-50%, 10px) scale(1.1);
+  z-index: 3;
+  left: 50%;
+}
+
+.info-card[data-index="0"] {
+  transform: translate(calc(-50% - 180px), 26px) scale(1);
+  z-index: 2;
+  left: 50%;
+}
+
+.info-card[data-index="2"] {
+  transform: translate(calc(-50% + 180px), 26px) scale(1);
+  z-index: 2;
+  left: 50%;
+}
+
+
+/* Extra Info Blocks */
+.info-extra-block {
+  width: 100%;
+  margin: 6rem 0 0;
+  padding: 0 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* ✅ ensure spacing between all elements */
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Headline and paragraph */
+.info-extra-headline,
+.info-extra-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 8vw;
+  text-align: left;
+}
+
+.info-extra-headline {
+  margin-top: 2rem; /* Space from image above */
+  margin-bottom: 0.5rem; /* ✅ Tighten space to paragraph */
+}
+
+.info-extra-text {
+  margin-top: 0; /* ✅ Remove any unwanted gap above */
+  margin-bottom: 2rem; /* Spacing before next image or section */
+}
+
+
+/* Full-width image */
+.info-extra-image {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Additional spacing below the last image */
+.info-extra-block .info-extra-headline:last-of-type {
+  margin-top: 4rem; /* adjust as needed for more/less space */
+}
+
+
+
+
+/* Container for side-by-side layout */
+.info-text-image-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 100%;
+  flex-wrap: wrap; /* Mobile fallback */
+}
+
+/* Ensure text stays readable and aligned */
+.info-text-image-wrapper .info-text-block {
+  flex: 1 1 50%;
+  transform: none; /* Remove translateX */
+  max-width: 600px;
+}
+
+/* Watch image on the right */
+.info-watch-image {
+  flex: 1 1 40%;
+  max-width: 500px;
+}
+
+.info-watch-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* Group container for two watch images */
+.info-watch-image-group {
+  display: flex;
+  flex-direction: row; /* ✅ horizontal side-by-side */
+  gap: -30;
+
+  flex: 1 1 40%;
+  max-width: 500px;
+}
+
+
+.info-watch-image-group img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+.info-extra-block {
+  width: 100%;
+  margin: 6rem 0 0;
+  padding: 0 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.info-extra-headline,
+.info-extra-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 8vw;
+  text-align: left;
+}
+
+.info-extra-headline {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.info-extra-text {
+  font-size: 1.125rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 0rem; /* ✅ remove space below paragraph */
+}
+
+/* Side-by-side mockups directly under the text */
+.info-extra-image-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;       /* ✅ no space above */
+  margin-bottom: 1rem; /* spacing before the full-width image */
+  padding: 0 8vw;
+}
+
+.info-extra-image-row img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.info-extra-image {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-top: 0; /* ✅ remove space above full-width image */
+}
+
+
+
+.info-extra-image-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0 8vw;
+}
+
+.info-extra-image-row img {
+  width: 100%;
+  max-width: 300px; /* or 400px if you prefer larger */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+/* ===================================== */
+/* 📱 INFO IMAGE SECTION – iOS OPTIMISED */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .info-image {
+    padding: 4rem 1.5rem;
+    gap: 3rem;
+  }
+
+  /* First full image */
+  .info-image img.main-image {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  /* Text blocks now centered */
+  .info-text-block {
+    transform: none;               /* remove left shift */
+    max-width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+
+  .info-text-block h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .info-text-block p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Second image */
+  .info-image img.secondary-image {
+    height: 55vh;
+    min-height: 350px;
+  }
+
+  .info-subtext-block {
+    transform: none;               /* remove left shift */
+    max-width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+
+  .info-subtext-block .subheadline {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .info-subtext-block .subtext {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Smaller Fan Card Layout */
+  .info-card-fan-layout {
+    height: 220px;
+    margin-top: 50px;
+  }
+
+  .info-card {
+    width: 140px;
+    height: 190px;
+  }
+
+  .info-card[data-index="1"] {
+    transform: translate(-50%, 6px) scale(1.05);
+  }
+
+  .info-card[data-index="0"] {
+    transform: translate(calc(-50% - 70px), 16px) scale(1);
+  }
+
+  .info-card[data-index="2"] {
+    transform: translate(calc(-50% + 70px), 16px) scale(1);
+  }
+
+  /* Extra blocks */
+  .info-extra-block {
+    margin: 4rem 0 0;
+    padding: 0 0 4rem 0;
+  }
+
+  .info-extra-headline {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .info-extra-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .info-extra-image {
+    height: 55vh;
+    min-height: 350px;
+  }
+
+  /* Side-by-side mockups stay side-by-side */
+  .info-extra-image-row img {
+    max-width: 120px;
+  }
+
+  /* Watch image group */
+  .info-watch-image-group {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .info-watch-image-group img {
+    max-width: 120px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GEAR INFO SECTION */
+.gear-info-section {
+  background-color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.gear-headline {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.gear-subtext {
+  font-size: 1.125rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.btn-gear {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px; /* makes it oval */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gear:hover {
+  background-color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* GEAR DISPLAY SECTION */
+.gear-display-section {
+  width: 100vw; /* Full viewport width */
+  margin: 0;
+  padding: 0;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.gear-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0; /* Remove spacing between images */
+}
+
+.gear-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  color: #fff;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Dark gradient overlay */
+.gear-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+  z-index: 1;
+}
+
+.gear-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.gear-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0 0 0.5rem 0;
+}
+
+.gear-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.gear-btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.gear-btn:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+/* ===================================== */
+/* 📱 GEAR INFO + DISPLAY – iOS OPTIMISED */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  /* ---------------- GEAR INFO SECTION ---------------- */
+
+  .gear-info-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .gear-headline {
+    font-size: 1.9rem;   /* scaled down */
+    margin-bottom: 0.75rem;
+  }
+
+  .gear-subtext {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-gear {
+    padding: 0.6rem 1.6rem;
+    font-size: 0.9rem;
+  }
+
+  /* ---------------- GEAR DISPLAY GRID ---------------- */
+
+  .gear-grid {
+    grid-template-columns: repeat(2, 1fr); /* keep exact layout */
+  }
+
+  .gear-card {
+    height: 55vh;        /* reduced from 90vh */
+    min-height: 320px;   /* prevent too small */
+    padding: 1.25rem;
+  }
+
+  .gear-label {
+    font-size: 0.75rem;
+  }
+
+  .gear-title {
+    font-size: 1.1rem;   /* scaled proportionally */
+    margin-bottom: 0.75rem;
+  }
+
+  .gear-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Weather Section */
+.weather-section {
+  background-color: #fff;
+  font-family: 'Satoshi', sans-serif;
+  padding: 6rem 0 4rem; /* ⬅️ Added 6rem top padding */
+}
+
+
+/* Headline inside weather section */
+.weather-headline {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 6rem 0 3rem;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+/* Top Image */
+.weather-top-image img {
+  width: 100%;
+  max-width: 90vw;
+  height: 400px;              /* ✅ Reduced height */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;           /* ✅ No rounding */
+}
+
+/* Text Block */
+.weather-text {
+  padding: 1.5rem 8vw 1rem;   /* ✅ Tight spacing below image */
+}
+
+.weather-text h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.weather-text h4 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.weather-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  max-width: 720px;
+}
+
+/* Mockup Images Row */
+.weather-mockup-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding: 0 8vw;
+  flex-wrap: wrap;
+}
+
+.weather-mockup-row img {
+  max-width: 550px;   /* ⬆️ Even larger */
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+/* Split Image Section – Reduced height */
+.split-image-section {
+  display: flex;
+  width: 100vw;
+  height: 60vh; /* Smaller height */
+  overflow: hidden;
+}
+
+.split-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.split-image.left {
+  border-right: none;
+}
+
+.split-image.right {
+  border-left: none;
+}
+
+
+
+.weather-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 5rem auto 6rem;  /* ⬆️ More space above */
+  padding: 0 2rem;
+}
+
+
+.weather-description p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+
+
+
+/* ===================================== */
+/* 📱 WEATHER SECTION – iOS OPTIMISED */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .weather-section {
+    padding: 4rem 0 3rem;
+  }
+
+  /* Headline */
+  .weather-headline {
+    font-size: 2rem;       /* scaled down from 3.5rem */
+    margin: 3rem 0 2rem;
+    padding: 0 1.5rem;
+  }
+
+  /* Top Image */
+  .weather-top-image img {
+    max-width: 94vw;
+    height: 260px;         /* reduced from 400px */
+  }
+
+  /* Text Block */
+  .weather-text {
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+
+  .weather-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .weather-text h4 {
+    font-size: 1rem;
+  }
+
+  .weather-text p {
+    font-size: 0.95rem;
+  }
+
+  /* Mockup Row – same layout, just scaled */
+  .weather-mockup-row {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .weather-mockup-row img {
+    max-width: 160px;   /* scaled down for phone */
+  }
+
+  /* Split Image Section – keep same side-by-side layout */
+  .split-image-section {
+    height: 40vh;       /* reduced from 60vh */
+    min-height: 260px;
+  }
+
+  /* Description */
+  .weather-description {
+    margin: 3rem auto 4rem;
+    padding: 0 1.5rem;
+  }
+
+  .weather-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.moven-gear-section {
+  background: #f5f5f5;
+  padding: 6rem 0;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Headline Section */
+.gear-text-block {
+  max-width: none;
+  margin: 0 0 4rem 0;
+  padding-left: 8vw;
+}
+
+.gear-headline.heart-section-title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.red-flash {
+  color: #ff4c4c;
+  animation: flashHeart 2s infinite;
+}
+
+.blue-text {
+  color: #53CAFC;
+}
+
+@keyframes flashHeart {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.gear-subheadline {
+  font-size: 1.25rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Mockups */
+.gear-mockup-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+
+.gear-mockup-row img {
+  max-width: 420px;
+  height: auto;
+  display: block;
+}
+
+/* Image Block */
+.gear-image-block {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.gear-image-block img {
+  max-width: 90vw;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Text Under Image */
+.gear-info-text {
+  text-align: center;
+  padding: 3rem 2rem 6rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gear-info-headline {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.gear-info-subheadline {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.gear-info-paragraph {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Side-by-side Image Row */
+.gear-double-image-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;                 /* ✅ Small gap */
+  margin-top: 5rem;           /* ✅ Space under mockups */
+  padding: 0 8vw;
+  flex-wrap: wrap;
+}
+
+.gear-double-image-row img {
+  width: 100%;
+  max-width: 44vw;             /* ✅ Keeps each image under half width */
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;         /* ✅ Slight rounding */
+  display: block;
+}
+
+
+/* ===================================== */
+/* 📱 MOVEN GEAR SECTION – iOS OPTIMISED */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .moven-gear-section {
+    padding: 4rem 0;
+  }
+
+  /* Headline Block */
+  .gear-text-block {
+    padding-left: 1.5rem;   /* reduced from 8vw */
+    margin-bottom: 3rem;
+  }
+
+  .gear-headline.heart-section-title {
+    font-size: 1.8rem;      /* scaled down */
+    line-height: 1.25;
+  }
+
+  .gear-subheadline {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  /* Mockups */
+  .gear-mockup-row {
+    gap: 1.5rem;            /* tighter spacing */
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .gear-mockup-row img {
+    max-width: 140px;       /* scaled proportionally */
+  }
+
+  /* Double Image Row – STACK LIKE DESKTOP FLOW */
+  .gear-double-image-row {
+    flex-direction: column;     /* stack vertically */
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .gear-double-image-row img {
+    max-width: 100%;
+    width: 100%;
+    height: 240px;              /* reduced but still impactful */
+    object-fit: cover;
+  }
+
+  /* Info Text Block */
+  .gear-info-text {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .gear-info-headline {
+    font-size: 1.8rem;
+  }
+
+  .gear-info-subheadline {
+    font-size: 1rem;
+  }
+
+  .gear-info-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Speed Zones Section */
+.speed-zones-section {
+  background-color: #fff;
+  padding: 6rem 8vw;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Top Headline */
+.speed-headline {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.speed-subheadline {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.speed-paragraph {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.6;
+}
+
+/* Mockup Image */
+.speed-image-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.speed-image-block img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.speed-dual-images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.main-speed-image {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* 👇 Overhanging watch image */
+.watch-overlay {
+  position: absolute;
+  bottom: -40px;        /* ⬅️ makes it hang below */
+  right: 450px;
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Second Info Block */
+.speed-info-block {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.speed-info-headline {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.speed-info-subheadline {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.speed-info-paragraph {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Final Block */
+.speed-final-block {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.final-speed-image {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 3rem auto;
+  border-radius: 12px;
+}
+
+.speed-final-headline {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.speed-final-subheadline {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.speed-final-paragraph {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+
+/* Image Grid Section */
+.speed-image-grid-section {
+  padding: 4rem 8vw;
+  text-align: center;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Intro text above grid */
+.speed-grid-intro {
+  font-size: 1.25rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+/* The 2×2 Image Grid */
+.speed-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+.speed-image-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Paragraph below grid */
+.speed-grid-text {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+
+
+
+
+/* ===================================== */
+/* 📱 SPEED ZONES SECTION – iOS OPTIMISED */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .speed-zones-section {
+    padding: 4rem 1.5rem;
+  }
+
+  /* Top Headline */
+  .speed-headline {
+    font-size: 1.9rem;
+  }
+
+  .speed-subheadline {
+    font-size: 1rem;
+  }
+
+  .speed-paragraph {
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Mockup Image */
+  .speed-image-block {
+    margin-bottom: 3rem;
+  }
+
+  .speed-image-block img {
+    max-width: 100%;
+  }
+
+  /* Dual Image Section */
+  .speed-dual-images {
+    margin-bottom: 4rem;
+  }
+
+  .main-speed-image {
+    height: 240px;   /* reduced from 400px */
+  }
+
+  /* Overhanging watch – repositioned for phone */
+  .watch-overlay {
+    position: absolute;
+    bottom: -25px;
+    right: 20px;        /* move inside screen */
+    width: 140px;       /* scaled down */
+  }
+
+  /* Second Info Block */
+  .speed-info-headline {
+    font-size: 1.6rem;
+  }
+
+  .speed-info-subheadline {
+    font-size: 1rem;
+  }
+
+  .speed-info-paragraph {
+    font-size: 0.95rem;
+  }
+
+  /* Final Block */
+  .speed-final-block {
+    margin-top: 4rem;
+  }
+
+  .final-speed-image {
+    height: 240px;
+    margin-bottom: 2rem;
+  }
+
+  .speed-final-headline {
+    font-size: 1.6rem;
+  }
+
+  .speed-final-subheadline {
+    font-size: 1rem;
+  }
+
+  .speed-final-paragraph {
+    font-size: 0.95rem;
+  }
+
+  /* Image Grid Section */
+  .speed-image-grid-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .speed-grid-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Keep 2×2 layout */
+  .speed-image-grid {
+    gap: 0.75rem;
+  }
+
+  .speed-image-grid img {
+    height: 140px;   /* reduced from 240px */
+  }
+
+  .speed-grid-text {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🌟 Glass Bottom Footer Container */
+.glass-bottom-footer {
+  background: linear-gradient(
+    135deg,
+    rgba(83, 202, 252, 0.25),
+    rgba(255, 255, 255, 0.1),
+    rgba(83, 202, 252, 0.2)
+  );
+  backdrop-filter: blur(48px) saturate(250%);
+  -webkit-backdrop-filter: blur(48px) saturate(250%);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 48px rgba(83, 202, 252, 0.35),
+    inset 0 0 60px rgba(255, 255, 255, 0.08);
+  padding: 100px 70px;
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  z-index: 2;
+  color: #B0B0B0;
+  font-family: 'Satoshi', sans-serif;
+  margin-top: 0;
+  position: relative;
+}
+
+/* ✨ Shimmer Overlay */
+.glass-bottom-footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 70%
+  );
+  animation: shimmerMove 8s infinite ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 🏷 Top Title */
+.footer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 50px;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+/* 📦 Footer Layout */
+.glass-footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-col {
+  min-width: 180px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-logobottom {
+  width: 160px;
+  margin: 40px auto 16px auto;
+  display: block;
+}
+
+.footer-small-text {
+  font-size: 0.9rem;
+  color: #8f8f8f;
+  margin: 6px 0;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-small-text a {
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-small-text a:hover {
+  color: #53CAFC;
+  text-decoration: underline;
+}
+
+/* 📰 Section Headlines */
+.footer-headline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #bdbdbd;
+  padding-bottom: 6px;
+  width: max-content;
+}
+
+/* 📋 Lists */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #8f8f8f;
+  transition: color 0.3s ease;
+}
+
+.footer-list li a {
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-list li a:hover {
+  color: #53CAFC;
+  text-decoration: underline;
+}
+
+/* 📧 Email */
+.footer-email {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #8f8f8f;
+}
+
+/* 🌐 Social Icons */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-socials img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.footer-socials img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* 📱 QR Icon */
+.qr-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 0 10px 0;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.download-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* 🛒 Store Icons */
+.store-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.store-icons img {
+  width: 105px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.store-icons img:hover {
+  transform: scale(1.05);
+}
+
+.store-icons img[alt="WatchOS"] {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+
+
+
+/* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
+@media (max-width: 430px) {
+
+  .glass-bottom-footer {
+    padding: 70px 24px;
+  }
+
+  .glass-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    text-align: left;
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  /* 🔥 Move logo + copyright column to bottom */
+  .glass-footer-content .footer-col:first-child {
+    order: 99;
+    margin-top: 40px;
+  }
+
+  .footer-logobottom {
+    width: 140px;
+    margin: 40px 0 12px 0;
+  }
+
+  .footer-small-text {
+    font-size: 0.85rem;
+    text-align: left;
+    margin-top: 6px;
+  }
+
+  /* Section Headlines */
+  .footer-headline {
+    font-size: 1.1rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Lists */
+  .footer-list li {
+    font-size: 0.9rem;
+  }
+
+  .footer-email {
+    font-size: 0.9rem;
+  }
+
+  /* Social icons */
+  .footer-socials {
+    justify-content: flex-start;
+  }
+
+  /* Download Block */
+  .download-block {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .qr-icon {
+    width: 70px;
+  }
+
+  .store-icons {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .store-icons img {
+    width: 95px;
+  }
+
+}

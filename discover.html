@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover | Find Your Edge With Moven</title>
+ <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+  <!-- Styles -->
+  <link rel="stylesheet" href="discover.css" />
+  <link rel="stylesheet" href="css/satoshi.css" />
+</head>
+
+<body>
+
+   
+
+<!-- 🔝 Sticky Top Bar (Hidden by default) -->
+<header id="stickyTopBar" class="sticky-top-bar">
+  <div class="top-bar-content">
+    <!-- Circle with Icon -->
+    <a href="index.html" class="top-bar-dot" aria-label="Go to Home"></a>
+
+    <!-- ✨ Normal Mode -->
+    <nav class="top-bar-nav nav-full">
+      <a href="discover.html">Discover</a>
+      <span class="divider"></span>
+      <a href="movengallery.html">Moven Gear</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Mover Pro</a>
+      <span class="divider"></span>
+      <a href="movenclubs.html">Moven Clubs</a>
+    </nav>
+
+    <!-- ✨ Compact Mode -->
+    <nav class="top-bar-nav nav-compact">
+      <a href="create-account.html">Join For Free</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Subscribe Now</a>
+      <span class="divider"></span>
+      <a href="movenai.html">Moven Ai</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Footer (hidden while sticky bar is shown) -->
+<footer class="minimal-footer">
+  <div class="footer-inner">
+
+    <!-- 🍔 iPhone Hamburger (hidden on desktop via CSS) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Left: Logo -->
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <!-- Right: Nav + User -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="discover.html">Discover</a>
+        <a href="ways-to-move.html">Ways To Move</a>
+        <a href="movengear.html">Moven Gear</a>
+        <a href="moven-features.html">Features</a>
+      </nav>
+
+      <div class="footer-buttons">
+        <!-- 🔹 Sign In button (only shown when logged out) -->
+        <button id="signin-btn" class="btn-signin-outline" style="display: none;">
+          Sign In
+        </button>
+
+        <!-- 👤 Logged-in user profile -->
+        <div id="user-profile" class="user-profile">
+          <img
+            id="profile-avatar"
+            src="default-avatar.jpg"
+            alt="Profile Picture"
+            class="profile-avatar"
+          />
+          <span id="profile-username" class="profile-username">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- 📱 iPhone Glass Dropdown Menu -->
+<div class="mobile-glass-menu" id="mobileGlassMenu">
+  <a href="discover.html">Discover</a>
+  <a href="ways-to-move.html">Ways To Move</a>
+  <a href="movengear.html">Moven Gear</a>
+  <a href="moven-features.html">Features</a>
+</div>
+
+
+
+
+
+
+
+  <section class="how-we-track-section" id="trackSection">
+  <h2 class="track-headline">Track with certainty.</h2>
+
+  <!-- Metric Cards Row -->
+  <div class="track-metric-row">
+    <!-- Card 1 -->
+    <div class="track-card">
+      <img src="AppleWatchRun.jpg" alt="Metric 1" class="track-card-img" />
+      <h4 class="track-card-title">Heart Rate Measure</h4>
+      <p class="track-card-highlight">Monitor your intensity in real-time.</p>
+      <p class="track-card-description">
+        Stay within your target heart zones with live feedback and post-session stats that optimize performance.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="track-card">
+      <img src="RunLongCard.jpg" alt="Metric 2" class="track-card-img" />
+      <h4 class="track-card-title">Measure Your Splits</h4>
+      <p class="track-card-highlight">Split by Split.</p>
+      <p class="track-card-description">
+        See how every segment of your session performs, giving you clear insight into pace, consistency, and progress over time.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="track-card">
+      <img src="SwimShortCard.jpg" alt="Metric 3" class="track-card-img" />
+      <h4 class="track-card-title">Stroke-Based Swim Tracking</h4>
+      <p class="track-card-highlight">Precision in Every Stroke.</p>
+      <p class="track-card-description">
+        Swim sessions are tracked using intelligent motion sensing to recognise stroke patterns and measure distance with clarity and consistency — whether you're in the pool or open water.
+      </p>
+    </div>
+  </div>
+
+  <!-- Discover More Link -->
+  <div class="track-discover-more">
+    <a href="moven-features.html" class="discover-link">Discover more features</a>
+  </div>
+
+  <!-- Insights Subsection -->
+  <div class="track-insights-stack">
+   <div class="insight-img-wrapper">
+  <img src="image200.jpg" alt="Insight 1" class="track-insight-img" />
+  <img src="image201.jpg" alt="Overlay Icon" class="track-overlay-icon" />
+</div>
+    <img src="image202.jpg" alt="Insight 2" class="track-insight-img" />
+   <h3 class="track-strava-style">
+  Built for athletes. Perfect <span class="highlight">for everyone.</span>
+</h3>
+
+  </div>
+</section>
+
+
+  <!-- TRANSITION SECTION -->
+  <section class="transition-section" id="transitionSection">
+    <img src="PARALAX1.jpg" alt="Transition Visual" class="transition-image" id="transitionImage" />
+  </section>
+
+  <!-- ⬇️ Placeholder to maintain scroll height after fixed image -->
+  <div class="transition-placeholder"></div>
+
+ <section class="sports-section" id="sportsSection">
+  <div class="sports-section-content">
+
+    <h2 class="sports-main-heading fade-item">Catered for all sports</h2>
+
+    <!-- Subheading and icons aligned left -->
+    <div class="sports-subheading-wrapper fade-item" style="text-align: left; padding-left: 5vw;">
+      <h3 class="sports-subheading">Find your sport</h3>
+      <div class="sports-icon-row" style="justify-content: flex-start;">
+        <img src="IconWalkblack.svg" alt="Walk Icon" class="sport-icon" />
+        <img src="IconMoveblack.svg" alt="Move Icon" class="sport-icon" />
+        <img src="IconJogblack.svg" alt="Jog Icon" class="sport-icon" />
+      </div>
+    </div>
+
+      <!-- Full‑bleed scroll viewport -->
+      <div class="sports-scroll-outer">
+        <div class="sports-scroll-gallery">
+          <img src="discover2.svg" alt="Sport 2" />
+          <img src="discover3.svg" alt="Sport 3" />
+          <img src="discover3.jpg" alt="Sport 4" />
+          <img src="discover5.svg" alt="Sport 5" />
+          <img src="discover5.jpg" alt="Sport 6" />
+          <img src="discover7.jpg" alt="Sport 7" />
+        </div>
+      </div>
+
+      <!-- CTA under TabView -->
+      <div class="sports-cta">
+        <h4 class="sports-cta-heading">
+          Made for motion. Tuned for performance. Ready for every sport.
+        </h4>
+        <a href="ways-to-move.html" class="sports-cta-link">View Sports</a>
+      </div>
+
+      <!-- Pagination dots -->
+      <div class="sports-pagination-dots" id="sportsDots"></div>
+    </div>
+  </section>
+
+<div class="sports-float-bar" id="sportsFloatBar">
+  <!-- Sports Icons -->
+  <div class="sports-icons">
+    <img src="WalkerAir.png" alt="WalkerPro" />
+    <img src="WalkerBlush.png" alt="JoggerPro" />
+    <img src="JoggerMotion.png" alt="GolfPro" />
+    <img src="JoggerStealth.png" alt="SwimmerPro" />
+  </div>
+
+  <!-- Weather Icons (initially hidden) -->
+  <div class="weather-icons">
+    <img src="sunny.svg" alt="Sunny" />
+    <img src="cloudy.svg" alt="Cloudy" />
+    <img src="rain.svg" alt="Rain" />
+    <img src="snowy.svg" alt="Snow" />
+    <img src="storm.svg" alt="Storm" />
+    <img src="wind.svg" alt="Wind" />
+  </div>
+
+  <!-- Ripple Arrow stays -->
+  <div class="arrow-button">
+    <svg viewBox="0 0 24 24">
+      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+    </svg>
+  </div>
+</div>
+
+
+
+
+ <!-- WEATHER -->
+<section class="weather-section" id="weatherSection">
+  <div class="weather-text-wrapper">
+
+    <h2 class="weather-headline fade-item" style="transition-delay: 0.1s;">
+      Train with the elements in mind
+    </h2>
+
+    <div class="weather-subtext fade-item" style="transition-delay: 0.3s;">
+      <p>Stay one step ahead with real-time weather insight, helping you move with confidence in every condition.</p>
+      <img src="weathericon.svg" alt="Weather Icon" class="weather-icon" />
+    </div>
+
+
+    <div class="weather-images-wrapper">
+      <!-- Weather Image 1 -->
+      <div class="weather-card">
+        <img src="weather1.svg" alt="Weather Visual 1" class="weather-image" />
+        <h4 class="weather-card-title">Morning Forecast</h4>
+        <p class="weather-card-text">Plan your early runs with confidence using Moven’s precise hourly data.</p>
+      </div>
+
+      <!-- Weather Image 2 -->
+      <div class="weather-card">
+        <img src="weather2.svg" alt="Weather Visual 2" class="weather-image" />
+        <h4 class="weather-card-title">Evening Outlook</h4>
+        <p class="weather-card-text">Avoid late surprises—track temperature drops, wind shifts, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Moven AI Section -->
+<section class="moven-ai-section" id="movenAiSection">
+  <div class="moven-ai-content">
+
+   <div class="ai-blur-cluster">
+  <div class="blob blob-blue"></div>
+  <div class="blob blob-magenta"></div>
+  <div class="blob blob-aqua"></div>
+  <div class="blob blob-glow"></div>
+</div>
+
+    <div class="headline-group">
+      <h2 class="moven-ai-gradient-headline">Moven Intelligence</h2>
+      <h3 class="moven-ai-subheadline">The new way to track.</h3>
+    </div>
+
+    <p class="moven-ai-description">
+     Moven AI transforms movement into understanding. Through intelligent learning and real-time insight, your sessions become more than data — they become clarity, progress, and direction. It’s performance, precision, and personalisation, evolving with every athlete, every goal, and every day.
+    </p>
+
+    <a href="movenai.html" class="moven-ai-learn-link">
+      Learn more about Moven Intelligence
+      <svg viewBox="0 0 24 24" class="chevron-icon">
+        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+      </svg>
+    </a>
+
+  </div>
+</section>
+
+
+
+<!-- Hero image inserted between the two sections -->
+<section class="moverpro-hero">
+  <img src="Weatherhero.jpg" alt="MoverPro Hero" class="moverpro-hero-image" />
+</section>
+
+
+
+<!-- MoverPro Section -->
+<section class="moverpro-section" id="moverproSection">
+
+  <!-- Blue Background Blur -->
+  <div class="moverpro-blur-bg" id="moverproBlurBg"></div>
+
+  <div class="moverpro-content">
+
+    <!-- Headline & Subheadline -->
+    <div class="moverpro-text-wrapper">
+      <h2 class="moverpro-headline fade-item" style="transition-delay: 0.1s;">
+        MoverPro
+      </h2>
+
+      <div class="moverpro-subheadline-wrapper fade-item" style="transition-delay: 0.25s;">
+        <p class="moverpro-subheadline">Move Pro with MovenPro</p>
+        <img src="IconMoveblack.svg" alt="Move Icon" class="moverpro-icon" />
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="moverpro-cta-row fade-item" style="transition-delay: 0.4s;">
+        <a href="MoverPro.html" class="btn-outline-subscribe">Subscribe</a>
+        <a href="create-account.html" class="text-join-free">Join for free</a>
+      </div>
+    </div>
+    <!-- Right: Card Deck + Description -->
+    <div class="moverpro-right-content">
+
+      <!-- Fanned Cards -->
+      <div class="moverpro-card-hand" id="moverproCardHand">
+        <img src="Card50.jpg" alt="Card 1" class="card-image" />
+        <img src="Card51.jpg" alt="Card 2" class="card-image" />
+        <img src="Card52.jpg" alt="Card 3" class="card-image" />
+        <img src="Card53.jpg" alt="Card 4" class="card-image" />
+        <img src="Card54.jpg" alt="Card 5" class="card-image" />
+        <img src="Card55.jpg" alt="Card 6" class="card-image" />
+      </div>
+
+      <!-- Caption Below -->
+      <div class="moverpro-caption-group">
+        <h4 class="moverpro-caption-heading">Built to Move Further</h4>
+
+        <p class="moverpro-caption-subtext">
+          Move Beyond the Standard
+        </p>
+
+        <p class="moverpro-caption-description">
+          Built for those who want more from every session. Subscribers unlock exclusive Moven Gear, custom gear creation (coming soon), and deeper performance analysis designed to elevate how you train and move. More clarity. More control. More momentum.
+        </p>
+      </div>
+
+      <!-- Learn More Button -->
+      <div class="moverpro-learnmore-container">
+        <a href="MoverPro.html" class="btn-black-learnmore">Learn More</a>
+      </div>
+
+    </div> <!-- end right-content -->
+
+<!-- Track Premium Feature Block -->
+<div class="moverpro-feature-block" id="moverproFeatureBlock">
+  <div class="feature-text">
+    <h3 class="feature-headline">Performance Powered By Intelligence</h3>
+    <h5 class="feature-subheadline">Enhanced intelligence that goes deeper than standard insight, learning how you move to deliver smarter performance.</h5>
+    <p class="feature-description">
+      MoverPro unlocks deeper analysis and more refined intelligence, revealing patterns, trends, and performance signals that go beyond standard tracking. It helps you understand how your body responds over time, refine your training decisions, and move with greater clarity and confidence.
+    </p>
+  </div>
+
+  <div class="feature-image">
+    <img src="FT1.jpg" alt="Feature Image" class="feature-image-img" />
+  </div>
+</div>
+
+
+<!-- New extended 3-column row -->
+<div class="feature-info-row">
+  <div class="feature-info-card">
+    <h4 class="feature-info-title">
+      Exclusive Gear Access
+      <img src="IconMoveblack.svg" alt="Customize Icon" class="feature-inline-icon" />
+    </h4>
+    <p class="feature-info-text">
+      Access exclusive Moven Gear designed to elevate how you move and express your identity.
+    </p>
+  </div>
+
+  <div class="feature-info-card">
+    <h4 class="feature-info-title">
+      Session Intelligence
+      <img src="IconMoveblack.svg" alt="Accuracy Icon" class="feature-inline-icon" />
+    </h4>
+    <p class="feature-info-text">
+      Turn raw session data into meaningful insight, helping you train smarter, refine performance, and move with confidence.
+    </p>
+  </div>
+
+  <div class="feature-info-card">
+    <h4 class="feature-info-title">
+      Recover With Moven Ai
+      <img src="IconMoveblack.svg" alt="Track Icon" class="feature-inline-icon" />
+    </h4>
+    <p class="feature-info-text">
+      Smart recovery insight helps you understand when to push, when to rest, and how to move forward stronger.
+    </p>
+  </div>
+</div>
+
+<div class="feature-image-grid">
+  <div class="grid-item image-20">
+    <img src="Grid100.jpg" alt="Image 20" />
+  </div>
+  <div class="grid-item image-21">
+    <img src="Grid101.jpg" alt="Image 21" />
+  </div>
+  <div class="grid-item image-22">
+    <img src="Grid103.jpg" alt="Image 22" />
+  </div>
+  <div class="grid-item image-23">
+    <img src="Grid102.jpg" alt="Image 23" />
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- Parallax Break Section -->
+<!-- Parallax Break Section (Image Only) -->
+<section class="parallax-section"></section>
+
+
+
+<!-- SIGN‑USER SECTION -->
+<section class="sign-user-section" id="signUserSection">
+  <div class="sign-user-content">
+
+    <!-- Left‑aligned headline + subtext + CTA -->
+    <h2 class="sign-user-headline-left fade-item" style="transition-delay: 0.1s;">
+      Join for free
+    </h2>
+
+    <p class="sign-user-subtext-left fade-item" style="transition-delay: 0.2s;">
+      Create an account for free...
+    </p>
+
+    <div class="left-signup-cta fade-item" style="transition-delay: 0.3s;">
+      <a href="create-account.html" class="btn-create-now">Create Now</a>
+    </div>
+
+    <!-- Center block -->
+    <div class="sign-user-center-block">
+
+      <!-- One‑line headline -->
+      <h3 class="sign-user-center-headline fade-item" style="transition-delay: 0.4s;">
+        Make exercising. <span>Effortless.</span>
+      </h3>
+
+      <!-- Stacked discover images with pink blur -->
+      <div class="sign-user-center-images-wrapper fade-item" id="blurWrapper" style="transition-delay: 0.5s;">
+        <div class="blur-pink-bg" id="pinkBlur"></div>
+
+        <div class="sign-user-center-images" id="topImages">
+          <img src="run10.jpg" alt="Preview image 1" class="center-img" />
+          <img src="discover2.jpg" alt="Preview image 2" class="center-img" />
+        </div>
+      </div>
+
+      <p class="sign-user-center-note fade-item" style="transition-delay: 0.6s;">
+        there’s never been a better way to move.
+      </p>
+
+      <a href="create-account.html" class="sign-user-btn fade-item" style="transition-delay: 0.7s;">
+        Join for free
+      </a>
+
+      <div class="sign-user-spacer"></div>
+
+      <!-- Bottom images side‑by‑side -->
+      <div class="sign-user-bottom-images fade-item" id="bottomImages" style="transition-delay: 0.8s;">
+        <img src="Join1.jpg" alt="Bottom image 1" class="bottom-img" />
+        <img src="Join2.jpg" alt="Bottom image 2" class="bottom-img" />
+      </div>
+
+      <!-- Centered text + paragraph + CTA -->
+      <div class="sign-user-bottom-text fade-item" style="transition-delay: 0.9s;">
+        <h4 class="sign-user-subheadline-bold">
+          Dive into the all‑in‑one fitness app
+        </h4>
+
+        <p class="sign-user-bottom-description">
+          Unlock progress with intelligent insights, tailored tracking and next‑gen movement tech.
+        </p>
+
+        <a href="moven-features.html" class="sign-user-link-blue">
+          Dive into Moven.
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="run-club-section" id="runClubSection">
+  <div class="run-club-content">
+
+    <!-- Left Side Text -->
+    <div class="run-club-text">
+
+      <h2 class="run-club-headline fade-item" style="transition-delay: 0.1s;">
+        Moven Clubs
+      </h2>
+
+      <p class="run-club-subtext-bold fade-item" style="transition-delay: 0.25s;">
+        <img src="IconMove.svg" alt="Move Icon" class="run-club-inline-icon" />
+        Train alongside a community that pushes you forward, celebrates progress, and keeps you moving consistently.
+      </p>
+
+      <a href="movenclubs.html" class="run-club-cta-link fade-item" style="transition-delay: 0.4s;">
+        Explore Moven Clubs
+      </a>
+
+    </div>
+
+    <!-- Right Side Image + Text Below -->
+    <div class="run-club-image-column">
+
+      <div class="run-club-image-wrapper fade-item" style="transition-delay: 0.55s;">
+        <img src="MovenClub.jpg" alt="Club Visual" class="run-club-image" />
+      </div>
+
+      <div class="run-club-social-content fade-item" style="transition-delay: 0.7s;">
+        <h3 class="run-club-social-headline">
+          Move Together
+          <img src="IconMove.svg" class="run-club-social-icon" alt="Social Icon" />
+        </h3>
+
+        <p class="run-club-social-highlight">
+          Moving is better together.
+        </p>
+
+        <p class="run-club-social-description">
+          Move with friends, discover new routes, and stay inspired through shared progress.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2x2 Image Grid -->
+  <div class="run-club-image-grid fade-item" style="transition-delay: 0.85s;">
+    <img src="Grid30.jpg" alt="Grid 1" class="grid-img" />
+    <img src="Grid32.jpg" alt="Grid 2" class="grid-img" />
+    <img src="Grid31.jpg" alt="Grid 3" class="grid-img" />
+    <img src="Grid33.jpg" alt="Grid 4" class="grid-img" />
+  </div>
+
+  <!-- Final headline -->
+  <h2 class="run-club-final-headline fade-item" style="transition-delay: 1s;">
+    Built for the way <span class="highlight-blue">you Move.</span>
+  </h2>
+
+</section>
+
+
+
+
+
+<footer class="glass-bottom-footer">
+  <div class="glass-footer-content">
+    <!-- 🔹 Left Section -->
+    <div class="footer-col left-col">
+      <img src="MovenLogoblack.jpg" alt="Moven Logo" class="footer-logobottom" />
+      <p class="footer-small-text">© 2025 Moven. All rights reserved.</p>
+      <p class="footer-small-text">
+        <a href="privacypolicy.html">Privacy Policy</a>
+      </p>
+    </div>
+
+    <!-- 🔹 Middle Left -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">Find out more</h4>
+      <ul class="footer-list">
+        <li><a href="moven-features.html">Features</a></li>
+        <li><a href="movengear.html">Moven Gear</a></li>
+        <li><a href="movenclubs.html">Sport Clubs</a></li>
+        <li><a href="MoverPro.html">MoverPro</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Middle Right -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">More</h4>
+      <ul class="footer-list">
+        <li><a href="movencollection.html">Moven Collection</a></li>
+        <li><a href="movenclubs.html">Moven Clubs</a></li>
+        <li><a href="ways-to-move.html">Sports</a></li>
+        <li><a href="create-account.html">Create Account</a></li>
+        <li><a href="moverpro.html">Subscribe</a></li>
+        <li><a href="create-account.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Reach Out Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Reach Out</h4>
+      <p class="footer-email">moven@startmoven.com</p>
+      <div class="footer-socials">
+        <img src="tik-tok.png" alt="TikTok" />
+        <img src="twitter.png" alt="Twitter" />
+        <img src="instagram.png" alt="Instagram" />
+      </div>
+    </div>
+
+    <!-- 🔹 Download Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Download Now</h4>
+
+      <div class="download-block">
+        <img src="MovenQr.png" alt="Move QR Icon" class="qr-icon" />
+        <p class="footer-small-text">Scan to download</p>
+      </div>
+
+      <div class="store-icons">
+        <img src="AppStore.png" alt="App Store" />
+        <img src="watchos.png" alt="WatchOS" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src="discover.js"></script>
+  <script src="Popup.js"></script>
+  <script src="moven-ai-headline.js"></script>
+  <script src="moverpro.js" defer></script>
+  <script src="DynamicIslanddiscover.js"></script>
+  <script src="index.js"></script>
+  <script src="indexdisplay.js"></script>
+   <script src="discoverbackground.js"></script>
+
+</body>
+</html>

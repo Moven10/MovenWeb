@@ -1,0 +1,3389 @@
+/* ─── Satoshi Font Setup ─────────────────────────────────────────── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype"),
+       url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+       url("./fonts/Satoshi-Regular.woff") format("woff"),
+       url("./fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Medium.otf") format("opentype"),
+       url("./fonts/Satoshi-Medium.ttf") format("truetype"),
+       url("./fonts/Satoshi-Medium.woff") format("woff"),
+       url("./fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype"),
+       url("./fonts/Satoshi-Bold.ttf") format("truetype"),
+       url("./fonts/Satoshi-Bold.woff") format("woff"),
+       url("./fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Black.otf") format("opentype"),
+       url("./fonts/Satoshi-Black.ttf") format("truetype"),
+       url("./fonts/Satoshi-Black.woff") format("woff"),
+       url("./fonts/Satoshi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+/* 🔹 Intro Splash */
+.intro-splash {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #53CAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px; /* ⬆️ Increased spacing between logo and bar */
+}
+
+/* ⬆️ BIGGER LOGO */
+.intro-logo-image {
+  width: 520px;              /* ⬆️ Larger width */
+  max-width: 85vw;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ⬆️ BIGGER LOADING BAR */
+.loading-bar {
+  width: 560px;              /* ⬆️ Wider bar */
+  max-width: 90vw;
+  height: 10px;              /* ⬆️ Thicker */
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress bar */
+.loading-progress {
+  height: 100%;
+  width: 0%;
+  background-color: #ffffff;
+  border-radius: 999px;
+  transition: width linear;
+}
+
+/* Fade out */
+.intro-splash.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+  background-color: white;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+/* ───── FOOTER STYLES ────────────────────────────────────────────── */
+.minimal-footer {
+  background: linear-gradient(
+    135deg,
+    rgba(83, 202, 252, 0.25),
+    rgba(255, 255, 255, 0.1),
+    rgba(83, 202, 252, 0.2)
+  );
+
+  backdrop-filter: blur(48px) saturate(250%);
+  -webkit-backdrop-filter: blur(48px) saturate(250%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 18px 64px rgba(83, 202, 252, 0.25),
+    inset 0 0 60px rgba(255, 255, 255, 0.08);
+
+  padding: 0.4rem 0;
+  width: 100%;
+  min-height: 56px;
+
+  position: fixed;      /* ✅ Locks it in place */
+  top: 0;               /* ✅ Sticks to top instead */
+  left: 0;
+  z-index: 9998;
+  overflow: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between; /* 👈 Clean two-sided layout */
+  align-items: center;
+  padding: 0 4rem;
+  height: 56px;
+  position: relative;
+}
+
+
+.footer-logo {
+  height: 48px;         /* ⬆️ Taller logo */
+  width: auto;
+  display: block;
+  margin-left: 2rem;    /* ⬅️ Narrower spacing */
+  margin-top: 16px;     /* ⬇️ Slightly reduced vertical offset */
+}
+.footer-right {
+  position: absolute;
+  right: 4rem; /* 👈 Shifted closer to center */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;        /* ⬆️ Upgraded to Black */
+  font-style: italic;      /* ⬅️ Now italic */
+  transition: color 0.3s ease;
+}
+
+
+.footer-nav a:hover {
+  color: #53CAFC;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-join,
+.btn-subscribe {
+  box-sizing: border-box;
+}
+
+.btn-join {
+  padding: 8px 16px;
+  border: 2px solid #53CAFC;
+  background: transparent;
+  color: #B0B0B0;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-join:hover {
+  background-color: #53CAFC;
+  color: white;
+  border-color: #53CAFC;
+}
+
+.btn-subscribe {
+  padding: 8px 16px;
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-subscribe::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid white;
+  border-radius: 8px;
+  opacity: 0;
+  animation: snake-outline 1s linear infinite;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.btn-subscribe:hover::before {
+  opacity: 1;
+}
+
+/* 👤 Logged-in user display */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(83, 202, 252, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Invisible placeholder to reserve space */
+.user-profile::after {
+  content: "Username"; /* Match expected username length */
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+}
+
+
+.user-profile:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05); /* 👈 grow on hover */
+}
+
+
+.profile-avatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #53CAFC;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.07);
+}
+
+.profile-username {
+  color: #ffffff;            /* ⬅️ Changed to white */
+  font-weight: 900;          /* ⬆️ Satoshi Black */
+  font-style: italic;        /* ⬅️ Italic style */
+  font-size: 0.95rem;
+  font-family: 'Satoshi', sans-serif;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+
+@keyframes snake-outline {
+  0% { clip-path: inset(0 100% 100% 0); }
+  25% { clip-path: inset(0 0 100% 0); }
+  50% { clip-path: inset(0 0 0 0); }
+  75% { clip-path: inset(100% 0 0 0); }
+  100% { clip-path: inset(0 100% 100% 0); }
+}
+
+/* ✅ Hide main footer when sticky bar is active using body class */
+body.hide-footer .minimal-footer {
+  display: none !important;
+}
+
+
+
+
+.btn-signin-outline {
+  padding: 8px 16px;
+  border: 2px solid #53CAFC;
+  background-color: transparent;
+  color: #53CAFC;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.btn-signin-outline:hover {
+  background-color: #53CAFC;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───── STICKY TOP BAR (Two‑Stage Drop Reveal) ───────────────────────────── */
+
+.sticky-top-bar {
+  position: fixed;
+  top: -120px;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  /* Hidden state */
+  opacity: 0;
+  transform: translateY(-40px) scale(0.95);
+  pointer-events: none;
+}
+
+/* First notch reveal */
+.sticky-top-bar.show-full {
+  animation: notchDropIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Second notch reveal */
+.sticky-top-bar.show-compact {
+  animation: notchDropIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Drop animation */
+@keyframes notchDropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(6px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    top: 0;
+  }
+}
+
+/* Layout */
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 🔵 Icon Circle */
+.top-bar-dot {
+  height: 44px;
+  width: 44px;
+  background-color: #53CAFC;
+  border-radius: 50%;
+  background-image: url("Moveiconwhite.svg");
+  background-size: 29px 29px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Rounded nav island */
+.top-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.35rem 0.85rem;
+  background-color: #53CAFC;
+  border-radius: 999px;
+  transition: all 0.35s ease;
+}
+
+/* Hide both navs by default */
+.nav-full,
+.nav-compact {
+  display: none;
+}
+
+/* Show only the correct nav */
+.sticky-top-bar.show-full .nav-full {
+  display: flex;
+}
+
+.sticky-top-bar.show-compact .nav-compact {
+  display: flex;
+}
+
+/* Compact notch slightly smaller */
+.sticky-top-bar.show-compact .top-bar-nav {
+  padding: 0.25rem 0.6rem;
+  transform: scale(0.92);
+}
+
+/* Nav links */
+.top-bar-nav a {
+  color: #ffffff;             /* ⬅️ White text */
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;           /* ⬆️ Satoshi Black */
+  font-style: italic;         /* ⬅️ Italic */
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+
+.top-bar-nav a:hover {
+  color: #FEE0FF;
+}
+
+/* Divider */
+.top-bar-nav .divider {
+  width: 1px;
+  height: 1rem;
+  background-color: white;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Hide mobile-only elements on desktop */
+.mobile-menu-toggle,
+.mobile-glass-menu {
+  display: none;
+}
+
+
+/* ───────── iPhone Top Footer + Sticky Bar Fix ───────── */
+@media (max-width: 430px) {
+
+  /* ===== Minimal Glass Top Footer ===== */
+
+  .minimal-footer {
+    padding: 0.6rem 0.6rem 0.6rem 0.2rem; /* reduced LEFT padding */
+    min-height: 60px;
+  }
+
+  .footer-inner {
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 🍔 Hamburger */
+  .mobile-menu-toggle {
+  display: flex;
+  width: 26px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 15px;   /* 🔥 pushes it right */
+  margin-right: 4px;
+}
+
+  .mobile-menu-toggle span {
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Keep container stable */
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* 🔥 Shift ONLY the logo left */
+  .footer-logo {
+    height: 40px;
+    margin: 0;
+    margin-left: -120px; /* controls logo position only */
+  }
+
+  /* Remove absolute positioning */
+  .footer-right {
+    position: static;
+    transform: none;
+    gap: 1rem;
+    margin-right: 6px;
+  }
+
+  /* Hide desktop nav */
+  .footer-nav {
+    display: none;
+  }
+
+  .footer-buttons {
+    gap: 0.5rem;
+  }
+
+  .profile-avatar {
+    height: 32px;
+    width: 32px;
+  }
+
+  .profile-username {
+    display: none;
+  }
+
+
+  /* ===== Glass Dropdown (Original Style Kept) ===== */
+
+  .mobile-glass-menu {
+    display: flex;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 30px 24px;
+
+    background: linear-gradient(
+      135deg,
+      rgba(83, 202, 252, 0.25),
+      rgba(255, 255, 255, 0.1),
+      rgba(83, 202, 252, 0.2)
+    );
+
+    backdrop-filter: blur(48px) saturate(250%);
+    -webkit-backdrop-filter: blur(48px) saturate(250%);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(83, 202, 252, 0.25);
+
+    flex-direction: column;
+    gap: 24px;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+    z-index: 9997;
+  }
+
+  .mobile-glass-menu a {
+    text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #ffffff;
+  }
+
+  .mobile-glass-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+  /* ===== Sticky Blue Drop Bar (Unchanged) ===== */
+
+  .sticky-top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    top: 18px;
+  }
+
+  .top-bar-content {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .top-bar-dot {
+    height: 30px;
+    width: 30px;
+    background-size: 18px 18px;
+  }
+
+  .top-bar-nav {
+    width: auto;
+    padding: 0.2rem 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .top-bar-nav a {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.35rem;
+  }
+
+  .top-bar-nav .divider {
+    height: 0.7rem;
+  }
+
+  .nav-full a:nth-of-type(1),
+  .nav-full .divider:nth-of-type(1) {
+    display: none;
+  }
+
+  .nav-full a:nth-of-type(3),
+  .nav-full .divider:nth-of-type(3) {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───────────────── HERO SECTION (REVAMPED) ───────────────── */
+
+.hero-section {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+  ),
+  url('Running2.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 1150px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding: 0 0 50px;
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  transition: background-image 0.6s ease-in-out;
+}
+
+.hero-spacer {
+  height: 1100px;
+  width: 100%;
+}
+
+.hero-layout {
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 60px;
+  margin: 0 auto;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-layout.hide {
+  opacity: 0;
+  transform: translateY(-40px);
+  pointer-events: none;
+}
+
+/* ───── LEFT GROUP ───── */
+.hero-bottom-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.hero-headline-inline {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero-icon {
+  height: 6.1rem;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  transform: translateY(0.05rem);
+}
+
+.hero-title {
+  font-size: 6.1rem;
+  font-weight: 900;
+  font-style: italic;
+  font-family: 'Satoshi', sans-serif;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #53CAFC;
+}
+
+/* ✅ Italic subheadline */
+.hero-subtitle {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-style: italic;
+  max-width: 100%;
+  line-height: 1.4;
+  color: #f2f2f2;
+  font-family: 'Satoshi', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ───── RIGHT GROUP (Buttons) ───── */
+.hero-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-pill-outline,
+.btn-pill-black {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px 22px;
+  font-weight: 600;
+}
+
+/* Outline pill */
+.btn-pill-outline {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.btn-pill-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Gradient animated MoverPro button */
+.btn-pill-black {
+  background: linear-gradient(90deg, #53CAFC, #FEE0FF);
+  background-size: 200% 200%;
+  animation: pulseGradient 3s ease infinite;
+  color: #000;
+  border: none;
+}
+
+.btn-pill-black:hover {
+  filter: brightness(1.05);
+}
+
+/* 🔁 Gradient animation */
+@keyframes pulseGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+/* ───────── iPhone Optimised Layout ───────── */
+@media screen and (max-width: 430px) {
+
+  /* 🔥 Disable only scroll/fade animations (not sticky footer) */
+  .fade-item,
+  .track-card,
+  .card-image {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Keep fixed hero so scroll-over works */
+  .hero-section {
+    min-height: 100svh;
+    padding: 0 20px 100px;
+    justify-content: flex-start;
+  }
+
+  .hero-spacer {
+    height: 100svh;
+  }
+
+  .hero-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 0px;
+    gap: 20px;
+  }
+
+  .hero-bottom-left {
+    align-items: flex-start;
+  }
+
+  .hero-headline-inline {
+    justify-content: flex-start;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .hero-icon {
+    height: 3.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    white-space: normal;
+    max-width: 95%;
+  }
+
+  /* Buttons under text */
+  .hero-bottom-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .btn-pill-outline,
+  .btn-pill-black {
+    width: auto;
+    min-width: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* display section */
+.display-section {
+  background-color: rgba(255, 255, 255, 0.88);
+  background-image: radial-gradient(
+    ellipse at center,
+    rgba(83, 202, 252, 0.12) 0%,
+    transparent 70%
+  );
+  background-repeat: no-repeat;
+  background-position: center 70%;
+  background-size: 1500px 600px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  min-height: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 80px 40px;
+  color: #111;
+  position: relative;
+  z-index: 2;
+  margin-top: 110px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Headline styling */
+.display-headline {
+  font-size: 3.5rem;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.display-headline .blue-text {
+  color: #53CAFC;
+}
+
+/* Sub‑headline styling */
+.display-subheadline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic; /* ✅ New italic style */
+  font-family: 'Satoshi', sans-serif;
+  color: #111;
+  margin-bottom: 40px;
+}
+
+/* Icons Row */
+.icons-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.display-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* Paragraph + Image Split Layout */
+.display-text-image {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.display-text-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Mini headlines with icon */
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mini-headline {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #000;
+  margin: 0;
+}
+
+.mini-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Paragraphs */
+.display-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #222;
+  margin-top: 12px;
+}
+
+/* ✅ Enhanced Learn More link */
+.learn-more {
+  font-size: 1.25rem;                  /* ⬆️ Bigger font size */
+  font-weight: 700;                    /* ⬆️ Bolder */
+  color: #111;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;                           /* More spacing from icon */
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.learn-more:hover {
+  border-bottom: 2px solid #53CAFC;
+  color: #53CAFC;
+}
+
+.chevron-icon {
+  width: 26px;                         /* ⬆️ Larger icon */
+  height: 26px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover .chevron-icon {
+  transform: translateX(4px);
+}
+
+
+.section-divider {
+  height: 4px;
+  width: 100%;
+  background-color: #FEE0FF;
+  margin: 20px 0 40px;
+}
+
+.display-side-image {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Scroll Reveal Fade‑In */
+.fade-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* ───────── iPhone Display Section Optimisation ───────── */
+@media (max-width: 430px) {
+
+  .display-section {
+    min-height: auto; /* remove huge desktop height */
+    padding: 60px 20px;
+    margin-top: 60px;
+    background-size: 700px 350px; /* shrink glow */
+    background-position: center 40%;
+  }
+
+  .display-headline {
+    font-size: 2.2rem;
+  }
+
+  .display-subheadline {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .icons-row {
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .display-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Stack text + image vertically */
+  .display-text-image {
+    flex-direction: column;
+    gap: 40px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .display-text-block {
+    gap: 30px;
+    text-align: left; /* keeps paragraphs readable */
+  }
+
+  .mini-headline {
+    font-size: 1rem;
+  }
+
+  .display-paragraph {
+    font-size: 1rem;
+  }
+
+  /* Hide original desktop image on iPhone */
+  .display-side-image {
+    display: none;
+  }
+
+  /* Add mobile-specific mockup image */
+  .display-text-image::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 380px; /* adjust if needed */
+    margin-top: 30px;
+    background-image: url("mockuplightside.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .learn-more {
+    font-size: 1.05rem;
+  }
+
+  .chevron-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .section-divider {
+    margin: 16px 0 30px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* IOS Section — simplified */
+.ios-section {
+  background-color: white;
+  padding: 180px 0 140px;   /* ⬆️ More bottom space for headline */
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Centered content */
+.ios-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Preview image */
+.ios-preview-image {
+  width: 100%;
+  max-width: 1500px;
+  height: 720px;
+  object-fit: cover;
+  display: block;
+  margin: 160px auto 0;     /* ⬇️ Push image down */
+  border-radius: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ───────────────── Headline Section ───────────────── */
+
+/* Headline container */
+.ios-headline-container {
+  margin-top: 220px;      /* ⬆️ Increased space under image */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+  text-align: left;
+}
+
+/* Main headline */
+.ios-dynamic-headline {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 3.6rem;      /* ⬇️ Slightly smaller */
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: -1px;
+  color: #111;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Word animation */
+.word {
+  opacity: 0;
+  transform: translateY(40px);
+  display: inline-block;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.word.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Coloring */
+.word.blue {
+  color: #53CAFC;
+}
+
+.word.pinkblue {
+  background: linear-gradient(90deg, #53CAFC, #FEE0FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ───────────── Apple‑Style Tab View Layout — Centered Start ───────────── */
+
+.ios-tabview {
+  display: flex;
+  gap: 32px;
+
+  margin-left: calc((100vw - 1200px) / 2); /* 👈 Aligned with headline */
+  margin-top: 100px;                       /* ⬇️ Increased space below headline */
+  padding-right: 40px;
+
+  /* ✅ Let height be natural instead of fixed */
+  height: auto;
+
+  align-items: flex-start;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+}
+
+.ios-tabview::-webkit-scrollbar {
+  display: none;
+}
+
+/* ───────────── Tab Unit = Card + Description Group ───────────── */
+
+.tab-unit {
+  flex: 0 0 auto;
+  width: 540px;
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* ✅ Removed fixed height to prevent text compression */
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+/* Image-only card */
+.tab-card {
+  width: 100%;
+  height: 340px;
+  border-radius: 28px;
+
+  background: #e6e6e6;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Headline above paragraph */
+.card-title {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #111;
+  margin: 0;
+  text-align: left;
+}
+
+/* Paragraph under the card */
+.card-description {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #888;
+  margin: 0;
+
+  max-width: 480px;
+  display: block;
+  text-align: left; /* ✅ Left-align the paragraph */
+}
+
+
+
+
+/* ✅ Inline highlighted italic text */
+.highlighted-italic {
+  font-family: 'Satoshi', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #111;
+}
+
+
+
+
+.ios-image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 1500px;
+  margin: 160px auto 0;
+}
+
+.ios-preview-image {
+  width: 100%;
+  height: 720px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🆕 Overhanging image */
+.ios-overhang-image {
+  position: absolute;
+  bottom: -70px;        /* Pushes it further below */
+  right: -100px;        /* Moves it more into the left of screen */
+  width: 320px;         /* ⬆️ Bigger image */
+  height: 320px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+  z-index: 3;
+}
+
+
+/* ───────── iPhone iOS Section Optimisation (Single Image Clean Version) ───────── */
+@media (max-width: 430px) {
+
+  /* 🔥 Global mobile containment */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .ios-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 80px 16px 70px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .ios-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  }
+
+  /* ───────── Mobile Headline Above Image ───────── */
+
+  .ios-image-wrapper::before {
+    content: "Make Exercise \A Effortless";
+    white-space: pre-line;
+    display: block;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #111;
+  }
+
+  /* Make second line blue */
+  .ios-image-wrapper::before {
+    background: linear-gradient(to bottom, #111 50%, #53CAFC 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* ───────── Single Image Layout ───────── */
+
+  .ios-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ios-preview-image {
+    width: min(300px, 82vw);
+    max-width: 82vw;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  /* Remove 21.jpg and overhang */
+  .ios-image-wrapper::after {
+    content: none !important;
+  }
+
+  .ios-overhang-image {
+    display: none !important;
+  }
+
+  /* ───────── Light Grey Paragraph Under Image ───────── */
+
+  .ios-section::after {
+    content: "Designed to simplify your routine and make every movement feel natural, intuitive, and powerful.";
+    display: block;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #9E9E9E;
+    max-width: 85%;
+    margin: 25px auto 0;
+    text-align: center;
+  }
+
+  /* ───────── Headline Below Reset ───────── */
+
+  .ios-headline-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 60px auto 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .ios-dynamic-headline {
+    display: block !important;
+    width: 100%;
+    max-width: 24ch;
+    margin: 0 auto;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  .word {
+    display: inline !important;
+  }
+
+  /* Mockup under headline */
+  .ios-headline-container::after {
+    content: "";
+    display: block;
+    width: min(260px, 76vw);
+    height: 220px;
+    margin: 30px auto 0;
+    background: url("mockuplightside.png") center / contain no-repeat;
+  }
+
+  /* Remove tabview completely */
+  .ios-tabview {
+    display: none !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Move With Style Section */
+.style-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto 0;
+  
+}
+
+/* HEADLINE — MAX BOLD */
+.style-headline {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 10px;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;
+}
+
+/* SUBTEXT — MEDIUM */
+.style-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+}
+
+/* Showcase Section */
+.style-showcase {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.style-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 100px 0;
+  flex-wrap: wrap;
+}
+
+.style-card {
+  background-color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  width: 220px;
+  height: 340px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.style-card:hover {
+  transform: scale(1.07);
+}
+
+.style-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.style-subtext {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 60px;
+}
+
+/* View Collection Button — MEDIUM */
+.btn-view-collection {
+  background: transparent;
+  border: 2px solid transparent;
+  color: #53CAFC;
+  font-size: 1rem;
+  padding: 12px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+}
+
+.btn-view-collection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid #53CAFC;
+  border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.btn-view-collection:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+
+
+/* ••• Four‑Card Grid in Info Section ••• */
+
+.info-section {
+  background-color: #f5f5f5;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-card {
+  position: relative;
+  width: 100%;
+  padding-top: 120%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.info-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ───────────────── Card Overlay Text + Buttons ───────────────── */
+
+.card-overlay {
+  position: absolute;
+  top: 32px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+
+  font-family: 'Satoshi', sans-serif;
+}
+
+.card-overlay.white-text {
+  color: white;
+}
+
+.card-overlay:not(.white-text) {
+  color: black;
+}
+
+.small-headline {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.feature-headline {
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.gear-type {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-pill-blue {
+  background-color: #53CAFC;
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-pill-blue:hover {
+  background-color: #3bb7e2;
+}
+
+.learn-more {
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #53CAFC;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.learn-more img {
+  width: 13px;
+  height: 13px;
+}
+
+/* ⭐️ Gear Icons Under Buttons */
+.gear-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.gear-icons img {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gear-icons img:hover {
+  transform: scale(1.4);
+}
+
+/* ───────────── CTA Headline Below Cards ───────────── */
+
+.info-cta {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.info-cta-headline {
+  font-size: 3.4rem;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+/* Gradient text underneath */
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #FEE0FF 0%,
+    #A6E6FA 6%,
+    #53CAFC 25%,
+    #3DB8F5 60%,
+    #3AADEB 100%
+  );
+  background-size: 200% 100%;
+  background-position: right center;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  position: relative;
+  z-index: 1;
+
+  transition: background-position 1.8s ease-in-out 0.3s;
+}
+
+/* Black overlay text — full coverage */
+.gradient-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #111;
+  background: none;
+  z-index: 2;
+  pointer-events: none;
+
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #111;
+
+  transition: opacity 1.4s ease-in-out 0.3s;
+}
+
+/* On scroll — reveal gradient */
+.gradient-text.active {
+  background-position: left center;
+}
+
+.gradient-text.active::before {
+  opacity: 0;
+}
+
+/* ───────── iPhone Info Cards (Large + Centered Content + White Text + CTA Fix) ───────── */
+@media (max-width: 430px) {
+
+  /* Grid */
+  .info-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  /* Card */
+  .info-card {
+    height: 340px;
+    padding-top: 0;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .info-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Soft gradient for readability */
+  .info-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.45)
+    );
+    z-index: 1;
+  }
+
+  /* Center content */
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+    gap: 8px;
+
+    color: #ffffff;
+  }
+
+  /* White text */
+  .small-headline,
+  .feature-headline,
+  .gear-type {
+    color: #ffffff !important;
+  }
+
+  .small-headline {
+    font-size: 0.75rem;
+  }
+
+  .feature-headline {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .gear-type {
+    font-size: 0.85rem;
+  }
+
+  .card-buttons {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .btn-pill-blue {
+    padding: 7px 16px;
+    font-size: 0.85rem;
+    color: #ffffff;
+  }
+
+  /* Keep Learn More blue */
+  .learn-more {
+    font-size: 0.75rem;
+    color: #53CAFC !important;
+  }
+
+  /* ───────── CTA Headline Below Cards (Mobile Optimised) ───────── */
+
+  .info-cta {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+
+  .info-cta-headline {
+    font-size: 2rem;        /* reduced from 3.4rem */
+    line-height: 1.25;
+    max-width: 20ch;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gradient-text {
+    background-size: 180% 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🌌 Inspire Section — Black background with interactive image blocks */
+.inspire-section {
+  position: relative;
+  background-color: #000000;
+  padding: 80px 40px;
+  z-index: 2;
+
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📦 Block container */
+.block {
+  position: relative;
+  height: 300px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* smooth resize */
+  flex-grow: 1;
+  flex-shrink: 1;
+  transition: flex 0.4s ease;
+}
+
+/* 📐 Initial proportional widths */
+.block:nth-child(1) {
+  flex-basis: 48%;
+  min-width: 360px;
+}
+.block:nth-child(2) {
+  flex-basis: 32%;
+  min-width: 240px;
+}
+.block:nth-child(3) {
+  flex-basis: 16%;
+  min-width: 160px;
+}
+
+/* ✨ Hover behavior — shrink others */
+.inspire-section:hover .block {
+  flex-basis: 28%; /* default when not hovered */
+}
+
+.inspire-section .block:hover {
+  flex-basis: 48% !important; /* grow hovered block */
+}
+
+/* 📝 Text overlay */
+.block-title {
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  z-index: 2;
+}
+
+
+
+/* ───────── iPhone Inspire Section Optimisation ───────── */
+@media (max-width: 430px) {
+
+  .inspire-section {
+    flex-direction: column;
+    padding: 60px 16px;
+    gap: 18px;
+  }
+
+  .block {
+    width: 100%;
+    height: 260px;
+    min-width: 100%;
+    flex-basis: auto !important;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 20px;
+  }
+
+  /* Disable hover resizing on mobile */
+  .inspire-section:hover .block,
+  .inspire-section .block:hover {
+    flex-basis: auto !important;
+  }
+
+  .block-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───────────── Moven Collection Section (Final) ───────────── */
+
+.collection-section {
+  background-color: #fff;
+  padding: 120px 40px;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🌟 Scroll Reveal Animation */
+.fade-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.collection-inner-simple {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.collection-headline-left {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 80px;
+  font-family: 'Satoshi', sans-serif;
+  text-align: left;
+}
+
+.collection-rectangles {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.collection-card-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 🎯 Larger slightly-off-square rectangles */
+.collection-rect {
+  width: 320px;
+  height: 360px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎨 Color variants */
+.light-blue {
+  background-color: #eef9ff;
+}
+
+.light-aqua {
+  background-color: #e9fcf7;
+}
+
+.light-pink {
+  background-color: #fff0f6;
+}
+
+/* 🏷️ Top-left label */
+.rect-top-label {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: #111;
+  font-size: 1.05rem;
+  z-index: 3;
+}
+
+.rect-top-label img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* 📦 Product image */
+.rect-product-img {
+  position: absolute;
+  bottom: 92px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 230px;
+  max-height: 260px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* 📝 Caption container */
+.rect-caption {
+  margin-top: 20px;
+  font-family: 'Satoshi', sans-serif;
+  text-align: left;
+}
+
+/* 👤 Title row */
+.caption-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.caption-title img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* 🖼️ Image name */
+.caption-subtext {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #111;
+  margin: 0;
+}
+
+/* 🧢 From text */
+.caption-source {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #111;
+  margin: 4px 0 0 0;
+}
+
+/* 🎨 Caption color themes */
+.walk-caption .caption-title {
+  color: #53CAFC;
+}
+
+.run-caption .caption-title {
+  color: #A3FFFC;
+}
+
+.cycle-caption .caption-title {
+  color: #FEE0FF;
+}
+
+/* ───────────── Collection Section Buttons ───────────── */
+
+.collection-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+
+.btn-pill-blue-fill {
+  background-color: #53CAFC;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.btn-pill-blue-fill:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
+
+.btn-pill-blue-outline {
+  background: transparent;
+  border: 2px solid #53CAFC;
+  color: #53CAFC;
+  padding: 14px 32px;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-pill-blue-outline:hover {
+  background-color: rgba(83, 202, 252, 0.15);
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ───────── iPhone Premium Collection Redesign ───────── */
+@media (max-width: 430px) {
+
+  .collection-section {
+    padding: 100px 20px;
+  }
+
+  .collection-headline-left {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  /* Single column layout */
+  .collection-rectangles {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .collection-card-unit {
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Larger premium cards */
+  .collection-rect {
+    width: 100%;
+    max-width: 340px;
+    height: 420px;
+    border-radius: 22px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Make product image larger and more centered */
+  .rect-product-img {
+    width: 260px;
+    max-height: 300px;
+    bottom: 110px;
+  }
+
+  /* Clean centered captions */
+  .rect-caption {
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .caption-title {
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .caption-subtext {
+    font-size: 1rem;
+  }
+
+  .caption-source {
+    font-size: 0.95rem;
+  }
+
+  /* 🔥 Properly centered premium buttons */
+  .collection-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* <-- this fixes left alignment */
+    justify-content: center;
+    gap: 16px;
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .btn-pill-blue-fill,
+  .btn-pill-blue-outline {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 28px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───────────── Activity Gallery — Full Width Images (Visible Above Layers) ───────────── */
+
+/* ───────────── Activity Gallery — Full Width Images (Visible Above Layers) ───────────── */
+
+.activity-gallery-section {
+  /* margin-top: 100px;  🔥 Remove this line */
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* If needed, ensure it’s shown above even stronger layers: */
+.zone-2 {
+  z-index: 1000 !important;
+}
+
+.activity-gallery {
+  display: flex;
+  width: 100vw;
+}
+
+/* Each image fills 1/4 of the viewport, no visible gaps */
+.activity-card {
+  position: relative;
+  flex: 1 0 25vw;
+  overflow: hidden;
+}
+
+.activity-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Button in bottom left of each card */
+.activity-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background-color: #fff;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.activity-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+
+
+
+
+/* ───────── iPhone Activity Gallery 2x2 Grid ───────── */
+@media (max-width: 430px) {
+
+  .activity-gallery-section {
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .activity-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 per row */
+    grid-template-rows: auto auto;
+    width: 100vw;
+    gap: 0; /* 🔥 no spacing between images */
+  }
+
+  .activity-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 🔥 perfect square layout */
+    overflow: hidden;
+  }
+
+  .activity-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .activity-btn {
+    bottom: 12px;
+    left: 12px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subscription-section {
+  background-color: #fff;
+  padding: 100px 40px;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.subscription-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.subscription-headline {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 60px;
+  line-height: 1.3;
+}
+
+.subscription-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 580px;
+}
+
+/* 🎨 Gradient "MoverPro" effect */
+.moverpro-gradient {
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  background-clip: text;               
+  -webkit-background-clip: text;       
+  -webkit-text-fill-color: transparent;
+  color: transparent;                  
+  display: inline-block;
+  font-weight: 900;
+}
+/* ───────────── Features Section (Under Subscription Image) ───────────── */
+
+.features-section {
+  width: 100%;
+  padding: 80px 0 0;
+  background: #fff;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.features-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: left;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 40px; /* ⬅ pushes actions lower */
+  position: relative;
+}
+
+.feature-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 48px;
+  height: 45%;
+  width: 1px;
+  background-color: #eee;
+}
+
+/* Header */
+.feature-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.feature-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin: 0;
+  text-align: center;
+}
+
+/* Body text */
+.feature-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+  margin: 0 0 40px 0; /* ⬅ pushes buttons / coming soon lower */
+  line-height: 1.5;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* ───── Buttons ───── */
+
+.btn-feature-outline {
+  display: inline-block;
+  padding: 10px 18px;
+  max-width: 140px;
+  margin: 0 auto;
+  border: 2px solid #53CAFC;
+  background: transparent;
+  color: #53CAFC;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-feature-outline:hover {
+  background-color: #53CAFC;
+  color: white;
+}
+
+/* 💙➡️💗 Gradient button for MoverPro */
+.feature-card:nth-child(2) .btn-feature-outline {
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  color: #fff;
+  border: none;
+}
+
+.feature-card:nth-child(2) .btn-feature-outline:hover {
+  filter: brightness(1.05);
+}
+
+/* ───── Coming Soon (TEXT — NOT BUTTON) ───── */
+
+.feature-card:nth-child(3) .btn-feature-outline {
+  all: unset; /* removes button behavior */
+  display: inline-block;
+  margin: 0 auto;
+  color: #aaa;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Satoshi', sans-serif;
+  cursor: default;
+  position: relative;
+}
+
+/* Underline on hover */
+.feature-card:nth-child(3) .btn-feature-outline:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: #aaa;
+}
+
+
+
+/* ───────── iPhone Subscription Section Redesign ───────── */
+@media (max-width: 430px) {
+
+  .subscription-section {
+    padding: 80px 20px;
+  }
+
+  .subscription-headline {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+
+  .subscription-image {
+    max-height: none;
+    border-radius: 18px;
+    margin-bottom: 60px;
+  }
+
+  /* ───────── Features Section ───────── */
+
+  .features-section {
+    padding: 40px 0 0;
+  }
+
+  .features-inner {
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-card {
+    min-width: auto;
+    width: 100%;
+    max-width: 360px;
+    padding-bottom: 0;
+  }
+
+  /* Remove divider lines */
+  .feature-card:not(:last-child)::after {
+    display: none;
+  }
+
+  .feature-title {
+    font-size: 1.4rem;
+  }
+
+  .feature-text {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  /* Premium full-width buttons */
+  .btn-feature-outline {
+    width: 100%;
+    max-width: 260px;
+    padding: 14px 22px;
+    font-size: 1rem;
+  }
+
+  /* Keep gradient for MoverPro */
+  .feature-card:nth-child(2) .btn-feature-outline {
+    background: linear-gradient(to right, #53CAFC, #FEE0FF);
+    color: #fff;
+    border: none;
+  }
+
+  /* Coming Soon cleaner */
+  .feature-card:nth-child(3) .btn-feature-outline {
+    font-size: 1rem;
+    color: #999;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.faq-section {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔄 Wraps both text and images in one layout */
+.faq-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* ✅ Vertically center */
+  gap: 60px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+
+/* 🧱 Left side: content */
+.faq-content-container {
+  flex: 1;
+  padding-left: clamp(60px, 12vw, 180px);
+  box-sizing: border-box;
+}
+
+.faq-content {
+  max-width: 700px;
+}
+
+.faq-headline {
+  font-size: 2.8rem;
+  color: #111;
+  margin-bottom: 40px;
+  text-align: left;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+}
+
+.faq-question {
+  font-size: 1.1rem;
+  color: #111;
+  margin: 0 0 8px 0;
+  text-align: left;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+}
+
+.faq-answer {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+}
+
+.faq-link {
+  color: #53CAFC;
+  text-decoration: none;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.faq-link:hover {
+  text-decoration: underline;
+}
+
+.faq-divider {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 20px 0;
+}
+
+/* 🖼 Right side: 2x2 image grid */
+.faq-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;                 /* ✅ Smaller gaps between images */
+  flex-shrink: 0;
+  width: 460px;
+  margin-top: 48px;         /* ✅ Push grid downward */
+}
+
+.faq-image-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 1024px) {
+  .faq-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faq-content-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .faq-image-grid {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 60px;       /* ✅ Slightly more spacing on mobile */
+    gap: 8px;
+  }
+
+  .faq-image-grid img {
+    height: 180px;
+  }
+}
+
+
+/* ───────── iPhone FAQ Section Redesign ───────── */
+@media (max-width: 430px) {
+
+  .faq-section {
+    padding: 70px 20px;
+  }
+
+  .faq-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+  }
+
+  /* Remove heavy left indent */
+  .faq-content-container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .faq-content {
+    max-width: 100%;
+  }
+
+  .faq-headline {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .faq-item {
+    margin-bottom: 24px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .faq-divider {
+    margin: 18px 0;
+  }
+
+  /* ───────── Image Grid ───────── */
+
+  .faq-image-grid {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .faq-image-grid img {
+    height: 140px;
+    border-radius: 10px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🌟 Glass Bottom Footer Container */
+.glass-bottom-footer {
+  background: linear-gradient(
+    135deg,
+    rgba(83, 202, 252, 0.25),
+    rgba(255, 255, 255, 0.1),
+    rgba(83, 202, 252, 0.2)
+  );
+  backdrop-filter: blur(48px) saturate(250%);
+  -webkit-backdrop-filter: blur(48px) saturate(250%);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 48px rgba(83, 202, 252, 0.35),
+    inset 0 0 60px rgba(255, 255, 255, 0.08);
+  padding: 100px 70px;
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  z-index: 2;
+  color: #B0B0B0;
+  font-family: 'Satoshi', sans-serif;
+  margin-top: 0;
+  position: relative;
+}
+
+/* ✨ Shimmer Overlay */
+.glass-bottom-footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 70%
+  );
+  animation: shimmerMove 8s infinite ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 🏷 Top Title */
+.footer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 50px;
+  font-family: 'Satoshi', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+/* 📦 Footer Layout */
+.glass-footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-col {
+  min-width: 180px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-logobottom {
+  width: 160px;
+  margin: 40px auto 16px auto;
+  display: block;
+}
+
+.footer-small-text {
+  font-size: 0.9rem;
+  color: #8f8f8f;
+  margin: 6px 0;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-small-text a {
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-small-text a:hover {
+  color: #53CAFC;
+  text-decoration: underline;
+}
+
+/* 📰 Section Headlines */
+.footer-headline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #bdbdbd;
+  padding-bottom: 6px;
+  width: max-content;
+}
+
+/* 📋 Lists */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #8f8f8f;
+  transition: color 0.3s ease;
+}
+
+.footer-list li a {
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-list li a:hover {
+  color: #53CAFC;
+  text-decoration: underline;
+}
+
+/* 📧 Email */
+.footer-email {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #8f8f8f;
+}
+
+/* 🌐 Social Icons */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-socials img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.footer-socials img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* 📱 QR Icon */
+.qr-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 0 10px 0;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.download-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* 🛒 Store Icons */
+.store-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.store-icons img {
+  width: 105px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.store-icons img:hover {
+  transform: scale(1.05);
+}
+
+.store-icons img[alt="WatchOS"] {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+/* ───────── iPhone Glass Bottom Footer (Left Aligned + Branding Bottom) ───────── */
+@media (max-width: 430px) {
+
+  .glass-bottom-footer {
+    padding: 70px 24px;
+  }
+
+  .glass-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    text-align: left;
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  /* 🔥 Move logo + copyright column to bottom */
+  .glass-footer-content .footer-col:first-child {
+    order: 99;
+    margin-top: 40px;
+  }
+
+  .footer-logobottom {
+    width: 140px;
+    margin: 40px 0 12px 0;
+  }
+
+  .footer-small-text {
+    font-size: 0.85rem;
+    text-align: left;
+    margin-top: 6px;
+  }
+
+  /* Section Headlines */
+  .footer-headline {
+    font-size: 1.1rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Lists */
+  .footer-list li {
+    font-size: 0.9rem;
+  }
+
+  .footer-email {
+    font-size: 0.9rem;
+  }
+
+  /* Social icons */
+  .footer-socials {
+    justify-content: flex-start;
+  }
+
+  /* Download Block */
+  .download-block {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .qr-icon {
+    width: 70px;
+  }
+
+  .store-icons {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .store-icons img {
+    width: 95px;
+  }
+
+}

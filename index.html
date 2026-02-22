@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOVEN | The All In One Fitness App</title>
+   <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="websiteimages/favicon1.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="websiteimages/favicon-32x32.png">
+<link rel="apple-touch-icon" href="websiteimages/apple-touch-icon.png">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="css/satoshi.css" />
+</head>
+
+<body>
+
+
+
+
+
+<!-- 🔝 Sticky Top Bar (Hidden by default) -->
+<header id="stickyTopBar" class="sticky-top-bar">
+  <div class="top-bar-content">
+    <!-- Circle with Icon -->
+    <a href="index.html" class="top-bar-dot" aria-label="Go to Home"></a>
+
+    <!-- ✨ Normal Mode -->
+    <nav class="top-bar-nav nav-full">
+      <a href="discover.html">Discover</a>
+      <span class="divider"></span>
+      <a href="movengallery.html">Moven Gear</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Mover Pro</a>
+      <span class="divider"></span>
+      <a href="movenclubs.html">Moven Clubs</a>
+    </nav>
+
+    <!-- ✨ Compact Mode -->
+    <nav class="top-bar-nav nav-compact">
+      <a href="create-account.html">Join For Free</a>
+      <span class="divider"></span>
+      <a href="MoverPro.html">Subscribe Now</a>
+      <span class="divider"></span>
+      <a href="movenai.html">Moven Ai</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Footer (hidden while sticky bar is shown) -->
+<footer class="minimal-footer">
+  <div class="footer-inner">
+
+    <!-- 🍔 iPhone Hamburger (hidden on desktop via CSS) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Left: Logo -->
+    <div class="footer-left">
+      <a href="index.html">
+        <img src="MOVENLOGOBLUE.png" alt="Moven Logo" class="footer-logo" />
+      </a>
+    </div>
+
+    <!-- Right: Nav + User -->
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="discover.html">Discover</a>
+        <a href="ways-to-move.html">Ways To Move</a>
+        <a href="movengear.html">Moven Gear</a>
+        <a href="moven-features.html">Features</a>
+      </nav>
+
+      <div class="footer-buttons">
+        <!-- 🔹 Sign In button (only shown when logged out) -->
+        <button id="signin-btn" class="btn-signin-outline" style="display: none;">
+          Sign In
+        </button>
+
+        <!-- 👤 Logged-in user profile -->
+        <div id="user-profile" class="user-profile">
+          <img
+            id="profile-avatar"
+            src="default-avatar.jpg"
+            alt="Profile Picture"
+            class="profile-avatar"
+          />
+          <span id="profile-username" class="profile-username">Guest</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- 📱 iPhone Glass Dropdown Menu -->
+<div class="mobile-glass-menu" id="mobileGlassMenu">
+  <a href="discover.html">Discover</a>
+  <a href="ways-to-move.html">Ways To Move</a>
+  <a href="movengear.html">Moven Gear</a>
+  <a href="moven-features.html">Features</a>
+</div>
+
+
+
+
+<section class="hero-section">
+  <div class="hero-layout">
+
+    <!-- ⬅️ Bottom Left Text/Icon Block -->
+    <div class="hero-bottom-left">
+
+      <!-- ✅ Headline + Icon Inline (icon now on the right) -->
+      <div class="hero-headline-inline">
+        <h1 class="hero-title">Moven</h1>
+        <img src="Moveicon.svg" alt="Moven Icon" class="hero-icon" />
+      </div>
+
+      <!-- ✅ Subtitle Below -->
+      <p class="hero-subtitle">
+        A new way to track, train, and elevate every way you move.
+      </p>
+
+    </div>
+
+    <!-- ➡️ Bottom Right Buttons -->
+<div class="hero-bottom-right">
+  <a href="create-account.html" class="btn-pill-outline">Join for Free</a>
+  <a href="MoverPro.html" class="btn-pill-black">MoverPro</a>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+<div class="hero-spacer"></div>
+
+
+
+<section class="display-section">
+  <div class="display-content">
+
+    <!-- Animated Headline -->
+    <h2 class="display-headline fade-item">
+      Get ready to <span class="blue-text">MOVE</span>
+    </h2>
+
+    <!-- Sub‑Headline -->
+    <h3 class="display-subheadline fade-item">
+      Move with style, designed to make exercising feel unique.
+    </h3>
+
+    <!-- Icons Row -->
+    <div class="icons-row fade-item">
+      <img src="IconWalkblack.svg" alt="Walk Icon" class="display-icon" />
+      <img src="IconMoveblack.svg" alt="Move Icon" class="display-icon" />
+      <img src="IconJogblack.svg" alt="Jog Icon" class="display-icon" />
+      <img src="IconCycleblack.svg" alt="Cycle Icon" class="display-icon" />
+    </div>
+
+    <!-- Paragraph + Image -->
+    <div class="display-text-image">
+
+      <div class="display-text-block">
+
+        <!-- Block 1 -->
+        <div class="display-block fade-item">
+          <div class="block-header">
+            <h4 class="mini-headline">Style in Motion</h4>
+            <img src="IconWalkblack.svg" alt="Walk Icon" class="mini-icon" />
+          </div>
+
+          <p class="display-paragraph">
+            Moven Gear transforms everyday movement into something personal, turning walking and training into an experience rather than just a start button. Your gear becomes part of the journey, adding identity, motivation, and intention to every step.
+          </p>
+
+          <a href="movengallery.html" class="learn-more">
+  Learn More <img src="RightChevronBlue.png" alt="Chevron" class="chevron-icon" />
+          </a>
+
+
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="display-block fade-item">
+          <div class="block-header">
+            <h4 class="mini-headline">Fitness Your Way</h4>
+            <img src="IconCycleblack.svg" alt="Walk Icon" class="mini-icon" />
+          </div>
+
+          <p class="display-paragraph">
+            Every ride becomes a more personal experience, going beyond speed and distance to add identity, momentum, and intention to each session.
+          </p>
+
+         <a href="movengallery.html" class="learn-more">
+  Learn More <img src="RightChevronBlue.png" alt="Chevron" class="chevron-icon" />
+</a>
+
+
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="display-block fade-item">
+          <div class="block-header">
+            <h4 class="mini-headline">Feel Every Step</h4>
+            <img src="IconJogblack.svg" alt="Walk Icon" class="mini-icon" />
+          </div>
+
+          <p class="display-paragraph">
+            Every run becomes more than just distance and pace, turning effort into an experience that feels personal, focused, and deeply motivating. From your first stride to your strongest finish, every step carries intention, momentum, and meaning.
+          </p>
+
+         <a href="movengallery.html" class="learn-more">
+  Learn More <img src="RightChevronBlue.png" alt="Chevron" class="chevron-icon" />
+</a>
+
+        </div>
+
+      </div>
+
+      <!-- Side Image -->
+      <img 
+        src="iosimage1.jpg" 
+        alt="Movement Illustration" 
+        class="display-side-image fade-item" 
+      />
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="ios-section">
+  <div class="ios-content">
+
+   <!-- Preview Image + Overhang -->
+<div class="ios-image-wrapper">
+  <img src="72.jpg" alt="iOS Preview" class="ios-preview-image" />
+
+  <!-- Overhanging image -->
+  <img src="iosimage22.jpg" alt="iOS Side Image" class="ios-overhang-image" />
+</div>
+
+
+    <!-- Dynamic Headline -->
+    <div class="ios-headline-container">
+      <h2 class="ios-dynamic-headline" id="animatedHeadline">
+        <span class="word">Move</span>
+        <span class="word">and</span>
+        <span class="word">track</span>
+        <span class="word">with</span>
+        <span class="word pinkblue">style</span>
+        <span class="word">and</span>
+        <span class="word blue">certainty.</span>
+      </h2>
+    </div>
+
+  </div>
+
+  <!-- ✅ Apple‑style Horizontal Tab View with image + description pairs -->
+  <div class="ios-tabview-outer">
+    <div class="ios-tabview">
+
+      <!-- Card 1 -->
+<div class="tab-unit">
+  <div class="tab-card">
+    <img src="card1.jpg" alt="Feature 1" class="card-image" />
+  </div>
+
+  <h4 class="card-title">Precision for Every Sport</h4>
+  <p class="card-description">
+    Every sport moves differently — and your data should reflect that. 
+    <span class="highlighted-italic">Tracking adapts to each activity</span>, measuring performance the way the sport actually works. 
+    A swim session captures distance differently than a track run, delivering clearer insights and more 
+    <span class="highlighted-italic">accurate progress</span> across every way you move.
+  </p>
+</div>
+
+     <!-- Card 2 -->
+<div class="tab-unit">
+  <div class="tab-card">
+    <img src="card2.jpg" alt="Feature 2" class="card-image" />
+  </div>
+  <h4 class="card-title">Built Around Real Conditions</h4>
+  <p class="card-description">
+    Check real-time conditions before you move to stay safe,
+    <span class="highlighted-italic">plan smarter</span>, and understand the difficulty of your session.
+    Weather is automatically captured during every activity and saved with your workout, so you can review conditions
+    alongside your <span class="highlighted-italic">performance</span> — giving deeper context to
+    <span class="highlighted-italic">how you trained</span> and how you felt.
+  </p>
+</div>
+
+
+     <!-- Card 3 -->
+<div class="tab-unit">
+  <div class="tab-card">
+    <img src="card3.jpg" alt="Feature 3" class="card-image" />
+  </div>
+  <h4 class="card-title">Intelligent Swim Tracking</h4>
+  <p class="card-description">
+    Swim sessions are currently tracked through <span class="highlighted-italic">Apple Watch</span>, with support for more Bluetooth-enabled devices coming soon.
+    Movement data is analysed using <span class="highlighted-italic">sensor-based stroke detection</span>, allowing each stroke and lap to be measured accurately in real time.
+    Moven supports four swim types — <span class="highlighted-italic">25m pool</span>, <span class="highlighted-italic">50m pool</span>,
+    <span class="highlighted-italic">100m pool</span>, and <span class="highlighted-italic">open water</span> — and calculates average pace based on your selected lap distance,
+    delivering clear insight into performance across every session.
+  </p>
+</div>
+
+
+      <!-- Card 4 -->
+<div class="tab-unit">
+  <div class="tab-card">
+    <img src="card4.svg" alt="Feature 4" class="card-image" />
+  </div>
+  <h4 class="card-title">Move, Personalised</h4>
+  <p class="card-description">
+    Moven Gear makes every session feel personal and uniquely yours.
+    If no sport is selected, sessions default to <span class="highlighted-italic">Move</span>, 
+    <span class="highlighted-italic">designed for everyday movement</span> and natural activity.
+    For deeper performance detail and a more <span class="highlighted-italic">immersive experience</span>, 
+    simply equip gear and move with it.
+    Custom gear creation is <span class="highlighted-italic">coming soon</span>, 
+    with creators and brands also building exclusive gear behind the scenes.
+  </p>
+</div>
+
+
+   <!-- Card 5 -->
+<div class="tab-unit">
+  <div class="tab-card">
+    <img src="card5.jpg" alt="Feature 5" class="card-image" />
+  </div>
+  <h4 class="card-title">Performance, Fully Captured</h4>
+  <p class="card-description">
+    On <span class="highlighted-italic">iOS</span>, Moven tracks steps, pace, distance, route, speed, speed zones, splits, elevation, time, weather, fastest speed, and fastest split — delivering a complete picture of every session.
+    When paired with <span class="highlighted-italic">Apple Watch</span>, heart rate, heart rate zones, and calories burned are added for deeper insight.
+    Not every session shows the same metrics — data is <span class="highlighted-italic">intelligently tailored</span> to your activity type.
+    With more Bluetooth-enabled devices coming soon, <span class="highlighted-italic">performance insight</span> will continue to expand and improve.
+  </p>
+</div>
+
+     <!-- Card 6 -->
+<div class="tab-unit">
+  <div class="tab-card">
+    <img src="card6.jpg" alt="Feature 6" class="card-image" />
+  </div>
+  <h4 class="card-title">Move Together</h4>
+  <p class="card-description">
+    Connect with friends, follow their sessions, and stay inspired by the way they 
+    <span class="highlighted-italic">move</span>. 
+    Share your own sessions across <span class="highlighted-italic">social platforms</span> or keep them private when you choose — 
+    giving you <span class="highlighted-italic">full control over</span> how and when you share your movement.
+  </p>
+</div>
+
+
+      <!-- Card 7 -->
+<div class="tab-unit">
+  <div class="tab-card">
+    <img src="card7.jpg" alt="Feature 7" class="card-image" />
+  </div>
+  <h4 class="card-title">Offline, Handled</h4>
+  <p class="card-description">
+    If service drops during a session, <span class="highlighted-italic">your activity</span> is safely stored on your device so 
+    <span class="highlighted-italic">nothing is lost</span>. Once you're back 
+    <span class="highlighted-italic">in service, you can review</span> the session and choose to save it or delete it — giving you full control and peace of mind 
+    <span class="highlighted-italic">wherever</span> you move.
+  </p>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="info-section">
+  <div class="info-cards-grid">
+
+    <!-- Card 1 -->
+    <div class="info-card fade-item"
+         onclick="location.href='movengallery.html'"
+         style="cursor: pointer; transition-delay: 0.1s;">
+      <img src="card12.jpg" alt="Discover 1" />
+      <div class="card-overlay white-text">
+        <p class="small-headline">Chase Your Goal</p>
+        <h3 class="feature-headline">Designed for uniqueness</h3>
+        <p class="gear-type">Moven Gear</p>
+        <div class="card-buttons">
+          <a href="movengallery.html"><button class="btn-pill-blue">View</button></a>
+          <a href="movengallery.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="info-card fade-item"
+         onclick="location.href='ways-to-move.html'"
+         style="cursor: pointer; transition-delay: 0.25s;">
+      <img src="card13.jpg" alt="Discover 2" />
+      <div class="card-overlay">
+        <p class="small-headline">Move With Others</p>
+        <h3 class="feature-headline">Find a club and get Moven</h3>
+        <p class="gear-type">All Sports</p>
+        <div class="card-buttons">
+          <a href="movenclubs.html"><button class="btn-pill-blue">View</button></a>
+          <a href="movenclubs.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="info-card fade-item"
+         onclick="location.href='Movenai.html'"
+         style="cursor: pointer; transition-delay: 0.4s;">
+      <img src="card14.jpg" alt="Discover 3" />
+      <div class="card-overlay">
+        <p class="small-headline">Moven Ai</p>
+        <h3 class="feature-headline">Track like never before</h3>
+        <p class="gear-type">The new way to move</p>
+        <div class="card-buttons">
+          <a href="Movenai.html"><button class="btn-pill-blue">View</button></a>
+          <a href="Movenai.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="info-card fade-item"
+         onclick="location.href='create-account.html'"
+         style="cursor: pointer; transition-delay: 0.55s;">
+      <img src="card15.jpg" alt="Discover 4" />
+      <div class="card-overlay">
+        <p class="small-headline">MoverPro</p>
+        <h3 class="feature-headline">Take exercise to the next level</h3>
+        <p class="gear-type">Move like never before</p>
+        <div class="card-buttons">
+          <a href="MoverPro.html"><button class="btn-pill-blue">Subscribe</button></a>
+          <a href="create-account.html" class="learn-more">Join for free</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="info-cta fade-item" style="transition-delay: 0.75s;">
+    <h2 class="info-cta-headline" id="scrollHeadline">
+      Join Moven today... Find what
+      <span class="gradient-text" data-text="moves you.">moves you.</span>
+    </h2>
+  </div>
+</section>
+
+
+
+<section class="inspire-section">
+  <div class="block block-1" style="background-image: url('Move.jpg');">
+    <h2 class="block-title">Move</h2>
+  </div>
+  <div class="block block-2" style="background-image: url('Your.jpg');">
+    <h2 class="block-title">Your</h2>
+  </div>
+  <div class="block block-3" style="background-image: url('Way.jpg');">
+    <h2 class="block-title">Way</h2>
+  </div>
+</section>
+
+
+<section class="collection-section">
+  <div class="collection-inner-simple">
+
+    <!-- Headline -->
+    <h2 class="collection-headline-left fade-item" style="transition-delay: 0.1s;">
+      Moven Collection
+    </h2>
+
+    <div class="collection-rectangles">
+
+      <!-- Walk Card -->
+      <div class="collection-card-unit fade-item" style="transition-delay: 0.25s;">
+        <div class="collection-rect light-blue">
+          <div class="rect-top-label">
+            <span>Walk</span>
+            <img src="IconWalkblack.svg" alt="Walk Icon" />
+          </div>
+          <img src="MovenWalker.png" alt="Walker Stroll" class="rect-product-img" />
+        </div>
+        <div class="rect-caption walk-caption">
+          <div class="caption-title">
+            <span>Walk Gear</span>
+            <img src="IconWalkblack.svg" alt="Walk Icon" />
+          </div>
+          <p class="caption-subtext">Moven Walker</p>
+          <p class="caption-source">From Moven Collection</p>
+        </div>
+      </div>
+
+      <!-- Run Card -->
+      <div class="collection-card-unit fade-item" style="transition-delay: 0.4s;">
+        <div class="collection-rect light-aqua">
+          <div class="rect-top-label">
+            <span>Run</span>
+            <img src="IconJogblack.svg" alt="Run Icon" />
+          </div>
+          <img src="MovenJogger.png" alt="Jogger Ultra" class="rect-product-img" />
+        </div>
+        <div class="rect-caption run-caption">
+          <div class="caption-title">
+            <span>Run Gear</span>
+            <img src="IconJogblack.svg" alt="Run Icon" />
+          </div>
+          <p class="caption-subtext">Moven Jogger</p>
+          <p class="caption-source">From Moven Collection</p>
+        </div>
+      </div>
+
+      <!-- Cycle Card -->
+      <div class="collection-card-unit fade-item" style="transition-delay: 0.55s;">
+        <div class="collection-rect light-pink">
+          <div class="rect-top-label">
+            <span>Cycle</span>
+            <img src="IconCycleblack.svg" alt="Cycle Icon" />
+          </div>
+          <img src="MovenBikeUltra.png" alt="Bike Dasher" class="rect-product-img" />
+        </div>
+        <div class="rect-caption cycle-caption">
+          <div class="caption-title">
+            <span>Cycle Gear</span>
+            <img src="IconCycleblack.svg" alt="Cycle Icon" />
+          </div>
+          <p class="caption-subtext">Moven Bike Ultra</p>
+          <p class="caption-source">From Moven Collection</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="collection-buttons fade-item" style="transition-delay: 0.7s;">
+      <a href="movencollection.html">
+        <button class="btn-pill-blue-fill">View Full Collection</button>
+      </a>
+      <a href="movengallery.html">
+        <button class="btn-pill-blue-outline">View Other Gear</button>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="activity-gallery-section zone-2">
+  <div class="activity-gallery">
+
+    <div class="activity-card">
+      <img src="gallery1.jpg" alt="Run Activity" class="activity-img" />
+      <a href="ways-to-move.html">
+        <button class="activity-btn">Run</button>
+      </a>
+    </div>
+
+    <div class="activity-card">
+      <img src="gallery2.jpg" alt="Swim Activity" class="activity-img" />
+      <a href="ways-to-move.html">
+        <button class="activity-btn">Swim</button>
+      </a>
+    </div>
+
+    <div class="activity-card">
+      <img src="gallery3.jpg" alt="Cycle Activity" class="activity-img" />
+      <a href="ways-to-move.html">
+        <button class="activity-btn">Cycle</button>
+      </a>
+    </div>
+
+    <div class="activity-card">
+      <img src="gallery4.jpg" alt="Hike Activity" class="activity-img" />
+      <a href="ways-to-move.html">
+        <button class="activity-btn">Hike</button>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="subscription-section">
+  <div class="subscription-inner">
+
+    <!-- Headline -->
+    <h2 class="subscription-headline fade-item" style="transition-delay: 0.1s;">
+      Move, Run, Customise your own.<br />
+      All with <span class="moverpro-gradient">MoverPro.</span>
+    </h2>
+
+    <!-- Hero Image -->
+    <img src="Moverproframe.jpg"
+         alt="MoverPro Visual"
+         class="subscription-image fade-item"
+         style="transition-delay: 0.25s;" />
+
+    <!-- New Feature Cards -->
+    <section class="features-section">
+      <div class="features-inner">
+
+        <!-- ➤ Mover -->
+        <div class="feature-card fade-item" style="transition-delay: 0.4s;">
+          <div class="feature-header">
+            <h3 class="feature-title">Mover</h3>
+            <img src="Moveicon.jpg" alt="Mover Icon" class="feature-icon" />
+          </div>
+
+          <p class="feature-text">
+            The best free platform for <br />
+            health and fitness.
+          </p>
+
+          <a href="create-account.html">
+            <button class="btn-feature-outline">Join Now</button>
+          </a>
+        </div>
+
+        <!-- ➤ MoverPro -->
+        <div class="feature-card fade-item" style="transition-delay: 0.55s;">
+          <div class="feature-header">
+            <h3 class="feature-title">MoverPro</h3>
+            <img src="Moveicon.jpg" alt="MoverPro Icon" class="feature-icon" />
+          </div>
+
+          <p class="feature-text">
+            Utilise subscription features, help<br />
+            get where you wanna get quicker <br />
+            with MoverPro.
+          </p>
+
+          <a href="moverpro.html">
+            <button class="btn-feature-outline">Subscribe</button>
+          </a>
+        </div>
+
+        <!-- ➤ MovenAthlete -->
+        <div class="feature-card fade-item" style="transition-delay: 0.7s;">
+          <div class="feature-header">
+            <h3 class="feature-title">MovenAthlete</h3>
+            <img src="Moveicon.jpg" alt="MovenAthlete Icon" class="feature-icon" />
+          </div>
+
+          <p class="feature-text">
+            Introducing the next best thing <br />
+            with MovenAthlete. Designed to <br />
+            make moving feel effortless.
+          </p>
+
+          <button class="btn-feature-outline">Coming Soon</button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</section>
+
+
+
+
+<!-- FAQ Section -->
+<section class="faq-section zone-2">
+  <div class="faq-inner">
+    
+    <!-- Left: FAQ Text Content -->
+    <div class="faq-content-container">
+      <div class="faq-content">
+        <h2 class="faq-headline">Common Asked Questions</h2>
+
+        <!-- ✅ FAQ 1 -->
+        <div class="faq-item">
+          <p class="faq-question">
+            How quickly can I start using Moven after downloading the app?
+          </p>
+          <p class="faq-answer">
+            Once you download and install Moven, you can set up your profile and begin your first workout within minutes. →
+            <a href="moven-features.html" class="faq-link">Find out more</a>
+          </p>
+        </div>
+        <hr class="faq-divider">
+
+        <!-- ✅ FAQ 2 -->
+        <div class="faq-item">
+          <p class="faq-question">
+            Is Moven only for runners?
+          </p>
+          <p class="faq-answer">
+           No. Moven supports multiple sports and ways to move — from walking and cycling to structured training sessions and events. →
+            <a href="movengallery.html" class="faq-link">Check out now</a>
+          </p>
+        </div>
+        <hr class="faq-divider">
+
+        <div class="faq-item">
+  <p class="faq-question">
+    Can I join events and clubs?
+  </p>
+  <p class="faq-answer">
+    Yes. You can discover events, join clubs, or create your own to move with others who share your goals. →
+    <a href="movenclubs.html" class="faq-link">Check out now</a>
+  </p>
+</div>
+
+        <hr class="faq-divider">
+
+        <div class="faq-item">
+  <p class="faq-question">
+    Can I sync Moven with my wearable or health‑tracking device?
+  </p>
+  <p class="faq-answer">
+    Yes — Moven supports many major wearables and fitness devices. Go to Settings › Devices to connect yours. →
+    <a href="moven-features.html" class="faq-link">Find out more</a>
+  </p>
+</div>
+
+        <hr class="faq-divider">
+
+        <!-- ✅ FAQ 5 (MoverPro link) -->
+        <div class="faq-item">
+          <p class="faq-question">
+            Do I need to be advanced to use Moven?
+          </p>
+          <p class="faq-answer">
+            Not at all. Moven is built for everyone — beginners, casual movers, and competitive athletes alike. →
+            <a href="discover.html" class="faq-link">Check out now</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right: Image Grid -->
+    <div class="faq-image-grid">
+      <img src="grid1.jpg" alt="FAQ Image 1" />
+      <img src="grid2.jpg" alt="FAQ Image 2" />
+      <img src="grid3.jpg" alt="FAQ Image 3" />
+      <img src="grid4.jpg" alt="FAQ Image 4" />
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="glass-bottom-footer">
+  <div class="glass-footer-content">
+    <!-- 🔹 Left Section -->
+    <div class="footer-col left-col">
+      <img src="MovenLogoblack.jpg" alt="Moven Logo" class="footer-logobottom" />
+      <p class="footer-small-text">© 2025 Moven. All rights reserved.</p>
+      <p class="footer-small-text">
+        <a href="privacypolicy.html">Privacy Policy</a>
+      </p>
+    </div>
+
+    <!-- 🔹 Middle Left -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">Find out more</h4>
+      <ul class="footer-list">
+        <li><a href="moven-features.html">Features</a></li>
+        <li><a href="movengear.html">Moven Gear</a></li>
+        <li><a href="movenclubs.html">Sport Clubs</a></li>
+        <li><a href="MoverPro.html">MoverPro</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Middle Right -->
+    <div class="footer-col mid-col">
+      <h4 class="footer-headline">More</h4>
+      <ul class="footer-list">
+        <li><a href="movencollection.html">Moven Collection</a></li>
+        <li><a href="movenclubs.html">Moven Clubs</a></li>
+        <li><a href="ways-to-move.html">Sports</a></li>
+        <li><a href="create-account.html">Create Account</a></li>
+        <li><a href="moverpro.html">Subscribe</a></li>
+        <li><a href="create-account.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Reach Out Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Reach Out</h4>
+      <p class="footer-email">moven@startmoven.com</p>
+      <div class="footer-socials">
+        <img src="tik-tok.png" alt="TikTok" />
+        <img src="twitter.png" alt="Twitter" />
+        <img src="instagram.png" alt="Instagram" />
+      </div>
+    </div>
+
+    <!-- 🔹 Download Section -->
+    <div class="footer-col right-col">
+      <h4 class="footer-headline">Download Now</h4>
+
+      <div class="download-block">
+        <img src="MovenQr.png" alt="Move QR Icon" class="qr-icon" />
+        <p class="footer-small-text">Scan to download</p>
+      </div>
+
+      <div class="store-icons">
+        <img src="AppStore.png" alt="App Store" />
+        <img src="watchos.png" alt="WatchOS" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- ✅ Make sure script loads *inside* the body, after all content -->
+<script src="index.js"></script>
+<script src="DynamicIsland.js"></script>
+<script src="indexdisplay.js"></script>
+<script src="indexios.js"></script>
+<script src="indexinfo.js"></script>
+<script src="indexbackground.js"></script>
+<script src="indexloadingscreen.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1757 @@
+/* ─── Satoshi Font Setup ─────────────────────────────────────────── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype"),
+       url("./fonts/Satoshi-Regular.ttf") format("truetype"),
+       url("./fonts/Satoshi-Regular.woff") format("woff"),
+       url("./fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Medium.otf") format("opentype"),
+       url("./fonts/Satoshi-Medium.ttf") format("truetype"),
+       url("./fonts/Satoshi-Medium.woff") format("woff"),
+       url("./fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype"),
+       url("./fonts/Satoshi-Bold.ttf") format("truetype"),
+       url("./fonts/Satoshi-Bold.woff") format("woff"),
+       url("./fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Black.otf") format("opentype"),
+       url("./fonts/Satoshi-Black.ttf") format("truetype"),
+       url("./fonts/Satoshi-Black.woff") format("woff"),
+       url("./fonts/Satoshi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+.top-footer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* balanced shadow */
+  z-index: 10000;
+  padding: 1.2rem 2rem;
+}
+
+/* Container */
+.top-footer-content {
+  position: relative;               /* ⬅️ Needed for absolute centering */
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Left logo */
+.logo-icon {
+  width: 120px;
+  height: auto;
+}
+
+/* Center logo wrapper */
+.center-logo-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Center logo */
+.center-logo {
+  width: 300px;                     /* Same size for symmetry */
+  height: auto;
+}
+
+
+
+/* ===================================== */
+/* 📱 TOP FOOTER – PHONE OPTIMISED */
+/* (Show Only Center Logo) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .top-footer {
+    padding: 0.9rem 1rem; /* slightly tighter */
+  }
+
+  .top-footer-content {
+    justify-content: center; /* center everything */
+  }
+
+  /* Hide left logo completely */
+  .logo-icon {
+    display: none;
+  }
+
+  /* Remove absolute centering */
+  .center-logo-wrapper {
+    position: static;
+    transform: none;
+  }
+
+  /* Scale logo for phone */
+  .center-logo {
+    width: 180px; /* scaled from 300px */
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── MoverPro Intro Section ───────────────────────────── */
+.MoverProIntro {
+  background-color: #ffffff;
+  position: fixed; /* 👈 stays in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 4rem 2rem 6rem;
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+.MoverProIntro.fade-to-white {
+  background-color: #ffffff !important;
+  color: #000000;
+}
+
+.MoverProIntro.fade-to-white h1,
+.MoverProIntro.fade-to-white p {
+  color: #000;
+}
+
+.MoverProIntro.fade-to-white .moverpro-image,
+.MoverProIntro.fade-to-white .mockup-image {
+  opacity: 0.4;
+  transition: opacity 0.5s ease;
+}
+
+.moverpro-content {
+  max-width: 800px;
+  width: 100%;
+  margin-top: 2rem; /* 👈 Pushes it down slightly from the top edge */
+}
+
+.moverpro-content h1 {
+  font-size: 4rem; /* 🆙 SUPERCHARGED SIZE */
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.moverpro-content .blue {
+  color: #53CAFC;
+}
+
+.moverpro-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.moverpro-tagline {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+.mockup-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.moverpro-subtext {
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+
+
+
+/* ===================================== */
+/* 📱 MOVERPRO INTRO – PHONE OPTIMISED */
+/* (Same Layout, Clean Scaling) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .MoverProIntro {
+    padding: 2.5rem 1.5rem 3rem; /* reduced from 4rem 2rem 6rem */
+    align-items: flex-start; /* keep same layout feel */
+  }
+
+  .moverpro-content {
+    margin-top: 3.5rem; /* adjusted for fixed top footer */
+    max-width: 100%;
+  }
+
+  /* Headline */
+  .moverpro-content h1 {
+    font-size: 2.2rem;  /* scaled from 4rem */
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  /* First Image */
+  .moverpro-image {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Tagline */
+  .moverpro-tagline {
+    font-size: 0.95rem; /* scaled down slightly */
+    line-height: 1.4;
+  }
+
+  /* Second Image */
+  .mockup-image {
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Subtext */
+  .moverpro-subtext {
+    font-size: 0.9rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── MoverPro Section ─── */
+.moverpro {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  padding: 6rem 2rem;
+  margin-top: 100vh; /* 👈 Pushes below the fixed intro */
+  text-align: left;
+}
+
+.moverpro-inner {
+  max-width: 1200px; /* ⬅ Increased from 900px */
+  margin: 0 auto;
+}
+
+
+/* Headline */
+.left-headline {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  text-align: left;
+  color: #1a1a1a;
+}
+
+/* Card Container */
+.moverpro-card {
+  background-color: #2c2c2c; /* Dark grey */
+  color: #000000;
+  border-radius: 12px;
+  padding: 3rem 2.5rem 5rem; /* Extra bottom space for "coming soon" */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+}
+
+/* Card Content Flex Wrapper */
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap; /* stacks on mobile */
+}
+
+/* LEFT SIDE STACK */
+.vertical-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Feature Block */
+.feature-block {
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+/* Icon + Text Row */
+.icon-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Icon */
+.feature-icon {
+  width: 48px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Feature Headline */
+.feature-text h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+/* Feature Paragraph */
+.feature-text p {
+  font-size: 1rem;
+  color: #dddddd;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Horizontal Divider */
+.horizontal-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  margin: 1.5rem 0;
+}
+
+/* Price Text */
+.price {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0.25rem 0 0;
+}
+
+/* RIGHT SIDE IMAGE STACK */
+.mockup-image-container {
+  flex-shrink: 0;        /* prevents layout squeeze */
+  width: 280px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mockup-gap {
+  height: 1.5rem;       /* space between stacked images */
+}
+
+.mockup-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Coming Soon Text */
+.coming-soon {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* Card Content Flex Wrapper */
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+
+/* LEFT SIDE STACK */
+.vertical-stack {
+  width: 100%;
+  max-width: 520px;
+  flex-shrink: 1;
+}
+
+/* RIGHT SIDE IMAGE STACK */
+.mockup-image-container {
+  flex-shrink: 0;
+  width: 280px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.mockup-gap {
+  display: none;
+}
+
+
+.mockup-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+
+.section-center-headline {
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 2rem auto 0;
+  max-width: 700px;
+}
+
+
+
+
+/* ===================================== */
+/* 📱 MOVERPRO SECTION – PHONE OPTIMISED */
+/* (Same Layout, Scaled Down Cleanly + Scoped Circular Mockups) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .moverpro {
+    padding: 4rem 1.25rem;
+  }
+
+  .moverpro-inner {
+    max-width: 100%;
+  }
+
+  /* Headline */
+  .left-headline {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Card */
+  .moverpro-card {
+    padding: 2rem 1.5rem 3.5rem;
+    border-radius: 10px;
+  }
+
+  /* Content wrapper */
+  .card-content {
+    gap: 1.25rem;
+  }
+
+  /* Left side */
+  .vertical-stack {
+    max-width: 60%;
+  }
+
+  .feature-block {
+    margin-bottom: 1.25rem;
+  }
+
+  .icon-row {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-icon {
+    width: 32px;
+  }
+
+  .feature-text h3 {
+    font-size: 1rem;
+  }
+
+  .feature-text p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .horizontal-divider {
+    margin: 1rem 0;
+  }
+
+  .price {
+    font-size: 0.95rem;
+  }
+
+  /* 🔥 Only target mockups INSIDE moverpro section */
+  .moverpro .mockup-image-container {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .moverpro .mockup-image-container .mockup-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* Coming soon */
+  .coming-soon {
+    font-size: 0.9rem;
+    bottom: 1.5rem;
+  }
+
+  /* Center headline below card */
+  .section-center-headline {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Compare Sub Section ─── */
+.compare-sub {
+  position: relative;
+  z-index: 1;
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 2rem;
+
+  display: flex;
+  flex-direction: column; /* ✅ THIS IS THE FIX */
+  align-items: center;
+}
+
+
+
+
+/* Headline above compare cards */
+.compare-headline {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: -1.5rem; /* Pull it higher if needed */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+/* Gradient styling for "MoverPro" */
+.gradient-text {
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+
+
+
+
+
+
+.compare-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.compare-card {
+  flex: 1 1 28%;       /* 👈 Slightly wider but still fits 3 per row */
+  background-color: #2c2c2c;
+  padding: 3rem 2.5rem;
+  border-radius: 6px;  /* 👈 Less rounded */
+  text-align: left;
+  color: #fff;
+  min-height: 520px;
+  box-sizing: border-box;
+}
+
+
+/* Subscription Card Specific */
+.card-subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+/* Small Grey Badge (Coming Soon) */
+.card-top-rect {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.9rem;
+  background-color: #ddd;
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+}
+
+/* Text inside badge */
+.coming-soon-tag {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Header with logo and title */
+.subscription-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.compare-logo {
+  width: 36px;
+  height: auto;
+}
+
+.subscription-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Subtitle text */
+.sub-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Pricing layout */
+.price-large {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: auto; /* Pushes pricing to bottom of content stack */
+}
+
+.price-dollars {
+  font-size: 3.75rem; /* Increased size */
+  font-weight: 900;
+  color: #fff;
+}
+
+.price-month {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #bbb;
+  transform: translateY(4px); /* Visually aligns with large number */
+}
+
+/* Year plan text */
+.sub-year {
+  font-size: 0.95rem;
+  margin-bottom: 2.25rem; /* Adds space below year pricing */
+  opacity: 0.8;
+}
+
+
+/* CTA Button */
+.select-plan {
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #53CAFC;
+  background: transparent;
+  border: 2px solid #53CAFC;
+  border-radius: 8px;
+  width: 100%; /* Full width of card content */
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto; /* Pushes it to bottom if needed */
+}
+
+.select-plan:hover {
+  background: rgba(83, 202, 252, 0.1);
+}
+
+
+
+
+/* Cream card modifier */
+.card-cream {
+  background-color: #F3F3F3;
+  color: #1a1a1a;
+}
+
+.card-cream .price-dollars,
+.card-cream .price-month,
+.card-cream .subscription-title {
+  color: #1a1a1a;
+}
+
+.card-cream .sub-year {
+  color: #555;
+  opacity: 0.9;
+}
+
+.card-cream .select-plan {
+  background-color: #53CAFC;
+  color: #000;
+  border: 2px solid #53CAFC;
+}
+
+.card-cream .select-plan:hover {
+  background-color: #3bb5e0;
+}
+
+
+
+/* ===================================== */
+/* 📱 COMPARE SUB – PHONE OPTIMISED */
+/* (Same 3-Card Layout, Scaled Down) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .compare-sub {
+    padding: 4rem 1.25rem;
+  }
+
+  /* Headline */
+  .compare-headline {
+    font-size: 1.9rem;      /* scaled from 4rem */
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  /* Cards container */
+  .compare-cards {
+    gap: 1rem;              /* tighter spacing */
+  }
+
+  /* Keep 3 cards side-by-side */
+  .compare-card {
+    flex: 1 1 30%;          /* still 3 per row */
+    padding: 1.75rem 1rem;  /* smaller rectangle */
+    border-radius: 6px;
+    min-height: 380px;      /* reduced from 520px */
+  }
+
+  /* Badge */
+  .card-top-rect {
+    padding: 0.3rem 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .coming-soon-tag {
+    font-size: 0.7rem;
+  }
+
+  /* Header */
+  .compare-logo {
+    width: 24px;           /* smaller logo */
+  }
+
+  .subscription-title {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  .sub-text {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Pricing */
+  .price-dollars {
+    font-size: 1.8rem;     /* scaled from 3.75rem */
+  }
+
+  .price-month {
+    font-size: 0.7rem;
+    transform: translateY(2px);
+  }
+
+  .sub-year {
+    font-size: 0.7rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* CTA */
+  .select-plan {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  /* ─── Third Card Specific Fit Fix ─── */
+
+  .compare-card:nth-child(3) .subscription-title {
+    font-size: 0.75rem;     /* slightly smaller for long title */
+  }
+
+  .compare-card:nth-child(3) .price-dollars {
+    font-size: 1.6rem;      /* slightly reduced */
+  }
+
+  .compare-card:nth-child(3) .sub-year {
+    font-size: 0.65rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── MoverPro Features Section ─── */
+.moverpro-features {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.moverpro-features-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Headline */
+.moverpro-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+/* Main Feature Image */
+.features-main-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto 15rem; /* ⬅️ Increased bottom margin */
+  display: block;
+  border-radius: 12px;
+}
+
+/* Feature Cards Row */
+.feature-card-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 7rem; /* ⬅️ Increased space before the button */
+}
+
+/* Each Card */
+.feature-card {
+  flex: 1 1 300px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card Image */
+.feature-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
+
+/* Headline under image */
+.feature-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph text under headline */
+.feature-card-text {
+  font-size: 1rem;
+  color: #444;
+  max-width: 90%;
+}
+
+/* CTA Button */
+.features-cta {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #53CAFC;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.features-cta:hover {
+  background-color: #3bb5e0;
+}
+
+
+
+
+/* ===================================== */
+/* 📱 MOVERPRO FEATURES – PHONE OPTIMISED */
+/* (Same Layout, Clean Scaling) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .moverpro-features {
+    padding: 4rem 1.25rem; /* tighter spacing */
+  }
+
+  .moverpro-features-inner {
+    max-width: 100%;
+  }
+
+  /* ─── Headline ─── */
+
+  .moverpro-title {
+    font-size: 1.75rem;   /* scaled from 2.5rem */
+    margin-bottom: 2rem;
+    line-height: 1.3;
+  }
+
+  /* ─── Main Image ─── */
+
+  .features-main-image {
+    margin-bottom: 4rem;  /* reduced from 15rem */
+    border-radius: 14px;
+  }
+
+  /* ─── Feature Cards Row ─── */
+
+  .feature-card-row {
+    gap: 1.25rem;         /* tighter spacing */
+    margin-bottom: 3rem;  /* reduced from 7rem */
+  }
+
+  /* Keep same layout structure (still flex wrap) */
+  .feature-card {
+    flex: 1 1 100%;
+    max-width: 100%;      /* stack cleanly on phone */
+  }
+
+  /* Card Image */
+  .feature-image {
+    height: 180px;        /* scaled from 220px */
+    border-radius: 14px;
+    margin-bottom: 1rem;
+  }
+
+  /* Headline */
+  .feature-card-title {
+    font-size: 1.05rem;   /* scaled from 1.25rem */
+    margin-bottom: 0.4rem;
+  }
+
+  /* Paragraph */
+  .feature-card-text {
+    font-size: 0.9rem;    /* scaled from 1rem */
+    max-width: 100%;
+  }
+
+  /* ─── CTA Button ─── */
+
+  .features-cta {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── ProAI Section ─── */
+/* ─── ProAI Section ─── */
+.proai {
+  position: relative;
+  z-index: 1;
+  background-color: #f8f8f8; /* Light grey */
+  color: #1a1a1a;
+  padding: 6rem 2rem;
+  text-align: center;
+  width: 100vw;      /* ⬅ Full viewport width */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Remove container width limit */
+.proai-inner {
+  max-width: none;   /* ⬅ Allow inner content to expand */
+  width: 100%;
+  padding: 0 2rem;   /* Optional inner padding */
+}
+
+
+/* Headline */
+/* Headline */
+.proai-headline {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 10rem; /* ⬅️ Increased from 2rem to 4rem */
+  line-height: 1.3;
+  text-align: center; /* Make sure it's centered */
+}
+
+
+/* Gradient for "MovenAi" */
+.proai-headline .gradient-text {
+  background: linear-gradient(to right, #53CAFC, #FEE0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.proai-pills-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.proai-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.proai-pill {
+  border: 1px solid #1a1a1a;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.proai-pill.active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* White Rectangle Card */
+.proai-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+  min-height: 420px;
+  margin: 0 auto 14rem;   /* ⬅ Centered + spaced below */
+  max-width: 1100px;      /* ⬅ Restrict width */
+  width: 100%;
+}
+
+/* Image Container */
+.proai-image-container {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.proai-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Text Content */
+.proai-text {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Center text block */
+  text-align: center;
+}
+
+.proai-text-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.proai-text-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 420px;
+}
+
+
+/* Follow-up Section */
+.proai-followup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+/* Rounded Image */
+.followup-image {
+  width: 400px;
+  height: auto;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+/* Text Block */
+.followup-text {
+  max-width: 480px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.followup-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.followup-sub {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #777;
+}
+
+.followup-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+
+
+/* ===================================== */
+/* 📱 PROAI SECTION – PHONE OPTIMISED */
+/* (Fixed Pill Cutoff + Clean Scaling) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .proai {
+    padding: 4rem 1.25rem;
+  }
+
+  .proai-inner {
+    padding: 0 1rem;
+  }
+
+  /* ─── Headline ─── */
+
+  .proai-headline {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+  }
+
+  /* ─── Pills ─── */
+
+  .proai-pills-wrapper {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  .proai-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    padding: 0 1rem 6px 0;  /* 🔥 Added right padding so Learn isn’t clipped */
+  }
+
+  .proai-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .proai-pill {
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.8rem;
+  }
+
+  /* ─── White Card ─── */
+
+  .proai-card {
+    padding: 2rem 1.25rem;
+    gap: 1.5rem;
+    min-height: auto;
+    border-radius: 14px;
+    margin-bottom: 6rem;
+  }
+
+  .proai-image-container {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .proai-image {
+    border-radius: 12px;
+  }
+
+  .proai-text-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .proai-text-paragraph {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  /* ─── Follow-up Section ─── */
+
+  .proai-followup {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .followup-image {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 18px;
+  }
+
+  .followup-title {
+    font-size: 1.25rem;
+  }
+
+  .followup-sub {
+    font-size: 0.95rem;
+  }
+
+  .followup-body {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Subscription Compare Section ─── */
+.subscription-compare {
+  position: relative;
+  background-color: #ffffff;
+  padding: 6rem 2rem 0;
+  overflow: hidden;
+}
+
+.subscription-compare-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.subscription-compare-headline {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;         /* ⬅️ Center align */
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ─── Subscription Table Container ─── */
+.subscription-table-container {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  min-height: 720px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ─── Subscription Table ─── */
+.subscription-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  table-layout: fixed;
+}
+
+/* ─── Table Headers & Cells ─── */
+.subscription-table th,
+.subscription-table td {
+  padding: 1.25rem 0.6rem;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+}
+
+/* ─── Removed Background Color on Header ─── */
+.subscription-table thead {
+  background-color: transparent;
+}
+
+.subscription-table th {
+  font-weight: 800;
+  color: #000000;       /* ⬅️ Black text */
+  font-size: 1.4rem;     /* ⬆️ Larger */
+  font-style: italic;    /* ⬅️ Italic */
+  padding-bottom: 1.5rem;
+}
+
+
+/* ─── Feature Column ─── */
+.subscription-table th.feature-col,
+.subscription-table td.feature-col {
+  text-align: left;
+  width: 60%;
+}
+
+/* ─── Feature Cell Layout ─── */
+.feature-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Feature Icon */
+.feature-icon {
+  width: 20px;
+  height: auto;
+}
+
+/* Plan Column Icon */
+.plan-icon {
+  width: 20px;
+  height: auto;
+}
+
+/* Plan Columns */
+.plan-col {
+  width: 60px;
+}
+
+/* ─── Image Section Under Table ─── */
+.subscription-image-wrapper {
+  margin-top: 10rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.subscription-full-image {
+  width: 85vw;
+  height: 720px; /* ⬅️ Reduced height */
+  object-fit: cover; /* Ensures the image fills the space cleanly */
+  border-radius: 12px;
+  display: block;
+}
+
+
+
+
+
+/* ─── Overlay Content on Subscription Image ─── */
+.subscription-image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 2.5rem;
+  max-width: 85%;
+}
+
+/* XL Headline Text */
+.subscription-image-title {
+  font-size: 3.5rem;              /* ⬆️ Made significantly larger */
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 2.25rem;
+  text-shadow: 0 6px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* CTA Button */
+.subscription-image-button {
+  padding: 1.1rem 2.25rem;
+  font-size: 1.1rem;              /* ⬆️ Slightly larger */
+  font-weight: 700;
+  background-color: #53CAFC;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscription-image-button:hover {
+  background-color: #3bb5e0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ─── Bottom Blue Blur Effect ─── */
+.subscription-blur {
+  position: absolute;
+  bottom: -6rem; /* ⬇️ Pushes the blur further down */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 280px;
+  background: radial-gradient(ellipse at center, rgba(83, 202, 252, 0.3), transparent 70%);
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+/* ===================================== */
+/* 📱 SUBSCRIPTION COMPARE – PHONE OPTIMISED */
+/* (Same Layout, Clean Scaling + Refined Overlay) */
+/* ===================================== */
+
+@media (max-width: 430px) {
+
+  .subscription-compare {
+    padding: 4rem 1.25rem 0;
+  }
+
+  .subscription-compare-inner {
+    max-width: 100%;
+  }
+
+  /* ─── Headline ─── */
+
+  .subscription-compare-headline {
+    font-size: 1.6rem;   /* scaled from 2.5rem */
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  /* ─── Table Container ─── */
+
+  .subscription-table-container {
+    padding: 1.25rem;
+    border-radius: 10px;
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  /* ─── Table ─── */
+
+  .subscription-table {
+    font-size: 0.8rem;
+  }
+
+  .subscription-table th,
+  .subscription-table td {
+    padding: 0.85rem 0.4rem;
+  }
+
+  .subscription-table th {
+    font-size: 0.95rem;
+    padding-bottom: 1rem;
+  }
+
+  /* Feature column slightly wider for text fit */
+  .subscription-table th.feature-col,
+  .subscription-table td.feature-col {
+    width: 65%;
+  }
+
+  /* Feature cell */
+  .feature-cell {
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .feature-icon,
+  .plan-icon {
+    width: 16px;
+  }
+
+  .plan-col {
+    width: 45px;
+  }
+
+  /* ─── Image Section ─── */
+
+  .subscription-image-wrapper {
+    margin-top: 4rem; /* refined spacing */
+  }
+
+  .subscription-full-image {
+    width: 94vw;
+    height: 320px; /* tighter + better proportion */
+    border-radius: 16px;
+  }
+
+  /* ─── Overlay Content (Refined Positioning) ─── */
+
+  .subscription-image-overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.25rem;
+    width: 85%;
+  }
+
+  .subscription-image-title {
+    font-size: 1.5rem;  
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+  }
+
+  .subscription-image-button {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+
+  /* ─── Bottom Blur ─── */
+
+  .subscription-blur {
+    height: 160px;
+    bottom: -3rem;
+    filter: blur(80px);
+  }
+
+}
