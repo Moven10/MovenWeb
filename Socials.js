@@ -1,6 +1,6 @@
 // Socials.js
 
-window.API_BASE = window.API_BASE || 'http://52.62.119.117:8080';
+window.API_BASE = window.API_BASE || 'https://api.startmoven.com';
 
 function waitForUsername(maxAttempts = 20) {
   return new Promise((resolve, reject) => {
