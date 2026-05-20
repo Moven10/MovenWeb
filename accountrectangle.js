@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!username || username === "guest") return;
 
   try {
-    const res = await fetch(`http://52.62.119.117:8080/get-user-details?username=${encodeURIComponent(username)}`);
+    const res = await fetch(`https://api.startmoven.com/get-user-details?username=${encodeURIComponent(username)}`);
     if (!res.ok) throw new Error(`Server returned ${res.status}`);
 
     const user = await res.json();
