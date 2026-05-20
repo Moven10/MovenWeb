@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const res = await fetch(
-      `http://52.62.119.117:8080/get-claimed-images?username=${encodeURIComponent(username)}`
+      `https://api.startmoven.com/get-claimed-images?username=${encodeURIComponent(username)}`
     );
 
     if (!res.ok) throw new Error(`Server returned ${res.status}`);
