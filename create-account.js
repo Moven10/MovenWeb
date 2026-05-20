@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const res = await fetch("http://52.62.119.117:8080/check-username", {
+      const res = await fetch("https://api.startmoven.com/check-username", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username })
@@ -321,7 +321,7 @@ attachPasswordToggle(loginPasswordInput);
     showProgressView();
 
     try {
-      const response = await fetch("http://52.62.119.117:8080/send-email", {
+      const response = await fetch("https://api.startmoven.com/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -372,7 +372,7 @@ attachPasswordToggle(loginPasswordInput);
     showProgressView();
 
     try {
-      const response = await fetch("http://52.62.119.117:8080/SignMoveUserIn", {
+      const response = await fetch("https://api.startmoven.com/SignMoveUserIn", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
