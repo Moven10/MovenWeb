@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const API_BASE = "http://52.62.119.117:8080"; // 🌐 server base
+const API_BASE = "https://api.startmoven.com"; // 🌐 server base
 
 
 async function fetchAllSessions(username) {
