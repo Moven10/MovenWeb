@@ -504,8 +504,6 @@ body.hide-footer .minimal-footer {
 
 
 
-
-
 /* Hide mobile-only elements on desktop */
 .mobile-menu-toggle,
 .mobile-glass-menu {
@@ -531,15 +529,15 @@ body.hide-footer .minimal-footer {
 
   /* 🍔 Hamburger */
   .mobile-menu-toggle {
-  display: flex;
-  width: 26px;
-  height: 18px;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  margin-left: 15px;   /* 🔥 pushes it right */
-  margin-right: 4px;
-}
+    display: flex;
+    width: 26px;
+    height: 18px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-left: 15px; /* 🔥 pushes it right */
+    margin-right: 4px;
+  }
 
   .mobile-menu-toggle span {
     height: 2px;
@@ -576,16 +574,8 @@ body.hide-footer .minimal-footer {
     display: none;
   }
 
+  /* ✅ Hide old sign in/profile area on mobile */
   .footer-buttons {
-    gap: 0.5rem;
-  }
-
-  .profile-avatar {
-    height: 32px;
-    width: 32px;
-  }
-
-  .profile-username {
     display: none;
   }
 
@@ -687,7 +677,6 @@ body.hide-footer .minimal-footer {
   }
 
 }
-
 
 
 
