@@ -314,45 +314,54 @@ attachPasswordToggle(loginPasswordInput);
      🆕 Create Account
   --------------------------------------------------- */
 
-  createForm?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    if (createBtn.disabled) return;
+createForm?.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    showProgressView();
+  if (createBtn.disabled) return;
 
-    try {
-      const response = await fetch("https://api.startmoven.com/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: nameInput.value.trim(),
-          username: usernameInput.value.trim(),
-          email: emailInput.value.trim(),
-          number: phoneInput.value.trim(),
-          password: passwordInput.value,
-          message: `Welcome to Moven, ${nameInput.value.trim()}! 🎉`,
-          profileImageUrl: ""
-        })
-      });
+  showProgressView();
 
-      const result = await response.json();
+  try {
+    const response = await fetch("https://api.startmoven.com/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: nameInput.value.trim(),
+        username: usernameInput.value.trim(),
+        email: emailInput.value.trim(),
+        number: phoneInput.value.trim(),
+        password: passwordInput.value,
+        message: `Welcome to Moven, ${nameInput.value.trim()}! 🎉`,
+        profileImageUrl: ""
+      })
+    });
 
-      if (!response.ok) {
-        hideProgressView();
-        alert(result.message || "Failed to create account.");
-        return;
-      }
+    const result = await response.json();
 
+    // ❌ Failed account creation
+    if (!response.ok) {
       hideProgressView();
-      alert("✅ Account created successfully! Please log in.");
-      createPanel.classList.remove("active");
-      loginPanel.classList.add("active");
-
-    } catch {
-      hideProgressView();
-      alert("Network error — please try again.");
+      alert(result.message || "Failed to create account.");
+      return;
     }
-  });
+
+    // ✅ Success
+    hideProgressView();
+
+    // ✅ Redirect user to homepage
+    window.location.href = "index.html";
+
+  } catch (error) {
+    console.error("Create account error:", error);
+
+    hideProgressView();
+
+    alert("Network error — please try again.");
+  }
+});
+
 
   /* ---------------------------------------------------
      🔐 LOGIN — ✅ FIXED REDIRECT
