@@ -346,7 +346,6 @@ createForm?.addEventListener("submit", async (e) => {
       alert(result.message || "Failed to create account.");
       return;
     }
-<<<<<<< HEAD
 
     // ✅ Success
     hideProgressView();
@@ -363,23 +362,7 @@ createForm?.addEventListener("submit", async (e) => {
   }
 });
 
-=======
->>>>>>> 38bc12c (Production update – full site refresh)
 
-    // ✅ Success
-    hideProgressView();
-
-    // ✅ Redirect user to homepage
-    window.location.href = "index.html";
-
-  } catch (error) {
-    console.error("Create account error:", error);
-
-    hideProgressView();
-
-    alert("Network error — please try again.");
-  }
-});
   /* ---------------------------------------------------
      🔐 LOGIN — ✅ FIXED REDIRECT
   --------------------------------------------------- */
