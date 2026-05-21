@@ -503,7 +503,6 @@ body.hide-footer .minimal-footer {
 
 
 
-
 /* Hide mobile-only elements on desktop */
 .mobile-menu-toggle,
 .mobile-glass-menu {
@@ -517,14 +516,18 @@ body.hide-footer .minimal-footer {
   /* ===== Minimal Glass Top Footer ===== */
 
   .minimal-footer {
-    padding: 0.6rem 0.6rem 0.6rem 0.2rem; /* reduced LEFT padding */
+    padding: 0.6rem 0.6rem 0.6rem 0.2rem;
     min-height: 60px;
   }
 
+  /* ===== Footer Layout ===== */
+
   .footer-inner {
+    position: relative;
     padding: 0;
-    justify-content: space-between;
+    display: flex;
     align-items: center;
+    justify-content: flex-start;
   }
 
   /* 🍔 Hamburger */
@@ -535,8 +538,8 @@ body.hide-footer .minimal-footer {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    margin-left: 15px; /* 🔥 pushes it right */
-    margin-right: 4px;
+    margin-left: 15px;
+    z-index: 2;
   }
 
   .mobile-menu-toggle span {
@@ -547,18 +550,20 @@ body.hide-footer .minimal-footer {
     transition: all 0.3s ease;
   }
 
-  /* Keep container stable */
+  /* ✅ True centered logo */
   .footer-left {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    width: auto;
   }
 
-  /* 🔥 Shift ONLY the logo left */
   .footer-logo {
     height: 40px;
     margin: 0;
-    margin-left: -120px; /* controls logo position only */
   }
 
   /* Remove absolute positioning */
